@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import javafx.application.Application;
 import javafx.application.HostServices;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
@@ -23,7 +24,12 @@ public class GUIController extends Application {
 
     @FXML // fx:id="RailwayWebsite"
     private MenuItem RailwayWebsite; // Value injected by FXMLLoader
-
+    
+    @FXML
+    void exitApp(ActionEvent event) {
+    	Platform.exit();
+    }
+    
     @FXML
     void openHelpWIndow(ActionEvent event) {
 

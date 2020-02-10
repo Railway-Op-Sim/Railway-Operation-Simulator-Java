@@ -18,7 +18,8 @@
                   <MenuItem mnemonicParsing="false" text="Load Timetable" />
                   <MenuItem mnemonicParsing="false" text="Load Session" />
                   <MenuItem mnemonicParsing="false" text="Clear All" />
-              <MenuItem mnemonicParsing="false" text="Exit" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="exitMenu" mnemonicParsing="false" onAction="#exitApp" text="Exit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
