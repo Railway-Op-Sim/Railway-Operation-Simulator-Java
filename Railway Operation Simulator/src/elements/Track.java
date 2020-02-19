@@ -1,6 +1,8 @@
 package elements;
 
 public abstract class Track extends Space {
+	protected boolean electrified;
+	protected String methodOfElectrification;
 	protected String trackName; 
 	protected int trackID;
 	protected int trackSpeed;
@@ -13,6 +15,26 @@ public abstract class Track extends Space {
 
 	public Track() {
 		// TODO Auto-generated constructor stub
+	}
+
+
+	public boolean isElectrified() {
+		return electrified;
+	}
+
+
+	public void setElectrified(boolean electrified) {
+		this.electrified = electrified;
+	}
+
+
+	public String getMethodOfElectrification() {
+		return methodOfElectrification;
+	}
+
+
+	public void setMethodOfElectrification(String methodOfElectrification) {
+		this.methodOfElectrification = methodOfElectrification;
 	}
 
 
@@ -94,7 +116,6 @@ public abstract class Track extends Space {
 	public void setDownLink(Track downLink) {
 		this.downLink = downLink;
 	}
-	
-	
 
+	
 }

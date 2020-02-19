@@ -1,19 +1,17 @@
 package application;
 
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.control.MenuItem;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.FXML;
-import javafx.scene.control.MenuItem;
+import application.MenuActions;
 
 public class GUIController extends Application {
 
@@ -26,6 +24,9 @@ public class GUIController extends Application {
     @FXML // fx:id="ExitMenuItem"
     private MenuItem ExitMenuItem; // Value injected by FXMLLoader
 
+    @FXML // fx:id="buildModifyRailway"
+    private MenuItem buildModifyRailway; // Value injected by FXMLLoader
+
     @FXML // fx:id="RailwayHelpMenuItem"
     private MenuItem RailwayHelpMenuItem; // Value injected by FXMLLoader
 
@@ -34,24 +35,15 @@ public class GUIController extends Application {
 
     @FXML // fx:id="AboutMenuItem"
     private MenuItem AboutMenuItem; // Value injected by FXMLLoader
-    
+
     @FXML // fx:id="canvas"
     private Canvas canvas; // Value injected by FXMLLoader
 
-    @FXML // This method is called by the FXMLLoader when initialization is complete
-    void initialize() {
-        assert ExitMenuItem != null : "fx:id=\"ExitMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
-        assert RailwayHelpMenuItem != null : "fx:id=\"RailwayHelpMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
-        assert RailwayWebsiteMenuItem != null : "fx:id=\"RailwayWebsiteMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
-        assert AboutMenuItem != null : "fx:id=\"AboutMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
-
-    }
-    
     @FXML
     void exitApp(ActionEvent event) {
-    	Platform.exit();
+    	MenuActions.exitProgram();
     }
-    
+
     @FXML
     void openHelpWIndow(ActionEvent event) {
 
@@ -63,11 +55,31 @@ public class GUIController extends Application {
 
     }
 
+    @FXML
+    void placeSelectItem(MouseEvent event) {
+    	double xLocation = event.getX();
+
+    }
+
+    @FXML
+    void showBuildMenu(ActionEvent event) {
+
+    }
+
+    @FXML // This method is called by the FXMLLoader when initialization is complete
+    void initialize() {
+        assert ExitMenuItem != null : "fx:id=\"ExitMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
+        assert buildModifyRailway != null : "fx:id=\"buildModifyRailway\" was not injected: check your FXML file 'GUI.fxml'.";
+        assert RailwayHelpMenuItem != null : "fx:id=\"RailwayHelpMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
+        assert RailwayWebsiteMenuItem != null : "fx:id=\"RailwayWebsiteMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
+        assert AboutMenuItem != null : "fx:id=\"AboutMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
+        assert canvas != null : "fx:id=\"canvas\" was not injected: check your FXML file 'GUI.fxml'.";
+
+    }
+
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
 }
-
-

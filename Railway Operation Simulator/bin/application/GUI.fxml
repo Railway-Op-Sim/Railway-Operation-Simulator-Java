@@ -29,6 +29,12 @@
                            </accelerator></MenuItem>
                   </items>
                 </Menu>
+                  <Menu mnemonicParsing="false" text="Mode">
+                    <items>
+                      <MenuItem fx:id="buildModifyRailway" mnemonicParsing="false" onAction="#showBuildMenu" text="Build/Modify Railway" />
+                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </Menu>
                 <Menu mnemonicParsing="false" text="Edit">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Delete" />
@@ -58,6 +64,6 @@
       </VBox>
    </right>
    <center>
-      <Canvas fx:id="canvas" height="400.0" width="600.0" />
+      <Canvas fx:id="canvas" height="400.0" onMouseClicked="#placeSelectItem" width="600.0" />
    </center>
 </BorderPane>
