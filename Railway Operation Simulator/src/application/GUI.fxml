@@ -6,10 +6,11 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUIController">
    <top>
       <VBox prefHeight="80.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -22,7 +23,10 @@
                         <MenuItem mnemonicParsing="false" text="Save Railway As" />
                         <MenuItem mnemonicParsing="false" text="Load Timetable" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Exit" />
+                        <MenuItem fx:id="ExitMenuItem" mnemonicParsing="false" onAction="#exitApp" text="Exit">
+                           <accelerator>
+                              <KeyCodeCombination alt="DOWN" code="F4" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Edit">
@@ -32,10 +36,13 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Railway Help" />
-                        <MenuItem mnemonicParsing="false" text="Railway Website" />
+                        <MenuItem fx:id="RailwayHelpMenuItem" mnemonicParsing="false" onAction="#openHelpWIndow" text="Railway Help" >
+                        <accelerator>
+                              <KeyCodeCombination alt="UP" code="F1" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator> </MenuItem>
+                        <MenuItem fx:id="RailwayWebsiteMenuItem" mnemonicParsing="false" onAction="#openRailwayWebsite" text="Railway Website" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem fx:id="AboutMenuItem" mnemonicParsing="false" text="About" /> 
                   </items>
                 </Menu>
               </menus>
