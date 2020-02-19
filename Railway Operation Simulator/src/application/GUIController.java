@@ -34,6 +34,9 @@ public class GUIController extends Application {
 
     @FXML // fx:id="AboutMenuItem"
     private MenuItem AboutMenuItem; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="canvas"
+    private Canvas canvas; // Value injected by FXMLLoader
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {

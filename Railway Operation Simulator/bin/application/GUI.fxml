@@ -36,7 +36,7 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                   <items>
-                        <MenuItem fx:id="RailwayHelpMenuItem" mnemonicParsing="false" onAction="#openHelpWIndow" text="Railway Help" >
+                        <MenuItem fx:id="RailwayHelpMenuItem" mnemonicParsing="false" onAction="#openHelpWIndow" text="Railway Help">
                         <accelerator>
                               <KeyCodeCombination alt="UP" code="F1" control="UP" meta="UP" shift="UP" shortcut="UP" />
                            </accelerator> </MenuItem>
@@ -58,6 +58,6 @@
       </VBox>
    </right>
    <center>
-      <Canvas height="200.0" width="200.0" />
+      <Canvas fx:id="canvas" height="400.0" width="600.0" />
    </center>
 </BorderPane>
