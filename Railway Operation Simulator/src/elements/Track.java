@@ -1,6 +1,10 @@
 package elements;
 
 public abstract class Track extends Space {
+	protected String trackName; 
+	protected int trackID;
+	protected int trackSpeed;
+	protected int trackLength;
 	protected Track leftLink;
 	protected Track rightLink;
 	protected Track upLink;
@@ -9,6 +13,46 @@ public abstract class Track extends Space {
 
 	public Track() {
 		// TODO Auto-generated constructor stub
+	}
+
+
+	public String getTrackName() {
+		return trackName;
+	}
+
+
+	public void setTrackName(String trackName) {
+		this.trackName = trackName;
+	}
+
+
+	public int getTrackID() {
+		return trackID;
+	}
+
+
+	public void setTrackID(int trackID) {
+		this.trackID = trackID;
+	}
+
+
+	public int getTrackSpeed() {
+		return trackSpeed;
+	}
+
+
+	public void setTrackSpeed(int trackSpeed) {
+		this.trackSpeed = trackSpeed;
+	}
+
+
+	public int getTrackLength() {
+		return trackLength;
+	}
+
+
+	public void setTrackLength(int trackLength) {
+		this.trackLength = trackLength;
 	}
 
 
