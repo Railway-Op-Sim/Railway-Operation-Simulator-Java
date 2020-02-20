@@ -10,7 +10,7 @@ import javafx.fxml.FXMLLoader;
 
 /**
  * Main.java
- * Class for starting the entire Program.
+ * The class for starting the entire Program.
  * @version 1.01
  * @author Jonathan K
  *

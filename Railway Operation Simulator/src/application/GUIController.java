@@ -18,7 +18,7 @@ import application.MenuActions;
 
 /**
  * GUIController.java
- * Interacts with the GUI.fxml to output to screen. Behaviours and Actions are specified here.
+ * The class that interacts with the GUI.fxml to output to screen. Behaviours and Actions are specified here.
  * @version 1.01
  * @author Jonathan K
  */
