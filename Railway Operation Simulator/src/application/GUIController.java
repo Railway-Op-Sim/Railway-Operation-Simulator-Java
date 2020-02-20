@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -36,6 +37,9 @@ public class GUIController extends Application {
 
     @FXML // fx:id="aboutMenuItem"
     private MenuItem aboutMenuItem; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="showGridButton"
+    private Button showGridButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="railMap"
     private Canvas railMap; // Value injected by FXMLLoader
@@ -67,6 +71,13 @@ public class GUIController extends Application {
     void showBuildMenu(ActionEvent event) {
 
     }
+    
+    @FXML
+    void showGrid(ActionEvent event) {
+    	MenuActions.createGrid(railMap);
+    }
+    
+    
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
@@ -75,6 +86,7 @@ public class GUIController extends Application {
         assert railwayHelpMenuItem != null : "fx:id=\"RailwayHelpMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
         assert railwayWebsiteMenuItem != null : "fx:id=\"RailwayWebsiteMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
         assert aboutMenuItem != null : "fx:id=\"AboutMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
+        assert showGridButton != null : "fx:id=\"showGridButton\" was not injected: check your FXML file 'GUI.fxml'.";
         assert railMap != null : "fx:id=\"canvas\" was not injected: check your FXML file 'GUI.fxml'.";
 
     }
