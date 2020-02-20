@@ -87,7 +87,8 @@ public class GUIController extends Application {
     @FXML
     void placeSelectItem(MouseEvent event) {
     	GraphicsContext graphic = railMap.getGraphicsContext2D();
-    	MapManager.sharedMapManager().getMap().
+    	
+    	MapManager.sharedMapManager().getMap().addElement();
     	MenuActions.drawElement(graphic, event);
 
     }

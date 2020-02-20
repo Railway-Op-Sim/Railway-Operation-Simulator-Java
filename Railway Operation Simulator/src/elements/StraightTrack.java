@@ -6,17 +6,14 @@ public class StraightTrack extends Track {
 			, int trackID, int trackSpeed, int trackLength) {
 		this.xLocation = xLocation;
 		this.yLocation = yLocation;
-		 electrified;
-		protected String methodOfElectrification;
+		this.electrified = electrified;
+		this.methodOfElectrification = methodOfElectrification;
+		this.trackID = trackID;
+		this.trackSpeed = trackSpeed;
+		this.trackLength = trackLength;
 
-		protected int trackID;
-		protected int trackSpeed;
-		protected int trackLength;
-		protected Track leftLink;
-		protected Track rightLink;
-		protected Track upLink;
-		protected Track downLink;
-		
 	}
+	
+	
 
 }

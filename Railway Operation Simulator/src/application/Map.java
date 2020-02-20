@@ -2,6 +2,7 @@ package application;
 
 import java.util.ArrayList;
 
+import elements.Space;
 import elements.StraightTrack;
 import train.Train;
 
@@ -37,11 +38,14 @@ public class Map {
 		this.trainList = trainList;
 	}
 	
-	public void addElement(Space element) {
-		if (element.equals("Straight Track")) {
-			straightTrackList.add(arg0)
+	public void addStraightTrack(StraightTrack element) {
+		straightTrackList.add(element);
+	}
+	
+	public void makeLinks() {
+		for(int i = 0; i<straightTrackList.size();i++) {
+			if (getTrackList().get(i).get)
 		}
-		
 	}
 	
 	
