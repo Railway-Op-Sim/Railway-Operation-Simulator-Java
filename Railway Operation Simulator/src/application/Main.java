@@ -18,7 +18,7 @@ import javafx.fxml.FXMLLoader;
 		
 public class Main extends Application {
 	/**
-	 * The starting method to launch the GUI
+	 * The starting method to launch the GUI.
 	 */
 	@Override
 	public void start(Stage primaryStage) {

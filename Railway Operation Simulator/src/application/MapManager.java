@@ -1,5 +1,11 @@
 package application;
 
+/**
+ * The class that makes sure that there is 1 map in the game and that there are no other copies.
+ * @version 1.01
+ * @author Jonathan K
+ *
+ */
 public class MapManager {
 	
 	
@@ -29,7 +35,7 @@ public class MapManager {
 	/**
 	 * Return the map.
 	 * 
-	 * @return map of game
+	 * @return map
 	 */
 	public Map getMap() {
 		return this.map;
@@ -38,7 +44,7 @@ public class MapManager {
 	/**
 	 * Set the map.
 	 * 
-	 * @param map of game
+	 * @param map
 	 */
 	public void setMap(Map map) {
 		this.map = map;

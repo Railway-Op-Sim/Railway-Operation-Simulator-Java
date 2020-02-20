@@ -7,7 +7,8 @@ import train.Train;
 
 /**
  * The class that stores the Track elements, Connections and Trains.
- * @author Jonathan
+ * @version 1.01
+ * @author Jonathan K
  *
  */
 public class Map {
