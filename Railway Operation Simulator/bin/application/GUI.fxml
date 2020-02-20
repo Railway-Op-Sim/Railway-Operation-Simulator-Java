@@ -23,7 +23,7 @@
                         <MenuItem mnemonicParsing="false" text="Save Railway As" />
                         <MenuItem mnemonicParsing="false" text="Load Timetable" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem fx:id="ExitMenuItem" mnemonicParsing="false" onAction="#exitApp" text="Exit">
+                        <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#exitApp" text="Exit">
                            <accelerator>
                               <KeyCodeCombination alt="DOWN" code="F4" control="UP" meta="UP" shift="UP" shortcut="UP" />
                            </accelerator></MenuItem>
@@ -42,13 +42,13 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                   <items>
-                        <MenuItem fx:id="RailwayHelpMenuItem" mnemonicParsing="false" onAction="#openHelpWIndow" text="Railway Help">
+                        <MenuItem fx:id="railwayHelpMenuItem" mnemonicParsing="false" onAction="#openHelpWIndow" text="Railway Help">
                         <accelerator>
                               <KeyCodeCombination alt="UP" code="F1" control="UP" meta="UP" shift="UP" shortcut="UP" />
                            </accelerator> </MenuItem>
-                        <MenuItem fx:id="RailwayWebsiteMenuItem" mnemonicParsing="false" onAction="#openRailwayWebsite" text="Railway Website" />
+                        <MenuItem fx:id="railwayWebsiteMenuItem" mnemonicParsing="false" onAction="#openRailwayWebsite" text="Railway Website" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                    <MenuItem fx:id="AboutMenuItem" mnemonicParsing="false" text="About" /> 
+                    <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" text="About" /> 
                   </items>
                 </Menu>
               </menus>
@@ -64,6 +64,6 @@
       </VBox>
    </right>
    <center>
-      <Canvas fx:id="canvas" height="400.0" onMouseClicked="#placeSelectItem" width="600.0" />
+      <Canvas fx:id="railMap" height="400.0" onMouseClicked="#placeSelectItem" width="600.0" />
    </center>
 </BorderPane>
