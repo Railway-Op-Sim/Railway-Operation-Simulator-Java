@@ -46,8 +46,8 @@ public class GUIController extends Application {
     @FXML // fx:id="aboutMenuItem"
     private MenuItem aboutMenuItem; // Value injected by FXMLLoader
     
-    @FXML // fx:id="showGridButton"
-    private Button showGridButton; // Value injected by FXMLLoader
+    @FXML // fx:id="showHideGridButton"
+    private Button showHideGridButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="railMap"
     private Canvas railMap; // Value injected by FXMLLoader
@@ -87,6 +87,7 @@ public class GUIController extends Application {
     @FXML
     void placeSelectItem(MouseEvent event) {
     	GraphicsContext graphic = railMap.getGraphicsContext2D();
+    	MapManager.sharedMapManager().getMap().
     	MenuActions.drawElement(graphic, event);
 
     }
@@ -106,7 +107,7 @@ public class GUIController extends Application {
      */
     @FXML
     void showGrid(ActionEvent event) {
-    	MenuActions.createGrid(railMap);
+    	MenuActions.toggleGrid(railMap,showHideGridButton);
     }
     
     
@@ -120,7 +121,7 @@ public class GUIController extends Application {
         assert railwayHelpMenuItem != null : "fx:id=\"RailwayHelpMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
         assert railwayWebsiteMenuItem != null : "fx:id=\"RailwayWebsiteMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
         assert aboutMenuItem != null : "fx:id=\"AboutMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
-        assert showGridButton != null : "fx:id=\"showGridButton\" was not injected: check your FXML file 'GUI.fxml'.";
+        assert showHideGridButton != null : "fx:id=\"showGridButton\" was not injected: check your FXML file 'GUI.fxml'.";
         assert railMap != null : "fx:id=\"canvas\" was not injected: check your FXML file 'GUI.fxml'.";
 
     }

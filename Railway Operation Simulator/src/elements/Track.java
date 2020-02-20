@@ -3,7 +3,6 @@ package elements;
 public abstract class Track extends Space {
 	protected boolean electrified;
 	protected String methodOfElectrification;
-	protected String trackName; 
 	protected int trackID;
 	protected int trackSpeed;
 	protected int trackLength;
@@ -35,16 +34,6 @@ public abstract class Track extends Space {
 
 	public void setMethodOfElectrification(String methodOfElectrification) {
 		this.methodOfElectrification = methodOfElectrification;
-	}
-
-
-	public String getTrackName() {
-		return trackName;
-	}
-
-
-	public void setTrackName(String trackName) {
-		this.trackName = trackName;
 	}
 
 

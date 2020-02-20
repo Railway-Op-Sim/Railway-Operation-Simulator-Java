@@ -8,6 +8,7 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
@@ -52,24 +53,20 @@ public class MenuActions {
 	 
 	 public static void createGrid(Canvas display) {
 		 	GraphicsContext railMap = display.getGraphicsContext2D();
-	        double w = gridSize;
-	        double h = gridSize;
-	        
+
 	        double railMapSizeX = display.getWidth();
 	        double railMapSizeY = display.getHeight();
-	        
-	        
 	        
 	        railMap.setStroke(Color.BLACK);
 	        
 	        //gc.setFill(Color.LIGHTGRAY);
 	        //gc.fillRect(0, 0, w, h);
 	        for (int x=0; x<railMapSizeX+1; x+=32) {
-	        	railMap.strokeLine(x, 0, x, 416);
+	        	railMap.strokeLine(x, 0, x, railMapSizeY);
 	        }
 	        
 	        for (int y=0; y<railMapSizeY+1; y+=32) {
-	        	railMap.strokeLine(0, y, 640, y);
+	        	railMap.strokeLine(0, y, railMapSizeX, y);
 	        }
 	        
 
@@ -79,6 +76,27 @@ public class MenuActions {
 	       
 
 	    }
+	 
+	 public static void toggleGrid(Canvas display, Button showHideGridButton ) {
+		 String showHideGridText = showHideGridButton.getText();
+		 if (showHideGridText.equals("Show Grid")) {
+			 createGrid(display);
+			 showHideGridButton.setText("Hide Grid");
+		 } else {
+			 removeGrid(display);
+			 showHideGridButton.setText("Show Grid");
+		 }
+	 }
+
+	private static void removeGrid(Canvas display) {
+		// TODO Auto-generated method stub
+		double railMapSizeX = display.getWidth();
+        double railMapSizeY = display.getHeight();
+		GraphicsContext railMap = display.getGraphicsContext2D();
+		railMap.clearRect(0, 0, railMapSizeX, railMapSizeY);
+		
+		
+	}
  	
 
 

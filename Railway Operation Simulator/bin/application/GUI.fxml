@@ -59,11 +59,11 @@
    <right>
       <VBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="64.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="showGridButton" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#showGrid" prefHeight="47.0" prefWidth="64.0" text="Show Grid" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" />
+            <Button fx:id="showHideGridButton" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#showGrid" prefHeight="47.0" prefWidth="64.0" text="Show Grid" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" />
          </children>
       </VBox>
    </right>
    <center>
-      <Canvas fx:id="railMap" height="416.0" onMouseClicked="#placeSelectItem" width="640.0" />
+      <Canvas fx:id="railMap" height="480.0" onMouseClicked="#placeSelectItem" width="672.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
