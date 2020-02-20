@@ -28,8 +28,14 @@ public class MenuActions {
 	 }
 	 
 	 public static void drawElement(GraphicsContext railMap, MouseEvent event) {
-		 int xLocation = (int) event.getX();
+		 int xLocation = (int) (event.getX());
 		 int yLocation = (int) event.getY();
+		 
+		 int slightlyOffX = xLocation %32;
+		 int slightLyOffY = yLocation %32;
+		 
+		 int placeX = xLocation - slightlyOffX;
+		 int placeY = yLocation - slightLyOffY;
 		 
 		 File trackImage = new File("./src/application/straightTrackLight.jpg");
 		 Image image = null;
@@ -39,7 +45,9 @@ public class MenuActions {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		railMap.drawImage( image, xLocation, yLocation);
+		
+		
+		railMap.drawImage( image, placeX, placeY);
 	 }
 	 
 	 public static void createGrid(Canvas display) {
@@ -53,6 +61,7 @@ public class MenuActions {
 	        
 	        
 	        railMap.setStroke(Color.BLACK);
+	        
 	        //gc.setFill(Color.LIGHTGRAY);
 	        //gc.fillRect(0, 0, w, h);
 	        for (int x=0; x<railMapSizeX+1; x+=32) {
