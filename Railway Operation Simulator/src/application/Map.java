@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import elements.Space;
 import elements.StraightTrack;
+import elements.Track;
 import train.Train;
 
 
@@ -15,19 +16,19 @@ import train.Train;
  */
 public class Map {
 	
-	private ArrayList<StraightTrack> straightTrackList = new ArrayList<StraightTrack>();
+	private ArrayList<Track> trackList = new ArrayList<Track>();
 	private ArrayList<Train> trainList = new ArrayList<Train>();
 	
 	public Map () {
 		
 	}
 
-	public ArrayList<StraightTrack> getTrackList() {
-		return straightTrackList;
+	public ArrayList<Track> getTrackList() {
+		return trackList;
 	}
 
-	public void setTrackList(ArrayList<StraightTrack> trackList) {
-		this.straightTrackList = straightTrackList;
+	public void setTrackList(ArrayList<Track> trackList) {
+		this.trackList = trackList;
 	}
 
 	public ArrayList<Train> getTrainList() {
@@ -38,16 +39,19 @@ public class Map {
 		this.trainList = trainList;
 	}
 	
-	public void addStraightTrack(StraightTrack element) {
-		straightTrackList.add(element);
+	public void addTrack(StraightTrack element) {
+		trackList.add(element);
 	}
 	
-	public void makeLinks() {
-		for(int i = 0; i<straightTrackList.size();i++) {
-			if (getTrackList().get(i).get)
+	public void makeStraightTRackLinks() {
+		for(int i = 0; i<trackList.size();i++) {
+			for (int j = 1; j<trackList.size();j++) {
+				Track track1 = trackList.get(i);
+				Track track2 = trackList.get(j);
+				
 		}
 	}
 	
-	
+	}
 
 }

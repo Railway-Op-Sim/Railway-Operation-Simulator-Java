@@ -1,15 +1,23 @@
 package elements;
 
 public abstract class Track extends Space {
+	protected String trackName;
 	protected boolean electrified;
 	protected String methodOfElectrification;
 	protected int trackID;
 	protected int trackSpeed;
 	protected int trackLength;
-	protected Track leftLink;
-	protected Track rightLink;
-	protected Track upLink;
-	protected Track downLink;
+	protected boolean[] trackLinks = new boolean[9];
+	
+	/*
+	 * trackLink works like thus 
+	 *           0 1 2
+	 *            \|/ 
+	 *           3---5
+	 *            /|\
+	 *           6 7 8
+	 */
+	
 	
 
 	public Track() {
@@ -67,44 +75,23 @@ public abstract class Track extends Space {
 	}
 
 
-	public Track getLeftLink() {
-		return leftLink;
+	public boolean[] getTrackLinks() {
+		return trackLinks;
 	}
 
 
-	public void setLeftLink(Track leftLink) {
-		this.leftLink = leftLink;
+	public void setTrackLinks(boolean[] trackLinks) {
+		this.trackLinks = trackLinks;
+	}
+	
+	public void set1TrackLink(int position) {
+		this.trackLinks[position] = true;
+	}
+	public void remove1TrackLink(int position) {
+		this.trackLinks[position] = false;
 	}
 
 
-	public Track getRightLink() {
-		return rightLink;
-	}
-
-
-	public void setRightLink(Track rightLink) {
-		this.rightLink = rightLink;
-	}
-
-
-	public Track getUpLink() {
-		return upLink;
-	}
-
-
-	public void setUpLink(Track upLink) {
-		this.upLink = upLink;
-	}
-
-
-	public Track getDownLink() {
-		return downLink;
-	}
-
-
-	public void setDownLink(Track downLink) {
-		this.downLink = downLink;
-	}
 
 	
 }
