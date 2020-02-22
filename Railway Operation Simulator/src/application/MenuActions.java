@@ -44,7 +44,7 @@ public class MenuActions {
 	  * @param railMap
 	  * @param event
 	  */
-	 public static void drawElement(GraphicsContext railMap, MouseEvent event) {
+	 public static void drawElement(GraphicsContext railMap, MouseEvent event, String file) {
 		 //Get Location of mouse click and round to 0
 		 int xLocation = (int) event.getX();
 		 int yLocation = (int) event.getY(); 
@@ -56,7 +56,7 @@ public class MenuActions {
 		 int placeX = xLocation - slightlyOffX;
 		 int placeY = yLocation - slightLyOffY;
 		 
-		 File trackImage = new File("./src/application/straightTrackLight.jpg"); //Open image file.
+		 File trackImage = new File(file); //Open image file.
 		 Image image = null;
 		try {
 			image = new Image(new FileInputStream(trackImage)); //Set file as image.
@@ -154,7 +154,7 @@ public class MenuActions {
 	}
 	
 	
-	public static void addTrack(MouseEvent event,Canvas railMap) {
+	public static void addTrack(MouseEvent event,Canvas railMap, String file) {
 		boolean trackExist = false;
     	int xLocation = (int) event.getX();
 		int yLocation = (int) event.getY();
@@ -176,7 +176,7 @@ public class MenuActions {
 			StraightTrack newTrack = new StraightTrack( "Straight Horizontal", placeX, placeY, false, "None");
 			trackStore.add(newTrack);
 			GraphicsContext graphic = railMap.getGraphicsContext2D();
-			drawElement(graphic, event);
+			drawElement(graphic, event, file);
 		}
 		System.out.println(trackStore.size());
 	}

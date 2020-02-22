@@ -109,7 +109,11 @@ public class GUIController extends Application {
 	 */
 	@FXML
 	void placeSelectItem(MouseEvent event) {
-		MenuActions.addTrack(event, railMap);
+		if (itemSelected.equals("horizontal straight")) {
+			MenuActions.addTrack(event, railMap,"./src/application/StraightTrackHorizontalLight24.jpg");
+		} else if (itemSelected.equals("left buffer")) {
+			MenuActions.addTrack(event, railMap,"./src/application/LeftBufferHorizontalLight24.jpg");
+		}
 
 	}
 

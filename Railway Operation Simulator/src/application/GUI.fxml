@@ -12,7 +12,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUIController">
 	<top>
-		<VBox fx:id="topVBox" prefHeight="80.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+		<VBox fx:id="topVBox" prefHeight="148.0" prefWidth="800.0" BorderPane.alignment="CENTER">
 			<children>
 				<MenuBar>
 					<menus>
@@ -66,6 +66,6 @@
 		</VBox>
 	</right>
 	<center>
-		<Canvas fx:id="railMap" height="480.0" onMouseClicked="#placeSelectItem" width="672.0" BorderPane.alignment="CENTER" />
+		<Canvas fx:id="railMap" height="438.0" onMouseClicked="#placeSelectItem" width="662.0" BorderPane.alignment="CENTER" />
 	</center>
 </BorderPane>

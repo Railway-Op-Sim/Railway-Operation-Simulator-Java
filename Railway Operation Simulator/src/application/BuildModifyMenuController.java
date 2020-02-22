@@ -76,9 +76,9 @@ public class BuildModifyMenuController {
 
     @FXML
     void selectLeftBuffer(ActionEvent event) {
-    	if (leftBufferToggle.isSelected()) {
+    	
     		GUIController.setItemSelected("left buffer");
-    	}
+
     }
     @FXML
     void selectDownBuffer(ActionEvent event) {
@@ -87,7 +87,7 @@ public class BuildModifyMenuController {
 
     @FXML
     void selectHorizontalTrack(ActionEvent event) {
-
+    	GUIController.setItemSelected("horizontal straight");
     }
 
     @FXML
