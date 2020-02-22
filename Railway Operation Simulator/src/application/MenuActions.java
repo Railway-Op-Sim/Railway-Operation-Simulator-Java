@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 import elements.StraightTrack;
 import elements.Track;
@@ -11,6 +12,8 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
@@ -118,7 +121,7 @@ public class MenuActions {
 		GraphicsContext railMap = display.getGraphicsContext2D();
 		railMap.clearRect(0, 0, railMapSizeX, railMapSizeY);// Clear entire display
 		Map map = MapManager.sharedMapManager().getMap();
-		ArrayList<Track> trackList = map.getTrackList();
+		HashSet<Track> trackStore = map.getTrackStore();
 		File trackImage = new File("./src/application/straightTrackLight.jpg");
 		 Image image = null;
 		try {
@@ -128,7 +131,7 @@ public class MenuActions {
 			e.printStackTrace();
 		}
 		// For every track in the list , redraw it.
-		for (Track track :trackList) {
+		for (Track track :trackStore) {
 			int xLocation = track.getxLocation();
 			int yLocation = track.getyLocation();
 			 
@@ -140,6 +143,42 @@ public class MenuActions {
 			railMap.drawImage(image, placeX, placeY);
 		}
 		
+	}
+	
+	public static void makeExistingTrackErrorBox() {
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setTitle("Existing Track error");
+		alert.setContentText("Cannot place track there as a track already exists there!");
+
+		alert.showAndWait();
+	}
+	
+	
+	public static void addTrack(MouseEvent event,Canvas railMap) {
+		boolean trackExist = false;
+    	int xLocation = (int) event.getX();
+		int yLocation = (int) event.getY();
+		int slightlyOffX = xLocation %32;
+		int slightLyOffY = yLocation %32;
+		int placeX = xLocation - slightlyOffX;
+		int placeY = yLocation - slightLyOffY;
+		HashSet<Track> trackStore = MapManager.sharedMapManager().getMap().getTrackStore();
+		for (Track track : trackStore) {
+			 int existingTrackX = track.getxLocation();
+			 int existingTrackY = track.getyLocation();
+			 if (existingTrackX ==placeX && existingTrackY == placeY) {
+				 trackExist = true;
+				 MenuActions.makeExistingTrackErrorBox();
+			} 
+		}
+		
+		if (!trackExist) {
+			StraightTrack newTrack = new StraightTrack( "Straight Horizontal", placeX, placeY, false, "None");
+			trackStore.add(newTrack);
+			GraphicsContext graphic = railMap.getGraphicsContext2D();
+			drawElement(graphic, event);
+		}
+		System.out.println(trackStore.size());
 	}
 	
 		

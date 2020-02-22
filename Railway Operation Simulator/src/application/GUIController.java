@@ -2,7 +2,7 @@ package application;
 
 
 import java.net.URL;
-
+import java.util.HashSet;
 import java.util.ResourceBundle;
 
 import javafx.application.Application;
@@ -88,18 +88,8 @@ public class GUIController extends Application {
      */
     @FXML
     void placeSelectItem(MouseEvent event) {
-    	GraphicsContext graphic = railMap.getGraphicsContext2D();
-    	int xLocation = (int) event.getX();
-		int yLocation = (int) event.getY();
-		int slightlyOffX = xLocation %32;
-		int slightLyOffY = yLocation %32;
-		int placeX = xLocation - slightlyOffX;
-		int placeY = yLocation - slightLyOffY;
-    	StraightTrack track = new StraightTrack( "Straight Horizontal", xLocation, yLocation, false, "None");
-
-    	MapManager.sharedMapManager().getMap().addTrack(track);
-    	MenuActions.drawElement(graphic, event);
-
+    	MenuActions.addTrack(event,railMap);
+    	
     }
     
     /**

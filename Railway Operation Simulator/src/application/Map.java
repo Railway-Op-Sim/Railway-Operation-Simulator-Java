@@ -18,7 +18,6 @@ import train.Train;
 public class Map {
 
 	private HashSet<Track>  trackStore = new HashSet<Track>();
-	private ArrayList<Track> trackList = new ArrayList<Track>();
 	private ArrayList<Train> trainList = new ArrayList<Train>();
 	private ArrayList<Object> otherList = new ArrayList<Object>();
 	/**
@@ -64,22 +63,6 @@ public class Map {
 	}
 	
 	/**
-	 * A method to get current list of track pieces.
-	 * @return
-	 */
-	public ArrayList<Track> getTrackList() {
-		return trackList;
-	}
-	
-	/**
-	 * A mehtod to set a new list of tracks pieces.
-	 * @param trackList
-	 */
-	public void setTrackList(ArrayList<Track> trackList) {
-		this.trackList = trackList;
-	}
-	
-	/**
 	 * A method that gets the  list of trains/services.
 	 * @return trainList
 	 */
@@ -101,19 +84,18 @@ public class Map {
 	 * @param element
 	 */
 	public void addTrack(StraightTrack element) {
-		trackList.add(element);
+		trackStore.add(element);
 	}
 
 	/**
 	 * A method to get Links between tracks.
 	 */
 	public void makeStraightTRackLinks() {
-		for(int i = 0; i<trackList.size();i++) {
-			for (int j = 1; j<trackList.size();j++) {
-				Track track1 = trackList.get(i);
-				Track track2 = trackList.get(j);
-			
-
+		for(Track track1 : trackStore){
+			for(Track track2 : trackStore){
+				if (!track1.equals(track2)) {
+					
+			}
 		}
 	}
 
