@@ -23,7 +23,7 @@ import javafx.stage.Stage;
 
 public class MenuActions {
 	
-	private static int gridSize = 32;
+	private static int gridSize = 24;
 
 	/**
 	 * Constructor that makes a MenuActions object.
@@ -48,11 +48,11 @@ public class MenuActions {
 		 //Get Location of mouse click and round to 0
 		 int xLocation = (int) event.getX();
 		 int yLocation = (int) event.getY(); 
-		 // Get remiander when divided by 32 to see how close it is to the last multiple of 32
-		 int slightlyOffX = xLocation %32;
-		 int slightLyOffY = yLocation %32;
+		 // Get remiander when divided by 24 to see how close it is to the last multiple of 24
+		 int slightlyOffX = xLocation %24;
+		 int slightLyOffY = yLocation %24;
 		 
-		 // Get the last multiple of 32 before it.
+		 // Get the last multiple of 24 before it.
 		 int placeX = xLocation - slightlyOffX;
 		 int placeY = yLocation - slightLyOffY;
 		 
@@ -82,13 +82,13 @@ public class MenuActions {
 	        //Set grid to Black
 	        railMap.setStroke(Color.BLACK);
 	        
-	        //Every 32 pixels draw a vertical line.
-	        for (int x=0; x<railMapSizeX+1; x+=32) {
+	        //Every 24 pixels draw a vertical line.
+	        for (int x=0; x<railMapSizeX+1; x+=24) {
 	        	railMap.strokeLine(x, 0, x, railMapSizeY);
 	        }
 	        
-	      //Every 32 pixels draw a horizontal line.
-	        for (int y=0; y<railMapSizeY+1; y+=32) {
+	      //Every 24 pixels draw a horizontal line.
+	        for (int y=0; y<railMapSizeY+1; y+=24) {
 	        	railMap.strokeLine(0, y, railMapSizeX, y);
 	        }
 
@@ -135,8 +135,8 @@ public class MenuActions {
 			int xLocation = track.getxLocation();
 			int yLocation = track.getyLocation();
 			 
-			int slightlyOffX = xLocation %32;
-			int slightLyOffY = yLocation %32;
+			int slightlyOffX = xLocation %24;
+			int slightLyOffY = yLocation %24;
 			 
 			int placeX = xLocation - slightlyOffX;
 			int placeY = yLocation - slightLyOffY;
@@ -158,8 +158,8 @@ public class MenuActions {
 		boolean trackExist = false;
     	int xLocation = (int) event.getX();
 		int yLocation = (int) event.getY();
-		int slightlyOffX = xLocation %32;
-		int slightLyOffY = yLocation %32;
+		int slightlyOffX = xLocation %24;
+		int slightLyOffY = yLocation %24;
 		int placeX = xLocation - slightlyOffX;
 		int placeY = yLocation - slightLyOffY;
 		HashSet<Track> trackStore = MapManager.sharedMapManager().getMap().getTrackStore();
