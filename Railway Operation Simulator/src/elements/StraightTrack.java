@@ -11,16 +11,12 @@ public class StraightTrack extends Track {
 	 *           6 7 8
 	 */
 
-	public StraightTrack(String trackName, int xLocation, int yLocation, boolean electrified, String methodOfElectrification
-			, int trackID, int trackSpeed, int trackLength) {
+	public StraightTrack(String trackName, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
 		this.trackName = trackName;
 		this.xLocation = xLocation;
 		this.yLocation = yLocation;
 		this.electrified = electrified;
 		this.methodOfElectrification = methodOfElectrification;
-		this.trackID = trackID;
-		this.trackSpeed = trackSpeed;
-		this.trackLength = trackLength;
 
 	}
 	

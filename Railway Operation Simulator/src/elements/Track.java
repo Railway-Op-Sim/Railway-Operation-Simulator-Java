@@ -4,9 +4,8 @@ public abstract class Track extends Space {
 	protected String trackName;
 	protected boolean electrified;
 	protected String methodOfElectrification;
-	protected int trackID;
-	protected int trackSpeed;
-	protected int trackLength;
+	protected int trackSpeed = 200;
+	protected int trackLength = 100;
 	protected boolean[] trackLinks = new boolean[9];
 	
 	/*
@@ -44,15 +43,6 @@ public abstract class Track extends Space {
 		this.methodOfElectrification = methodOfElectrification;
 	}
 
-
-	public int getTrackID() {
-		return trackID;
-	}
-
-
-	public void setTrackID(int trackID) {
-		this.trackID = trackID;
-	}
 
 
 	public int getTrackSpeed() {

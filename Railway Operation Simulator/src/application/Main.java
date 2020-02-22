@@ -25,6 +25,9 @@ public class Main extends Application {
 			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("GUI.fxml")); //Load FXML file into BorderPane
 			Scene scene = new Scene(root,1280,720); //Make the Program size 1280 x 720
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm()); //Apply css elements if necessary.
+			MapManager.sharedMapManager();
+			Map currentMap = new Map();
+			MapManager.sharedMapManager().setMap(currentMap);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
@@ -37,7 +40,7 @@ public class Main extends Application {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		MapManager.sharedMapManager();
+		
 		launch(args);
 	}
 }

@@ -3,7 +3,10 @@ package application;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
+import elements.StraightTrack;
+import elements.Track;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.canvas.Canvas;
@@ -29,7 +32,7 @@ public class MenuActions {
 	 }
 	 
 	 public static void drawElement(GraphicsContext railMap, MouseEvent event) {
-		 int xLocation = (int) (event.getX());
+		 int xLocation = (int) event.getX();
 		 int yLocation = (int) event.getY();
 		 
 		 int slightlyOffX = xLocation %32;
@@ -90,14 +93,37 @@ public class MenuActions {
 
 	private static void removeGrid(Canvas display) {
 		// TODO Auto-generated method stub
-		double railMapSizeX = display.getWidth();
-        double railMapSizeY = display.getHeight();
+		int railMapSizeX = (int) display.getWidth();
+        int railMapSizeY = (int) display.getHeight();
+        
+        
+        
 		GraphicsContext railMap = display.getGraphicsContext2D();
 		railMap.clearRect(0, 0, railMapSizeX, railMapSizeY);
-		
+		Map map = MapManager.sharedMapManager().getMap();
+		ArrayList<Track> trackList = map.getTrackList();
+		File trackImage = new File("./src/application/straightTrackLight.jpg");
+		 Image image = null;
+		try {
+			image = new Image(new FileInputStream(trackImage));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		for (Track track :trackList) {
+			int xLocation = track.getxLocation();
+			int yLocation = track.getyLocation();
+			 
+			int slightlyOffX = xLocation %32;
+			int slightLyOffY = yLocation %32;
+			 
+			int placeX = xLocation - slightlyOffX;
+			int placeY = yLocation - slightLyOffY;
+			railMap.drawImage(image, placeX, placeY);
+		}
 		
 	}
- 	
-
+	
+		
 
 }

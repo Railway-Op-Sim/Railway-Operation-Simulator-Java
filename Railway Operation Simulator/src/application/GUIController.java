@@ -15,6 +15,8 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import application.MenuActions;
+import elements.StraightTrack;
+import elements.Track;
 
 /**
  * GUIController.java
@@ -87,8 +89,15 @@ public class GUIController extends Application {
     @FXML
     void placeSelectItem(MouseEvent event) {
     	GraphicsContext graphic = railMap.getGraphicsContext2D();
-    	
-    	MapManager.sharedMapManager().getMap().addElement();
+    	int xLocation = (int) event.getX();
+		int yLocation = (int) event.getY();
+		int slightlyOffX = xLocation %32;
+		int slightLyOffY = yLocation %32;
+		int placeX = xLocation - slightlyOffX;
+		int placeY = yLocation - slightLyOffY;
+    	StraightTrack track = new StraightTrack( "Straight Horizontal", xLocation, yLocation, false, "None");
+
+    	MapManager.sharedMapManager().getMap().addTrack(track);
     	MenuActions.drawElement(graphic, event);
 
     }

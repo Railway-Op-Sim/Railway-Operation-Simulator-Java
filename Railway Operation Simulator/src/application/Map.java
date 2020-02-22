@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 import elements.Space;
 import elements.StraightTrack;
@@ -16,11 +17,29 @@ import train.Train;
  */
 public class Map {
 	
+	private HashSet<Track>  trackStore = new HashSet<Track>(); 
 	private ArrayList<Track> trackList = new ArrayList<Track>();
 	private ArrayList<Train> trainList = new ArrayList<Train>();
+	private ArrayList<Object> otherList = new ArrayList<Object>();
 	
 	public Map () {
 		
+	}
+	
+	public HashSet<Track> getTrackStore() {
+		return trackStore;
+	}
+
+	public void setTrackStore(HashSet<Track> trackStore) {
+		this.trackStore = trackStore;
+	}
+
+	public ArrayList<Object> getOtherList() {
+		return otherList;
+	}
+
+	public void setOtherList(ArrayList<Object> otherList) {
+		this.otherList = otherList;
 	}
 
 	public ArrayList<Track> getTrackList() {
