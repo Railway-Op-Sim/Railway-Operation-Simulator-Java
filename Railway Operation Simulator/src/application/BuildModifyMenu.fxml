@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefWidth="128.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BuildModifyMenuController">
+   <children>
+      <HBox prefHeight="48.0" prefWidth="72.0">
+         <children>
+            <Button fx:id="buildModifyMenuButton" mnemonicParsing="false" onAction="#openbuildModifyMenu">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@BuildModify.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets top="-1.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="12.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <GridPane fx:id="trackMenu">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="28.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="28.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="32.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ToggleButton fx:id="leftBufferToggle" mnemonicParsing="false" onAction="#selectLeftBuffer">
+               <graphic>
+                  <ImageView fx:id="leftBufferImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@LeftBufferHorizontalLight24.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <toggleGroup>
+                  <ToggleGroup fx:id="elementGroup" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="rightBufferToggle" mnemonicParsing="false" onAction="#selectRightBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="1">
+               <graphic>
+                  <ImageView fx:id="rightBufferImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@RightBufferHorizontalLight24.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="upBufferToggle" mnemonicParsing="false" onAction="#selectUpBuffer" toggleGroup="$elementGroup" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="upBufferImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@UpBufferVerticalLight24.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="downBufferToggle" mnemonicParsing="false" onAction="#selectDownBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="downBufferImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@DownBufferVerticalLight24.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="horizontalToggle" mnemonicParsing="false" onAction="#selectHorizontalTrack" toggleGroup="$elementGroup" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="horizontalTrackImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@StraightTrackHorizontalLight24.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="verticalTrackToggle" mnemonicParsing="false" onAction="#selectVerticalTrack" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="verticalTrackImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@StraightTrackVerticalLight24.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

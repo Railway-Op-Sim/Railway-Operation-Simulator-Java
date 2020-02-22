@@ -31,7 +31,16 @@ import elements.Track;
  */
 
 public class GUIController extends Application {
+	
+	private static String itemSelected = null;
 
+	public static String getItemSelected() {
+		return itemSelected;
+	}
+
+	public static void setItemSelected(String itemSelected) {
+		GUIController.itemSelected = itemSelected;
+	}
 	@FXML // ResourceBundle that was given to the FXMLLoader
 	private ResourceBundle resources;
 
@@ -130,13 +139,21 @@ public class GUIController extends Application {
 	@FXML // This method is called by the FXMLLoader when initialization is complete
 	void initialize() {
 
+			try {
+				VBox buildMenu = FXMLLoader.load(getClass().getResource("BuildModifyMenu.fxml"));
+				topVBox.getChildren().add(buildMenu);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+		
 		assert topVBox != null : "fx:id=\"topVBox\" was not injected: check your FXML file 'GUI.fxml'.";
         assert exitMenuItem != null : "fx:id=\"exitMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
         assert buildModifyRailway != null : "fx:id=\"buildModifyRailway\" was not injected: check your FXML file 'GUI.fxml'.";
         assert railwayHelpMenuItem != null : "fx:id=\"railwayHelpMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
         assert railwayWebsiteMenuItem != null : "fx:id=\"railwayWebsiteMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
         assert aboutMenuItem != null : "fx:id=\"aboutMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
-       assert showHideGridButton != null : "fx:id=\"showHideGridButton\" was not injected: check your FXML file 'GUI.fxml'.";
+        assert showHideGridButton != null : "fx:id=\"showHideGridButton\" was not injected: check your FXML file 'GUI.fxml'.";
         assert railMap != null : "fx:id=\"railMap\" was not injected: check your FXML file 'GUI.fxml'.";
         }
 	/**
