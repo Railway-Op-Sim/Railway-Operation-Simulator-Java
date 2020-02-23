@@ -13,6 +13,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
@@ -64,6 +65,10 @@ public class GUIController extends Application {
 
 	@FXML // fx:id="aboutMenuItem"
 	private MenuItem aboutMenuItem; // Value injected by FXMLLoader
+	
+	@FXML // fx:id="canvasSlider"
+	private Slider canvasSlider; // Value injected by FXMLLoader
+	
 	
 	@FXML // fx:id="showHideGridButton"
 	private Button showHideGridButton; // Value injected by FXMLLoader
@@ -136,6 +141,16 @@ public class GUIController extends Application {
 	void showGrid(ActionEvent event) {
 		MenuActions.toggleGrid(railMap, showHideGridButton);
 	}
+	/**
+	 * A method that zooms in and out of canvas.
+	 * @param event
+	 */
+	@FXML
+    void onSliderChanged(MouseEvent event) {
+		int sliderValue = (int) canvasSlider.getValue();
+		railMap.setScaleX(sliderValue);
+		railMap.setScaleY(sliderValue);
+    }
 
 	/**
 	 * Auto-generated method t help initalize the FXML?
