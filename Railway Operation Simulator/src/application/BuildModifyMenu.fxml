@@ -49,7 +49,7 @@
                <graphic>
                   <ImageView fx:id="leftBufferImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@LeftBufferHorizontalLight24.jpg" />
+                        <Image url="@leftBuffer16Light.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -61,7 +61,7 @@
                <graphic>
                   <ImageView fx:id="rightBufferImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@RightBufferHorizontalLight24.jpg" />
+                        <Image url="@rightBuffer16Light.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -88,7 +88,7 @@
                <graphic>
                   <ImageView fx:id="horizontalTrackImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@StraightTrackHorizontalLight24.jpg" />
+                        <Image url="@StraightH16Light.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -97,7 +97,7 @@
                <graphic>
                   <ImageView fx:id="verticalTrackImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@StraightTrackVerticalLight24.jpg" />
+                        <Image url="@StraightV16Light.png" />
                      </image>
                   </ImageView>
                </graphic>

@@ -9,6 +9,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -16,6 +17,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import application.MenuActions;
@@ -31,7 +33,7 @@ import elements.Track;
  */
 
 public class GUIController extends Application {
-	
+
 	private static String itemSelected = null;
 
 	public static String getItemSelected() {
@@ -41,6 +43,7 @@ public class GUIController extends Application {
 	public static void setItemSelected(String itemSelected) {
 		GUIController.itemSelected = itemSelected;
 	}
+
 	@FXML // ResourceBundle that was given to the FXMLLoader
 	private ResourceBundle resources;
 
@@ -64,12 +67,12 @@ public class GUIController extends Application {
 
 	@FXML // fx:id="aboutMenuItem"
 	private MenuItem aboutMenuItem; // Value injected by FXMLLoader
-	
+
 	@FXML // fx:id="showHideGridButton"
 	private Button showHideGridButton; // Value injected by FXMLLoader
 
 	@FXML // fx:id="railMap"
-	private Canvas railMap; // Value injected by FXMLLoader
+	private GridPane railMap; // Value injected by FXMLLoader
 
 	/**
 	 * A method to exit and close the program.
@@ -108,11 +111,24 @@ public class GUIController extends Application {
 	 * @param event
 	 */
 	@FXML
-	void placeSelectItem(MouseEvent event) {
-		if (itemSelected.equals("horizontal straight")) {
-			MenuActions.addTrack(event, railMap,"./src/application/StraightTrackHorizontalLight24.jpg");
-		} else if (itemSelected.equals("left buffer")) {
-			MenuActions.addTrack(event, railMap,"./src/application/LeftBufferHorizontalLight24.jpg");
+	void onMouseClickedRailMap(MouseEvent event) {
+		if (itemSelected == null) {
+			System.out.println("Nothing selected");
+		} else {
+			
+			
+			switch (itemSelected) {
+
+			case "horizontal straight":
+				MenuActions.addTrack(event, railMap, "./src/application/straightH16Light.png");
+				break;
+			case "left buffer":
+				MenuActions.addTrack(event, railMap, "./src/application/leftBuffer16Light.png");
+				break;
+			case "right buffer":
+				MenuActions.addTrack(event, railMap, "./src/application/rightBuffer16Light.png");
+				break;
+			}
 		}
 
 	}
@@ -133,8 +149,12 @@ public class GUIController extends Application {
 	 * @param event
 	 */
 	@FXML
-	void showGrid(ActionEvent event) {
-		MenuActions.toggleGrid(railMap, showHideGridButton);
+	void toggleGrid(ActionEvent event) {
+		if (!railMap.isGridLinesVisible()) {
+			railMap.setGridLinesVisible(true);
+		} else {
+			railMap.setGridLinesVisible(false);
+		}
 	}
 
 	/**
@@ -143,23 +163,24 @@ public class GUIController extends Application {
 	@FXML // This method is called by the FXMLLoader when initialization is complete
 	void initialize() {
 
-			try {
-				VBox buildMenu = FXMLLoader.load(getClass().getResource("BuildModifyMenu.fxml"));
-				topVBox.getChildren().add(buildMenu);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} 
-		
+		try {
+			VBox buildMenu = FXMLLoader.load(getClass().getResource("BuildModifyMenu.fxml"));
+			topVBox.getChildren().add(buildMenu);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		assert topVBox != null : "fx:id=\"topVBox\" was not injected: check your FXML file 'GUI.fxml'.";
-        assert exitMenuItem != null : "fx:id=\"exitMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
-        assert buildModifyRailway != null : "fx:id=\"buildModifyRailway\" was not injected: check your FXML file 'GUI.fxml'.";
-        assert railwayHelpMenuItem != null : "fx:id=\"railwayHelpMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
-        assert railwayWebsiteMenuItem != null : "fx:id=\"railwayWebsiteMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
-        assert aboutMenuItem != null : "fx:id=\"aboutMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
-        assert showHideGridButton != null : "fx:id=\"showHideGridButton\" was not injected: check your FXML file 'GUI.fxml'.";
-        assert railMap != null : "fx:id=\"railMap\" was not injected: check your FXML file 'GUI.fxml'.";
-        }
+		assert exitMenuItem != null : "fx:id=\"exitMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
+		assert buildModifyRailway != null : "fx:id=\"buildModifyRailway\" was not injected: check your FXML file 'GUI.fxml'.";
+		assert railwayHelpMenuItem != null : "fx:id=\"railwayHelpMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
+		assert railwayWebsiteMenuItem != null : "fx:id=\"railwayWebsiteMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
+		assert aboutMenuItem != null : "fx:id=\"aboutMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
+		assert showHideGridButton != null : "fx:id=\"showHideGridButton\" was not injected: check your FXML file 'GUI.fxml'.";
+		assert railMap != null : "fx:id=\"railMap\" was not injected: check your FXML file 'GUI.fxml'.";
+	}
+
 	/**
 	 * 
 	 */

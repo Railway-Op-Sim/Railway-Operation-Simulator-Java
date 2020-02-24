@@ -16,7 +16,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.stage.Stage;
@@ -44,15 +46,15 @@ public class MenuActions {
 	  * @param railMap
 	  * @param event
 	  */
-	 public static void drawElement(GraphicsContext railMap, MouseEvent event, String file) {
+	 public static void drawElement(GridPane railMap, MouseEvent event, String file) {
 		 //Get Location of mouse click and round to 0
 		 int xLocation = (int) event.getX();
 		 int yLocation = (int) event.getY(); 
-		 // Get remiander when divided by 24 to see how close it is to the last multiple of 24
-		 int slightlyOffX = xLocation %24;
-		 int slightLyOffY = yLocation %24;
+		 // Get remiander when divided by 16 to see how close it is to the last multiple of 16.
+		 int slightlyOffX = xLocation %16;
+		 int slightLyOffY = yLocation %16;
 		 
-		 // Get the last multiple of 24 before it.
+		 // Get the last multiple of 16 before it.
 		 int placeX = xLocation - slightlyOffX;
 		 int placeY = yLocation - slightLyOffY;
 		 
@@ -63,87 +65,11 @@ public class MenuActions {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+		ImageView newImage = new ImageView(image);
 		
-		
-		railMap.drawImage( image, placeX, placeY); //Draw the image at that place.
+		railMap.add( newImage, placeX, placeY); //Draw the image at that place.
 	 }
 	 
-	 /**
-	  * A method to draw the grid on the canvas.
-	  * @param display
-	  */
-	 public static void createGrid(Canvas display) {
-		 	GraphicsContext railMap = display.getGraphicsContext2D();
-		 	
-		 	//Get the canvas size
-	        double railMapSizeX = display.getWidth();
-	        double railMapSizeY = display.getHeight();
-	        
-	        //Set grid to Black
-	        railMap.setStroke(Color.BLACK);
-	        
-	        //Every 24 pixels draw a vertical line.
-	        for (int x=0; x<railMapSizeX+1; x+=24) {
-	        	railMap.strokeLine(x, 0, x, railMapSizeY);
-	        }
-	        
-	      //Every 24 pixels draw a horizontal line.
-	        for (int y=0; y<railMapSizeY+1; y+=24) {
-	        	railMap.strokeLine(0, y, railMapSizeX, y);
-	        }
-
-	    }
-	 /**
-	  * A method to change draw or remove the grid.
-	  * Also changes text of button that activates this action.
-	  * @param display
-	  * @param showHideGridButton
-	  */
-	 public static void toggleGrid(Canvas display, Button showHideGridButton ) {
-		 String showHideGridText = showHideGridButton.getText();
-		 if (showHideGridText.equals("Show Grid")) {
-			 createGrid(display);
-			 showHideGridButton.setText("Hide Grid");
-		 } else {
-			 removeGrid(display);
-			 showHideGridButton.setText("Show Grid");
-		 }
-	 }
-	 /**
-	  * A method to remove the grid drawn on the canvas.
-	  * @param display
-	  */
-	private static void removeGrid(Canvas display) {
-		
-		int railMapSizeX = (int) display.getWidth();
-        int railMapSizeY = (int) display.getHeight();
-
-		GraphicsContext railMap = display.getGraphicsContext2D();
-		railMap.clearRect(0, 0, railMapSizeX, railMapSizeY);// Clear entire display
-		Map map = MapManager.sharedMapManager().getMap();
-		HashSet<Track> trackStore = map.getTrackStore();
-		File trackImage = new File("./src/application/straightTrackLight.jpg");
-		 Image image = null;
-		try {
-			image = new Image(new FileInputStream(trackImage));
-		} catch (FileNotFoundException e) {
-
-			e.printStackTrace();
-		}
-		// For every track in the list , redraw it.
-		for (Track track :trackStore) {
-			int xLocation = track.getxLocation();
-			int yLocation = track.getyLocation();
-			 
-			int slightlyOffX = xLocation %24;
-			int slightLyOffY = yLocation %24;
-			 
-			int placeX = xLocation - slightlyOffX;
-			int placeY = yLocation - slightLyOffY;
-			railMap.drawImage(image, placeX, placeY);
-		}
-		
-	}
 	
 	public static void makeExistingTrackErrorBox() {
 		Alert alert = new Alert(AlertType.ERROR);
@@ -154,12 +80,12 @@ public class MenuActions {
 	}
 	
 	
-	public static void addTrack(MouseEvent event,Canvas railMap, String file) {
+	public static void addTrack(MouseEvent event,GridPane railMap, String file) {
 		boolean trackExist = false;
     	int xLocation = (int) event.getX();
 		int yLocation = (int) event.getY();
-		int slightlyOffX = xLocation %24;
-		int slightLyOffY = yLocation %24;
+		int slightlyOffX = xLocation %16;
+		int slightLyOffY = yLocation %16;
 		int placeX = xLocation - slightlyOffX;
 		int placeY = yLocation - slightLyOffY;
 		HashSet<Track> trackStore = MapManager.sharedMapManager().getMap().getTrackStore();
@@ -175,8 +101,8 @@ public class MenuActions {
 		if (!trackExist) {
 			StraightTrack newTrack = new StraightTrack( "Straight Horizontal", placeX, placeY, false, "None");
 			trackStore.add(newTrack);
-			GraphicsContext graphic = railMap.getGraphicsContext2D();
-			drawElement(graphic, event, file);
+			
+			drawElement(railMap, event, file);
 		}
 		System.out.println(trackStore.size());
 	}
