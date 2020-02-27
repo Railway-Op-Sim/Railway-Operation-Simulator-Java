@@ -10,6 +10,7 @@ import elements.StraightTrack;
 import elements.Track;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.scene.Node;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
@@ -47,16 +48,9 @@ public class MenuActions {
 	  * @param event
 	  */
 	 public static void drawElement(GridPane railMap, MouseEvent event, String file) {
-		 //Get Location of mouse click and round to 0
-		 int xLocation = (int) event.getX();
-		 int yLocation = (int) event.getY(); 
-		 // Get remiander when divided by 16 to see how close it is to the last multiple of 16.
-		 int slightlyOffX = xLocation %16;
-		 int slightLyOffY = yLocation %16;
-		 
-		 // Get the last multiple of 16 before it.
-		 int placeX = xLocation - slightlyOffX;
-		 int placeY = yLocation - slightLyOffY;
+		 Node source = (Node)event.getSource() ;
+	     int yLocation = GridPane.getColumnIndex(source);
+	     int xLocation = GridPane.getRowIndex(source);
 		 
 		 File trackImage = new File(file); //Open image file.
 		 Image image = null;
@@ -67,7 +61,7 @@ public class MenuActions {
 		}
 		ImageView newImage = new ImageView(image);
 		
-		railMap.add( newImage, placeX, placeY); //Draw the image at that place.
+		railMap.add( newImage, xLocation, yLocation); //Draw the image at that place.
 	 }
 	 
 	
@@ -82,24 +76,22 @@ public class MenuActions {
 	
 	public static void addTrack(MouseEvent event,GridPane railMap, String file) {
 		boolean trackExist = false;
-    	int xLocation = (int) event.getX();
-		int yLocation = (int) event.getY();
-		int slightlyOffX = xLocation %16;
-		int slightLyOffY = yLocation %16;
-		int placeX = xLocation - slightlyOffX;
-		int placeY = yLocation - slightLyOffY;
+		GridPane source = (GridPane)event.getSource() ;
+		System.out.println(source.toString());
+        int yLocation = GridPane.getColumnIndex(source);
+        int xLocation = GridPane.getRowIndex(source);
 		HashSet<Track> trackStore = MapManager.sharedMapManager().getMap().getTrackStore();
 		for (Track track : trackStore) {
 			 int existingTrackX = track.getxLocation();
 			 int existingTrackY = track.getyLocation();
-			 if (existingTrackX ==placeX && existingTrackY == placeY) {
+			 if (existingTrackX ==xLocation && existingTrackY == yLocation) {
 				 trackExist = true;
 				 MenuActions.makeExistingTrackErrorBox();
 			} 
 		}
 		
 		if (!trackExist) {
-			StraightTrack newTrack = new StraightTrack( "Straight Horizontal", placeX, placeY, false, "None");
+			StraightTrack newTrack = new StraightTrack( "Straight Horizontal", xLocation, yLocation, false, "None");
 			trackStore.add(newTrack);
 			
 			drawElement(railMap, event, file);
