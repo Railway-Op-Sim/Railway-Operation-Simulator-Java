@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import elements.BufferedTrack;
 import elements.StraightTrack;
 import elements.Track;
 import javafx.application.Application;
@@ -23,7 +24,7 @@ import javafx.stage.Stage;
 
 public class MenuActions {
 	
-	private static int gridSize = 24;
+	private static int gridSize = 16;
 
 	/**
 	 * Constructor that makes a MenuActions object.
@@ -48,11 +49,11 @@ public class MenuActions {
 		 //Get Location of mouse click and round to 0
 		 int xLocation = (int) event.getX();
 		 int yLocation = (int) event.getY(); 
-		 // Get remiander when divided by 24 to see how close it is to the last multiple of 24
-		 int slightlyOffX = xLocation %24;
-		 int slightLyOffY = yLocation %24;
+		 // Get remiander when divided by 16 to see how close it is to the last multiple of 16.
+		 int slightlyOffX = xLocation %16;
+		 int slightLyOffY = yLocation %16;
 		 
-		 // Get the last multiple of 24 before it.
+		 // Get the last multiple of 16 before it.
 		 int placeX = xLocation - slightlyOffX;
 		 int placeY = yLocation - slightLyOffY;
 		 
@@ -83,12 +84,12 @@ public class MenuActions {
 	        railMap.setStroke(Color.BLACK);
 	        
 	        //Every 24 pixels draw a vertical line.
-	        for (int x=0; x<railMapSizeX+1; x+=24) {
+	        for (int x=0; x<railMapSizeX+1; x+=16) {
 	        	railMap.strokeLine(x, 0, x, railMapSizeY);
 	        }
 	        
 	      //Every 24 pixels draw a horizontal line.
-	        for (int y=0; y<railMapSizeY+1; y+=24) {
+	        for (int y=0; y<railMapSizeY+1; y+=16) {
 	        	railMap.strokeLine(0, y, railMapSizeX, y);
 	        }
 
@@ -135,8 +136,8 @@ public class MenuActions {
 			int xLocation = track.getxLocation();
 			int yLocation = track.getyLocation();
 			 
-			int slightlyOffX = xLocation %24;
-			int slightLyOffY = yLocation %24;
+			int slightlyOffX = xLocation %16;
+			int slightLyOffY = yLocation %16;
 			 
 			int placeX = xLocation - slightlyOffX;
 			int placeY = yLocation - slightLyOffY;
@@ -153,13 +154,21 @@ public class MenuActions {
 		alert.showAndWait();
 	}
 	
+	public static void makeNoItemSelectedErrorBox() {
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setTitle("No Item selected error");
+		alert.setContentText("Cannot place anything as nothing selected!");
+
+		alert.showAndWait();
+	}
 	
-	public static void addTrack(MouseEvent event,Canvas railMap, String file) {
+	
+	public static void addTrack(MouseEvent event,Canvas railMap, String file, String trackName) {
 		boolean trackExist = false;
     	int xLocation = (int) event.getX();
 		int yLocation = (int) event.getY();
-		int slightlyOffX = xLocation %24;
-		int slightLyOffY = yLocation %24;
+		int slightlyOffX = xLocation %16;
+		int slightLyOffY = yLocation %16;
 		int placeX = xLocation - slightlyOffX;
 		int placeY = yLocation - slightLyOffY;
 		HashSet<Track> trackStore = MapManager.sharedMapManager().getMap().getTrackStore();
@@ -173,8 +182,17 @@ public class MenuActions {
 		}
 		
 		if (!trackExist) {
-			StraightTrack newTrack = new StraightTrack( "Straight Horizontal", placeX, placeY, false, "None");
-			trackStore.add(newTrack);
+			
+			
+			if (trackName.equals("horizontal straight")) {
+				StraightTrack newTrack = new StraightTrack( "Straight Horizontal", placeX, placeY, false, "None");
+				trackStore.add(newTrack);
+			} else if (trackName.equals("left buffer")) {
+				BufferedTrack newTrack = new BufferedTrack( "Straight Horizontal", placeX, placeY, false, "None");
+				trackStore.add(newTrack);
+			}
+			
+			
 			GraphicsContext graphic = railMap.getGraphicsContext2D();
 			drawElement(graphic, event, file);
 		}

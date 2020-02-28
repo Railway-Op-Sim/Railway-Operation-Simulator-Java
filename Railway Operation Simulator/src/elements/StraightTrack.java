@@ -10,6 +10,8 @@ public class StraightTrack extends Track {
 	 *            /|\
 	 *           6 7 8
 	 */
+	
+	// Straight Horizontal, Straight Vertical, Diagonal Top Right, Diagonal Top Left
 
 	public StraightTrack(String trackName, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
 		this.trackName = trackName;

@@ -76,8 +76,14 @@ public class BuildModifyMenuController {
 
     @FXML
     void selectLeftBuffer(ActionEvent event) {
-    	
-    		GUIController.setItemSelected("left buffer");
+    		
+    		if (leftBufferToggle.isSelected()) {
+    			GUIController.setItemSelected("left buffer");
+    		} else {
+    			leftBufferToggle.setSelected(false);
+    			GUIController.setItemSelected("");
+    		}
+    		
 
     }
     @FXML
@@ -87,7 +93,13 @@ public class BuildModifyMenuController {
 
     @FXML
     void selectHorizontalTrack(ActionEvent event) {
-    	GUIController.setItemSelected("horizontal straight");
+    	
+    	if (horizontalToggle.isSelected()) {
+    		GUIController.setItemSelected("horizontal straight");
+		} else {
+			horizontalToggle.setSelected(false);
+			GUIController.setItemSelected("");
+		}
     }
 
     @FXML

@@ -17,7 +17,6 @@ public abstract class Track extends Space {
 	 *           6 7 8
 	 */
 	
-	
 
 	public Track() {
 		// TODO Auto-generated constructor stub

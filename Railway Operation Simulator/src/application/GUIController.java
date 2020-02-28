@@ -33,7 +33,7 @@ import elements.Track;
 
 public class GUIController extends Application {
 	
-	private static String itemSelected = null;
+	private static String itemSelected = "";
 
 	public static String getItemSelected() {
 		return itemSelected;
@@ -42,6 +42,7 @@ public class GUIController extends Application {
 	public static void setItemSelected(String itemSelected) {
 		GUIController.itemSelected = itemSelected;
 	}
+	
 	@FXML // ResourceBundle that was given to the FXMLLoader
 	private ResourceBundle resources;
 
@@ -68,7 +69,6 @@ public class GUIController extends Application {
 	
 	@FXML // fx:id="canvasSlider"
 	private Slider canvasSlider; // Value injected by FXMLLoader
-	
 	
 	@FXML // fx:id="showHideGridButton"
 	private Button showHideGridButton; // Value injected by FXMLLoader
@@ -114,10 +114,13 @@ public class GUIController extends Application {
 	 */
 	@FXML
 	void placeSelectItem(MouseEvent event) {
-		if (itemSelected.equals("horizontal straight")) {
-			MenuActions.addTrack(event, railMap,"./src/application/StraightTrackHorizontalLight24.jpg");
+		if (itemSelected =="") {
+			MenuActions.makeNoItemSelectedErrorBox();
+			
+		} else if (itemSelected.equals("horizontal straight")) {
+			MenuActions.addTrack(event, railMap,"./src/application/StraightH16Light.png", itemSelected);
 		} else if (itemSelected.equals("left buffer")) {
-			MenuActions.addTrack(event, railMap,"./src/application/LeftBufferHorizontalLight24.jpg");
+			MenuActions.addTrack(event, railMap,"./src/application/leftBuffer16Light.png", itemSelected);
 		}
 
 	}
