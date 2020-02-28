@@ -39,17 +39,17 @@ public class BuildModifyMenuController {
     @FXML // fx:id="rightBufferImage"
     private ImageView rightBufferImage; // Value injected by FXMLLoader
 
-    @FXML // fx:id="upBufferToggle"
-    private ToggleButton upBufferToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="topBufferToggle"
+    private ToggleButton topBufferToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="upBufferImage"
-    private ImageView upBufferImage; // Value injected by FXMLLoader
+    @FXML // fx:id="topBufferImage"
+    private ImageView topBufferImage; // Value injected by FXMLLoader
 
-    @FXML // fx:id="downBufferToggle"
-    private ToggleButton downBufferToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="bottomBufferToggle"
+    private ToggleButton bottomBufferToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="downBufferImage"
-    private ImageView downBufferImage; // Value injected by FXMLLoader
+    @FXML // fx:id="bottomBufferImage"
+    private ImageView bottomBufferImage; // Value injected by FXMLLoader
 
     @FXML // fx:id="horizontalToggle"
     private ToggleButton horizontalToggle; // Value injected by FXMLLoader
@@ -78,16 +78,22 @@ public class BuildModifyMenuController {
     void selectLeftBuffer(ActionEvent event) {
     		
     		if (leftBufferToggle.isSelected()) {
-    			GUIController.setItemSelected("left buffer");
+    			GUIController.setItemSelected(TrackType.LEFTBUFFER);
     		} else {
     			leftBufferToggle.setSelected(false);
-    			GUIController.setItemSelected("");
+    			GUIController.setItemSelected(TrackType.NONE);
     		}
     		
 
     }
     @FXML
-    void selectDownBuffer(ActionEvent event) {
+    void selectBottomBuffer(ActionEvent event) {
+    	if (bottomBufferToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.BOTTOMBUFFER);
+		} else {
+			bottomBufferToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
 
     }
 
@@ -95,21 +101,32 @@ public class BuildModifyMenuController {
     void selectHorizontalTrack(ActionEvent event) {
     	
     	if (horizontalToggle.isSelected()) {
-    		GUIController.setItemSelected("horizontal straight");
+    		GUIController.setItemSelected(TrackType.STRAIGHTHORIZONTAL);
 		} else {
 			horizontalToggle.setSelected(false);
-			GUIController.setItemSelected("");
+			GUIController.setItemSelected(TrackType.NONE);
 		}
     }
 
     @FXML
     void selectRightBuffer(ActionEvent event) {
+    	if (rightBufferToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.RIGHTBUFFER);
+		} else {
+			rightBufferToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
 
     }
 
     @FXML
-    void selectUpBuffer(ActionEvent event) {
-
+    void selectTopBuffer(ActionEvent event) {
+    	if (topBufferToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.TOPBUFFER);
+		} else {
+			topBufferToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
     }
 
     @FXML
@@ -126,10 +143,10 @@ public class BuildModifyMenuController {
         assert elementGroup != null : "fx:id=\"elementGroup\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
         assert rightBufferToggle != null : "fx:id=\"rightBufferToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
         assert rightBufferImage != null : "fx:id=\"rightBufferImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert upBufferToggle != null : "fx:id=\"upBufferToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert upBufferImage != null : "fx:id=\"upBufferImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert downBufferToggle != null : "fx:id=\"downBufferToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert downBufferImage != null : "fx:id=\"downBufferImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
+        assert topBufferToggle != null : "fx:id=\"upBufferToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
+        assert topBufferImage != null : "fx:id=\"upBufferImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
+        assert bottomBufferToggle != null : "fx:id=\"downBufferToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
+        assert bottomBufferImage != null : "fx:id=\"downBufferImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
         assert horizontalToggle != null : "fx:id=\"horizontalToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
         assert horizontalTrackImage != null : "fx:id=\"horizontalTrackImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
         assert verticalTrackToggle != null : "fx:id=\"verticalTrackToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";

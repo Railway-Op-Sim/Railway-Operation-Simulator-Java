@@ -123,14 +123,7 @@ public class MenuActions {
 		railMap.clearRect(0, 0, railMapSizeX, railMapSizeY);// Clear entire display
 		Map map = MapManager.sharedMapManager().getMap();
 		HashSet<Track> trackStore = map.getTrackStore();
-		File trackImage = new File("./src/application/straightTrackLight.jpg");
-		 Image image = null;
-		try {
-			image = new Image(new FileInputStream(trackImage));
-		} catch (FileNotFoundException e) {
-
-			e.printStackTrace();
-		}
+		
 		// For every track in the list , redraw it.
 		for (Track track :trackStore) {
 			int xLocation = track.getxLocation();
@@ -141,6 +134,39 @@ public class MenuActions {
 			 
 			int placeX = xLocation - slightlyOffX;
 			int placeY = yLocation - slightLyOffY;
+			
+			File trackImage = null;
+			Image image = null;
+			String currentTrackName = track.getTrackName();
+			switch (currentTrackName) {
+			case "Straight Horizontal" :
+				trackImage = new File("./src/graphics/StraightH16Light.png"); //Open image file.
+				break;
+				
+			case "Left Buffer" :
+				trackImage = new File("./src/graphics/leftBuffer16Light.png"); //Open image file.
+				break;
+			
+			case "Right Buffer" :
+				trackImage = new File("./src/graphics/rightBuffer16Light.png"); //Open image file.
+				break;
+			
+			case "Top Buffer" :
+				trackImage = new File("./src/graphics/topBuffer16Light.png"); //Open image file.
+				break;
+				
+			case "Bottom Buffer" :
+				trackImage = new File("./src/graphics/bottomBuffer16Light.png"); //Open image file.
+				break;
+				
+				
+			}
+			try {
+				image = new Image(new FileInputStream(trackImage)); //Set file as image.
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			
 			railMap.drawImage(image, placeX, placeY);
 		}
 		
@@ -163,7 +189,7 @@ public class MenuActions {
 	}
 	
 	
-	public static void addTrack(MouseEvent event,Canvas railMap, String file, String trackName) {
+	public static void addTrack(MouseEvent event,Canvas railMap, String file, TrackType itemSelected) {
 		boolean trackExist = false;
     	int xLocation = (int) event.getX();
 		int yLocation = (int) event.getY();
@@ -181,16 +207,40 @@ public class MenuActions {
 			} 
 		}
 		
+		
 		if (!trackExist) {
+			Track newTrack = null;
+			switch(itemSelected) {
+			case STRAIGHTHORIZONTAL: 
+				StraightTrack straightHorizontal = new StraightTrack( "Straight Horizontal", placeX, placeY, false, "None");
+				newTrack = straightHorizontal;
+				break;
 			
+			case LEFTBUFFER: 
+				BufferedTrack leftBuffer = new BufferedTrack("Left Buffer", placeX, placeY, false, "None");
+				newTrack = leftBuffer;
+				break;
 			
-			if (trackName.equals("horizontal straight")) {
-				StraightTrack newTrack = new StraightTrack( "Straight Horizontal", placeX, placeY, false, "None");
-				trackStore.add(newTrack);
-			} else if (trackName.equals("left buffer")) {
-				BufferedTrack newTrack = new BufferedTrack( "Straight Horizontal", placeX, placeY, false, "None");
-				trackStore.add(newTrack);
+			case RIGHTBUFFER: 
+				BufferedTrack rightBuffer = new BufferedTrack("Right Buffer", placeX, placeY, false, "None");
+				newTrack = rightBuffer;
+				break;
+				
+			case TOPBUFFER: 
+				BufferedTrack topBuffer = new BufferedTrack("Top Buffer", placeX, placeY, false, "None");
+				newTrack = topBuffer;
+				break;
+				
+			case BOTTOMBUFFER: 
+				BufferedTrack bottomBuffer = new BufferedTrack("Bottom Buffer", placeX, placeY, false, "None");
+				newTrack = bottomBuffer;
+				break;
+				
+			default:
+				break;
 			}
+			
+			trackStore.add(newTrack);
 			
 			
 			GraphicsContext graphic = railMap.getGraphicsContext2D();

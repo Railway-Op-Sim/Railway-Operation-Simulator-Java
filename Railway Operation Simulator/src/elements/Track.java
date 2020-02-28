@@ -1,5 +1,7 @@
 package elements;
 
+import application.TrackType;
+
 public abstract class Track extends Space {
 	protected String trackName;
 	protected boolean electrified;
@@ -20,6 +22,15 @@ public abstract class Track extends Space {
 
 	public Track() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	public String getTrackName() {
+		return trackName;
+	}
+
+
+	public void setTrackName(String trackName) {
+		this.trackName = trackName;
 	}
 
 
@@ -57,6 +68,9 @@ public abstract class Track extends Space {
 	public int getTrackLength() {
 		return trackLength;
 	}
+
+
+	
 
 
 	public void setTrackLength(int trackLength) {

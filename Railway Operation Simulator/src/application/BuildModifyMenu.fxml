@@ -49,7 +49,7 @@
                <graphic>
                   <ImageView fx:id="leftBufferImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@leftBuffer16Light.png" />
+                        <Image url="@../graphics/leftBuffer16Light.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -61,25 +61,25 @@
                <graphic>
                   <ImageView fx:id="rightBufferImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@rightBuffer16Light.png" />
+                        <Image url="@../graphics/rightBuffer16Light.png" />
                      </image>
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="upBufferToggle" mnemonicParsing="false" onAction="#selectUpBuffer" toggleGroup="$elementGroup" GridPane.rowIndex="1">
+            <ToggleButton fx:id="topBufferToggle" mnemonicParsing="false" onAction="#selectTopBuffer" toggleGroup="$elementGroup" GridPane.rowIndex="1">
                <graphic>
-                  <ImageView fx:id="upBufferImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="topBufferImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@UpBufferVerticalLight24.jpg" />
+                        <Image url="@../graphics/topBuffer16Light.png" />
                      </image>
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="downBufferToggle" mnemonicParsing="false" onAction="#selectDownBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <ToggleButton fx:id="bottomBufferToggle" mnemonicParsing="false" onAction="#selectBottomBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <graphic>
-                  <ImageView fx:id="downBufferImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="bottomBufferImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@DownBufferVerticalLight24.jpg" />
+                        <Image url="@../graphics/bottomBuffer16Light.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -88,7 +88,7 @@
                <graphic>
                   <ImageView fx:id="horizontalTrackImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@StraightH16Light.png" />
+                        <Image url="@../graphics/StraightH16Light.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -97,7 +97,7 @@
                <graphic>
                   <ImageView fx:id="verticalTrackImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@StraightV16Light.png" />
+                        <Image url="@../graphics/StraightV16Light.png" />
                      </image>
                   </ImageView>
                </graphic>

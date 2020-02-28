@@ -33,13 +33,13 @@ import elements.Track;
 
 public class GUIController extends Application {
 	
-	private static String itemSelected = "";
+	private static TrackType itemSelected = TrackType.NONE;
 
-	public static String getItemSelected() {
+	public static TrackType getItemSelected() {
 		return itemSelected;
 	}
 
-	public static void setItemSelected(String itemSelected) {
+	public static void setItemSelected(TrackType itemSelected) {
 		GUIController.itemSelected = itemSelected;
 	}
 	
@@ -114,13 +114,35 @@ public class GUIController extends Application {
 	 */
 	@FXML
 	void placeSelectItem(MouseEvent event) {
-		if (itemSelected =="") {
+		
+		switch (itemSelected) {
+		case NONE :
 			MenuActions.makeNoItemSelectedErrorBox();
-			
-		} else if (itemSelected.equals("horizontal straight")) {
-			MenuActions.addTrack(event, railMap,"./src/application/StraightH16Light.png", itemSelected);
-		} else if (itemSelected.equals("left buffer")) {
-			MenuActions.addTrack(event, railMap,"./src/application/leftBuffer16Light.png", itemSelected);
+			break;
+		
+		case STRAIGHTHORIZONTAL : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/StraightH16Light.png", itemSelected);
+			break;
+		
+		case LEFTBUFFER : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/leftBuffer16Light.png", itemSelected);
+			break;
+		
+		case RIGHTBUFFER : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/rightBuffer16Light.png", itemSelected);
+			break;
+		
+		case TOPBUFFER : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/topBuffer16Light.png", itemSelected);
+			break;
+		
+		case BOTTOMBUFFER : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/bottomBuffer16Light.png", itemSelected);
+			break;
+		default:
+			break;
+		
+		
 		}
 
 	}
