@@ -32,19 +32,19 @@ public class BufferedTrack extends Track {
 			this.trackLinks[1] = true;
 			break;
 			
-		case "Top Left Buffer":
+		case "Left Up Buffer":
 			this.trackLinks[0] = true;
 			break;
 			
-		case "Top Right Buffer":
+		case "Right Up Buffer":
 			this.trackLinks[2] = true;
 			break;
 			
-		case "Bottom Left Buffer":
+		case "Left Down Buffer":
 			this.trackLinks[6] = true;
 			break;
 			
-		case "Bottom Right Buffer":
+		case "Right Down Buffer":
 			this.trackLinks[8] = true;
 			break;
 			

@@ -233,36 +233,44 @@ public class MenuActions {
 			switch(itemSelected) {
 			case STRAIGHTHORIZONTAL: 
 				StraightTrack straightHorizontal = new StraightTrack( "Straight Horizontal", placeX, placeY, false, "None");
+				straightHorizontal.setLinks();
 				newTrack = straightHorizontal;
 				break;
 			
 			case STRAIGHTVERTICAL: 
 				StraightTrack straightVertical = new StraightTrack( "Straight Vertical", placeX, placeY, false, "None");
+				straightVertical.setLinks();
 				newTrack = straightVertical;
+				
 				break;
 			
 			case LEFTBUFFER: 
 				BufferedTrack leftBuffer = new BufferedTrack("Left Buffer", placeX, placeY, false, "None");
+				leftBuffer.setLinks();
 				newTrack = leftBuffer;
 				break;
 			
 			case RIGHTBUFFER: 
 				BufferedTrack rightBuffer = new BufferedTrack("Right Buffer", placeX, placeY, false, "None");
+				rightBuffer.setLinks();
 				newTrack = rightBuffer;
 				break;
 				
 			case TOPBUFFER: 
 				BufferedTrack topBuffer = new BufferedTrack("Top Buffer", placeX, placeY, false, "None");
+				topBuffer.setLinks();
 				newTrack = topBuffer;
 				break;
 				
 			case BOTTOMBUFFER: 
 				BufferedTrack bottomBuffer = new BufferedTrack("Bottom Buffer", placeX, placeY, false, "None");
+				bottomBuffer.setLinks();
 				newTrack = bottomBuffer;
 				break;
 				
 			case LEFTUPBUFFER: 
 				BufferedTrack leftUpBuffer = new BufferedTrack("Left Up Buffer", placeX, placeY, false, "None");
+				leftUpBuffer.setLinks();
 				newTrack = leftUpBuffer;
 				break;
 			
