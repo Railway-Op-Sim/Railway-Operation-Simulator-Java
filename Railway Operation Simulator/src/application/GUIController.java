@@ -123,6 +123,10 @@ public class GUIController extends Application {
 		case STRAIGHTHORIZONTAL : 
 			MenuActions.addTrack(event, railMap,"./src/graphics/StraightH16Light.png", itemSelected);
 			break;
+			
+		case STRAIGHTVERTICAL : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/StraightV16Light.png", itemSelected);
+			break;
 		
 		case LEFTBUFFER : 
 			MenuActions.addTrack(event, railMap,"./src/graphics/leftBuffer16Light.png", itemSelected);
@@ -138,6 +142,22 @@ public class GUIController extends Application {
 		
 		case BOTTOMBUFFER : 
 			MenuActions.addTrack(event, railMap,"./src/graphics/bottomBuffer16Light.png", itemSelected);
+			break;
+		
+		case LEFTUPBUFFER : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/leftUpBuffer16Light.png", itemSelected);
+			break;
+			
+		case RIGHTUPBUFFER : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/rightUpBuffer16Light.png", itemSelected);
+			break;
+			
+		case LEFTDOWNBUFFER : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/leftDownBuffer16Light.png", itemSelected);
+			break;
+			
+		case RIGHTDOWNBUFFER : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/rightDownBuffer16Light.png", itemSelected);
 			break;
 		default:
 			break;

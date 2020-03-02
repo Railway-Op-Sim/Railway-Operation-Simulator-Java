@@ -52,7 +52,7 @@ public class BuildModifyMenuController {
     private ImageView bottomBufferImage; // Value injected by FXMLLoader
 
     @FXML // fx:id="horizontalToggle"
-    private ToggleButton horizontalToggle; // Value injected by FXMLLoader
+    private ToggleButton horizontalTrackToggle; // Value injected by FXMLLoader
 
     @FXML // fx:id="horizontalTrackImage"
     private ImageView horizontalTrackImage; // Value injected by FXMLLoader
@@ -62,6 +62,31 @@ public class BuildModifyMenuController {
 
     @FXML // fx:id="verticalTrackImage"
     private ImageView verticalTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="leftUpBufferToggle"
+    private ToggleButton leftUpBufferToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="leftUpBufferImage"
+    private ImageView leftUpBufferImage; // Value injected by FXMLLoader
+
+    @FXML // fx:id="rightUpBufferToggle"
+    private ToggleButton rightUpBufferToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="rightUpBufferImage"
+    private ImageView rightUpBufferImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="rightDownBufferToggle"
+    private ToggleButton rightDownBufferToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="rightDownBufferImage"
+    private ImageView rightDownBufferImage; // Value injected by FXMLLoader
+
+    @FXML // fx:id="leftDownBufferToggle"
+    private ToggleButton leftDownBufferToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="leftDownBufferImage"
+    private ImageView leftDownBufferImage; // Value injected by FXMLLoader
+
 
     
     @FXML
@@ -72,6 +97,28 @@ public class BuildModifyMenuController {
     	leftBufferToggle.setVisible(true);
     	leftBufferImage.setDisable(false);
     	leftBufferImage.setVisible(true);
+    }
+    
+    @FXML
+    void selectHorizontalTrack(ActionEvent event) {
+    	
+    	if (horizontalTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.STRAIGHTHORIZONTAL);
+		} else {
+			horizontalTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    }
+    
+    @FXML
+    void selectVerticalTrack(ActionEvent event) {
+    	if (verticalTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.STRAIGHTVERTICAL);
+		} else {
+			verticalTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
     }
 
     @FXML
@@ -97,16 +144,7 @@ public class BuildModifyMenuController {
 
     }
 
-    @FXML
-    void selectHorizontalTrack(ActionEvent event) {
-    	
-    	if (horizontalToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.STRAIGHTHORIZONTAL);
-		} else {
-			horizontalToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
-		}
-    }
+    
 
     @FXML
     void selectRightBuffer(ActionEvent event) {
@@ -128,9 +166,46 @@ public class BuildModifyMenuController {
 			GUIController.setItemSelected(TrackType.NONE);
 		}
     }
+    
+    @FXML
+    void selectLeftUpBuffer(ActionEvent event) {
+    	if (leftUpBufferToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.LEFTUPBUFFER);
+		} else {
+			leftUpBufferToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    }
 
     @FXML
-    void selectVerticalTrack(ActionEvent event) {
+    void selectRightUpBuffer(ActionEvent event) {
+    	if (rightUpBufferToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.RIGHTUPBUFFER);
+		} else {
+			rightUpBufferToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    }
+    
+    @FXML
+    void selectLeftDownBuffer(ActionEvent event) {
+    	if (leftDownBufferToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.LEFTDOWNBUFFER);
+		} else {
+			leftDownBufferToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectRightDownBuffer(ActionEvent event) {
+    	if (rightDownBufferToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.RIGHTDOWNBUFFER);
+		} else {
+			rightDownBufferToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
 
     }
 
@@ -147,7 +222,7 @@ public class BuildModifyMenuController {
         assert topBufferImage != null : "fx:id=\"upBufferImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
         assert bottomBufferToggle != null : "fx:id=\"downBufferToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
         assert bottomBufferImage != null : "fx:id=\"downBufferImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert horizontalToggle != null : "fx:id=\"horizontalToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
+        assert horizontalTrackToggle != null : "fx:id=\"horizontalToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
         assert horizontalTrackImage != null : "fx:id=\"horizontalTrackImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
         assert verticalTrackToggle != null : "fx:id=\"verticalTrackToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
         assert verticalTrackImage != null : "fx:id=\"verticalTrackImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
