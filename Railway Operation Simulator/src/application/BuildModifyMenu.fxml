@@ -179,6 +179,15 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
+            <ToggleButton fx:id="topLeftGapToggle" mnemonicParsing="false" onAction="#selectTopLeftGapTrack" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="rightUpGapImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/rightDownBuffer16Light.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
          </children>
       </GridPane>
    </children>

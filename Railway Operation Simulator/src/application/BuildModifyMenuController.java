@@ -27,7 +27,7 @@ public class BuildModifyMenuController {
     @FXML // fx:id="trackMenu"
     private GridPane trackMenu; // Value injected by FXMLLoader
 
-    // Buffer toggles and images
+    // ** Buffer toggles and images. **
     
     @FXML // fx:id="leftBufferToggle"
     private ToggleButton leftBufferToggle; // Value injected by FXMLLoader
@@ -77,7 +77,7 @@ public class BuildModifyMenuController {
     @FXML // fx:id="leftDownBufferImage"
     private ImageView leftDownBufferImage; // Value injected by FXMLLoader
     
-    //Straight Track toggles and images.
+    //  ** Straight Track toggles and images. **
 
     @FXML // fx:id="horizontalTrackToggle"
     private ToggleButton horizontalTrackToggle; // Value injected by FXMLLoader
@@ -91,7 +91,7 @@ public class BuildModifyMenuController {
     @FXML // fx:id="verticalTrackImage"
     private ImageView verticalTrackImage; // Value injected by FXMLLoader
     
-    // Gap link track toggle and images
+    // ** Gap link track toggle and images **
     
     @FXML // fx:id="leftGapTrackToggle"
     private ToggleButton leftGapTrackToggle; // Value injected by FXMLLoader
@@ -291,22 +291,7 @@ public class BuildModifyMenuController {
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
-        assert buildModifyMenuButton != null : "fx:id=\"buildModifyMenuButton\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert trackMenu != null : "fx:id=\"trackMenu\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert leftBufferToggle != null : "fx:id=\"leftBufferToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert leftBufferImage != null : "fx:id=\"leftBufferImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert elementGroup != null : "fx:id=\"elementGroup\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert rightBufferToggle != null : "fx:id=\"rightBufferToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert rightBufferImage != null : "fx:id=\"rightBufferImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert upBufferToggle != null : "fx:id=\"upBufferToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert upBufferImage != null : "fx:id=\"upBufferImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert downBufferToggle != null : "fx:id=\"downBufferToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert downBufferImage != null : "fx:id=\"downBufferImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert horizontalTrackToggle != null : "fx:id=\"horizontalToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert horizontalTrackImage != null : "fx:id=\"horizontalTrackImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert verticalTrackToggle != null : "fx:id=\"verticalTrackToggle\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-        assert verticalTrackImage != null : "fx:id=\"verticalTrackImage\" was not injected: check your FXML file 'BuildModifyMenu.fxml'.";
-
+        
     }
 
 }
