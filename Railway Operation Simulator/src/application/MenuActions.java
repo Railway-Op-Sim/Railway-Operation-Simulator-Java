@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 import elements.BufferedTrack;
+import elements.GapLinkedTrack;
 import elements.StraightTrack;
 import elements.Track;
 import javafx.application.Application;
@@ -137,46 +138,62 @@ public class MenuActions {
 			
 			File trackImage = null;
 			Image image = null;
-			String currentTrackName = track.getTrackName();
-			switch (currentTrackName) {
-			case "Straight Horizontal" :
+			TrackType currentTrackType = track.getTrackType();
+			switch (currentTrackType) {
+			case STRAIGHTHORIZONTAL :
 				trackImage = new File("./src/graphics/straightH16Light.png"); //Open image file.
 				break;
 			
-			case "Straight Vertical" :
+			case STRAIGHTVERTICAL :
 				trackImage = new File("./src/graphics/straightV16Light.png"); //Open image file.
 				break;
 				
-			case "Left Buffer" :
+			case LEFTBUFFER :
 				trackImage = new File("./src/graphics/leftBuffer16Light.png"); //Open image file.
 				break;
 			
-			case "Right Buffer" :
+			case RIGHTBUFFER :
 				trackImage = new File("./src/graphics/rightBuffer16Light.png"); //Open image file.
 				break;
 			
-			case "Top Buffer" :
+			case UPBUFFER :
 				trackImage = new File("./src/graphics/topBuffer16Light.png"); //Open image file.
 				break;
 				
-			case "Bottom Buffer" :
+			case DOWNBUFFER :
 				trackImage = new File("./src/graphics/bottomBuffer16Light.png"); //Open image file.
 				break;
 				
-			case "Left Up Buffer" :
+			case LEFTUPBUFFER :
 				trackImage = new File("./src/graphics/leftUpBuffer16Light.png"); //Open image file.
 				break;
 			
-			case "Right Up Buffer" :
+			case RIGHTUPBUFFER :
 				trackImage = new File("./src/graphics/rightUpBuffer16Light.png"); //Open image file.
 				break;
 				
-			case "Left Down Buffer" :
+			case LEFTDOWNBUFFER :
 				trackImage = new File("./src/graphics/leftDownBuffer16Light.png"); //Open image file.
 				break;
 			
-			case "Right Down Buffer" :
+			case RIGHTDOWNBUFFER :
 				trackImage = new File("./src/graphics/rightDownBuffer16Light.png"); //Open image file.
+				break;
+				
+			case LEFTGAP :
+				trackImage = new File("./src/graphics/unsetLeftGap16Light.png"); //Open image file.
+				break;
+			
+			case RIGHTGAP :
+				trackImage = new File("./src/graphics/unsetRightGap16Light.png"); //Open image file.
+				break;
+			
+			case UPGAP :
+				trackImage = new File("./src/graphics/unsetUpGap16Light.png"); //Open image file.
+				break;
+				
+			case DOWNGAP :
+				trackImage = new File("./src/graphics/unsetDownGap16Light.png"); //Open image file.
 				break;
 				
 				
@@ -232,61 +249,81 @@ public class MenuActions {
 			Track newTrack = null;
 			switch(itemSelected) {
 			case STRAIGHTHORIZONTAL: 
-				StraightTrack straightHorizontal = new StraightTrack( "Straight Horizontal", placeX, placeY, false, "None");
+				StraightTrack straightHorizontal = new StraightTrack( TrackType.STRAIGHTHORIZONTAL, placeX, placeY, false, "None");
 				straightHorizontal.setLinks();
 				newTrack = straightHorizontal;
 				break;
 			
 			case STRAIGHTVERTICAL: 
-				StraightTrack straightVertical = new StraightTrack( "Straight Vertical", placeX, placeY, false, "None");
+				StraightTrack straightVertical = new StraightTrack( TrackType.STRAIGHTVERTICAL, placeX, placeY, false, "None");
 				straightVertical.setLinks();
 				newTrack = straightVertical;
 				
 				break;
 			
 			case LEFTBUFFER: 
-				BufferedTrack leftBuffer = new BufferedTrack("Left Buffer", placeX, placeY, false, "None");
+				BufferedTrack leftBuffer = new BufferedTrack(TrackType.LEFTBUFFER, placeX, placeY, false, "None");
 				leftBuffer.setLinks();
 				newTrack = leftBuffer;
 				break;
 			
 			case RIGHTBUFFER: 
-				BufferedTrack rightBuffer = new BufferedTrack("Right Buffer", placeX, placeY, false, "None");
+				BufferedTrack rightBuffer = new BufferedTrack(TrackType.RIGHTBUFFER, placeX, placeY, false, "None");
 				rightBuffer.setLinks();
 				newTrack = rightBuffer;
 				break;
 				
-			case TOPBUFFER: 
-				BufferedTrack topBuffer = new BufferedTrack("Top Buffer", placeX, placeY, false, "None");
+			case UPBUFFER: 
+				BufferedTrack topBuffer = new BufferedTrack(TrackType.UPBUFFER, placeX, placeY, false, "None");
 				topBuffer.setLinks();
 				newTrack = topBuffer;
 				break;
 				
-			case BOTTOMBUFFER: 
-				BufferedTrack bottomBuffer = new BufferedTrack("Bottom Buffer", placeX, placeY, false, "None");
+			case DOWNBUFFER: 
+				BufferedTrack bottomBuffer = new BufferedTrack(TrackType.DOWNBUFFER, placeX, placeY, false, "None");
 				bottomBuffer.setLinks();
 				newTrack = bottomBuffer;
 				break;
 				
 			case LEFTUPBUFFER: 
-				BufferedTrack leftUpBuffer = new BufferedTrack("Left Up Buffer", placeX, placeY, false, "None");
+				BufferedTrack leftUpBuffer = new BufferedTrack(TrackType.LEFTUPBUFFER, placeX, placeY, false, "None");
 				leftUpBuffer.setLinks();
 				newTrack = leftUpBuffer;
 				break;
 			
 			case RIGHTUPBUFFER: 
-				BufferedTrack rightUpBuffer = new BufferedTrack("Right Up Buffer", placeX, placeY, false, "None");
+				BufferedTrack rightUpBuffer = new BufferedTrack(TrackType.RIGHTUPBUFFER, placeX, placeY, false, "None");
 				newTrack = rightUpBuffer;
 				break;
 				
 			case LEFTDOWNBUFFER: 
-				BufferedTrack leftDownBuffer = new BufferedTrack("Left Down Buffer", placeX, placeY, false, "None");
+				BufferedTrack leftDownBuffer = new BufferedTrack(TrackType.LEFTDOWNBUFFER, placeX, placeY, false, "None");
 				newTrack = leftDownBuffer;
 				break;
 			
 			case RIGHTDOWNBUFFER: 
-				BufferedTrack rightDownBuffer = new BufferedTrack("Right Down Buffer", placeX, placeY, false, "None");
+				BufferedTrack rightDownBuffer = new BufferedTrack(TrackType.RIGHTDOWNBUFFER, placeX, placeY, false, "None");
 				newTrack = rightDownBuffer;
+				break;
+				
+			case LEFTGAP: 
+				GapLinkedTrack leftGapTrack = new GapLinkedTrack(TrackType.LEFTGAP, placeX, placeY, false, "None");
+				newTrack = leftGapTrack;
+				break;
+				
+			case RIGHTGAP: 
+				GapLinkedTrack rightGapTrack = new GapLinkedTrack(TrackType.RIGHTGAP, placeX, placeY, false, "None");
+				newTrack = rightGapTrack;
+				break;
+				
+			case UPGAP: 
+				GapLinkedTrack upGapTrack = new GapLinkedTrack(TrackType.UPGAP, placeX, placeY, false, "None");
+				newTrack = upGapTrack;
+				break;
+				
+			case DOWNGAP: 
+				GapLinkedTrack downGapTrack = new GapLinkedTrack(TrackType.DOWNGAP, placeX, placeY, false, "None");
+				newTrack = downGapTrack;
 				break;
 			default:
 				break;

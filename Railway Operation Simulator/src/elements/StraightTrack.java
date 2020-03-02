@@ -1,5 +1,7 @@
 package elements;
 
+import application.TrackType;
+
 public class StraightTrack extends Track {
 	
 	/*
@@ -13,8 +15,8 @@ public class StraightTrack extends Track {
 	
 	// Straight Horizontal, Straight Vertical, Diagonal Top Right, Diagonal Top Left
 
-	public StraightTrack(String trackName, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
-		this.trackName = trackName;
+	public StraightTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
+		this.trackType = trackType;
 		this.xLocation = xLocation;
 		this.yLocation = yLocation;
 		this.electrified = electrified;
@@ -24,19 +26,19 @@ public class StraightTrack extends Track {
 	
 	public void setLinks() {
 		
-		switch (this.trackName) {
+		switch (this.trackType) {
 		
-		case "Straight Horizontal":
+		case STRAIGHTHORIZONTAL:
 			
 			this.trackLinks[3] = true;
 			this.trackLinks[5] = true;
 			break;
 		
-		case "Straight Vertical": 
+		case STRAIGHTVERTICAL: 
 			this.trackLinks[1] = true;
 			this.trackLinks[7] = true;
             break; 
-        case "Diagonal Top Right": 
+        /*case "Diagonal Top Right": 
         	this.trackLinks[2] = true;
 			this.trackLinks[6] = true;
             break; 
@@ -44,6 +46,7 @@ public class StraightTrack extends Track {
         	this.trackLinks[0] = true;
 			this.trackLinks[8] = true;
             break;
+            */
 		}
 	}
 	

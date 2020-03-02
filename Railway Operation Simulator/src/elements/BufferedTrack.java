@@ -1,10 +1,12 @@
 package elements;
 
+import application.TrackType;
+
 public class BufferedTrack extends Track {
 
-	public BufferedTrack(String trackName, int xLocation, int yLocation, boolean electrified,
+	public BufferedTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified,
 			String methodOfElectrification) {
-		this.trackName = trackName;
+		this.trackType = trackType;
 		this.xLocation = xLocation;
 		this.yLocation = yLocation;
 		this.electrified = electrified;
@@ -14,37 +16,37 @@ public class BufferedTrack extends Track {
 
 	public void setLinks() {
 
-		switch (this.trackName) {
+		switch (this.trackType) {
 
-		case "Left Buffer":
+		case LEFTBUFFER:
 			this.trackLinks[5] = true;
 			break;
 			
-		case "Right Buffer":
+		case RIGHTBUFFER:
 			this.trackLinks[3] = true;
 			break;
 			
-		case "Top Buffer":
+		case UPBUFFER:
 			this.trackLinks[7] = true;
 			break;
 			
-		case "Bottom Buffer":
+		case DOWNBUFFER:
 			this.trackLinks[1] = true;
 			break;
 			
-		case "Left Up Buffer":
+		case LEFTUPBUFFER:
 			this.trackLinks[0] = true;
 			break;
 			
-		case "Right Up Buffer":
+		case RIGHTUPBUFFER:
 			this.trackLinks[2] = true;
 			break;
 			
-		case "Left Down Buffer":
+		case LEFTDOWNBUFFER:
 			this.trackLinks[6] = true;
 			break;
 			
-		case "Right Down Buffer":
+		case RIGHTDOWNBUFFER:
 			this.trackLinks[8] = true;
 			break;
 			

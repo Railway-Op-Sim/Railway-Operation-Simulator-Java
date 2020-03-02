@@ -3,7 +3,7 @@ package elements;
 import application.TrackType;
 
 public abstract class Track extends Space {
-	protected String trackName;
+	protected TrackType trackType;
 	protected boolean electrified;
 	protected String methodOfElectrification;
 	protected int trackSpeed = 200;
@@ -24,13 +24,13 @@ public abstract class Track extends Space {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public String getTrackName() {
-		return trackName;
+	public TrackType getTrackType() {
+		return this.trackType;
 	}
 
 
-	public void setTrackName(String trackName) {
-		this.trackName = trackName;
+	public void setTrackType(TrackType trackType) {
+		this.trackType = trackType;
 	}
 
 

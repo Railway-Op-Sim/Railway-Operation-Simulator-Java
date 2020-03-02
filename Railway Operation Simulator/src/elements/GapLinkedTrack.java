@@ -1,10 +1,13 @@
 package elements;
 
+import application.TrackType;
+
 public class GapLinkedTrack extends Track {
 	boolean[] gapLink = new boolean[9];
+	GapLinkedTrack specialLink;
 
-	public GapLinkedTrack(String trackName, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
-		this.trackName = trackName;
+	public GapLinkedTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
+		this.trackType = trackType;
 		this.xLocation = xLocation;
 		this.yLocation = yLocation;
 		this.electrified = electrified;
@@ -12,45 +15,58 @@ public class GapLinkedTrack extends Track {
 
 	}
 	
-public void setLinks() {
+	public void setLinks() {
 		
-		switch (this.trackName) {
+		switch (this.trackType) {
 		
-		case "Left Gap Linked Track":
+		case LEFTGAP:
 			this.trackLinks[5] = true;
 
 			break;
 		
-		case "Top Left Gap Linked Track": 
+		/*case "Up Left Gap Track": 
 			this.trackLinks[8] = true;
 
             break; 
-        case "Top Gap Linked Track": 
+            */
+        case UPGAP: 
         	this.trackLinks[7] = true;
         	
             break; 
-        case "Top Right Linked Track": 
+        /*case "Up Right Track": 
         	this.trackLinks[6] = true;
 
             break;
-        case "Right Linked Track": 
+            */
+        case RIGHTGAP: 
         	this.trackLinks[3] = true;
 
             break;
-        case "Down Right Linked Track": 
+        /*case "Down Right Linked Track": 
         	this.trackLinks[0] = true;
 
-            break;
-        case "Down Linked Track": 
+            break; */
+        case DOWNGAP: 
         	this.trackLinks[1] = true;
 
             break;
             
-        case "Left Down Linked Track": 
+       /* case "Left Down Linked Track": 
         	this.trackLinks[2] = true;
 
             break;
+            */
 		}
 	}
+
+	public GapLinkedTrack getSpecialLink() {
+		return specialLink;
+	}
+
+	public void setSpecialLink(GapLinkedTrack specialLink) {
+		this.specialLink = specialLink;
+	}
+	
+	
 
 }
