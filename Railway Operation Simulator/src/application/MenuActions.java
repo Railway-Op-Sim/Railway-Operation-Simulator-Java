@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
 import java.util.HashSet;
+import java.util.Iterator;
 
 import elements.BufferedTrack;
 import elements.DirectionalTrack;
@@ -150,6 +152,14 @@ public class MenuActions {
 				trackImage = new File("./src/graphics/straightV.png"); //Open image file.
 				break;
 				
+			case STRAIGHTLEFTUP :
+				trackImage = new File("./src/graphics/straightLeftUp.png"); //Open image file.
+				break;
+			
+			case STRAIGHTRIGHTUP :
+				trackImage = new File("./src/graphics/straightRightUp.png"); //Open image file.
+				break;
+				
 			case LEFTBUFFER :
 				trackImage = new File("./src/graphics/leftBuffer.png"); //Open image file.
 				break;
@@ -263,7 +273,15 @@ public class MenuActions {
 		alert.showAndWait();
 	}
 	
-	public static void deleteTrack (MouseEvent event,Canvas display) {
+	public static void makeDeleteTrackErrorBox() {
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setTitle("No track found error");
+		alert.setContentText("Cannot delete as no trackis there!");
+
+		alert.showAndWait();
+	}
+	
+	public static void deleteTrack (MouseEvent event,Canvas display)  {
     	int xLocation = (int) event.getX();
 		int yLocation = (int) event.getY();
 		int slightlyOffX = xLocation %16;
@@ -272,15 +290,32 @@ public class MenuActions {
 		int placeY = yLocation - slightLyOffY;
 		GraphicsContext railMap = display.getGraphicsContext2D();
 		HashSet<Track> trackStore = MapManager.sharedMapManager().getMap().getTrackStore();
+		Track item = null;
 		for (Track track : trackStore) {
 			 int existingTrackX = track.getxLocation();
 			 int existingTrackY = track.getyLocation();
 			 if (existingTrackX ==placeX && existingTrackY == placeY) {
-				 trackStore.remove(track);
-				 railMap.clearRect(placeX, placeY, placeX + gridSize, placeY + gridSize);
-			} 
+				 item = track;
+				 railMap.clearRect(placeX, placeY, gridSize, gridSize);
+				} 
+			}
+		if (item !=null) {
+			trackStore.remove(item);
+			railMap.strokeRect(placeX, placeY, gridSize, gridSize);
+		} else {
+			makeDeleteTrackErrorBox();
 		}
 		
+			
+		/*for (Iterator<Track> i = trackStore.iterator(); i.hasNext();) {
+		    Track track = i.next();
+		    int existingTrackX = track.getxLocation();
+			int existingTrackY = track.getyLocation();
+			if (existingTrackX ==placeX && existingTrackY == placeY) {
+		        i.remove();
+		    }
+		}
+		*/
 	}
 	
 	
@@ -316,6 +351,19 @@ public class MenuActions {
 				StraightTrack straightVertical = new StraightTrack( TrackType.STRAIGHTVERTICAL, placeX, placeY, false, "None");
 				straightVertical.setLinks();
 				newTrack = straightVertical;
+				
+				break;
+				
+			case STRAIGHTLEFTUP: 
+				StraightTrack straightLeftUp = new StraightTrack( TrackType.STRAIGHTLEFTUP, placeX, placeY, false, "None");
+				straightLeftUp.setLinks();
+				newTrack = straightLeftUp;
+				break;
+			
+			case STRAIGHTRIGHTUP: 
+				StraightTrack straightRightUp = new StraightTrack( TrackType.STRAIGHTRIGHTUP, placeX, placeY, false, "None");
+				straightRightUp.setLinks();
+				newTrack = straightRightUp;
 				
 				break;
 			

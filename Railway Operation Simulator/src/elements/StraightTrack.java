@@ -36,15 +36,15 @@ public class StraightTrack extends Track {
 			this.trackLinks[1] = true;
 			this.trackLinks[7] = true;
             break; 
-        /*case "Diagonal Top Right": 
+        case STRAIGHTRIGHTUP : 
         	this.trackLinks[2] = true;
 			this.trackLinks[6] = true;
             break; 
-        case "Diagonal Top Left": 
+        case STRAIGHTLEFTUP : 
         	this.trackLinks[0] = true;
 			this.trackLinks[8] = true;
             break;
-            */
+            
 		}
 	}
 	

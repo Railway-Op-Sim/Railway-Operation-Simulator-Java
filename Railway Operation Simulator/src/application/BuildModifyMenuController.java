@@ -93,6 +93,18 @@ public class BuildModifyMenuController {
     @FXML // fx:id="verticalTrackImage"
     private ImageView verticalTrackImage; // Value injected by FXMLLoader
     
+    @FXML // fx:id="straightRightUpToggle"
+    private ToggleButton straightRightUpToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="straightRightUpImage"
+    private ImageView straightRightUpImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="straightLeftUpToggle"
+    private ToggleButton straightLeftUpToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="straightLeftUpImage"
+    private ImageView straightLeftUpImage; // Value injected by FXMLLoader
+    
     // ** Gap link track toggle and images **
     
     @FXML // fx:id="leftGapTrackToggle"
@@ -201,6 +213,28 @@ public class BuildModifyMenuController {
     		GUIController.setItemSelected(TrackType.STRAIGHTVERTICAL);
 		} else {
 			verticalTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectStraightLeftUpTrack(ActionEvent event) {
+    	if (straightLeftUpToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.STRAIGHTLEFTUP);
+		} else {
+			straightLeftUpToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectStraightRightUpTrack(ActionEvent event) {
+    	if (straightRightUpToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.STRAIGHTRIGHTUP);
+		} else {
+			straightRightUpToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 

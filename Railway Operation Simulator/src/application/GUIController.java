@@ -131,6 +131,14 @@ public class GUIController extends Application {
 			case STRAIGHTVERTICAL : 
 				MenuActions.addTrack(event, railMap,"./src/graphics/StraightV.png", itemSelected);
 				break;
+				
+			case STRAIGHTLEFTUP : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/straightLeftUp.png", itemSelected);
+				break;
+				
+			case STRAIGHTRIGHTUP : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/straightRightUp.png", itemSelected);
+				break;
 			
 			case LEFTBUFFER : 
 				MenuActions.addTrack(event, railMap,"./src/graphics/leftBuffer.png", itemSelected);
