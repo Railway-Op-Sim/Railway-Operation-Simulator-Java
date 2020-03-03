@@ -183,6 +183,15 @@ public class GUIController extends Application {
 		case RIGHTUPGAP : 
 			MenuActions.addTrack(event, railMap,"./src/graphics/unsetRightUpGap.png", itemSelected);
 			break;
+			
+		case LEFTDOWNGAP : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/unsetLeftDownGap.png", itemSelected);
+			break;
+			
+		case RIGHTDOWNGAP : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/unsetRightDownGap.png", itemSelected);
+			break;
+			
 		default:
 			break;
 		

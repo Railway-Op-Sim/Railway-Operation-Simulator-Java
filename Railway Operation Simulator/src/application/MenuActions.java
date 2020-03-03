@@ -204,6 +204,18 @@ public class MenuActions {
 				trackImage = new File("./src/graphics/unsetRightUpGap.png"); //Open image file.
 				break;
 				
+			case LEFTDOWNGAP :
+				trackImage = new File("./src/graphics/unsetLeftDownGap.png"); //Open image file.
+				break;
+				
+			case RIGHTDOWNGAP :
+				trackImage = new File("./src/graphics/unsetRightDownGap.png"); //Open image file.
+				break;
+				
+			default:
+				break;
+				
+				
 				
 			}
 			try {
@@ -342,6 +354,16 @@ public class MenuActions {
 			case RIGHTUPGAP: 
 				GapLinkedTrack rightUpGapTrack = new GapLinkedTrack(TrackType.RIGHTUPGAP, placeX, placeY, false, "None");
 				newTrack = rightUpGapTrack;
+				break;
+				
+			case LEFTDOWNGAP: 
+				GapLinkedTrack leftDownGapTrack = new GapLinkedTrack(TrackType.LEFTDOWNGAP, placeX, placeY, false, "None");
+				newTrack = leftDownGapTrack;
+				break;
+				
+			case RIGHTDOWNGAP: 
+				GapLinkedTrack rightDownGapTrack = new GapLinkedTrack(TrackType.RIGHTDOWNGAP, placeX, placeY, false, "None");
+				newTrack = rightDownGapTrack;
 				break;
 			default:
 				break;
