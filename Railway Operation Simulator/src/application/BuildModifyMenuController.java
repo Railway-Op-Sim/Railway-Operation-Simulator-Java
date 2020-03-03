@@ -116,6 +116,18 @@ public class BuildModifyMenuController {
 
     @FXML // fx:id="downGapTrackImage"
     private ImageView downGapTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="leftUpGapTrackToggle"
+    private ToggleButton leftUpGapTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="leftUpGapTrackImage"
+    private ImageView leftUpGapTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="rightUpGapTrackToggle"
+    private ToggleButton rightUpGapTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="rightUpGapTrackImage"
+    private ImageView rightUpGapTrackImage; // Value injected by FXMLLoader
    
 
     
@@ -284,6 +296,28 @@ public class BuildModifyMenuController {
     		GUIController.setItemSelected(TrackType.UPGAP);
 		} else {
 			upGapTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectLeftUpGapTrack(ActionEvent event) {
+    	if (leftUpGapTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.LEFTUPGAP);
+		} else {
+			leftUpGapTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectRightUpGapTrack(ActionEvent event) {
+    	if (rightUpGapTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.RIGHTUPGAP);
+		} else {
+			rightUpGapTrackToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 

@@ -141,59 +141,67 @@ public class MenuActions {
 			TrackType currentTrackType = track.getTrackType();
 			switch (currentTrackType) {
 			case STRAIGHTHORIZONTAL :
-				trackImage = new File("./src/graphics/straightH16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/straightH.png"); //Open image file.
 				break;
 			
 			case STRAIGHTVERTICAL :
-				trackImage = new File("./src/graphics/straightV16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/straightV.png"); //Open image file.
 				break;
 				
 			case LEFTBUFFER :
-				trackImage = new File("./src/graphics/leftBuffer16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/leftBuffer.png"); //Open image file.
 				break;
 			
 			case RIGHTBUFFER :
-				trackImage = new File("./src/graphics/rightBuffer16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/rightBuffer.png"); //Open image file.
 				break;
 			
 			case UPBUFFER :
-				trackImage = new File("./src/graphics/topBuffer16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/upBuffer.png"); //Open image file.
 				break;
 				
 			case DOWNBUFFER :
-				trackImage = new File("./src/graphics/bottomBuffer16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/downBuffer.png"); //Open image file.
 				break;
 				
 			case LEFTUPBUFFER :
-				trackImage = new File("./src/graphics/leftUpBuffer16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/leftUpBuffer.png"); //Open image file.
 				break;
 			
 			case RIGHTUPBUFFER :
-				trackImage = new File("./src/graphics/rightUpBuffer16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/rightUpBuffer.png"); //Open image file.
 				break;
 				
 			case LEFTDOWNBUFFER :
-				trackImage = new File("./src/graphics/leftDownBuffer16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/leftDownBuffer.png"); //Open image file.
 				break;
 			
 			case RIGHTDOWNBUFFER :
-				trackImage = new File("./src/graphics/rightDownBuffer16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/rightDownBuffer.png"); //Open image file.
 				break;
 				
 			case LEFTGAP :
-				trackImage = new File("./src/graphics/unsetLeftGap16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/unsetLeftGap.png"); //Open image file.
 				break;
 			
 			case RIGHTGAP :
-				trackImage = new File("./src/graphics/unsetRightGap16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/unsetRightGap.png"); //Open image file.
 				break;
 			
 			case UPGAP :
-				trackImage = new File("./src/graphics/unsetUpGap16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/unsetUpGap.png"); //Open image file.
 				break;
 				
 			case DOWNGAP :
-				trackImage = new File("./src/graphics/unsetDownGap16Light.png"); //Open image file.
+				trackImage = new File("./src/graphics/unsetDownGap.png"); //Open image file.
+				break;
+				
+			case LEFTUPGAP :
+				trackImage = new File("./src/graphics/unsetLeftUpGap.png"); //Open image file.
+				break;
+				
+			case RIGHTUPGAP :
+				trackImage = new File("./src/graphics/unsetRightUpGap.png"); //Open image file.
 				break;
 				
 				
@@ -324,6 +332,16 @@ public class MenuActions {
 			case DOWNGAP: 
 				GapLinkedTrack downGapTrack = new GapLinkedTrack(TrackType.DOWNGAP, placeX, placeY, false, "None");
 				newTrack = downGapTrack;
+				break;
+			
+			case LEFTUPGAP: 
+				GapLinkedTrack leftUpGapTrack = new GapLinkedTrack(TrackType.LEFTUPGAP, placeX, placeY, false, "None");
+				newTrack = leftUpGapTrack;
+				break;
+				
+			case RIGHTUPGAP: 
+				GapLinkedTrack rightUpGapTrack = new GapLinkedTrack(TrackType.RIGHTUPGAP, placeX, placeY, false, "None");
+				newTrack = rightUpGapTrack;
 				break;
 			default:
 				break;

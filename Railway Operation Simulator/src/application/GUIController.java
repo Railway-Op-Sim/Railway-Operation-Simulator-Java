@@ -121,59 +121,67 @@ public class GUIController extends Application {
 			break;
 		
 		case STRAIGHTHORIZONTAL : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/StraightH16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/StraightH.png", itemSelected);
 			break;
 			
 		case STRAIGHTVERTICAL : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/StraightV16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/StraightV.png", itemSelected);
 			break;
 		
 		case LEFTBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/leftBuffer16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/leftBuffer.png", itemSelected);
 			break;
 		
 		case RIGHTBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/rightBuffer16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/rightBuffer.png", itemSelected);
 			break;
 		
 		case UPBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/topBuffer16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/upBuffer.png", itemSelected);
 			break;
 		
 		case DOWNBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/bottomBuffer16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/downBuffer.png", itemSelected);
 			break;
 		
 		case LEFTUPBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/leftUpBuffer16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/leftUpBuffer.png", itemSelected);
 			break;
 			
 		case RIGHTUPBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/rightUpBuffer16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/rightUpBuffer.png", itemSelected);
 			break;
 			
 		case LEFTDOWNBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/leftDownBuffer16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/leftDownBuffer.png", itemSelected);
 			break;
 			
 		case RIGHTDOWNBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/rightDownBuffer16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/rightDownBuffer.png", itemSelected);
 			break;
 			
 		case LEFTGAP : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/unsetLeftGap16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/unsetLeftGap.png", itemSelected);
 			break;
 		
 		case RIGHTGAP : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/unsetRightGap16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/unsetRightGap.png", itemSelected);
 			break;
 			
 		case UPGAP : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/unsetUpGap16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/unsetUpGap.png", itemSelected);
 			break;
 			
 		case DOWNGAP : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/unsetDownGap16Light.png", itemSelected);
+			MenuActions.addTrack(event, railMap,"./src/graphics/unsetDownGap.png", itemSelected);
+			break;
+			
+		case LEFTUPGAP : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/unsetLeftUpGap.png", itemSelected);
+			break;
+			
+		case RIGHTUPGAP : 
+			MenuActions.addTrack(event, railMap,"./src/graphics/unsetRightUpGap.png", itemSelected);
 			break;
 		default:
 			break;

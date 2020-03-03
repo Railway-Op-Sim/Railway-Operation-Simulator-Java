@@ -54,7 +54,7 @@
                <graphic>
                   <ImageView fx:id="horizontalTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/StraightH16Light.png" />
+                        <Image url="@../graphics/straightH.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -66,7 +66,7 @@
                <graphic>
                   <ImageView fx:id="leftGapTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/setLeftGap16Light.png" />
+                        <Image url="@../graphics/setLeftGap.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -75,7 +75,7 @@
                <graphic>
                   <ImageView fx:id="leftBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/leftBuffer16Light.png" />
+                        <Image url="@../graphics/leftBuffer.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -84,7 +84,7 @@
                <graphic>
                   <ImageView fx:id="verticalTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/StraightV16Light.png" />
+                        <Image url="@../graphics/straightV.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -93,7 +93,7 @@
                <graphic>
                   <ImageView fx:id="rightGapTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/setRightGap16Light.png" />
+                        <Image url="@../graphics/setRightGap.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -102,7 +102,7 @@
                <graphic>
                   <ImageView fx:id="rightBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/rightBuffer16Light.png" />
+                        <Image url="@../graphics/rightBuffer.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -111,7 +111,7 @@
                <graphic>
                   <ImageView fx:id="downGapTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/setDownGap16Light.png" />
+                        <Image url="@../graphics/setDownGap.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -120,7 +120,7 @@
                <graphic>
                   <ImageView fx:id="downBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/bottomBuffer16Light.png" />
+                        <Image url="@../graphics/downBuffer.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -129,7 +129,7 @@
                <graphic>
                   <ImageView fx:id="upGapTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/setUpGap16Light.png" />
+                        <Image url="@../graphics/setUpGap.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -138,7 +138,16 @@
                <graphic>
                   <ImageView fx:id="upBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/topBuffer16Light.png" />
+                        <Image url="@../graphics/upBuffer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="leftUpGapTrackToggle" mnemonicParsing="false" onAction="#selectLeftUpGapTrack" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="leftUpGapTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/setLeftUpGap.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -147,16 +156,16 @@
                <graphic>
                   <ImageView fx:id="leftUpBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/leftUpBuffer16Light.png" />
+                        <Image url="@../graphics/leftUpBuffer.png" />
                      </image>
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="leftDownBufferToggle" mnemonicParsing="false" onAction="#selectLeftDownBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="6" GridPane.rowIndex="2">
+            <ToggleButton fx:id="rightUpGapTrackToggle" mnemonicParsing="false" onAction="#selectRightUpGapTrack" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <graphic>
-                  <ImageView fx:id="leftDownBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="rightUpGapTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/leftDownBuffer16Light.png" />
+                        <Image url="@../graphics/setRighUpGap.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -165,7 +174,16 @@
                <graphic>
                   <ImageView fx:id="rightUpBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/rightUpBuffer16Light.png" />
+                        <Image url="@../graphics/rightUpBuffer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="leftDownBufferToggle" mnemonicParsing="false" onAction="#selectLeftDownBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="leftDownBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/leftDownBuffer.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -174,16 +192,7 @@
                <graphic>
                   <ImageView fx:id="rightDownBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/rightDownBuffer16Light.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </ToggleButton>
-            <ToggleButton fx:id="topLeftGapToggle" mnemonicParsing="false" onAction="#selectTopLeftGapTrack" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="1">
-               <graphic>
-                  <ImageView fx:id="rightUpGapImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../graphics/rightDownBuffer16Light.png" />
+                        <Image url="@../graphics/rightDownBuffer.png" />
                      </image>
                   </ImageView>
                </graphic>
