@@ -1,7 +1,5 @@
 package elements;
 
-import application.TrackType;
-
 public abstract class Track extends Space {
 	protected TrackType trackType;
 	protected boolean electrified;

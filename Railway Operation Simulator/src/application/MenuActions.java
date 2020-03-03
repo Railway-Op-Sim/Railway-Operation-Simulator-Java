@@ -7,9 +7,11 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 import elements.BufferedTrack;
+import elements.DirectionalTrack;
 import elements.GapLinkedTrack;
 import elements.StraightTrack;
 import elements.Track;
+import elements.TrackType;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.canvas.Canvas;
@@ -212,6 +214,22 @@ public class MenuActions {
 				trackImage = new File("./src/graphics/unsetRightDownGap.png"); //Open image file.
 				break;
 				
+			case DIRECTLEFT :
+				trackImage = new File("./src/graphics/directLeftTrack.png"); //Open image file.
+				break;
+				
+			case DIRECTRIGHT :
+				trackImage = new File("./src/graphics/directRightTrack.png"); //Open image file.
+				break;
+				
+			case DIRECTUP :
+				trackImage = new File("./src/graphics/directUpTrack.png"); //Open image file.
+				break;
+				
+			case DIRECTDOWN :
+				trackImage = new File("./src/graphics/directDownTrack.png"); //Open image file.
+				break;
+				
 			default:
 				break;
 				
@@ -243,6 +261,26 @@ public class MenuActions {
 		alert.setContentText("Cannot place anything as nothing selected!");
 
 		alert.showAndWait();
+	}
+	
+	public static void deleteTrack (MouseEvent event,Canvas display) {
+    	int xLocation = (int) event.getX();
+		int yLocation = (int) event.getY();
+		int slightlyOffX = xLocation %16;
+		int slightLyOffY = yLocation %16;
+		int placeX = xLocation - slightlyOffX;
+		int placeY = yLocation - slightLyOffY;
+		GraphicsContext railMap = display.getGraphicsContext2D();
+		HashSet<Track> trackStore = MapManager.sharedMapManager().getMap().getTrackStore();
+		for (Track track : trackStore) {
+			 int existingTrackX = track.getxLocation();
+			 int existingTrackY = track.getyLocation();
+			 if (existingTrackX ==placeX && existingTrackY == placeY) {
+				 trackStore.remove(track);
+				 railMap.clearRect(placeX, placeY, placeX + gridSize, placeY + gridSize);
+			} 
+		}
+		
 	}
 	
 	
@@ -364,6 +402,26 @@ public class MenuActions {
 			case RIGHTDOWNGAP: 
 				GapLinkedTrack rightDownGapTrack = new GapLinkedTrack(TrackType.RIGHTDOWNGAP, placeX, placeY, false, "None");
 				newTrack = rightDownGapTrack;
+				break;
+				
+			case DIRECTLEFT: 
+				DirectionalTrack directLeftTrack = new DirectionalTrack(TrackType.DIRECTLEFT, placeX, placeY, false, "None");
+				newTrack = directLeftTrack;
+				break;
+				
+			case DIRECTRIGHT: 
+				DirectionalTrack directRightTrack = new DirectionalTrack(TrackType.DIRECTRIGHT, placeX, placeY, false, "None");
+				newTrack = directRightTrack;
+				break;
+				
+			case DIRECTUP: 
+				DirectionalTrack directUpTrack = new DirectionalTrack(TrackType.DIRECTUP, placeX, placeY, false, "None");
+				newTrack = directUpTrack;
+				break;
+				
+			case DIRECTDOWN: 
+				DirectionalTrack directDownTrack = new DirectionalTrack(TrackType.DIRECTDOWN, placeX, placeY, false, "None");
+				newTrack = directDownTrack;
 				break;
 			default:
 				break;

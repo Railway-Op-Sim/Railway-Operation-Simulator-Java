@@ -2,6 +2,8 @@ package application;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import elements.TrackType;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -140,6 +142,32 @@ public class BuildModifyMenuController {
 
     @FXML // fx:id="rightDownGapTrackImage"
     private ImageView rightDownGapTrackImage; // Value injected by FXMLLoader
+    
+    //** Directional Track toggles and images. **
+    
+    @FXML // fx:id="directLeftTrackToggle"
+    private ToggleButton directLeftTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="directLeftTrackImage"
+    private ImageView directLeftTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="directRightTrackToggle"
+    private ToggleButton directRightTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="directRightTrackImage"
+    private ImageView directRightTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="directUpTrackToggle"
+    private ToggleButton directUpTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="directUpTrackImage"
+    private ImageView directUpTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="directDownTrackToggle"
+    private ToggleButton directDownTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="directDownTrackImage"
+    private ImageView directDownTrackImage; // Value injected by FXMLLoader
 
    
 
@@ -357,6 +385,54 @@ public class BuildModifyMenuController {
 		}
 
     }
+    
+    // Select directional track actions
+    
+    @FXML
+    void selectDirectLeftTrack(ActionEvent event) {
+    	if (directLeftTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.DIRECTLEFT);
+		} else {
+			directLeftTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectDirectRightTrack(ActionEvent event) {
+    	if (directRightTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.DIRECTRIGHT);
+		} else {
+			directRightTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectDirectUpTrack(ActionEvent event) {
+    	if (directUpTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.DIRECTUP);
+		} else {
+			directUpTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectDirectDownTrack(ActionEvent event) {
+    	if (directDownTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.DIRECTDOWN);
+		} else {
+			directDownTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {

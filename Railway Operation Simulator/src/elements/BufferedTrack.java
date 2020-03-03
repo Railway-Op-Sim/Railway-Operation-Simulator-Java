@@ -1,7 +1,5 @@
 package elements;
 
-import application.TrackType;
-
 public class BufferedTrack extends Track {
 
 	public BufferedTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified,

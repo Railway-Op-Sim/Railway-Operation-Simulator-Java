@@ -1,7 +1,5 @@
 package elements;
 
-import application.TrackType;
-
 public class CurvedTrack extends Track {
 
 	public CurvedTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {

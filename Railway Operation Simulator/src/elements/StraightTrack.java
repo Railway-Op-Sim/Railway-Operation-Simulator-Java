@@ -1,7 +1,5 @@
 package elements;
 
-import application.TrackType;
-
 public class StraightTrack extends Track {
 	
 	/*

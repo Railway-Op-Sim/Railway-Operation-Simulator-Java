@@ -1,7 +1,5 @@
 package elements;
 
-import application.TrackType;
-
 public class GapLinkedTrack extends Track {
 	boolean[] gapLink = new boolean[9];
 	GapLinkedTrack specialLink;

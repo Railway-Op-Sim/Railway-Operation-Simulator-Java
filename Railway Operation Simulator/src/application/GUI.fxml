@@ -71,7 +71,7 @@
    <center>
       <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="480.0" prefWidth="640.0" BorderPane.alignment="CENTER">
          <content>
-      		<Canvas fx:id="railMap" height="438.0" onMouseClicked="#placeSelectItem" width="747.0" />
+      		<Canvas fx:id="railMap" height="438.0" onMouseClicked="#onMouseClicked" width="747.0" />
          </content>
       </ScrollPane>
    </center>

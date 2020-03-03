@@ -15,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -22,6 +23,7 @@ import javafx.stage.Stage;
 import application.MenuActions;
 import elements.StraightTrack;
 import elements.Track;
+import elements.TrackType;
 
 /**
  * GUIController.java The class that interacts with the GUI.fxml to output to
@@ -113,90 +115,114 @@ public class GUIController extends Application {
 	 * @param event
 	 */
 	@FXML
-	void placeSelectItem(MouseEvent event) {
+	void onMouseClicked(MouseEvent event) {
 		
-		switch (itemSelected) {
-		case NONE :
-			MenuActions.makeNoItemSelectedErrorBox();
-			break;
-		
-		case STRAIGHTHORIZONTAL : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/StraightH.png", itemSelected);
-			break;
+		if (event.getButton() == MouseButton.PRIMARY) {
 			
-		case STRAIGHTVERTICAL : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/StraightV.png", itemSelected);
-			break;
-		
-		case LEFTBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/leftBuffer.png", itemSelected);
-			break;
-		
-		case RIGHTBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/rightBuffer.png", itemSelected);
-			break;
-		
-		case UPBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/upBuffer.png", itemSelected);
-			break;
-		
-		case DOWNBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/downBuffer.png", itemSelected);
-			break;
-		
-		case LEFTUPBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/leftUpBuffer.png", itemSelected);
-			break;
+			switch (itemSelected) {
+			case NONE :
+				MenuActions.makeNoItemSelectedErrorBox();
+				break;
 			
-		case RIGHTUPBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/rightUpBuffer.png", itemSelected);
-			break;
+			case STRAIGHTHORIZONTAL : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/StraightH.png", itemSelected);
+				break;
+				
+			case STRAIGHTVERTICAL : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/StraightV.png", itemSelected);
+				break;
 			
-		case LEFTDOWNBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/leftDownBuffer.png", itemSelected);
-			break;
+			case LEFTBUFFER : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/leftBuffer.png", itemSelected);
+				break;
 			
-		case RIGHTDOWNBUFFER : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/rightDownBuffer.png", itemSelected);
-			break;
+			case RIGHTBUFFER : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/rightBuffer.png", itemSelected);
+				break;
 			
-		case LEFTGAP : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/unsetLeftGap.png", itemSelected);
-			break;
-		
-		case RIGHTGAP : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/unsetRightGap.png", itemSelected);
-			break;
+			case UPBUFFER : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/upBuffer.png", itemSelected);
+				break;
 			
-		case UPGAP : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/unsetUpGap.png", itemSelected);
-			break;
+			case DOWNBUFFER : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/downBuffer.png", itemSelected);
+				break;
 			
-		case DOWNGAP : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/unsetDownGap.png", itemSelected);
-			break;
+			case LEFTUPBUFFER : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/leftUpBuffer.png", itemSelected);
+				break;
+				
+			case RIGHTUPBUFFER : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/rightUpBuffer.png", itemSelected);
+				break;
+				
+			case LEFTDOWNBUFFER : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/leftDownBuffer.png", itemSelected);
+				break;
+				
+			case RIGHTDOWNBUFFER : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/rightDownBuffer.png", itemSelected);
+				break;
+				
+			case LEFTGAP : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/unsetLeftGap.png", itemSelected);
+				break;
 			
-		case LEFTUPGAP : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/unsetLeftUpGap.png", itemSelected);
-			break;
+			case RIGHTGAP : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/unsetRightGap.png", itemSelected);
+				break;
+				
+			case UPGAP : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/unsetUpGap.png", itemSelected);
+				break;
+				
+			case DOWNGAP : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/unsetDownGap.png", itemSelected);
+				break;
+				
+			case LEFTUPGAP : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/unsetLeftUpGap.png", itemSelected);
+				break;
+				
+			case RIGHTUPGAP : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/unsetRightUpGap.png", itemSelected);
+				break;
+				
+			case LEFTDOWNGAP : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/unsetLeftDownGap.png", itemSelected);
+				break;
+				
+			case RIGHTDOWNGAP : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/unsetRightDownGap.png", itemSelected);
+				break;
+				
+			case DIRECTLEFT : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/directLeftTrack.png", itemSelected);
+				break;
+				
+			case DIRECTRIGHT : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/directRightTrack.png", itemSelected);
+				break;
+				
+			case DIRECTUP : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/directUpTrack.png", itemSelected);
+				break;
+				
+			case DIRECTDOWN : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/directDownTrack.png", itemSelected);
+				break;
+				
+			default:
+				break;
 			
-		case RIGHTUPGAP : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/unsetRightUpGap.png", itemSelected);
-			break;
 			
-		case LEFTDOWNGAP : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/unsetLeftDownGap.png", itemSelected);
-			break;
+			}
 			
-		case RIGHTDOWNGAP : 
-			MenuActions.addTrack(event, railMap,"./src/graphics/unsetRightDownGap.png", itemSelected);
-			break;
-			
-		default:
-			break;
-		
-		
+		} else if (event.getButton() == MouseButton.SECONDARY) {
+			MenuActions.deleteTrack(event, railMap);
 		}
+		
+		
 
 	}
 
