@@ -227,7 +227,7 @@ public class GUIController extends Application {
 			}
 			
 		} else if (event.getButton() == MouseButton.SECONDARY) {
-			MenuActions.deleteTrack(event, railMap, showHideGridButton);
+			MenuActions.deleteTrack(event, railMap);
 		}
 		
 		
