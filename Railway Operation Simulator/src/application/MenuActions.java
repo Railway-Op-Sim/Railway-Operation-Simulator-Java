@@ -494,6 +494,16 @@ public class MenuActions {
 				DirectionalTrack directRightUpTrack = new DirectionalTrack(TrackType.DIRECTRIGHTUP, placeX, placeY, false, "None", Direction.RIGHTUP);
 				newTrack = directRightUpTrack;
 				break;
+				
+			case DIRECTLEFTDOWN: 
+				DirectionalTrack directLeftDownTrack = new DirectionalTrack(TrackType.DIRECTLEFTDOWN, placeX, placeY, false, "None", Direction.LEFTDOWN);
+				newTrack = directLeftDownTrack;
+				break;
+				
+			case DIRECTRIGHTDOWN: 
+				DirectionalTrack directRightDownTrack = new DirectionalTrack(TrackType.DIRECTRIGHT, placeX, placeY, false, "None", Direction.RIGHTDOWN);
+				newTrack = directRightDownTrack;
+				break;
 			default:
 				break;
 			}

@@ -197,7 +197,7 @@
                <graphic>
                   <ImageView fx:id="directDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/directDownTrack.png" />
+                        <Image url="@../graphics/directDown.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -274,7 +274,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="directRightUpToggle" mnemonicParsing="false" onAction="#selectDirectRightUp" toggleGroup="$elementGroup" GridPane.columnIndex="8">
+            <ToggleButton fx:id="directRightUpToggle" mnemonicParsing="false" onAction="#selectDirectRightUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="8">
                <graphic>
                   <ImageView fx:id="directRightUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -283,7 +283,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="directLeftDownToggle" mnemonicParsing="false" onAction="#selectDirectLeftDown" toggleGroup="$elementGroup" GridPane.columnIndex="8" GridPane.rowIndex="1">
+            <ToggleButton fx:id="directLeftDownToggle" mnemonicParsing="false" onAction="#selectDirectLeftDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="8" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fx:id="directLeftDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -292,7 +292,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="directLeftUpToggle" mnemonicParsing="false" onAction="#selectDirectLeftUp" toggleGroup="$elementGroup" GridPane.columnIndex="9">
+            <ToggleButton fx:id="directLeftUpToggle" mnemonicParsing="false" onAction="#selectDirectLeftUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="9">
                <graphic>
                   <ImageView fx:id="directLeftUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -301,7 +301,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="directRightDownToggle" mnemonicParsing="false" onAction="#selectDirectRightDown" toggleGroup="$elementGroup" GridPane.columnIndex="9" GridPane.rowIndex="1">
+            <ToggleButton fx:id="directRightDownToggle" mnemonicParsing="false" onAction="#selectDirectRightDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="9" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fx:id="directRightDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>

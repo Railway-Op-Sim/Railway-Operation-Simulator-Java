@@ -228,6 +228,14 @@ public class GUIController extends Application {
 				MenuActions.addTrack(event, railMap,"./src/graphics/directRightUp.png", itemSelected);
 				break;
 				
+			case DIRECTLEFTDOWN : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/directLeftDown.png", itemSelected);
+				break;
+				
+			case DIRECTRIGHTDOWN : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/directRightDown.png", itemSelected);
+				break;
+				
 			default:
 				break;
 			

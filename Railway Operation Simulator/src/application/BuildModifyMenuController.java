@@ -81,17 +81,17 @@ public class BuildModifyMenuController {
     
     //  ** Straight Track toggles and images. **
 
-    @FXML // fx:id="horizontalTrackToggle"
-    private ToggleButton horizontalTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="straightHorizontalTrackToggle"
+    private ToggleButton straightHorizontalTrackToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="horizontalTrackImage"
-    private ImageView horizontalTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="straightHorizontalTrackImage"
+    private ImageView straightHorizontalTrackImage; // Value injected by FXMLLoader
 
-    @FXML // fx:id="verticalTrackToggle"
-    private ToggleButton verticalTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="straightVerticalTrackToggle"
+    private ToggleButton straightVerticalTrackToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="verticalTrackImage"
-    private ImageView verticalTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="straightVerticalTrackImage"
+    private ImageView straightVerticalTrackImage; // Value injected by FXMLLoader
     
     @FXML // fx:id="straightRightUpToggle"
     private ToggleButton straightRightUpToggle; // Value injected by FXMLLoader
@@ -180,6 +180,30 @@ public class BuildModifyMenuController {
 
     @FXML // fx:id="directDownTrackImage"
     private ImageView directDownTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="directRightUpToggle"
+    private ToggleButton directRightUpToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="directRightUpTrackImage"
+    private ImageView directRightUpTrackImage; // Value injected by FXMLLoader
+
+    @FXML // fx:id="directLeftUpToggle"
+    private ToggleButton directLeftUpToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="directLeftUpTrackImage"
+    private ImageView directLeftUpTrackImage; // Value injected by FXMLLoader
+
+    @FXML // fx:id="directRightDownToggle"
+    private ToggleButton directRightDownToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="directRightDownTrackImage"
+    private ImageView directRightDownTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="directLeftDownToggle"
+    private ToggleButton directLeftDownToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="directLeftDownTrackImage"
+    private ImageView directLeftDownTrackImage; // Value injected by FXMLLoader
 
    
 
@@ -197,22 +221,22 @@ public class BuildModifyMenuController {
     // Select Straight Track Actions.
     
     @FXML
-    void selectHorizontalTrack(ActionEvent event) {
+    void selectStraightHorizontalTrack(ActionEvent event) {
     	
-    	if (horizontalTrackToggle.isSelected()) {
+    	if (straightHorizontalTrackToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.STRAIGHTHORIZONTAL);
 		} else {
-			horizontalTrackToggle.setSelected(false);
+			straightHorizontalTrackToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
     }
     
     @FXML
-    void selectVerticalTrack(ActionEvent event) {
-    	if (verticalTrackToggle.isSelected()) {
+    void selectStraightVerticalTrack(ActionEvent event) {
+    	if (straightVerticalTrackToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.STRAIGHTVERTICAL);
 		} else {
-			verticalTrackToggle.setSelected(false);
+			straightVerticalTrackToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
@@ -465,6 +489,53 @@ public class BuildModifyMenuController {
 		}
 
     }
+    
+    @FXML
+    void selectDirectRightUpTrack(ActionEvent event) {
+    	if (directRightUpToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.DIRECTRIGHTUP);
+		} else {
+			directRightUpToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectDirectLeftUpTrack(ActionEvent event) {
+    	if (directLeftUpToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.DIRECTLEFTUP);
+		} else {
+			directLeftUpToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectDirectRightDownTrack(ActionEvent event) {
+    	if (directRightDownToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.DIRECTRIGHTDOWN);
+		} else {
+			directRightDownToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectDirectLeftDownTrack(ActionEvent event) {
+    	if (directLeftDownToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.DIRECTLEFTDOWN);
+		} else {
+			directLeftDownToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    
+   
     
     
 
