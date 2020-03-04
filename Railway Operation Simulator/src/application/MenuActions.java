@@ -9,6 +9,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 import elements.BufferedTrack;
+import elements.Direction;
 import elements.DirectionalTrack;
 import elements.GapLinkedTrack;
 import elements.StraightTrack;
@@ -88,12 +89,12 @@ public class MenuActions {
 	        //Set grid to Black
 	        railMap.setStroke(Color.BLACK);
 	        
-	        //Every 24 pixels draw a vertical line.
+	        //Every 16 pixels draw a vertical line.
 	        for (int x=0; x<railMapSizeX+1; x+=16) {
 	        	railMap.strokeLine(x, 0, x, railMapSizeY);
 	        }
 	        
-	      //Every 24 pixels draw a horizontal line.
+	      //Every 16 pixels draw a horizontal line.
 	        for (int y=0; y<railMapSizeY+1; y+=16) {
 	        	railMap.strokeLine(0, y, railMapSizeX, y);
 	        }
@@ -281,7 +282,7 @@ public class MenuActions {
 		alert.showAndWait();
 	}
 	
-	public static void deleteTrack (MouseEvent event,Canvas display)  {
+	public static void deleteTrack (MouseEvent event,Canvas display, Button showHideGridButton)  {
     	int xLocation = (int) event.getX();
 		int yLocation = (int) event.getY();
 		int slightlyOffX = xLocation %16;
@@ -301,7 +302,11 @@ public class MenuActions {
 			}
 		if (item !=null) {
 			trackStore.remove(item);
-			railMap.strokeRect(placeX, placeY, gridSize, gridSize);
+			String showHidGridButtonText = showHideGridButton.getText();
+			if (showHidGridButtonText.equals("Hide Grid")){
+				railMap.strokeRect(placeX, placeY, gridSize, gridSize);
+			}
+			
 		} else {
 			makeDeleteTrackErrorBox();
 		}
@@ -453,22 +458,22 @@ public class MenuActions {
 				break;
 				
 			case DIRECTLEFT: 
-				DirectionalTrack directLeftTrack = new DirectionalTrack(TrackType.DIRECTLEFT, placeX, placeY, false, "None");
+				DirectionalTrack directLeftTrack = new DirectionalTrack(TrackType.DIRECTLEFT, placeX, placeY, false, "None", Direction.LEFT);
 				newTrack = directLeftTrack;
 				break;
 				
 			case DIRECTRIGHT: 
-				DirectionalTrack directRightTrack = new DirectionalTrack(TrackType.DIRECTRIGHT, placeX, placeY, false, "None");
+				DirectionalTrack directRightTrack = new DirectionalTrack(TrackType.DIRECTRIGHT, placeX, placeY, false, "None", Direction.RIGHT);
 				newTrack = directRightTrack;
 				break;
 				
 			case DIRECTUP: 
-				DirectionalTrack directUpTrack = new DirectionalTrack(TrackType.DIRECTUP, placeX, placeY, false, "None");
+				DirectionalTrack directUpTrack = new DirectionalTrack(TrackType.DIRECTUP, placeX, placeY, false, "None", Direction.UP);
 				newTrack = directUpTrack;
 				break;
 				
 			case DIRECTDOWN: 
-				DirectionalTrack directDownTrack = new DirectionalTrack(TrackType.DIRECTDOWN, placeX, placeY, false, "None");
+				DirectionalTrack directDownTrack = new DirectionalTrack(TrackType.DIRECTDOWN, placeX, placeY, false, "None", Direction.DOWN);
 				newTrack = directDownTrack;
 				break;
 			default:
