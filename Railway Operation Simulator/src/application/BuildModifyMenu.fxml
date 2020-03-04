@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefWidth="256.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BuildModifyMenuController">
+<VBox prefHeight="120.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BuildModifyMenuController">
    <children>
-      <HBox prefHeight="48.0" prefWidth="72.0">
+      <HBox prefHeight="48.0" prefWidth="512.0">
          <children>
             <Button fx:id="buildModifyMenuButton" mnemonicParsing="false" onAction="#openbuildModifyMenu">
                <graphic>
@@ -43,6 +43,10 @@
             <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" prefWidth="15.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" prefWidth="16.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" prefWidth="16.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" prefWidth="16.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="16.0" vgrow="SOMETIMES" />
