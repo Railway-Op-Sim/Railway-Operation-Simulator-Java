@@ -283,11 +283,29 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
+            <ToggleButton fx:id="exitLeftTrackToggle" mnemonicParsing="false" onAction="#selectExitLeftTrack" toggleGroup="$elementGroup" GridPane.columnIndex="8" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="exitLeftTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/exitLeftTrack.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
             <ToggleButton fx:id="directLeftUpToggle" mnemonicParsing="false" onAction="#selectDirectLeftUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="9">
                <graphic>
                   <ImageView fx:id="directLeftUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../graphics/directLeftUp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="exitRightTrackToggle" mnemonicParsing="false" onAction="#selectExitRightTrack" toggleGroup="$elementGroup" GridPane.columnIndex="9" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="exitRightTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/exitRightTrack.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -301,11 +319,29 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
+            <ToggleButton fx:id="exitDownTrackToggle" mnemonicParsing="false" onAction="#selectExitDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="10" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="exitDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/exitDownTrack.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
             <ToggleButton fx:id="directRightDownToggle" mnemonicParsing="false" onAction="#selectDirectRightDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="11">
                <graphic>
                   <ImageView fx:id="directRightDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../graphics/directRightDown.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="exitUpTrackToggle" mnemonicParsing="false" onAction="#selectExitUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="11" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="exitUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/exitUpTrack.png" />
                      </image>
                   </ImageView>
                </graphic>

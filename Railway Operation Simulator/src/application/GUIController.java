@@ -236,6 +236,22 @@ public class GUIController extends Application {
 				MenuActions.addTrack(event, railMap,"./src/graphics/directRightDown.png", itemSelected);
 				break;
 				
+			case EXITLEFT : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/exitLeftTrack.png", itemSelected);
+				break;
+				
+			case EXITRIGHT : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/exitRightTrack.png", itemSelected);
+				break;
+				
+			case EXITUP : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/exitUpTrack.png", itemSelected);
+				break;
+				
+			case EXITDOWN : 
+				MenuActions.addTrack(event, railMap,"./src/graphics/exitDownTrack.png", itemSelected);
+				break;
+				
 			default:
 				break;
 			

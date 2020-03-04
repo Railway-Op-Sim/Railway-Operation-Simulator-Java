@@ -249,6 +249,22 @@ public class MenuActions {
 				trackImage = new File("./src/graphics/directRightUp.png"); //Open image file.
 				break;
 				
+			case EXITLEFT :
+				trackImage = new File("./src/graphics/exitLeftTrack.png"); //Open image file.
+				break;
+				
+			case EXITRIGHT :
+				trackImage = new File("./src/graphics/exitRightTrack.png"); //Open image file.
+				break;
+				
+			case EXITUP :
+				trackImage = new File("./src/graphics/exitUpTrack.png"); //Open image file.
+				break;
+				
+			case EXITDOWN :
+				trackImage = new File("./src/graphics/exitDownTrack.png"); //Open image file.
+				break;
+			
 			default:
 				break;
 				
@@ -503,6 +519,26 @@ public class MenuActions {
 			case DIRECTRIGHTDOWN: 
 				DirectionalTrack directRightDownTrack = new DirectionalTrack(TrackType.DIRECTRIGHT, placeX, placeY, false, "None", Direction.RIGHTDOWN);
 				newTrack = directRightDownTrack;
+				break;
+				
+			case EXITLEFT: 
+				DirectionalTrack exitLeftTrack = new DirectionalTrack(TrackType.EXITLEFT, placeX, placeY, false, "None", Direction.LEFT);
+				newTrack = exitLeftTrack;
+				break;
+				
+			case EXITRIGHT: 
+				DirectionalTrack exitRightTrack = new DirectionalTrack(TrackType.EXITRIGHT, placeX, placeY, false, "None", Direction.RIGHT);
+				newTrack = exitRightTrack;
+				break;
+				
+			case EXITUP: 
+				DirectionalTrack exitUpTrack = new DirectionalTrack(TrackType.EXITUP, placeX, placeY, false, "None", Direction.UP);
+				newTrack = exitUpTrack;
+				break;
+				
+			case EXITDOWN: 
+				DirectionalTrack exitDownTrack = new DirectionalTrack(TrackType.EXITDOWN, placeX, placeY, false, "None", Direction.DOWN);
+				newTrack = exitDownTrack;
 				break;
 			default:
 				break;

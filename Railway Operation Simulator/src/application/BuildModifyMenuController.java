@@ -204,6 +204,32 @@ public class BuildModifyMenuController {
 
     @FXML // fx:id="directLeftDownTrackImage"
     private ImageView directLeftDownTrackImage; // Value injected by FXMLLoader
+    
+    //** Exit Track toggles and images. **
+    
+    @FXML // fx:id="exitLeftTrackToggle"
+    private ToggleButton exitLeftTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="exitLeftTrackImage"
+    private ImageView exitLeftTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="exitRightTrackToggle"
+    private ToggleButton exitRightTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="exitRightTrackImage"
+    private ImageView exitRightTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="exitDownTrackToggle"
+    private ToggleButton exitDownTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="exitDownTrackImage"
+    private ImageView exitDownTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="exitUpTrackToggle"
+    private ToggleButton exitUpTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="exitUpTrackImage"
+    private ImageView exitUpTrackImage; // Value injected by FXMLLoader
 
    
 
@@ -534,6 +560,51 @@ public class BuildModifyMenuController {
 
     }
     
+    //Select Exit Track actions
+    
+    @FXML
+    void selectExitLeftTrack(ActionEvent event) {
+    	if (exitLeftTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.EXITLEFT);
+		} else {
+			exitLeftTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectExitRightTrack(ActionEvent event) {
+    	if (exitRightTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.EXITRIGHT);
+		} else {
+			exitRightTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectExitDownTrack(ActionEvent event) {
+    	if (exitDownTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.EXITDOWN);
+		} else {
+			exitDownTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectExitUpTrack(ActionEvent event) {
+    	if (exitUpTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.EXITUP);
+		} else {
+			exitUpTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    	
+    }
     
    
     
