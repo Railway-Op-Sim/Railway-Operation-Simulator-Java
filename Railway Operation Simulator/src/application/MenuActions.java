@@ -226,19 +226,27 @@ public class MenuActions {
 				break;
 				
 			case DIRECTLEFT :
-				trackImage = new File("./src/graphics/directLeftTrack.png"); //Open image file.
+				trackImage = new File("./src/graphics/directLeft.png"); //Open image file.
 				break;
 				
 			case DIRECTRIGHT :
-				trackImage = new File("./src/graphics/directRightTrack.png"); //Open image file.
+				trackImage = new File("./src/graphics/directRight.png"); //Open image file.
 				break;
 				
 			case DIRECTUP :
-				trackImage = new File("./src/graphics/directUpTrack.png"); //Open image file.
+				trackImage = new File("./src/graphics/directUp.png"); //Open image file.
 				break;
 				
 			case DIRECTDOWN :
-				trackImage = new File("./src/graphics/directDownTrack.png"); //Open image file.
+				trackImage = new File("./src/graphics/directDown.png"); //Open image file.
+				break;
+				
+			case DIRECTLEFTUP :
+				trackImage = new File("./src/graphics/directLeftUp.png"); //Open image file.
+				break;
+				
+			case DIRECTRIGHTUP :
+				trackImage = new File("./src/graphics/directRightUp.png"); //Open image file.
 				break;
 				
 			default:
@@ -475,6 +483,16 @@ public class MenuActions {
 			case DIRECTDOWN: 
 				DirectionalTrack directDownTrack = new DirectionalTrack(TrackType.DIRECTDOWN, placeX, placeY, false, "None", Direction.DOWN);
 				newTrack = directDownTrack;
+				break;
+				
+			case DIRECTLEFTUP: 
+				DirectionalTrack directLeftUpTrack = new DirectionalTrack(TrackType.DIRECTLEFTUP, placeX, placeY, false, "None", Direction.LEFTUP);
+				newTrack = directLeftUpTrack;
+				break;
+				
+			case DIRECTRIGHTUP: 
+				DirectionalTrack directRightUpTrack = new DirectionalTrack(TrackType.DIRECTRIGHTUP, placeX, placeY, false, "None", Direction.RIGHTUP);
+				newTrack = directRightUpTrack;
 				break;
 			default:
 				break;
