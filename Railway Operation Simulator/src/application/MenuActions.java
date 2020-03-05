@@ -68,11 +68,7 @@ public class MenuActions {
 		 
 		 File trackImage = new File(file); //Open image file.
 		 Image image = null;
-		try {
-			image = new Image(new FileInputStream(trackImage)); //Set file as image.
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
+		 image = new Image(MenuActions.class.getClassLoader().getResource(file).toString()); //Set file as image.
 		
 		
 		railMap.drawImage( image, placeX, placeY); //Draw the image at that place.
@@ -144,180 +140,180 @@ public class MenuActions {
 			int placeX = xLocation - slightlyOffX;
 			int placeY = yLocation - slightLyOffY;
 			
-			File trackImage = null;
+			String trackImage = null;
 			Image image = null;
 			SignalTrack newSig = null;
 			TrackType currentTrackType = track.getTrackType();
 			switch (currentTrackType) {
 			case STRAIGHTHORIZONTAL :
-				trackImage = new File("./src/graphics/straightH.png"); //Open image file.
+				trackImage = new String("graphics/straightH.png"); //Open image file.
 				break;
 			
 			case STRAIGHTVERTICAL :
-				trackImage = new File("./src/graphics/straightV.png"); //Open image file.
+				trackImage = new String("graphics/straightV.png"); //Open image file.
 				break;
 				
 			case STRAIGHTLEFTUP :
-				trackImage = new File("./src/graphics/straightLeftUp.png"); //Open image file.
+				trackImage = new String("graphics/straightLeftUp.png"); //Open image file.
 				break;
 			
 			case STRAIGHTRIGHTUP :
-				trackImage = new File("./src/graphics/straightRightUp.png"); //Open image file.
+				trackImage = new String("graphics/straightRightUp.png"); //Open image file.
 				break;
 				
 			case LEFTBUFFER :
-				trackImage = new File("./src/graphics/leftBuffer.png"); //Open image file.
+				trackImage = new String("graphics/leftBuffer.png"); //Open image file.
 				break;
 			
 			case RIGHTBUFFER :
-				trackImage = new File("./src/graphics/rightBuffer.png"); //Open image file.
+				trackImage = new String("graphics/rightBuffer.png"); //Open image file.
 				break;
 			
 			case UPBUFFER :
-				trackImage = new File("./src/graphics/upBuffer.png"); //Open image file.
+				trackImage = new String("graphics/upBuffer.png"); //Open image file.
 				break;
 				
 			case DOWNBUFFER :
-				trackImage = new File("./src/graphics/downBuffer.png"); //Open image file.
+				trackImage = new String("graphics/downBuffer.png"); //Open image file.
 				break;
 				
 			case LEFTUPBUFFER :
-				trackImage = new File("./src/graphics/leftUpBuffer.png"); //Open image file.
+				trackImage = new String("graphics/leftUpBuffer.png"); //Open image file.
 				break;
 			
 			case RIGHTUPBUFFER :
-				trackImage = new File("./src/graphics/rightUpBuffer.png"); //Open image file.
+				trackImage = new String("graphics/rightUpBuffer.png"); //Open image file.
 				break;
 				
 			case LEFTDOWNBUFFER :
-				trackImage = new File("./src/graphics/leftDownBuffer.png"); //Open image file.
+				trackImage = new String("graphics/leftDownBuffer.png"); //Open image file.
 				break;
 			
 			case RIGHTDOWNBUFFER :
-				trackImage = new File("./src/graphics/rightDownBuffer.png"); //Open image file.
+				trackImage = new String("graphics/rightDownBuffer.png"); //Open image file.
 				break;
 				
 			case LEFTGAP :
-				trackImage = new File("./src/graphics/unsetLeftGap.png"); //Open image file.
+				trackImage = new String("graphics/unsetLeftGap.png"); //Open image file.
 				break;
 			
 			case RIGHTGAP :
-				trackImage = new File("./src/graphics/unsetRightGap.png"); //Open image file.
+				trackImage = new String("graphics/unsetRightGap.png"); //Open image file.
 				break;
 			
 			case UPGAP :
-				trackImage = new File("./src/graphics/unsetUpGap.png"); //Open image file.
+				trackImage = new String("graphics/unsetUpGap.png"); //Open image file.
 				break;
 				
 			case DOWNGAP :
-				trackImage = new File("./src/graphics/unsetDownGap.png"); //Open image file.
+				trackImage = new String("graphics/unsetDownGap.png"); //Open image file.
 				break;
 				
 			case LEFTUPGAP :
-				trackImage = new File("./src/graphics/unsetLeftUpGap.png"); //Open image file.
+				trackImage = new String("graphics/unsetLeftUpGap.png"); //Open image file.
 				break;
 				
 			case RIGHTUPGAP :
-				trackImage = new File("./src/graphics/unsetRightUpGap.png"); //Open image file.
+				trackImage = new String("graphics/unsetRightUpGap.png"); //Open image file.
 				break;
 				
 			case LEFTDOWNGAP :
-				trackImage = new File("./src/graphics/unsetLeftDownGap.png"); //Open image file.
+				trackImage = new String("graphics/unsetLeftDownGap.png"); //Open image file.
 				break;
 				
 			case RIGHTDOWNGAP :
-				trackImage = new File("./src/graphics/unsetRightDownGap.png"); //Open image file.
+				trackImage = new String("graphics/unsetRightDownGap.png"); //Open image file.
 				break;
 				
 			case DIRECTLEFT :
-				trackImage = new File("./src/graphics/directLeft.png"); //Open image file.
+				trackImage = new String("graphics/directLeft.png"); //Open image file.
 				break;
 				
 			case DIRECTRIGHT :
-				trackImage = new File("./src/graphics/directRight.png"); //Open image file.
+				trackImage = new String("graphics/directRight.png"); //Open image file.
 				break;
 				
 			case DIRECTUP :
-				trackImage = new File("./src/graphics/directUp.png"); //Open image file.
+				trackImage = new String("graphics/directUp.png"); //Open image file.
 				break;
 				
 			case DIRECTDOWN :
-				trackImage = new File("./src/graphics/directDown.png"); //Open image file.
+				trackImage = new String("graphics/directDown.png"); //Open image file.
 				break;
 				
 			case DIRECTLEFTUP :
-				trackImage = new File("./src/graphics/directLeftUp.png"); //Open image file.
+				trackImage = new String("graphics/directLeftUp.png"); //Open image file.
 				break;
 				
 			case DIRECTRIGHTUP :
-				trackImage = new File("./src/graphics/directRightUp.png"); //Open image file.
+				trackImage = new String("graphics/directRightUp.png"); //Open image file.
+				break;
+			
+			case DIRECTLEFTDOWN :
+				trackImage = new String("graphics/directLeftDown.png"); //Open image file.
+				break;
+				
+			case DIRECTRIGHTDOWN :
+				trackImage = new String("graphics/directRightDown.png"); //Open image file.
 				break;
 				
 			case EXITLEFT :
-				trackImage = new File("./src/graphics/exitLeftTrack.png"); //Open image file.
+				trackImage = new String("graphics/exitLeftTrack.png"); //Open image file.
 				break;
 				
 			case EXITRIGHT :
-				trackImage = new File("./src/graphics/exitRightTrack.png"); //Open image file.
+				trackImage = new String("graphics/exitRightTrack.png"); //Open image file.
 				break;
 				
 			case EXITUP :
-				trackImage = new File("./src/graphics/exitUpTrack.png"); //Open image file.
+				trackImage = new String("graphics/exitUpTrack.png"); //Open image file.
 				break;
 				
 			case EXITDOWN :
-				trackImage = new File("./src/graphics/exitDownTrack.png"); //Open image file.
+				trackImage = new String("graphics/exitDownTrack.png"); //Open image file.
 				break;
 				
 			case SIGNALLEFT :
 				newSig = (SignalTrack) track;
 				if (newSig.getAspect() == SignalAspect.SHUNT) {
-					trackImage = new File("./src/graphics/shuntLeftSignalRed.png");
+					trackImage = new String("graphics/shuntLeftSignalRed.png");
 				} else {
-					trackImage = new File("./src/graphics/signalLeft.png");
+					trackImage = new String("graphics/signalLeft.png");
 				}
-				 //Open image file.
 				break;
 				
 			case SIGNALRIGHT :
 				newSig = (SignalTrack) track;
 				if (newSig.getAspect() == SignalAspect.SHUNT) {
-					trackImage = new File("./src/graphics/shuntRightSignalRed.png");
+					trackImage = new String("graphics/shuntRightSignalRed.png");
 				} else {
-					trackImage = new File("./src/graphics/signalRight.png"); //Open image file.
+					trackImage = new String("graphics/signalRight.png"); //Open image file.
 				}
 				break;
 				
 			case SIGNALUP :
 				newSig = (SignalTrack) track;
 				if (newSig.getAspect() == SignalAspect.SHUNT) {
-					trackImage = new File("./src/graphics/shuntUpSignalRed.png");
+					trackImage = new String("graphics/shuntUpSignalRed.png");
 				} else {
-					trackImage = new File("./src/graphics/signalUp.png"); //Open image file.
+					trackImage = new String("graphics/signalUp.png"); //Open image file.
 				}
 				break;
 				
 			case SIGNALDOWN :
 				newSig = (SignalTrack) track;
 				if (newSig.getAspect() == SignalAspect.SHUNT) {
-					trackImage = new File("./src/graphics/shuntDownSignalRed.png");
+					trackImage = new String("graphics/shuntDownSignalRed.png");
 				} else {
-					trackImage = new File("./src/graphics/signalDown.png"); //Open image file.
+					trackImage = new String("graphics/signalDown.png"); //Open image file.
 				}
-				
 				break;
 			
 			default:
 				break;
 				
-				
-				
 			}
-			try {
-				image = new Image(new FileInputStream(trackImage)); //Set file as image.
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
+				image = new Image(MenuActions.class.getClassLoader().getResource(trackImage).toString());; //Set file as image.
 			
 			railMap.drawImage(image, placeX, placeY);
 		}

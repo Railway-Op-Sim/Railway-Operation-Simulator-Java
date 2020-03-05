@@ -35,7 +35,7 @@
                <graphic>
                   <ImageView fx:id="aspectChangerImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../railicon/fourIcon.png" />
+                        <Image url="@../graphics/fourIcon.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -332,7 +332,7 @@
                <graphic>
                   <ImageView fx:id="rightSignalTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../graphics/Signalright.png" />
+                        <Image url="@../graphics/signalRight.png" />
                      </image>
                   </ImageView>
                </graphic>

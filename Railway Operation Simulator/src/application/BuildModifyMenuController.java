@@ -290,32 +290,32 @@ public class BuildModifyMenuController {
     
     @FXML
     void changeAspect(ActionEvent event) {
-    	File aspectImage = null;
+    	String aspectImage = null;
 		Image image = null;
 		
     	switch (aspect) {
     		case FOUR: 
     			aspect = SignalAspect.THREE; 
-    			aspectImage = new File("./src/graphics/threeIcon.png");
+    			aspectImage = new String("graphics/threeIcon.png");
     			System.out.println(3);
     			break;
     			
     		case THREE: 
     			aspect = SignalAspect.TWO; 
-    			aspectImage = new File("./src/graphics/twoIcon.png");
+    			aspectImage = new String("graphics/twoIcon.png");
     			System.out.println(2);
     			break;
     			
     		case TWO: 
     			aspect = SignalAspect.SHUNT; 
-    			aspectImage = new File("./src/graphics/shuntIcon.png");
+    			aspectImage = new String("graphics/shuntIcon.png");
     			BuildModifyMenuActions.changeToShuntSignalGraphic(leftSignalTrackImage, rightSignalTrackImage, upSignalTrackImage, downSignalTrackImage);
     			System.out.println(1);
     			break;
     			
     		case SHUNT: 
     			aspect = SignalAspect.FOUR; 
-    			aspectImage = new File("./src/graphics/fourIcon.png");
+    			aspectImage = new String("graphics/fourIcon.png");
     			BuildModifyMenuActions.changeToNormalSignalGraphic(leftSignalTrackImage, rightSignalTrackImage, upSignalTrackImage, downSignalTrackImage);
     			System.out.println(4);
     			break;
@@ -324,11 +324,7 @@ public class BuildModifyMenuController {
     			break;
     		}
     		
-    		try {
-    			image = new Image(new FileInputStream(aspectImage)); //Set file as image.
-    		} catch (FileNotFoundException e) {
-    			e.printStackTrace();
-    		}
+    		image = new Image(MenuActions.class.getClassLoader().getResource(aspectImage).toString());
     		aspectChangerImage.setImage(image);
     		
     }

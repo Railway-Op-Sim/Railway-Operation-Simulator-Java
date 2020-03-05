@@ -128,163 +128,163 @@ public class GUIController extends Application {
 				break;
 
 			case STRAIGHTHORIZONTAL:
-				MenuActions.addTrack(event, railMap, "./src/graphics/StraightH.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/StraightH.png", itemSelected, null);
 				break;
 
 			case STRAIGHTVERTICAL:
-				MenuActions.addTrack(event, railMap, "./src/graphics/StraightV.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/StraightV.png", itemSelected, null);
 				break;
 
 			case STRAIGHTLEFTUP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/straightLeftUp.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/straightLeftUp.png", itemSelected, null);
 				break;
 
 			case STRAIGHTRIGHTUP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/straightRightUp.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/straightRightUp.png", itemSelected, null);
 				break;
 
 			case LEFTBUFFER:
-				MenuActions.addTrack(event, railMap, "./src/graphics/leftBuffer.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/leftBuffer.png", itemSelected, null);
 				break;
 
 			case RIGHTBUFFER:
-				MenuActions.addTrack(event, railMap, "./src/graphics/rightBuffer.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/rightBuffer.png", itemSelected, null);
 				break;
 
 			case UPBUFFER:
-				MenuActions.addTrack(event, railMap, "./src/graphics/upBuffer.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/upBuffer.png", itemSelected, null);
 				break;
 
 			case DOWNBUFFER:
-				MenuActions.addTrack(event, railMap, "./src/graphics/downBuffer.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/downBuffer.png", itemSelected, null);
 				break;
 
 			case LEFTUPBUFFER:
-				MenuActions.addTrack(event, railMap, "./src/graphics/leftUpBuffer.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/leftUpBuffer.png", itemSelected, null);
 				break;
 
 			case RIGHTUPBUFFER:
-				MenuActions.addTrack(event, railMap, "./src/graphics/rightUpBuffer.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/rightUpBuffer.png", itemSelected, null);
 				break;
 
 			case LEFTDOWNBUFFER:
-				MenuActions.addTrack(event, railMap, "./src/graphics/leftDownBuffer.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/leftDownBuffer.png", itemSelected, null);
 				break;
 
 			case RIGHTDOWNBUFFER:
-				MenuActions.addTrack(event, railMap, "./src/graphics/rightDownBuffer.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/rightDownBuffer.png", itemSelected, null);
 				break;
 
 			case LEFTGAP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/unsetLeftGap.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/unsetLeftGap.png", itemSelected, null);
 				break;
 
 			case RIGHTGAP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/unsetRightGap.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/unsetRightGap.png", itemSelected, null);
 				break;
 
 			case UPGAP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/unsetUpGap.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/unsetUpGap.png", itemSelected, null);
 				break;
 
 			case DOWNGAP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/unsetDownGap.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/unsetDownGap.png", itemSelected, null);
 				break;
 
 			case LEFTUPGAP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/unsetLeftUpGap.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/unsetLeftUpGap.png", itemSelected, null);
 				break;
 
 			case RIGHTUPGAP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/unsetRightUpGap.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/unsetRightUpGap.png", itemSelected, null);
 				break;
 
 			case LEFTDOWNGAP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/unsetLeftDownGap.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/unsetLeftDownGap.png", itemSelected, null);
 				break;
 
 			case RIGHTDOWNGAP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/unsetRightDownGap.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/unsetRightDownGap.png", itemSelected, null);
 				break;
 
 			case DIRECTLEFT:
-				MenuActions.addTrack(event, railMap, "./src/graphics/directLeft.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/directLeft.png", itemSelected, null);
 				break;
 
 			case DIRECTRIGHT:
-				MenuActions.addTrack(event, railMap, "./src/graphics/directRight.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/directRight.png", itemSelected, null);
 				break;
 
 			case DIRECTUP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/directUp.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/directUp.png", itemSelected, null);
 				break;
 
 			case DIRECTDOWN:
-				MenuActions.addTrack(event, railMap, "./src/graphics/directDown.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/directDown.png", itemSelected, null);
 				break;
 
 			case DIRECTLEFTUP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/directLeftUp.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/directLeftUp.png", itemSelected, null);
 				break;
 
 			case DIRECTRIGHTUP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/directRightUp.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/directRightUp.png", itemSelected, null);
 				break;
 
 			case DIRECTLEFTDOWN:
-				MenuActions.addTrack(event, railMap, "./src/graphics/directLeftDown.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/directLeftDown.png", itemSelected, null);
 				break;
 
 			case DIRECTRIGHTDOWN:
-				MenuActions.addTrack(event, railMap, "./src/graphics/directRightDown.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/directRightDown.png", itemSelected, null);
 				break;
 
 			case EXITLEFT:
-				MenuActions.addTrack(event, railMap, "./src/graphics/exitLeftTrack.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/exitLeftTrack.png", itemSelected, null);
 				break;
 
 			case EXITRIGHT:
-				MenuActions.addTrack(event, railMap, "./src/graphics/exitRightTrack.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/exitRightTrack.png", itemSelected, null);
 				break;
 
 			case EXITUP:
-				MenuActions.addTrack(event, railMap, "./src/graphics/exitUpTrack.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/exitUpTrack.png", itemSelected, null);
 				break;
 
 			case EXITDOWN:
-				MenuActions.addTrack(event, railMap, "./src/graphics/exitDownTrack.png", itemSelected, null);
+				MenuActions.addTrack(event, railMap, "graphics/exitDownTrack.png", itemSelected, null);
 				break;
 
 			case SIGNALLEFT:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, railMap, "./src/graphics/shuntLeftSignalRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, railMap, "graphics/shuntLeftSignalRed.png", itemSelected, aspect);
 				} else {
-					MenuActions.addTrack(event, railMap, "./src/graphics/signalLeft.png", itemSelected, aspect);
+					MenuActions.addTrack(event, railMap, "graphics/signalLeft.png", itemSelected, aspect);
 				}
 
 				break;
 
 			case SIGNALRIGHT:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, railMap, "./src/graphics/shuntRightSignalRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, railMap, "graphics/shuntRightSignalRed.png", itemSelected, aspect);
 				} else {
-					MenuActions.addTrack(event, railMap, "./src/graphics/signalRight.png", itemSelected, aspect);
+					MenuActions.addTrack(event, railMap, "graphics/signalRight.png", itemSelected, aspect);
 				}
 				break;
 
 			case SIGNALUP:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, railMap,"./src/graphics/shuntUpSignalRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, railMap,"graphics/shuntUpSignalRed.png", itemSelected, aspect);
 				} else {
-					MenuActions.addTrack(event, railMap,"./src/graphics/signalUp.png", itemSelected, aspect);
+					MenuActions.addTrack(event, railMap,"graphics/signalUp.png", itemSelected, aspect);
 				}
 				break;
 
 			case SIGNALDOWN:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, railMap,"./src/graphics/shuntDownSignalRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, railMap,"graphics/shuntDownSignalRed.png", itemSelected, aspect);
 				} else {
-					MenuActions.addTrack(event, railMap,"./src/graphics/signalDown.png", itemSelected, aspect);
+					MenuActions.addTrack(event, railMap,"graphics/signalDown.png", itemSelected, aspect);
 				}
 				break;
 

@@ -14,41 +14,15 @@ public class BuildModifyMenuActions {
 	}
 
 	public static void changeToShuntSignalGraphic(ImageView leftSignal, ImageView rightSignal, ImageView upSignal, ImageView downSignal) {
-		File leftShuntFile = new File("./src/graphics/shuntLeftSignalRed.png");
-		File rightShuntFile = new File("./src/graphics/shuntRightSignalRed.png");
-		File upShuntFile = new File("./src/graphics/shuntUpSignalRed.png");
-		File downShuntFile = new File("./src/graphics/shuntDownSignalRed.png");
-		Image leftShuntImage = null;
-		Image rightShuntImage =null;
-		Image upShuntImage = null;
-		Image downShuntImage = null;
-		try {
-			leftShuntImage = new Image(new FileInputStream(leftShuntFile));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		String leftShuntFile = new String("graphics/shuntLeftSignalRed.png");
+		String rightShuntFile = new String("graphics/shuntRightSignalRed.png");
+		String upShuntFile = new String("graphics/shuntUpSignalRed.png");
+		String downShuntFile = new String("graphics/shuntDownSignalRed.png");
 		
-		try {
-			rightShuntImage = new Image(new FileInputStream(rightShuntFile));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		try {
-			upShuntImage = new Image(new FileInputStream(upShuntFile));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		try {
-			downShuntImage = new Image(new FileInputStream(downShuntFile));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Image leftShuntImage = new Image(MenuActions.class.getClassLoader().getResource(leftShuntFile).toString());
+		Image rightShuntImage = new Image(MenuActions.class.getClassLoader().getResource(rightShuntFile).toString());
+		Image upShuntImage = new Image(MenuActions.class.getClassLoader().getResource(upShuntFile).toString());
+		Image downShuntImage = new Image(MenuActions.class.getClassLoader().getResource(downShuntFile).toString());
 		
 		leftSignal.setImage(leftShuntImage);
 		rightSignal.setImage(rightShuntImage);
@@ -59,41 +33,16 @@ public class BuildModifyMenuActions {
 	}
 	
 	public static void changeToNormalSignalGraphic(ImageView leftSignal, ImageView rightSignal, ImageView upSignal, ImageView downSignal) {
-		File leftSignalFile = new File("./src/graphics/signalLeft.png");
-		File rightSignalFile = new File("./src/graphics/signalRight.png");
-		File upSignalFile = new File("./src/graphics/signalUp.png");
-		File downSignalFile = new File("./src/graphics/signalDown.png");
-		Image leftSignalImage = null;
-		Image rightSignalImage =null;
-		Image upSignalImage = null;
-		Image downSignalImage = null;
-		try {
-			leftSignalImage = new Image(new FileInputStream(leftSignalFile));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		String leftSignalFile = new String("graphics/signalLeft.png");
+		String rightSignalFile = new String("graphics/signalRight.png");
+		String upSignalFile = new String("graphics/signalUp.png");
+		String downSignalFile = new String("graphics/signalDown.png");
 		
-		try {
-			rightSignalImage = new Image(new FileInputStream(rightSignalFile));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		try {
-			upSignalImage = new Image(new FileInputStream(upSignalFile));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		try {
-			downSignalImage = new Image(new FileInputStream(downSignalFile));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Image leftSignalImage = new Image(MenuActions.class.getClassLoader().getResource(leftSignalFile).toString());
+		Image rightSignalImage = new Image(MenuActions.class.getClassLoader().getResource(rightSignalFile).toString());
+		Image upSignalImage = new Image(MenuActions.class.getClassLoader().getResource(upSignalFile).toString());
+		Image downSignalImage = new Image(MenuActions.class.getClassLoader().getResource(downSignalFile).toString());
+	
 		
 		leftSignal.setImage(leftSignalImage);
 		rightSignal.setImage(rightSignalImage);

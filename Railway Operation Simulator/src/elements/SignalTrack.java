@@ -3,6 +3,8 @@ package elements;
 public class SignalTrack extends Track {
 	SignalAspect aspect;
 	Track nextSignalBlock;
+	Track nextTwoSignalBlock;
+	Track nextThreeSignalBlock;
 	boolean state;
 
 	public SignalTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification, SignalAspect aspect) {
