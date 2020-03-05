@@ -31,6 +31,15 @@
                   <Insets bottom="12.0" />
                </HBox.margin>
             </Button>
+            <Button fx:id="aspectChangerButton" mnemonicParsing="false" onAction="#changeAspect">
+               <graphic>
+                  <ImageView fx:id="aspectChangerImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../railicon/fourIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </HBox>
       <GridPane fx:id="trackMenu">
@@ -292,6 +301,15 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
+            <ToggleButton fx:id="leftSignalTrackToggle" mnemonicParsing="false" onAction="#selectLeftSignalTrack" toggleGroup="$elementGroup" GridPane.columnIndex="8" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="leftSignalTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/signalLeft.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
             <ToggleButton fx:id="directLeftUpToggle" mnemonicParsing="false" onAction="#selectDirectLeftUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="9">
                <graphic>
                   <ImageView fx:id="directLeftUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
@@ -306,6 +324,15 @@
                   <ImageView fx:id="exitRightTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../graphics/exitRightTrack.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="rightSignalTrackToggle" mnemonicParsing="false" onAction="#selectRightSignalTrack" toggleGroup="$elementGroup" GridPane.columnIndex="9" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="rightSignalTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/Signalright.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -328,6 +355,15 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
+            <ToggleButton fx:id="upSignalTrackToggle" mnemonicParsing="false" onAction="#selectUpSignalTrack" toggleGroup="$elementGroup" GridPane.columnIndex="10" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="upSignalTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/signalUp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
             <ToggleButton fx:id="directRightDownToggle" mnemonicParsing="false" onAction="#selectDirectRightDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="11">
                <graphic>
                   <ImageView fx:id="directRightDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
@@ -342,6 +378,15 @@
                   <ImageView fx:id="exitUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../graphics/exitUpTrack.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="downSignalTrackToggle" mnemonicParsing="false" onAction="#selectDownSignalTrack" toggleGroup="$elementGroup" GridPane.columnIndex="11" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="downSignalImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/signalDown.png" />
                      </image>
                   </ImageView>
                </graphic>

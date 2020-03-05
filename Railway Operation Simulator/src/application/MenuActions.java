@@ -12,9 +12,11 @@ import elements.BufferedTrack;
 import elements.Direction;
 import elements.DirectionalTrack;
 import elements.GapLinkedTrack;
+import elements.SignalAspect;
 import elements.StraightTrack;
 import elements.Track;
 import elements.TrackType;
+import elements.TwoAspectSignalTrack;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.canvas.Canvas;
@@ -335,20 +337,10 @@ public class MenuActions {
 			makeDeleteTrackErrorBox();
 		}
 		
-			
-		/*for (Iterator<Track> i = trackStore.iterator(); i.hasNext();) {
-		    Track track = i.next();
-		    int existingTrackX = track.getxLocation();
-			int existingTrackY = track.getyLocation();
-			if (existingTrackX ==placeX && existingTrackY == placeY) {
-		        i.remove();
-		    }
-		}
-		*/
 	}
 	
 	
-	public static void addTrack(MouseEvent event,Canvas railMap, String file, TrackType itemSelected) {
+	public static void addTrack(MouseEvent event,Canvas railMap, String file, TrackType itemSelected, SignalAspect aspect ) {
 		boolean trackExist = false;
     	int xLocation = (int) event.getX();
 		int yLocation = (int) event.getY();
@@ -540,6 +532,23 @@ public class MenuActions {
 				DirectionalTrack exitDownTrack = new DirectionalTrack(TrackType.EXITDOWN, placeX, placeY, false, "None", Direction.DOWN);
 				newTrack = exitDownTrack;
 				break;
+				
+			case SIGNALLEFT: 
+				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				
+				break;
+				
+			case SIGNALRIGHT: 
+				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				break;
+				
+			case SIGNALUP: 
+				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				break;
+				
+			case SIGNALDOWN: 
+				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				break;
 			default:
 				break;
 			}
@@ -552,6 +561,39 @@ public class MenuActions {
 		}
 		System.out.println(trackStore.size());
 	}
+	
+	public static Track addsSignalTrack( int placeX, int placeY, TrackType itemSelected, SignalAspect aspect) {
+		Track newTrack = null;;
+		switch(aspect) {
+		
+		/*case SHUNT: 
+			DirectionalTrack exitLeftTrack = new DirectionalTrack(itemSelected, placeX, placeY, false, "None");
+			newTrack = exitLeftTrack;
+			break;
+			*/
+			
+		case TWO: 
+			TwoAspectSignalTrack exitRightTrack = new TwoAspectSignalTrack(itemSelected, placeX, placeY, false, "None");
+			newTrack = exitRightTrack;
+			break;
+			
+		/*case THREE: 
+			DirectionalTrack exitUpTrack = new DirectionalTrack(itemSelected, placeX, placeY, false, "None");
+			newTrack = exitUpTrack;
+			break;
+			
+		case FOUR: 
+			DirectionalTrack exitDownTrack = new DirectionalTrack(itemSelected, placeX, placeY, false, "None");
+			newTrack = exitDownTrack;
+			break;
+			*/
+			
+			
+		}
+		return newTrack;
+	}
+	
+	
 	
 		
 

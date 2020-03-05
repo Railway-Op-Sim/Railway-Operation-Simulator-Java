@@ -1,14 +1,19 @@
 package application;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import elements.SignalAspect;
 import elements.TrackType;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
@@ -28,6 +33,14 @@ public class BuildModifyMenuController {
 
     @FXML // fx:id="trackMenu"
     private GridPane trackMenu; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="aspectChangerButton"
+    private Button aspectChangerButton; // Value injected by FXMLLoader
+
+    @FXML // fx:id="aspectChangerImage"
+    private ImageView aspectChangerImage; // Value injected by FXMLLoader
+    
+    private static SignalAspect aspect;
 
     // ** Buffer toggles and images. **
     
@@ -230,11 +243,42 @@ public class BuildModifyMenuController {
 
     @FXML // fx:id="exitUpTrackImage"
     private ImageView exitUpTrackImage; // Value injected by FXMLLoader
+    
+    //** Signal Track toggles and images. **
+    
+    @FXML // fx:id="leftSignalTrackToggle"
+    private ToggleButton leftSignalTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="leftSignalTrackImage"
+    private ImageView leftSignalTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="rightSignalTrackToggle"
+    private ToggleButton rightSignalTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="rightSignalTrackImage"
+    private ImageView rightSignalTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="upSignalTrackToggle"
+    private ToggleButton upSignalTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="upSignalTrackImage"
+    private ImageView upSignalTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="downSignalTrackToggle"
+    private ToggleButton downSignalTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="downSignalImage"
+    private ImageView downSignalImage; // Value injected by FXMLLoader
 
    
 
     
-    @FXML
+    public static SignalAspect getAspect() {
+		return aspect;
+	}
+
+
+	@FXML
     void openbuildModifyMenu(ActionEvent event) {
     	trackMenu.setDisable(false);
     	trackMenu.setVisible(true);
@@ -242,6 +286,45 @@ public class BuildModifyMenuController {
     	leftBufferToggle.setVisible(true);
     	leftBufferImage.setDisable(false);
     	leftBufferImage.setVisible(true);
+    }
+    
+    @FXML
+    void changeAspect(ActionEvent event) {
+    	File aspectImage = null;
+		Image image = null;
+		
+    	switch (aspect) {
+    		case FOUR: 
+    			aspect = SignalAspect.THREE; 
+    			aspectImage = new File("./src/graphics/threeIcon.png");
+    			break;
+    			
+    		case THREE: 
+    			aspect = SignalAspect.TWO; 
+    			aspectImage = new File("./src/graphics/twoIcon.png");
+    			break;
+    			
+    		case TWO: 
+    			aspect = SignalAspect.SHUNT; 
+    			aspectImage = new File("./src/graphics/shuntIcon.png");
+    			break;
+    			
+    		case SHUNT: 
+    			aspect = SignalAspect.FOUR; 
+    			aspectImage = new File("./src/graphics/fourIcon.png");
+    			break;
+    		
+    		default:
+    			break;
+    		}
+    		
+    		try {
+    			image = new Image(new FileInputStream(aspectImage)); //Set file as image.
+    		} catch (FileNotFoundException e) {
+    			e.printStackTrace();
+    		}
+    		aspectChangerImage.setImage(image);
+    		
     }
     
     // Select Straight Track Actions.
@@ -606,13 +689,59 @@ public class BuildModifyMenuController {
     	
     }
     
+    // Select Signal Track actions
+    
+    @FXML
+    void selectLeftSignalTrack(ActionEvent event) {
+    	if (leftSignalTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SIGNALLEFT);
+		} else {
+			leftSignalTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectRightSignalTrack(ActionEvent event) {
+    	if (rightSignalTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SIGNALRIGHT);
+		} else {
+			rightSignalTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectUpSignalTrack(ActionEvent event) {
+    	if (upSignalTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SIGNALUP);
+		} else {
+			upSignalTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectDownSignalTrack(ActionEvent event) {
+    	if (downSignalTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SIGNALDOWN);
+		} else {
+			downSignalTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
    
     
     
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
-        
+    	 aspect = SignalAspect.FOUR;
     }
 
 }
