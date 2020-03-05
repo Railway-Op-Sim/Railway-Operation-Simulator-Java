@@ -57,6 +57,14 @@
             <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="16.0" vgrow="SOMETIMES" />
@@ -387,6 +395,78 @@
                   <ImageView fx:id="downSignalTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../graphics/signalDown.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="tightCurve1Toggle" mnemonicParsing="false" onAction="#selectTightCurve1" toggleGroup="$elementGroup" GridPane.columnIndex="12">
+               <graphic>
+                  <ImageView fx:id="tightCurve1Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/tightCurve1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="exitLeftUpTrackToggle" mnemonicParsing="false" onAction="#selectExitLeftUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="12" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="exitLeftUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/exitLeftUpTrack.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="tightCurve2Toggle" mnemonicParsing="false" onAction="#selectTightCurve2" toggleGroup="$elementGroup" GridPane.columnIndex="13">
+               <graphic>
+                  <ImageView fx:id="tightCurve1Image2" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/tightCurve2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="exitRightUpTrackToggle" mnemonicParsing="false" onAction="#selectExitRightUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="13" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="exitRightUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/exitRightUpTrack.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="tightCurve3Toggle" mnemonicParsing="false" onAction="#selectTightCurve3" toggleGroup="$elementGroup" GridPane.columnIndex="14">
+               <graphic>
+                  <ImageView fx:id="tightCurve3Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/tightCurve3.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="exitLeftDownTrackToggle" mnemonicParsing="false" onAction="#selectExitLeftDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="14" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="exitLeftDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/exitLeftDownTrack.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="tightCurve4Toggle" mnemonicParsing="false" onAction="#selectTightCurve4" toggleGroup="$elementGroup" GridPane.columnIndex="15">
+               <graphic>
+                  <ImageView fx:id="tightCurve4Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/tightcurve4.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="exitRightDownTrackToggle" mnemonicParsing="false" onAction="#selectExitRightDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="15" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="exitRightDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/exitRightDownTrack.png" />
                      </image>
                   </ImageView>
                </graphic>

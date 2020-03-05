@@ -9,9 +9,10 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 import elements.BufferedTrack;
+import elements.CurvedTrack;
 import elements.Direction;
 import elements.DirectionalTrack;
-
+import elements.ExitTrack;
 import elements.GapLinkedTrack;
 import elements.SignalAspect;
 import elements.SignalTrack;
@@ -271,6 +272,38 @@ public class MenuActions {
 				
 			case EXITDOWN :
 				trackImage = new String("graphics/exitDownTrack.png"); //Open image file.
+				break;
+				
+			case EXITLEFTUP :
+				trackImage = new String("graphics/exitLeftUpTrack.png"); //Open image file.
+				break;
+				
+			case EXITRIGHTUP :
+				trackImage = new String("graphics/exitRightUpTrack.png"); //Open image file.
+				break;
+				
+			case EXITLEFTDOWN :
+				trackImage = new String("graphics/exitLeftDownTrack.png"); //Open image file.
+				break;
+				
+			case EXITRIGHTDOWN :
+				trackImage = new String("graphics/exitRightDownTrack.png"); //Open image file.
+				break;
+			
+			case TIGHTCURVE1 :
+				trackImage = new String("graphics/tightCurve1.png"); //Open image file.
+				break;
+				
+			case TIGHTCURVE2 :
+				trackImage = new String("graphics/tightCurve2.png"); //Open image file.
+				break;
+				
+			case TIGHTCURVE3 :
+				trackImage = new String("graphics/tightCurve3.png"); //Open image file.
+				break;
+				
+			case TIGHTCURVE4 :
+				trackImage = new String("graphics/tightCurve4.png"); //Open image file.
 				break;
 				
 			case SIGNALLEFT :
@@ -550,23 +583,63 @@ public class MenuActions {
 				break;
 				
 			case EXITLEFT: 
-				DirectionalTrack exitLeftTrack = new DirectionalTrack(TrackType.EXITLEFT, placeX, placeY, false, "None", Direction.LEFT);
+				ExitTrack exitLeftTrack = new ExitTrack(TrackType.EXITLEFT, placeX, placeY, false, "None");
 				newTrack = exitLeftTrack;
 				break;
 				
 			case EXITRIGHT: 
-				DirectionalTrack exitRightTrack = new DirectionalTrack(TrackType.EXITRIGHT, placeX, placeY, false, "None", Direction.RIGHT);
+				ExitTrack exitRightTrack = new ExitTrack(TrackType.EXITRIGHT, placeX, placeY, false, "None");
 				newTrack = exitRightTrack;
 				break;
 				
 			case EXITUP: 
-				DirectionalTrack exitUpTrack = new DirectionalTrack(TrackType.EXITUP, placeX, placeY, false, "None", Direction.UP);
+				ExitTrack exitUpTrack = new ExitTrack(TrackType.EXITUP, placeX, placeY, false, "None");
 				newTrack = exitUpTrack;
 				break;
 				
 			case EXITDOWN: 
-				DirectionalTrack exitDownTrack = new DirectionalTrack(TrackType.EXITDOWN, placeX, placeY, false, "None", Direction.DOWN);
+				ExitTrack exitDownTrack = new ExitTrack(TrackType.EXITDOWN, placeX, placeY, false, "None");
 				newTrack = exitDownTrack;
+				break;
+				
+			case EXITLEFTUP: 
+				ExitTrack exitLeftUpTrack = new ExitTrack(TrackType.EXITLEFTUP, placeX, placeY, false, "None");
+				newTrack = exitLeftUpTrack;
+				break;
+				
+			case EXITRIGHTUP: 
+				ExitTrack exitRightUpTrack = new ExitTrack(TrackType.EXITRIGHTUP, placeX, placeY, false, "None");
+				newTrack = exitRightUpTrack;
+				break;
+				
+			case EXITLEFTDOWN: 
+				ExitTrack exitLeftDownTrack = new ExitTrack(TrackType.EXITLEFTDOWN, placeX, placeY, false, "None");
+				newTrack = exitLeftDownTrack;
+				break;
+				
+			case EXITRIGHTDOWN: 
+				ExitTrack exitRightDownTrack = new ExitTrack(TrackType.EXITRIGHTDOWN, placeX, placeY, false, "None");
+				newTrack = exitRightDownTrack;
+				break;
+				
+			case TIGHTCURVE1: 
+				CurvedTrack tightCurve1 = new CurvedTrack(TrackType.TIGHTCURVE1, placeX, placeY, false, "None");
+				newTrack = tightCurve1;
+				break;
+				
+			case TIGHTCURVE2: 
+				CurvedTrack tightCurve2 = new CurvedTrack(TrackType.TIGHTCURVE2, placeX, placeY, false, "None");
+				newTrack = tightCurve2;
+				break;
+				
+			case TIGHTCURVE3: 
+				CurvedTrack tightCurve3 = new CurvedTrack(TrackType.TIGHTCURVE3, placeX, placeY, false, "None");
+				newTrack = tightCurve3;
+				break;
+				
+			case TIGHTCURVE4: 
+				CurvedTrack tightCurve4 = new CurvedTrack(TrackType.TIGHTCURVE4, placeX, placeY, false, "None");
+				newTrack = tightCurve4;
 				break;
 				
 			case SIGNALLEFT: 

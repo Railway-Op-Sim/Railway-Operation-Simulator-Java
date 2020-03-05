@@ -244,6 +244,30 @@ public class BuildModifyMenuController {
     @FXML // fx:id="exitUpTrackImage"
     private ImageView exitUpTrackImage; // Value injected by FXMLLoader
     
+    @FXML // fx:id="exitLeftUpTrackToggle"
+    private ToggleButton exitLeftUpTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="exitLeftUpTrackImage"
+    private ImageView exitLeftUpTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="exitRightUpTrackToggle"
+    private ToggleButton exitRightUpTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="exitRightUpTrackImage"
+    private ImageView exitRightUpTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="exitLeftDownTrackToggle"
+    private ToggleButton exitLeftDownTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="exitLeftDownTrackImage"
+    private ImageView exitLeftDownTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="exitRightDownTrackToggle"
+    private ToggleButton exitRightDownTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="exitRightDownImage"
+    private ImageView exitRightDownImage; // Value injected by FXMLLoader
+    
     //** Signal Track toggles and images. **
     
     @FXML // fx:id="leftSignalTrackToggle"
@@ -269,6 +293,32 @@ public class BuildModifyMenuController {
 
     @FXML // fx:id="downSignalTrackImage"
     private ImageView downSignalTrackImage; // Value injected by FXMLLoader
+    
+    // ** Tight curve toggles and images **
+    
+    @FXML // fx:id="tightCurve1Toggle"
+    private ToggleButton tightCurve1Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="tightCurve1Image"
+    private ImageView tightCurve1Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="tightCurve2Toggle"
+    private ToggleButton tightCurve2Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="tightCurve1Image2"
+    private ImageView tightCurve1Image2; // Value injected by FXMLLoader
+
+    @FXML // fx:id="tightCurve3Toggle"
+    private ToggleButton tightCurve3Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="tightCurve3Image"
+    private ImageView tightCurve3Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="tightCurve4Toggle"
+    private ToggleButton tightCurve4Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="tightCurve4Image"
+    private ImageView tightCurve4Image; // Value injected by FXMLLoader
 
    
 
@@ -692,6 +742,50 @@ public class BuildModifyMenuController {
     	
     }
     
+    @FXML
+    void selectExitLeftUpTrack(ActionEvent event) {
+    	if (exitLeftUpTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.EXITLEFTUP);
+		} else {
+			exitLeftTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectExitRightUpTrack(ActionEvent event) {
+    	if (exitRightUpTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.EXITRIGHTUP);
+		} else {
+			exitRightUpTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectExitLeftDownTrack(ActionEvent event) {
+    	if (exitLeftDownTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.EXITLEFTDOWN);
+		} else {
+			exitLeftDownTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectExitRightDownTrack(ActionEvent event) {
+    	if (exitRightDownTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.EXITRIGHTDOWN);
+		} else {
+			exitRightDownTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
     // Select Signal Track actions
     
     @FXML
@@ -736,6 +830,50 @@ public class BuildModifyMenuController {
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
+    }
+    
+    // Select Tight Curve Actions
+    
+    @FXML
+    void selectTightCurve1(ActionEvent event) {
+    	if (tightCurve1Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.TIGHTCURVE1);
+		} else {
+			tightCurve1Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    }
+
+    @FXML
+    void selectTightCurve2(ActionEvent event) {
+    	if (tightCurve2Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.TIGHTCURVE2);
+		} else {
+			tightCurve2Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectTightCurve3(ActionEvent event) {
+    	if (tightCurve3Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.TIGHTCURVE3);
+		} else {
+			tightCurve3Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectTightCurve4(ActionEvent event) {
+    	if (tightCurve4Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.TIGHTCURVE4);
+		} else {
+			tightCurve4Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
     }
     
    
