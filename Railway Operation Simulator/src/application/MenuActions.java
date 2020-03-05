@@ -11,12 +11,13 @@ import java.util.Iterator;
 import elements.BufferedTrack;
 import elements.Direction;
 import elements.DirectionalTrack;
+
 import elements.GapLinkedTrack;
 import elements.SignalAspect;
+import elements.SignalTrack;
 import elements.StraightTrack;
 import elements.Track;
 import elements.TrackType;
-import elements.TwoAspectSignalTrack;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.canvas.Canvas;
@@ -145,6 +146,7 @@ public class MenuActions {
 			
 			File trackImage = null;
 			Image image = null;
+			SignalTrack newSig = null;
 			TrackType currentTrackType = track.getTrackType();
 			switch (currentTrackType) {
 			case STRAIGHTHORIZONTAL :
@@ -265,6 +267,44 @@ public class MenuActions {
 				
 			case EXITDOWN :
 				trackImage = new File("./src/graphics/exitDownTrack.png"); //Open image file.
+				break;
+				
+			case SIGNALLEFT :
+				newSig = (SignalTrack) track;
+				if (newSig.getAspect() == SignalAspect.SHUNT) {
+					trackImage = new File("./src/graphics/shuntLeftSignalRed.png");
+				} else {
+					trackImage = new File("./src/graphics/signalLeft.png");
+				}
+				 //Open image file.
+				break;
+				
+			case SIGNALRIGHT :
+				newSig = (SignalTrack) track;
+				if (newSig.getAspect() == SignalAspect.SHUNT) {
+					trackImage = new File("./src/graphics/shuntRightSignalRed.png");
+				} else {
+					trackImage = new File("./src/graphics/signalRight.png"); //Open image file.
+				}
+				break;
+				
+			case SIGNALUP :
+				newSig = (SignalTrack) track;
+				if (newSig.getAspect() == SignalAspect.SHUNT) {
+					trackImage = new File("./src/graphics/shuntUpSignalRed.png");
+				} else {
+					trackImage = new File("./src/graphics/signalUp.png"); //Open image file.
+				}
+				break;
+				
+			case SIGNALDOWN :
+				newSig = (SignalTrack) track;
+				if (newSig.getAspect() == SignalAspect.SHUNT) {
+					trackImage = new File("./src/graphics/shuntDownSignalRed.png");
+				} else {
+					trackImage = new File("./src/graphics/signalDown.png"); //Open image file.
+				}
+				
 				break;
 			
 			default:
@@ -566,27 +606,27 @@ public class MenuActions {
 		Track newTrack = null;;
 		switch(aspect) {
 		
-		/*case SHUNT: 
-			DirectionalTrack exitLeftTrack = new DirectionalTrack(itemSelected, placeX, placeY, false, "None");
+		case SHUNT: 
+			SignalTrack exitLeftTrack = new SignalTrack(itemSelected, placeX, placeY, false, "None", aspect);
 			newTrack = exitLeftTrack;
 			break;
-			*/
+			
 			
 		case TWO: 
-			TwoAspectSignalTrack exitRightTrack = new TwoAspectSignalTrack(itemSelected, placeX, placeY, false, "None");
+			SignalTrack exitRightTrack = new SignalTrack(itemSelected, placeX, placeY, false, "None", aspect);
 			newTrack = exitRightTrack;
 			break;
 			
-		/*case THREE: 
-			DirectionalTrack exitUpTrack = new DirectionalTrack(itemSelected, placeX, placeY, false, "None");
+		case THREE: 
+			SignalTrack exitUpTrack = new SignalTrack(itemSelected, placeX, placeY, false, "None", aspect);
 			newTrack = exitUpTrack;
 			break;
 			
 		case FOUR: 
-			DirectionalTrack exitDownTrack = new DirectionalTrack(itemSelected, placeX, placeY, false, "None");
+			SignalTrack exitDownTrack = new SignalTrack(itemSelected, placeX, placeY, false, "None", aspect);
 			newTrack = exitDownTrack;
 			break;
-			*/
+			
 			
 			
 		}

@@ -267,8 +267,8 @@ public class BuildModifyMenuController {
     @FXML // fx:id="downSignalTrackToggle"
     private ToggleButton downSignalTrackToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="downSignalImage"
-    private ImageView downSignalImage; // Value injected by FXMLLoader
+    @FXML // fx:id="downSignalTrackImage"
+    private ImageView downSignalTrackImage; // Value injected by FXMLLoader
 
    
 
@@ -297,21 +297,27 @@ public class BuildModifyMenuController {
     		case FOUR: 
     			aspect = SignalAspect.THREE; 
     			aspectImage = new File("./src/graphics/threeIcon.png");
+    			System.out.println(3);
     			break;
     			
     		case THREE: 
     			aspect = SignalAspect.TWO; 
     			aspectImage = new File("./src/graphics/twoIcon.png");
+    			System.out.println(2);
     			break;
     			
     		case TWO: 
     			aspect = SignalAspect.SHUNT; 
     			aspectImage = new File("./src/graphics/shuntIcon.png");
+    			BuildModifyMenuActions.changeToShuntSignalGraphic(leftSignalTrackImage, rightSignalTrackImage, upSignalTrackImage, downSignalTrackImage);
+    			System.out.println(1);
     			break;
     			
     		case SHUNT: 
     			aspect = SignalAspect.FOUR; 
     			aspectImage = new File("./src/graphics/fourIcon.png");
+    			BuildModifyMenuActions.changeToNormalSignalGraphic(leftSignalTrackImage, rightSignalTrackImage, upSignalTrackImage, downSignalTrackImage);
+    			System.out.println(4);
     			break;
     		
     		default:
@@ -326,6 +332,7 @@ public class BuildModifyMenuController {
     		aspectChangerImage.setImage(image);
     		
     }
+    
     
     // Select Straight Track Actions.
     

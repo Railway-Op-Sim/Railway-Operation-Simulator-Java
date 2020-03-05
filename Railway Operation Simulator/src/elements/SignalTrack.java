@@ -1,12 +1,33 @@
 package elements;
 
-public abstract class SignalTrack extends Track {
+public class SignalTrack extends Track {
+	SignalAspect aspect;
 	Track nextSignalBlock;
 	boolean state;
 
-	public SignalTrack() {
-		// TODO Auto-generated constructor stub
+	public SignalTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification, SignalAspect aspect) {
+		this.trackType = trackType;
+		this.xLocation = xLocation;
+		this.yLocation = yLocation;
+		this.electrified = electrified;
+		this.methodOfElectrification = methodOfElectrification;
+		this.aspect = aspect;
+
 	}
+	
+	
+
+	public SignalAspect getAspect() {
+		return aspect;
+	}
+
+
+
+	public void setAspect(SignalAspect aspect) {
+		this.aspect = aspect;
+	}
+
+
 
 	public Track getNextSignalBlock() {
 		return nextSignalBlock;

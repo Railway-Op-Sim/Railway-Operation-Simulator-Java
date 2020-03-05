@@ -384,7 +384,7 @@
             </ToggleButton>
             <ToggleButton fx:id="downSignalTrackToggle" mnemonicParsing="false" onAction="#selectDownSignalTrack" toggleGroup="$elementGroup" GridPane.columnIndex="11" GridPane.rowIndex="2">
                <graphic>
-                  <ImageView fx:id="downSignalImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="downSignalTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../graphics/signalDown.png" />
                      </image>
