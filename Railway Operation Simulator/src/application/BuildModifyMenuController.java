@@ -270,29 +270,54 @@ public class BuildModifyMenuController {
     
     //** Signal Track toggles and images. **
     
-    @FXML // fx:id="leftSignalTrackToggle"
-    private ToggleButton leftSignalTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="signalLeftTrackToggle"
+    private ToggleButton signalLeftTrackToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="leftSignalTrackImage"
-    private ImageView leftSignalTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="signalLeftTrackImage"
+    private ImageView signalLeftTrackImage; // Value injected by FXMLLoader
     
-    @FXML // fx:id="rightSignalTrackToggle"
-    private ToggleButton rightSignalTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="signalRightTrackToggle"
+    private ToggleButton signalRightTrackToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="rightSignalTrackImage"
-    private ImageView rightSignalTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="signalRightTrackImage"
+    private ImageView signalRightTrackImage; // Value injected by FXMLLoader
     
-    @FXML // fx:id="upSignalTrackToggle"
-    private ToggleButton upSignalTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="signalUpTrackToggle"
+    private ToggleButton signalUpTrackToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="upSignalTrackImage"
-    private ImageView upSignalTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="signalUpTrackImage"
+    private ImageView signalUpTrackImage; // Value injected by FXMLLoader
     
-    @FXML // fx:id="downSignalTrackToggle"
-    private ToggleButton downSignalTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="signalDownTrackToggle"
+    private ToggleButton signalDownTrackToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="downSignalTrackImage"
-    private ImageView downSignalTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="signalDownTrackImage"
+    private ImageView signalDownTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="signalLeftUpTrackToggle"
+    private ToggleButton signalLeftUpTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="signalLeftUpTrackImage"
+    private ImageView signalLeftUpTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="signalRightUpTrackToggle"
+    private ToggleButton signalRightUpTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="signalRightUpTrackImage"
+    private ImageView signalRightUpTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="signalLeftDownTrackToggle"
+    private ToggleButton signalLeftDownTrackToggle; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="signalRightDownTrackImage"
+    private ImageView signalLeftDownTrackImage; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="signalRightDownTrackToggle"
+    private ToggleButton signalRightDownTrackToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="signalRightDownTrackImage"
+    private ImageView signalRightDownTrackImage; // Value injected by FXMLLoader
+
     
     // ** Tight curve toggles and images **
     
@@ -359,14 +384,16 @@ public class BuildModifyMenuController {
     		case TWO: 
     			aspect = SignalAspect.SHUNT; 
     			aspectImage = new String("graphics/shuntIcon.png");
-    			BuildModifyMenuActions.changeToShuntSignalGraphic(leftSignalTrackImage, rightSignalTrackImage, upSignalTrackImage, downSignalTrackImage);
+    			BuildModifyMenuActions.changeToShuntSignalGraphic(signalLeftTrackImage, signalRightTrackImage, signalUpTrackImage,
+    					signalDownTrackImage, signalLeftUpTrackImage, signalRightUpTrackImage, signalLeftDownTrackImage, signalRightDownTrackImage);
     			System.out.println(1);
     			break;
     			
     		case SHUNT: 
     			aspect = SignalAspect.FOUR; 
     			aspectImage = new String("graphics/fourIcon.png");
-    			BuildModifyMenuActions.changeToNormalSignalGraphic(leftSignalTrackImage, rightSignalTrackImage, upSignalTrackImage, downSignalTrackImage);
+    			BuildModifyMenuActions.changeToNormalSignalGraphic(signalLeftTrackImage, signalRightTrackImage, signalUpTrackImage, signalDownTrackImage,
+    					signalLeftUpTrackImage, signalRightUpTrackImage, signalLeftDownTrackImage, signalRightDownTrackImage);
     			System.out.println(4);
     			break;
     		
@@ -789,44 +816,88 @@ public class BuildModifyMenuController {
     // Select Signal Track actions
     
     @FXML
-    void selectLeftSignalTrack(ActionEvent event) {
-    	if (leftSignalTrackToggle.isSelected()) {
+    void selectSignalLeftTrack(ActionEvent event) {
+    	if (signalLeftTrackToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.SIGNALLEFT);
 		} else {
-			leftSignalTrackToggle.setSelected(false);
+			signalLeftTrackToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
 
     @FXML
-    void selectRightSignalTrack(ActionEvent event) {
-    	if (rightSignalTrackToggle.isSelected()) {
+    void selectSignalRightTrack(ActionEvent event) {
+    	if (signalRightTrackToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.SIGNALRIGHT);
 		} else {
-			rightSignalTrackToggle.setSelected(false);
+			signalRightTrackToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
     
     @FXML
-    void selectUpSignalTrack(ActionEvent event) {
-    	if (upSignalTrackToggle.isSelected()) {
+    void selectSignalUpTrack(ActionEvent event) {
+    	if (signalUpTrackToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.SIGNALUP);
 		} else {
-			upSignalTrackToggle.setSelected(false);
+			signalUpTrackToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
     
     @FXML
-    void selectDownSignalTrack(ActionEvent event) {
-    	if (downSignalTrackToggle.isSelected()) {
+    void selectSignalDownTrack(ActionEvent event) {
+    	if (signalDownTrackToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.SIGNALDOWN);
 		} else {
-			downSignalTrackToggle.setSelected(false);
+			signalDownTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectSignalLeftUpTrack(ActionEvent event) {
+    	if (signalLeftUpTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SIGNALLEFTUP);
+		} else {
+			signalLeftUpTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSignalRightUpTrack(ActionEvent event) {
+    	if (signalRightUpTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SIGNALRIGHTUP);
+		} else {
+			signalRightUpTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectSignalLeftDownTrack(ActionEvent event) {
+    	if (signalLeftDownTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SIGNALLEFTDOWN);
+		} else {
+			signalLeftDownTrackToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSignalRightDownTrack(ActionEvent event) {
+    	if (signalRightDownTrackToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SIGNALRIGHTDOWN);
+		} else {
+			signalRightDownTrackToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 

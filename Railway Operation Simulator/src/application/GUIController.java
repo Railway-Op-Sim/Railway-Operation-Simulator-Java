@@ -289,7 +289,7 @@ public class GUIController extends Application {
 
 			case SIGNALLEFT:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, railMap, "graphics/shuntLeftSignalRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, railMap, "graphics/shuntLeftRed.png", itemSelected, aspect);
 				} else {
 					MenuActions.addTrack(event, railMap, "graphics/signalLeft.png", itemSelected, aspect);
 				}
@@ -298,7 +298,7 @@ public class GUIController extends Application {
 
 			case SIGNALRIGHT:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, railMap, "graphics/shuntRightSignalRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, railMap, "graphics/shuntRightRed.png", itemSelected, aspect);
 				} else {
 					MenuActions.addTrack(event, railMap, "graphics/signalRight.png", itemSelected, aspect);
 				}
@@ -306,7 +306,7 @@ public class GUIController extends Application {
 
 			case SIGNALUP:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, railMap,"graphics/shuntUpSignalRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, railMap,"graphics/shuntUpRed.png", itemSelected, aspect);
 				} else {
 					MenuActions.addTrack(event, railMap,"graphics/signalUp.png", itemSelected, aspect);
 				}
@@ -314,9 +314,43 @@ public class GUIController extends Application {
 
 			case SIGNALDOWN:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, railMap,"graphics/shuntDownSignalRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, railMap,"graphics/shuntDownRed.png", itemSelected, aspect);
 				} else {
 					MenuActions.addTrack(event, railMap,"graphics/signalDown.png", itemSelected, aspect);
+				}
+				break;
+				
+			case SIGNALLEFTUP:
+				if (aspect == SignalAspect.SHUNT) {
+					MenuActions.addTrack(event, railMap, "graphics/shuntLeftUpRed.png", itemSelected, aspect);
+				} else {
+					MenuActions.addTrack(event, railMap, "graphics/signalLeftUp.png", itemSelected, aspect);
+				}
+
+				break;
+
+			case SIGNALRIGHTUP:
+				if (aspect == SignalAspect.SHUNT) {
+					MenuActions.addTrack(event, railMap, "graphics/shuntRightUpRed.png", itemSelected, aspect);
+				} else {
+					MenuActions.addTrack(event, railMap, "graphics/signalRightUp.png", itemSelected, aspect);
+				}
+				break;
+				
+			case SIGNALLEFTDOWN:
+				if (aspect == SignalAspect.SHUNT) {
+					MenuActions.addTrack(event, railMap, "graphics/shuntLeftDownRed.png", itemSelected, aspect);
+				} else {
+					MenuActions.addTrack(event, railMap, "graphics/signalLeftDown.png", itemSelected, aspect);
+				}
+
+				break;
+
+			case SIGNALRIGHTDOWN:
+				if (aspect == SignalAspect.SHUNT) {
+					MenuActions.addTrack(event, railMap, "graphics/shuntRightDownRed.png", itemSelected, aspect);
+				} else {
+					MenuActions.addTrack(event, railMap, "graphics/signalRightDown.png", itemSelected, aspect);
 				}
 				break;
 

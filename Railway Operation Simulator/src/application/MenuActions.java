@@ -309,7 +309,7 @@ public class MenuActions {
 			case SIGNALLEFT :
 				newSig = (SignalTrack) track;
 				if (newSig.getAspect() == SignalAspect.SHUNT) {
-					trackImage = new String("graphics/shuntLeftSignalRed.png");
+					trackImage = new String("graphics/shuntLeftRed.png");
 				} else {
 					trackImage = new String("graphics/signalLeft.png");
 				}
@@ -318,7 +318,7 @@ public class MenuActions {
 			case SIGNALRIGHT :
 				newSig = (SignalTrack) track;
 				if (newSig.getAspect() == SignalAspect.SHUNT) {
-					trackImage = new String("graphics/shuntRightSignalRed.png");
+					trackImage = new String("graphics/shuntRightRed.png");
 				} else {
 					trackImage = new String("graphics/signalRight.png"); //Open image file.
 				}
@@ -327,7 +327,7 @@ public class MenuActions {
 			case SIGNALUP :
 				newSig = (SignalTrack) track;
 				if (newSig.getAspect() == SignalAspect.SHUNT) {
-					trackImage = new String("graphics/shuntUpSignalRed.png");
+					trackImage = new String("graphics/shuntUpRed.png");
 				} else {
 					trackImage = new String("graphics/signalUp.png"); //Open image file.
 				}
@@ -336,11 +336,48 @@ public class MenuActions {
 			case SIGNALDOWN :
 				newSig = (SignalTrack) track;
 				if (newSig.getAspect() == SignalAspect.SHUNT) {
-					trackImage = new String("graphics/shuntDownSignalRed.png");
+					trackImage = new String("graphics/shuntDownRed.png");
 				} else {
 					trackImage = new String("graphics/signalDown.png"); //Open image file.
 				}
 				break;
+				
+			case SIGNALLEFTUP :
+				newSig = (SignalTrack) track;
+				if (newSig.getAspect() == SignalAspect.SHUNT) {
+					trackImage = new String("graphics/shuntLeftUpRed.png");
+				} else {
+					trackImage = new String("graphics/signalLeftUp.png");
+				}
+				break;
+				
+			case SIGNALRIGHTUP :
+				newSig = (SignalTrack) track;
+				if (newSig.getAspect() == SignalAspect.SHUNT) {
+					trackImage = new String("graphics/shuntRightUpRed.png");
+				} else {
+					trackImage = new String("graphics/signalRightUp.png"); //Open image file.
+				}
+				break;
+				
+			case SIGNALLEFTDOWN :
+				newSig = (SignalTrack) track;
+				if (newSig.getAspect() == SignalAspect.SHUNT) {
+					trackImage = new String("graphics/shuntLeftDownRed.png");
+				} else {
+					trackImage = new String("graphics/signalLeftDown.png");
+				}
+				break;
+				
+			case SIGNALRIGHTDOWN :
+				newSig = (SignalTrack) track;
+				if (newSig.getAspect() == SignalAspect.SHUNT) {
+					trackImage = new String("graphics/shuntRightDownRed.png");
+				} else {
+					trackImage = new String("graphics/signalRightDown.png"); //Open image file.
+				}
+				break;
+				
 			
 			default:
 				break;
@@ -656,6 +693,24 @@ public class MenuActions {
 				break;
 				
 			case SIGNALDOWN: 
+				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				break;
+				
+			case SIGNALLEFTUP: 
+				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				
+				break;
+				
+			case SIGNALRIGHTUP: 
+				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				break;
+			
+			case SIGNALLEFTDOWN: 
+				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				
+				break;
+				
+			case SIGNALRIGHTDOWN: 
 				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
 				break;
 			default:
