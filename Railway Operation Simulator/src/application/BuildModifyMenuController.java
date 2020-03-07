@@ -420,6 +420,32 @@ public class BuildModifyMenuController {
 
     @FXML // fx:id="underpass2Image"
     private ImageView underpass2Image; // Value injected by FXMLLoader
+    
+  //** Tight switch toggles and images **
+    
+    @FXML // fx:id="switchTight1Toggle"
+    private ToggleButton switchTight1Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight1"
+    private ImageView switchTight1; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight2Toggle"
+    private ToggleButton switchTight2Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight2Image"
+    private ImageView switchTight2Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight3Toggle"
+    private ToggleButton switchTight3Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight3Image"
+    private ImageView switchTight3Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight4Toggle"
+    private ToggleButton switchTight4Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight4Image"
+    private ImageView switchTight4Image; // Value injected by FXMLLoader
    
 
     
@@ -1152,6 +1178,52 @@ public class BuildModifyMenuController {
     		GUIController.setItemSelected(TrackType.UNDERPASS2);
 		} else {
 			underpass2Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    // Select tight switch actions
+    
+    @FXML
+    void selectSwitchTight1(ActionEvent event) {
+    	if (switchTight1Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCHTIGHT1);
+		} else {
+			switchTight1Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitchTight2(ActionEvent event) {
+    	if (switchTight2Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCHTIGHT2);
+		} else {
+			switchTight2Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitchTight3(ActionEvent event) {
+    	if (switchTight3Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCHTIGHT3);
+		} else {
+			switchTight3Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitchTight4(ActionEvent event) {
+    	if (switchTight4Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCHTIGHT4);
+		} else {
+			switchTight4Toggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 

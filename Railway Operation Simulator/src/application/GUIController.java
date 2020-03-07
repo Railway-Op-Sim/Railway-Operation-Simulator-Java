@@ -309,6 +309,7 @@ public class GUIController extends Application {
 			case CURVE4:
 				MenuActions.addTrack(event, railMap, "graphics/curve4.png", itemSelected, null);
 				break;
+				
 			case CURVE5:
 				MenuActions.addTrack(event, railMap, "graphics/curve5.png", itemSelected, null);
 				break;
@@ -339,6 +340,22 @@ public class GUIController extends Application {
 
 			case UNDERPASS2:
 				MenuActions.addTrack(event, railMap, "graphics/underpassUnset2.png", itemSelected, null);
+				break;
+				
+			case SWITCHTIGHT1:
+				MenuActions.addTrack(event, railMap, "graphics/switchTight1.png", itemSelected, null);
+				break;
+
+			case SWITCHTIGHT2:
+				MenuActions.addTrack(event, railMap, "graphics/switchTight2.png", itemSelected, null);
+				break;
+
+			case SWITCHTIGHT3:
+				MenuActions.addTrack(event, railMap, "graphics/switchTight3.png", itemSelected, null);
+				break;
+
+			case SWITCHTIGHT4:
+				MenuActions.addTrack(event, railMap, "graphics/switchTight4.png", itemSelected, null);
 				break;
 
 			case SIGNALLEFT:

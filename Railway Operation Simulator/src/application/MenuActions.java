@@ -18,6 +18,7 @@ import elements.SignalAspect;
 import elements.SignalTrack;
 import elements.StationBridgeUnderpassTrack;
 import elements.StraightTrack;
+import elements.SwitchTrack;
 import elements.Track;
 import elements.TrackType;
 import javafx.application.Application;
@@ -339,6 +340,23 @@ public class MenuActions {
 			case CURVE8 :
 				trackImage = new String("graphics/curve8.png"); //Open image file.
 				break;
+				
+			case SWITCHTIGHT1 :
+				trackImage = new String("graphics/switchTight1.png"); //Open image file.
+				break;
+				
+			case SWITCHTIGHT2 :
+				trackImage = new String("graphics/switchTight2.png"); //Open image file.
+				break;
+				
+			case SWITCHTIGHT3 :
+				trackImage = new String("graphics/switchTight3.png"); //Open image file.
+				break;
+				
+			case SWITCHTIGHT4 :
+				trackImage = new String("graphics/switchTight4.png"); //Open image file.
+				break;
+				
 				
 			case BRIDGE1 :
 				bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
@@ -788,6 +806,26 @@ public class MenuActions {
 			case CURVE8: 
 				CurvedTrack curve8 = new CurvedTrack(TrackType.CURVE8, placeX, placeY, false, "None");
 				newTrack = curve8;
+				break;
+				
+			case SWITCHTIGHT1: 
+				SwitchTrack switchTrack1 = new SwitchTrack(TrackType.SWITCHTIGHT1, placeX, placeY, false, "None");
+				newTrack = switchTrack1;
+				break;
+				
+			case SWITCHTIGHT2: 
+				SwitchTrack switchTrack2 = new SwitchTrack(TrackType.SWITCHTIGHT2, placeX, placeY, false, "None");
+				newTrack = switchTrack2;
+				break;
+				
+			case SWITCHTIGHT3: 
+				SwitchTrack switchTrack3 = new SwitchTrack(TrackType.SWITCHTIGHT3, placeX, placeY, false, "None");
+				newTrack = switchTrack3;
+				break;
+				
+			case SWITCHTIGHT4: 
+				SwitchTrack switchTrack4 = new SwitchTrack(TrackType.SWITCHTIGHT4, placeX, placeY, false, "None");
+				newTrack = switchTrack4;
 				break;
 				
 			case BRIDGE1: 
