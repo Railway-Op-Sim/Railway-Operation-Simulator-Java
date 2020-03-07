@@ -10,6 +10,8 @@ public class ExitTrack extends Track {
 		this.electrified = electrified;
 		this.methodOfElectrification = methodOfElectrification;
 		this.exit = exit;
+		this.station = false;
+		this.stationName = null;
 
 	}
 

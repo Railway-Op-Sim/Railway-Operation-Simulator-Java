@@ -324,6 +324,22 @@ public class GUIController extends Application {
 			case CURVE8:
 				MenuActions.addTrack(event, railMap, "graphics/curve8.png", itemSelected, null);
 				break;
+				
+			case BRIDGE1:
+				MenuActions.addTrack(event, railMap, "graphics/bridgeUnset1.png", itemSelected, null);
+				break;
+
+			case BRIDGE2:
+				MenuActions.addTrack(event, railMap, "graphics/bridgeUnset2.png", itemSelected, null);
+				break;
+
+			case UNDERPASS1:
+				MenuActions.addTrack(event, railMap, "graphics/underpassUnset1.png", itemSelected, null);
+				break;
+
+			case UNDERPASS2:
+				MenuActions.addTrack(event, railMap, "graphics/underpassUnset2.png", itemSelected, null);
+				break;
 
 			case SIGNALLEFT:
 				if (aspect == SignalAspect.SHUNT) {
@@ -448,6 +464,7 @@ public class GUIController extends Application {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		railMap.widthProperty().bind(pane.widthProperty());
 	    railMap.heightProperty().bind(pane.heightProperty());
 		assert topVBox != null : "fx:id=\"topVBox\" was not injected: check your FXML file 'GUI.fxml'.";

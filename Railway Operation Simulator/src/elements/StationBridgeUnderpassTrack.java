@@ -1,8 +1,9 @@
 package elements;
 
-public class CurvedTrack extends Track {
+public class StationBridgeUnderpassTrack extends Track {
 
-	public CurvedTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
+	
+	public StationBridgeUnderpassTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
 		this.trackType = trackType;
 		this.xLocation = xLocation;
 		this.yLocation = yLocation;
@@ -10,7 +11,7 @@ public class CurvedTrack extends Track {
 		this.methodOfElectrification = methodOfElectrification;
 		this.station = false;
 		this.stationName = null;
-		// TODO Auto-generated constructor stub
+
 	}
 
 }

@@ -9,6 +9,8 @@ public class BufferedTrack extends Track {
 		this.yLocation = yLocation;
 		this.electrified = electrified;
 		this.methodOfElectrification = methodOfElectrification;
+		this.station = false;
+		this.stationName = null;
 
 	}
 

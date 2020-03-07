@@ -16,6 +16,7 @@ import elements.ExitTrack;
 import elements.GapLinkedTrack;
 import elements.SignalAspect;
 import elements.SignalTrack;
+import elements.StationBridgeUnderpassTrack;
 import elements.StraightTrack;
 import elements.Track;
 import elements.TrackType;
@@ -95,7 +96,7 @@ public class MenuActions {
 	        }
 	        
 	      //Every 16 pixels draw a horizontal line.
-	        for (int y=0; y<railMapSizeY+1; y+=16) {
+	        for (int y=0; y<railMapSizeY; y+=16) {
 	        	railMap.strokeLine(0, y, railMapSizeX, y);
 	        }
 
@@ -144,6 +145,7 @@ public class MenuActions {
 			String trackImage = null;
 			Image image = null;
 			SignalTrack newSig = null;
+			StationBridgeUnderpassTrack bridgeUnderPassTrack = null;
 			TrackType currentTrackType = track.getTrackType();
 			switch (currentTrackType) {
 			case STRAIGHTHORIZONTAL :
@@ -336,6 +338,43 @@ public class MenuActions {
 				
 			case CURVE8 :
 				trackImage = new String("graphics/curve8.png"); //Open image file.
+				break;
+				
+			case BRIDGE1 :
+				bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
+				if (bridgeUnderPassTrack.isStation()) {
+					trackImage = new String("graphics/bridgeSet1.png"); //Open image file.
+				} else {
+					trackImage = new String("graphics/bridgeUnset1.png"); //Open image file.
+				}
+				
+				break;
+				
+			case BRIDGE2 :
+				bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
+				if (bridgeUnderPassTrack.isStation()) {
+					trackImage = new String("graphics/bridgeSet2.png"); //Open image file.
+				} else {
+					trackImage = new String("graphics/bridgeUnset2.png"); //Open image file.
+				}
+				break;
+				
+			case UNDERPASS1 :
+				bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
+				if (bridgeUnderPassTrack.isStation()) {
+					trackImage = new String("graphics/underpassSet1.png"); //Open image file.
+				} else {
+					trackImage = new String("graphics/underpassUnset1.png"); //Open image file.
+				}
+				break;
+				
+			case UNDERPASS2 :
+				bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
+				if (bridgeUnderPassTrack.isStation()) {
+					trackImage = new String("graphics/underpassSet1.png"); //Open image file.
+				} else {
+					trackImage = new String("graphics/underpassUnset1.png"); //Open image file.
+				}
 				break;
 				
 			case SIGNALLEFT :
@@ -749,6 +788,26 @@ public class MenuActions {
 			case CURVE8: 
 				CurvedTrack curve8 = new CurvedTrack(TrackType.CURVE8, placeX, placeY, false, "None");
 				newTrack = curve8;
+				break;
+				
+			case BRIDGE1: 
+				StationBridgeUnderpassTrack bridge1 = new StationBridgeUnderpassTrack(TrackType.BRIDGE1, placeX, placeY, false, "None");
+				newTrack = bridge1;
+				break;
+				
+			case BRIDGE2: 
+				StationBridgeUnderpassTrack bridge2 = new StationBridgeUnderpassTrack(TrackType.BRIDGE2, placeX, placeY, false, "None");
+				newTrack = bridge2;
+				break;
+				
+			case UNDERPASS1: 
+				StationBridgeUnderpassTrack underpass1 = new StationBridgeUnderpassTrack(TrackType.UNDERPASS1, placeX, placeY, false, "None");
+				newTrack = underpass1;
+				break;
+				
+			case UNDERPASS2: 
+				StationBridgeUnderpassTrack underpass2 = new StationBridgeUnderpassTrack(TrackType.UNDERPASS2, placeX, placeY, false, "None");
+				newTrack = underpass2;
 				break;
 				
 			case SIGNALLEFT: 

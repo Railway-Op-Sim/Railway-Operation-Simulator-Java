@@ -395,7 +395,31 @@ public class BuildModifyMenuController {
     @FXML // fx:id="curve8Image"
     private ImageView curve8Image; // Value injected by FXMLLoader
 
+// ** Bridge and Underpass Toggles and Images**
+    
+    @FXML // fx:id="bridge1Toggle"
+    private ToggleButton bridge1Toggle; // Value injected by FXMLLoader
 
+    @FXML // fx:id="bridge1Image"
+    private ImageView bridge1Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="bridge2Toggle"
+    private ToggleButton bridge2Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="bridge2Image"
+    private ImageView bridge2Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="underpass1Toggle"
+    private ToggleButton underpass1Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="underpass1Image"
+    private ImageView underpass1Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="underpass2Toggle"
+    private ToggleButton underpass2Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="underpass2Image"
+    private ImageView underpass2Image; // Value injected by FXMLLoader
    
 
     
@@ -1087,6 +1111,52 @@ public class BuildModifyMenuController {
 		}
 
     }
+    
+    //Select Bridge and Underpass tracks
+    
+    @FXML
+    void selectBridge1(ActionEvent event) {
+    	if (bridge1Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.BRIDGE1);
+		} else {
+			bridge1Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    }
+
+    @FXML
+    void selectBridge2(ActionEvent event) {
+    	if (bridge2Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.BRIDGE2);
+		} else {
+			bridge2Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectUnderpass1(ActionEvent event) {
+    	if (underpass1Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.UNDERPASS1);
+		} else {
+			underpass1Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectUnderpass2(ActionEvent event) {
+    	if (underpass2Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.UNDERPASS2);
+		} else {
+			underpass2Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
     
    
     

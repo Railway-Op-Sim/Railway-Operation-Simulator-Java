@@ -14,6 +14,8 @@ public class SignalTrack extends Track {
 		this.electrified = electrified;
 		this.methodOfElectrification = methodOfElectrification;
 		this.aspect = aspect;
+		this.station = false;
+		this.stationName = null;
 
 	}
 	

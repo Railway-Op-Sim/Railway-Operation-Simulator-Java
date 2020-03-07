@@ -581,6 +581,42 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
+            <ToggleButton fx:id="bridge1Toggle" mnemonicParsing="false" onAction="#selectBridge1" toggleGroup="$elementGroup" GridPane.columnIndex="16" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="bridge1Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/bridgeSet1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="bridge2Toggle" mnemonicParsing="false" onAction="#selectBridge2" toggleGroup="$elementGroup" GridPane.columnIndex="17" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="bridge2Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/bridgeSet2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="underpass1Toggle" mnemonicParsing="false" onAction="#selectUnderpass1" toggleGroup="$elementGroup" GridPane.columnIndex="18" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="underpass1Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/underpassSet1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="underpass2Toggle" mnemonicParsing="false" onAction="#selectUnderpass2" toggleGroup="$elementGroup" GridPane.columnIndex="19" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="underpass2Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/underpassSet2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
          </children>
       </GridPane>
    </children>
