@@ -82,6 +82,9 @@
                <toggleGroup>
                   <ToggleGroup fx:id="elementGroup" />
                </toggleGroup>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </ToggleButton>
             <ToggleButton fx:id="leftGapTrackToggle" mnemonicParsing="false" onAction="#selectLeftGapTrack" toggleGroup="$elementGroup" GridPane.rowIndex="1">
                <graphic>
@@ -616,6 +619,12 @@
                      </image>
                   </ImageView>
                </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
             </ToggleButton>
          </children>
       </GridPane>
