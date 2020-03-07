@@ -344,6 +344,57 @@ public class BuildModifyMenuController {
 
     @FXML // fx:id="tightCurve4Image"
     private ImageView tightCurve4Image; // Value injected by FXMLLoader
+    
+ // ** Curve toggles and images **
+    
+    @FXML // fx:id="curve1Toggle"
+    private ToggleButton curve1Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve1Image"
+    private ImageView curve1Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve2Toggle"
+    private ToggleButton curve2Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve2Image"
+    private ImageView curve2Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve3Toggle"
+    private ToggleButton curve3Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve3Image"
+    private ImageView curve3Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve4Toggle"
+    private ToggleButton curve4Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve4Image"
+    private ImageView curve4Image; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="curve5Toggle"
+    private ToggleButton curve5Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve5Image"
+    private ImageView curve5Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve6Toggle"
+    private ToggleButton curve6Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve6Image"
+    private ImageView curve6Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve7Toggle"
+    private ToggleButton curve7Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve7Image"
+    private ImageView curve7Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve8Toggle"
+    private ToggleButton curve8Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="curve8Image"
+    private ImageView curve8Image; // Value injected by FXMLLoader
+
 
    
 
@@ -945,6 +996,96 @@ public class BuildModifyMenuController {
 			tightCurve4Toggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
+    }
+    
+    // Select Curve Actions
+    
+    @FXML
+    void selectCurve1(ActionEvent event) {
+    	if (curve1Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.CURVE1);
+		} else {
+			curve1Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectCurve2(ActionEvent event) {
+    	if (curve2Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.CURVE2);
+		} else {
+			curve2Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectCurve3(ActionEvent event) {
+    	if (curve3Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.CURVE3);
+		} else {
+			curve3Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectCurve4(ActionEvent event) {
+    	if (curve4Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.CURVE4);
+		} else {
+			curve4Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectCurve5(ActionEvent event) {
+    	if (curve5Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.CURVE5);
+		} else {
+			curve5Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectCurve6(ActionEvent event) {
+    	if (curve6Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.CURVE6);
+		} else {
+			curve6Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectCurve7(ActionEvent event) {
+    	if (curve7Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.CURVE7);
+		} else {
+			curve7Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectCurve8(ActionEvent event) {
+    	if (curve8Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.CURVE8);
+		} else {
+			curve8Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
     }
     
    

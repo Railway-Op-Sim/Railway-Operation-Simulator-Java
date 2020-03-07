@@ -306,6 +306,38 @@ public class MenuActions {
 				trackImage = new String("graphics/tightCurve4.png"); //Open image file.
 				break;
 				
+			case CURVE1 :
+				trackImage = new String("graphics/curve1.png"); //Open image file.
+				break;
+				
+			case CURVE2 :
+				trackImage = new String("graphics/curve2.png"); //Open image file.
+				break;
+				
+			case CURVE3 :
+				trackImage = new String("graphics/curve3.png"); //Open image file.
+				break;
+				
+			case CURVE4 :
+				trackImage = new String("graphics/curve4.png"); //Open image file.
+				break;
+				
+			case CURVE5 :
+				trackImage = new String("graphics/curve5.png"); //Open image file.
+				break;
+				
+			case CURVE6 :
+				trackImage = new String("graphics/curve6.png"); //Open image file.
+				break;
+				
+			case CURVE7 :
+				trackImage = new String("graphics/curve7.png"); //Open image file.
+				break;
+				
+			case CURVE8 :
+				trackImage = new String("graphics/curve8.png"); //Open image file.
+				break;
+				
 			case SIGNALLEFT :
 				newSig = (SignalTrack) track;
 				if (newSig.getAspect() == SignalAspect.SHUNT) {
@@ -677,6 +709,46 @@ public class MenuActions {
 			case TIGHTCURVE4: 
 				CurvedTrack tightCurve4 = new CurvedTrack(TrackType.TIGHTCURVE4, placeX, placeY, false, "None");
 				newTrack = tightCurve4;
+				break;
+				
+			case CURVE1: 
+				CurvedTrack curve1 = new CurvedTrack(TrackType.CURVE1, placeX, placeY, false, "None");
+				newTrack = curve1;
+				break;
+				
+			case CURVE2: 
+				CurvedTrack curve2 = new CurvedTrack(TrackType.CURVE2, placeX, placeY, false, "None");
+				newTrack = curve2;
+				break;
+				
+			case CURVE3: 
+				CurvedTrack curve3 = new CurvedTrack(TrackType.CURVE3, placeX, placeY, false, "None");
+				newTrack = curve3;
+				break;
+				
+			case CURVE4: 
+				CurvedTrack curve4 = new CurvedTrack(TrackType.CURVE4, placeX, placeY, false, "None");
+				newTrack = curve4;
+				break;
+				
+			case CURVE5: 
+				CurvedTrack curve5 = new CurvedTrack(TrackType.CURVE5, placeX, placeY, false, "None");
+				newTrack = curve5;
+				break;
+				
+			case CURVE6: 
+				CurvedTrack curve6 = new CurvedTrack(TrackType.CURVE6, placeX, placeY, false, "None");
+				newTrack = curve6;
+				break;
+				
+			case CURVE7: 
+				CurvedTrack curve7 = new CurvedTrack(TrackType.CURVE7, placeX, placeY, false, "None");
+				newTrack = curve7;
+				break;
+				
+			case CURVE8: 
+				CurvedTrack curve8 = new CurvedTrack(TrackType.CURVE8, placeX, placeY, false, "None");
+				newTrack = curve8;
 				break;
 				
 			case SIGNALLEFT: 

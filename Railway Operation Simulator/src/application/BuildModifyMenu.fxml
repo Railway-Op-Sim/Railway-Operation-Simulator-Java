@@ -506,6 +506,81 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
+            <ToggleButton fx:id="curve1Toggle" mnemonicParsing="false" onAction="#selectCurve1" toggleGroup="$elementGroup" GridPane.columnIndex="16">
+               <graphic>
+                  <ImageView fx:id="curve1Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/curve1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="curve5Toggle" mnemonicParsing="false" onAction="#selectCurve5" toggleGroup="$elementGroup" GridPane.columnIndex="16" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="curve5Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/curve5.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="curve2Toggle" mnemonicParsing="false" onAction="#selectCurve2" toggleGroup="$elementGroup" GridPane.columnIndex="17">
+               <graphic>
+                  <ImageView fx:id="curve2Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/curve2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="curve6Toggle" mnemonicParsing="false" onAction="#selectCurve6" toggleGroup="$elementGroup" GridPane.columnIndex="17" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="curve6Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/curve6.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="curve3Toggle" mnemonicParsing="false" onAction="#selectCurve3" toggleGroup="$elementGroup" GridPane.columnIndex="18">
+               <graphic>
+                  <ImageView fx:id="curve3Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/curve3.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="curve7Toggle" mnemonicParsing="false" onAction="#selectCurve7" toggleGroup="$elementGroup" GridPane.columnIndex="18" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="curve7Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/curve7.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="curve4Toggle" cacheHint="SPEED" mnemonicParsing="false" onAction="#selectCurve4" toggleGroup="$elementGroup" GridPane.columnIndex="19">
+               <graphic>
+                  <ImageView fx:id="curve4Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/curve4.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ToggleButton>
+            <ToggleButton fx:id="curve8Toggle" mnemonicParsing="false" onAction="#selectCurve8" toggleGroup="$elementGroup" GridPane.columnIndex="19" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="curve8Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/curve8.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
          </children>
       </GridPane>
    </children>

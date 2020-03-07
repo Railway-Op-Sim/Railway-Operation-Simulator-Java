@@ -286,6 +286,37 @@ public class GUIController extends Application {
 			case TIGHTCURVE4:
 				MenuActions.addTrack(event, railMap, "graphics/tightCurve4.png", itemSelected, null);
 				break;
+				
+			case CURVE1:
+				MenuActions.addTrack(event, railMap, "graphics/curve1.png", itemSelected, null);
+				break;
+
+			case CURVE2:
+				MenuActions.addTrack(event, railMap, "graphics/curve2.png", itemSelected, null);
+				break;
+
+			case CURVE3:
+				MenuActions.addTrack(event, railMap, "graphics/curve4.png", itemSelected, null);
+				break;
+
+			case CURVE4:
+				MenuActions.addTrack(event, railMap, "graphics/curve4.png", itemSelected, null);
+				break;
+			case CURVE5:
+				MenuActions.addTrack(event, railMap, "graphics/curve5.png", itemSelected, null);
+				break;
+
+			case CURVE6:
+				MenuActions.addTrack(event, railMap, "graphics/curve6.png", itemSelected, null);
+				break;
+
+			case CURVE7:
+				MenuActions.addTrack(event, railMap, "graphics/curve7.png", itemSelected, null);
+				break;
+
+			case CURVE8:
+				MenuActions.addTrack(event, railMap, "graphics/curve8.png", itemSelected, null);
+				break;
 
 			case SIGNALLEFT:
 				if (aspect == SignalAspect.SHUNT) {
