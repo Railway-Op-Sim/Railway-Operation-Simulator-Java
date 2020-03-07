@@ -18,6 +18,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import application.MenuActions;
@@ -51,6 +52,12 @@ public class GUIController extends Application {
 
 	@FXML // URL location of the FXML file that was given to the FXMLLoader
 	private URL location;
+	
+	@FXML // fx:id="boarderPane"
+    private BorderPane boarderPane; // Value injected by FXMLLoader
+	
+	@FXML // fx:id="pane"
+	private Pane pane; // Value injected by FXMLLoader
 
 	@FXML // fx:id="topVBox"
 	private VBox topVBox; // Value injected by FXMLLoader
@@ -441,7 +448,8 @@ public class GUIController extends Application {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		railMap.widthProperty().bind(pane.widthProperty());
+	    railMap.heightProperty().bind(pane.heightProperty());
 		assert topVBox != null : "fx:id=\"topVBox\" was not injected: check your FXML file 'GUI.fxml'.";
 		assert exitMenuItem != null : "fx:id=\"exitMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
 		assert buildModifyRailway != null : "fx:id=\"buildModifyRailway\" was not injected: check your FXML file 'GUI.fxml'.";
