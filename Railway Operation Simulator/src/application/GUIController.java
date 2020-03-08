@@ -357,6 +357,22 @@ public class GUIController extends Application {
 			case SWITCHTIGHT4:
 				MenuActions.addTrack(event, railMap, "graphics/switchTight4.png", itemSelected, null);
 				break;
+				
+			case SWITCH1:
+				MenuActions.addTrack(event, railMap, "graphics/switch1.png", itemSelected, null);
+				break;
+
+			case SWITCH2:
+				MenuActions.addTrack(event, railMap, "graphics/switch2.png", itemSelected, null);
+				break;
+
+			case SWITCH3:
+				MenuActions.addTrack(event, railMap, "graphics/switch3.png", itemSelected, null);
+				break;
+
+			case SWITCH4:
+				MenuActions.addTrack(event, railMap, "graphics/switch4.png", itemSelected, null);
+				break;
 
 			case SIGNALLEFT:
 				if (aspect == SignalAspect.SHUNT) {

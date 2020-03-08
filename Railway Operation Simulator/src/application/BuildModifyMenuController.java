@@ -426,8 +426,8 @@ public class BuildModifyMenuController {
     @FXML // fx:id="switchTight1Toggle"
     private ToggleButton switchTight1Toggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="switchTight1"
-    private ImageView switchTight1; // Value injected by FXMLLoader
+    @FXML // fx:id="switchTight1Image"
+    private ImageView switchTight1Image; // Value injected by FXMLLoader
 
     @FXML // fx:id="switchTight2Toggle"
     private ToggleButton switchTight2Toggle; // Value injected by FXMLLoader
@@ -446,6 +446,32 @@ public class BuildModifyMenuController {
 
     @FXML // fx:id="switchTight4Image"
     private ImageView switchTight4Image; // Value injected by FXMLLoader
+    
+  //** Switch toggles and images **
+    
+    @FXML // fx:id="switch1Toggle"
+    private ToggleButton switch1Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch1Image"
+    private ImageView switch1Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch2Toggle"
+    private ToggleButton switch2Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch2Image"
+    private ImageView switch2Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch3Toggle"
+    private ToggleButton switch3Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch3Image"
+    private ImageView switch3Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch4Toggle"
+    private ToggleButton switch4Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch4Image"
+    private ImageView switch4Image; // Value injected by FXMLLoader
    
 
     
@@ -1224,6 +1250,52 @@ public class BuildModifyMenuController {
     		GUIController.setItemSelected(TrackType.SWITCHTIGHT4);
 		} else {
 			switchTight4Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    // Select Switch actions
+    
+    @FXML
+    void selectSwitch1(ActionEvent event) {
+    	if (switch1Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCH1);
+		} else {
+			switch1Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitch2(ActionEvent event) {
+    	if (switch2Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCH2);
+		} else {
+			switch2Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitch3(ActionEvent event) {
+    	if (switch3Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCH3);
+		} else {
+			switch3Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitch4(ActionEvent event) {
+    	if (switch4Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCH4);
+		} else {
+			switch4Toggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
