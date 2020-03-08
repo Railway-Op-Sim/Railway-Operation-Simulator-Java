@@ -18,7 +18,7 @@
          <children>
             <Button fx:id="buildModifyMenuButton" mnemonicParsing="false" onAction="#openbuildModifyMenu">
                <graphic>
-                  <ImageView fitHeight="24.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/buildMenuIcon.png" />
                      </image>
@@ -33,7 +33,7 @@
             </Button>
             <Button fx:id="aspectChangerButton" mnemonicParsing="false" onAction="#changeAspect">
                <graphic>
-                  <ImageView fx:id="aspectChangerImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="aspectChangerImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../graphics/fourIcon.png" />
                      </image>
@@ -76,9 +76,9 @@
                 <RowConstraints minHeight="16.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ToggleButton fx:id="straightHorizontalTrackToggle" mnemonicParsing="false" onAction="#selectStraightHorizontalTrack">
+                  <ToggleButton fx:id="straightHorizontalToggle" mnemonicParsing="false" onAction="#selectStraightHorizontal">
                      <graphic>
-                        <ImageView fx:id="straightHorizontalTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="straightHImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/straightH.png" />
                            </image>
@@ -109,9 +109,9 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="straightVerticalTrackToggle" mnemonicParsing="false" onAction="#selectStraightVerticalTrack" toggleGroup="$elementGroup" GridPane.columnIndex="1">
+                  <ToggleButton fx:id="straightVerticalToggle" mnemonicParsing="false" onAction="#selectStraightVertical" toggleGroup="$elementGroup" GridPane.columnIndex="1">
                      <graphic>
-                        <ImageView fx:id="straightVerticalImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="straightVImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/straightV.png" />
                            </image>
@@ -154,15 +154,14 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="downBufferToggle" mnemonicParsing="false" onAction="#selectDownBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <ToggleButton id="downBufferToggle" fx:id="downBufferToggle" mnemonicParsing="false" onAction="#selectDownBuffer" stylesheets="@application.css" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <graphic>
-                        <ImageView fx:id="downBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/downBuffer.png" />
                            </image>
                         </ImageView>
-                     </graphic>
-                  </ToggleButton>
+                     </graphic></ToggleButton>
                   <ToggleButton fx:id="directRightTrackToggle" mnemonicParsing="false" onAction="#selectDirectRightTrack" toggleGroup="$elementGroup" GridPane.columnIndex="3">
                      <graphic>
                         <ImageView fx:id="directRightTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
@@ -244,7 +243,7 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="straightRightUpToggle" mnemonicParsing="false" onAction="#selectStraightRightUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="6">
+                  <ToggleButton fx:id="straightRightUpToggle" mnemonicParsing="false" onAction="#selectStraightRightUp" toggleGroup="$elementGroup" GridPane.columnIndex="6">
                      <graphic>
                         <ImageView fx:id="straightRightUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -271,7 +270,7 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="straightLeftUpToggle" mnemonicParsing="false" onAction="#selectStraightLeftUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="7">
+                  <ToggleButton fx:id="straightLeftUpToggle" mnemonicParsing="false" onAction="#selectStraightLeftUp" toggleGroup="$elementGroup" GridPane.columnIndex="7">
                      <graphic>
                         <ImageView fx:id="straightLeftUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -648,7 +647,7 @@
                <children>
                   <ToggleButton fx:id="switchTight1Toggle" mnemonicParsing="false" onAction="#selectSwitchTight1" toggleGroup="$elementGroup">
                      <graphic>
-                        <ImageView fx:id="switchTight1Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="switchTight1" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/switchTight1.png" />
                            </image>
@@ -687,54 +686,6 @@
                         <ImageView fx:id="switchTight4Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/switchTight4.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </ToggleButton>
-                  <ToggleButton fx:id="switch1Toggle" mnemonicParsing="false" onAction="#selectSwitch1" toggleGroup="$elementGroup" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="switch1Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/switch1.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </ToggleButton>
-                  <ToggleButton fx:id="switch2Toggle" mnemonicParsing="false" onAction="#selectSwitch2" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="switch2Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/switch2.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </ToggleButton>
-                  <ToggleButton fx:id="switch3Toggle" mnemonicParsing="false" onAction="#selectSwitch3" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="switch3Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/switch3.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </ToggleButton>
-                  <ToggleButton fx:id="switch4Toggle" mnemonicParsing="false" onAction="#selectSwitch4" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="switch4Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/switch4.png" />
                            </image>
                         </ImageView>
                      </graphic>

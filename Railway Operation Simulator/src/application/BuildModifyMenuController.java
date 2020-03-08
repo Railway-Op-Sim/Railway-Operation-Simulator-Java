@@ -94,17 +94,17 @@ public class BuildModifyMenuController {
     
     //  ** Straight Track toggles and images. **
 
-    @FXML // fx:id="straightHorizontalTrackToggle"
-    private ToggleButton straightHorizontalTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="straightHorizontalToggle"
+    private ToggleButton straightHorizontalToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="straightHorizontalTrackImage"
-    private ImageView straightHorizontalTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="straightHorizontalImage"
+    private ImageView straightHorizontalImage; // Value injected by FXMLLoader
 
-    @FXML // fx:id="straightVerticalTrackToggle"
-    private ToggleButton straightVerticalTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="straightVerticalToggle"
+    private ToggleButton straightVerticalToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="straightVerticalTrackImage"
-    private ImageView straightVerticalTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="straightVerticalImage"
+    private ImageView straightVerticalImage; // Value injected by FXMLLoader
     
     @FXML // fx:id="straightRightUpToggle"
     private ToggleButton straightRightUpToggle; // Value injected by FXMLLoader
@@ -426,8 +426,8 @@ public class BuildModifyMenuController {
     @FXML // fx:id="switchTight1Toggle"
     private ToggleButton switchTight1Toggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="switchTight1Image"
-    private ImageView switchTight1Image; // Value injected by FXMLLoader
+    @FXML // fx:id="switchTight1"
+    private ImageView switchTight1; // Value injected by FXMLLoader
 
     @FXML // fx:id="switchTight2Toggle"
     private ToggleButton switchTight2Toggle; // Value injected by FXMLLoader
@@ -447,31 +447,8 @@ public class BuildModifyMenuController {
     @FXML // fx:id="switchTight4Image"
     private ImageView switchTight4Image; // Value injected by FXMLLoader
     
-  //** Switch toggles and images **
-    
-    @FXML // fx:id="switch1Toggle"
-    private ToggleButton switch1Toggle; // Value injected by FXMLLoader
-
-    @FXML // fx:id="switch1Image"
-    private ImageView switch1Image; // Value injected by FXMLLoader
-
-    @FXML // fx:id="switch2Toggle"
-    private ToggleButton switch2Toggle; // Value injected by FXMLLoader
-
-    @FXML // fx:id="switch2Image"
-    private ImageView switch2Image; // Value injected by FXMLLoader
-
-    @FXML // fx:id="switch3Toggle"
-    private ToggleButton switch3Toggle; // Value injected by FXMLLoader
-
-    @FXML // fx:id="switch3Image"
-    private ImageView switch3Image; // Value injected by FXMLLoader
-
-    @FXML // fx:id="switch4Toggle"
-    private ToggleButton switch4Toggle; // Value injected by FXMLLoader
-
-    @FXML // fx:id="switch4Image"
-    private ImageView switch4Image; // Value injected by FXMLLoader
+    @FXML
+    private ToggleButton cssTest;
    
 
     
@@ -537,29 +514,29 @@ public class BuildModifyMenuController {
     // Select Straight Track Actions.
     
     @FXML
-    void selectStraightHorizontalTrack(ActionEvent event) {
+    void selectStraightHorizontal(ActionEvent event) {
     	
-    	if (straightHorizontalTrackToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.STRAIGHTHORIZONTAL);
+    	if (straightHorizontalToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.STRAIGHTH);
 		} else {
-			straightHorizontalTrackToggle.setSelected(false);
+			straightHorizontalToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
     }
     
     @FXML
-    void selectStraightVerticalTrack(ActionEvent event) {
-    	if (straightVerticalTrackToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.STRAIGHTVERTICAL);
+    void selectStraightVertical(ActionEvent event) {
+    	if (straightVerticalToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.STRAIGHTV);
 		} else {
-			straightVerticalTrackToggle.setSelected(false);
+			straightVerticalToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
     
     @FXML
-    void selectStraightLeftUpTrack(ActionEvent event) {
+    void selectStraightLeftUp(ActionEvent event) {
     	if (straightLeftUpToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.STRAIGHTLEFTUP);
 		} else {
@@ -570,7 +547,7 @@ public class BuildModifyMenuController {
     }
 
     @FXML
-    void selectStraightRightUpTrack(ActionEvent event) {
+    void selectStraightRightUp(ActionEvent event) {
     	if (straightRightUpToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.STRAIGHTRIGHTUP);
 		} else {
@@ -1250,52 +1227,6 @@ public class BuildModifyMenuController {
     		GUIController.setItemSelected(TrackType.SWITCHTIGHT4);
 		} else {
 			switchTight4Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
-		}
-
-    }
-    
-    // Select Switch actions
-    
-    @FXML
-    void selectSwitch1(ActionEvent event) {
-    	if (switch1Toggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.SWITCH1);
-		} else {
-			switch1Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
-		}
-
-    }
-
-    @FXML
-    void selectSwitch2(ActionEvent event) {
-    	if (switch2Toggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.SWITCH2);
-		} else {
-			switch2Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
-		}
-
-    }
-
-    @FXML
-    void selectSwitch3(ActionEvent event) {
-    	if (switch3Toggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.SWITCH3);
-		} else {
-			switch3Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
-		}
-
-    }
-
-    @FXML
-    void selectSwitch4(ActionEvent event) {
-    	if (switch4Toggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.SWITCH4);
-		} else {
-			switch4Toggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 

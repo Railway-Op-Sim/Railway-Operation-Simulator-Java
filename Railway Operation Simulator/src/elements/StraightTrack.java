@@ -26,13 +26,13 @@ public class StraightTrack extends Track {
 		
 		switch (this.trackType) {
 		
-		case STRAIGHTHORIZONTAL:
+		case STRAIGHTH:
 			
 			this.trackLinks[3] = true;
 			this.trackLinks[5] = true;
 			break;
 		
-		case STRAIGHTVERTICAL: 
+		case STRAIGHTV: 
 			this.trackLinks[1] = true;
 			this.trackLinks[7] = true;
             break; 

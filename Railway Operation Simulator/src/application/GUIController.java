@@ -134,20 +134,20 @@ public class GUIController extends Application {
 				MenuActions.makeNoItemSelectedErrorBox();
 				break;
 
-			case STRAIGHTHORIZONTAL:
-				MenuActions.addTrack(event, railMap, "graphics/StraightH.png", itemSelected, null);
+			case STRAIGHTH:
+				MenuActions.addTrack(event, railMap, "graphics/straightH.png", itemSelected, null);
 				break;
 
-			case STRAIGHTVERTICAL:
-				MenuActions.addTrack(event, railMap, "graphics/StraightV.png", itemSelected, null);
-				break;
-
-			case STRAIGHTLEFTUP:
-				MenuActions.addTrack(event, railMap, "graphics/straightLeftUp.png", itemSelected, null);
+			case STRAIGHTV:
+				MenuActions.addTrack(event, railMap, "graphics/straightV.png", itemSelected, null);
 				break;
 
 			case STRAIGHTRIGHTUP:
 				MenuActions.addTrack(event, railMap, "graphics/straightRightUp.png", itemSelected, null);
+				break;
+
+			case STRAIGHTLEFTUP:
+				MenuActions.addTrack(event, railMap, "graphics/straightLeftUp.png", itemSelected, null);
 				break;
 
 			case LEFTBUFFER:
@@ -358,6 +358,22 @@ public class GUIController extends Application {
 				MenuActions.addTrack(event, railMap, "graphics/switchTight4.png", itemSelected, null);
 				break;
 				
+			case SWITCHTIGHT5:
+				MenuActions.addTrack(event, railMap, "graphics/switchTight5.png", itemSelected, null);
+				break;
+
+			case SWITCHTIGHT6:
+				MenuActions.addTrack(event, railMap, "graphics/switchTight6.png", itemSelected, null);
+				break;
+
+			case SWITCHTIGHT7:
+				MenuActions.addTrack(event, railMap, "graphics/switchTight7.png", itemSelected, null);
+				break;
+
+			case SWITCHTIGHT8:
+				MenuActions.addTrack(event, railMap, "graphics/switchTight8.png", itemSelected, null);
+				break;
+				
 			case SWITCH1:
 				MenuActions.addTrack(event, railMap, "graphics/switch1.png", itemSelected, null);
 				break;
@@ -372,6 +388,22 @@ public class GUIController extends Application {
 
 			case SWITCH4:
 				MenuActions.addTrack(event, railMap, "graphics/switch4.png", itemSelected, null);
+				break;
+				
+			case SWITCH5:
+				MenuActions.addTrack(event, railMap, "graphics/switch5.png", itemSelected, null);
+				break;
+
+			case SWITCH6:
+				MenuActions.addTrack(event, railMap, "graphics/switch6.png", itemSelected, null);
+				break;
+
+			case SWITCH7:
+				MenuActions.addTrack(event, railMap, "graphics/switch7.png", itemSelected, null);
+				break;
+
+			case SWITCH8:
+				MenuActions.addTrack(event, railMap, "graphics/switch8.png", itemSelected, null);
 				break;
 
 			case SIGNALLEFT:

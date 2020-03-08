@@ -149,20 +149,20 @@ public class MenuActions {
 			StationBridgeUnderpassTrack bridgeUnderPassTrack = null;
 			TrackType currentTrackType = track.getTrackType();
 			switch (currentTrackType) {
-			case STRAIGHTHORIZONTAL :
+			case STRAIGHTH :
 				trackImage = new String("graphics/straightH.png"); //Open image file.
 				break;
 			
-			case STRAIGHTVERTICAL :
+			case STRAIGHTV :
 				trackImage = new String("graphics/straightV.png"); //Open image file.
 				break;
 				
-			case STRAIGHTLEFTUP :
-				trackImage = new String("graphics/straightLeftUp.png"); //Open image file.
-				break;
-			
 			case STRAIGHTRIGHTUP :
 				trackImage = new String("graphics/straightRightUp.png"); //Open image file.
+				break;
+			
+			case STRAIGHTLEFTUP :
+				trackImage = new String("graphics/straightLeftUp.png"); //Open image file.
 				break;
 				
 			case LEFTBUFFER :
@@ -357,6 +357,22 @@ public class MenuActions {
 				trackImage = new String("graphics/switchTight4.png"); //Open image file.
 				break;
 				
+			case SWITCHTIGHT5 :
+				trackImage = new String("graphics/switchTight5.png"); //Open image file.
+				break;
+				
+			case SWITCHTIGHT6 :
+				trackImage = new String("graphics/switchTight6.png"); //Open image file.
+				break;
+				
+			case SWITCHTIGHT7 :
+				trackImage = new String("graphics/switchTight7.png"); //Open image file.
+				break;
+				
+			case SWITCHTIGHT8 :
+				trackImage = new String("graphics/switchTight8.png"); //Open image file.
+				break;
+				
 			case SWITCH1 :
 				trackImage = new String("graphics/switch1.png"); //Open image file.
 				break;
@@ -371,6 +387,22 @@ public class MenuActions {
 				
 			case SWITCH4 :
 				trackImage = new String("graphics/switch4.png"); //Open image file.
+				break;
+				
+			case SWITCH5 :
+				trackImage = new String("graphics/switch5.png"); //Open image file.
+				break;
+				
+			case SWITCH6 :
+				trackImage = new String("graphics/switch6.png"); //Open image file.
+				break;
+				
+			case SWITCH7 :
+				trackImage = new String("graphics/switch7.png"); //Open image file.
+				break;
+				
+			case SWITCH8 :
+				trackImage = new String("graphics/switch8.png"); //Open image file.
 				break;
 				
 				
@@ -573,29 +605,29 @@ public class MenuActions {
 		if (!trackExist) {
 			Track newTrack = null;
 			switch(itemSelected) {
-			case STRAIGHTHORIZONTAL: 
-				StraightTrack straightHorizontal = new StraightTrack( TrackType.STRAIGHTHORIZONTAL, placeX, placeY, false, "None");
-				straightHorizontal.setLinks();
-				newTrack = straightHorizontal;
+			case STRAIGHTH: 
+				StraightTrack straight1 = new StraightTrack( TrackType.STRAIGHTH, placeX, placeY, false, "None");
+				straight1.setLinks();
+				newTrack = straight1;
 				break;
 			
-			case STRAIGHTVERTICAL: 
-				StraightTrack straightVertical = new StraightTrack( TrackType.STRAIGHTVERTICAL, placeX, placeY, false, "None");
-				straightVertical.setLinks();
-				newTrack = straightVertical;
+			case STRAIGHTV: 
+				StraightTrack straight2 = new StraightTrack( TrackType.STRAIGHTV, placeX, placeY, false, "None");
+				straight2.setLinks();
+				newTrack = straight2;
 				
 				break;
 				
 			case STRAIGHTLEFTUP: 
-				StraightTrack straightLeftUp = new StraightTrack( TrackType.STRAIGHTLEFTUP, placeX, placeY, false, "None");
-				straightLeftUp.setLinks();
-				newTrack = straightLeftUp;
+				StraightTrack straight3 = new StraightTrack( TrackType.STRAIGHTLEFTUP, placeX, placeY, false, "None");
+				straight3.setLinks();
+				newTrack = straight3;
 				break;
 			
 			case STRAIGHTRIGHTUP: 
-				StraightTrack straightRightUp = new StraightTrack( TrackType.STRAIGHTRIGHTUP, placeX, placeY, false, "None");
-				straightRightUp.setLinks();
-				newTrack = straightRightUp;
+				StraightTrack straight4 = new StraightTrack( TrackType.STRAIGHTRIGHTUP, placeX, placeY, false, "None");
+				straight4.setLinks();
+				newTrack = straight4;
 				
 				break;
 			
@@ -844,6 +876,26 @@ public class MenuActions {
 				newTrack = switchTight4;
 				break;
 				
+			case SWITCHTIGHT5: 
+				SwitchTrack switchTight5 = new SwitchTrack(TrackType.SWITCHTIGHT5, placeX, placeY, false, "None");
+				newTrack = switchTight5;
+				break;
+				
+			case SWITCHTIGHT6: 
+				SwitchTrack switchTight6 = new SwitchTrack(TrackType.SWITCHTIGHT6, placeX, placeY, false, "None");
+				newTrack = switchTight6;
+				break;
+				
+			case SWITCHTIGHT7: 
+				SwitchTrack switchTight7 = new SwitchTrack(TrackType.SWITCHTIGHT7, placeX, placeY, false, "None");
+				newTrack = switchTight7;
+				break;
+				
+			case SWITCHTIGHT8: 
+				SwitchTrack switchTight8 = new SwitchTrack(TrackType.SWITCHTIGHT8, placeX, placeY, false, "None");
+				newTrack = switchTight8;
+				break;
+				
 			case SWITCH1: 
 				SwitchTrack switch1 = new SwitchTrack(TrackType.SWITCH1, placeX, placeY, false, "None");
 				newTrack = switch1;
@@ -862,6 +914,26 @@ public class MenuActions {
 			case SWITCH4: 
 				SwitchTrack switch4 = new SwitchTrack(TrackType.SWITCH4, placeX, placeY, false, "None");
 				newTrack = switch4;
+				break;
+				
+			case SWITCH5: 
+				SwitchTrack switch5 = new SwitchTrack(TrackType.SWITCH5, placeX, placeY, false, "None");
+				newTrack = switch5;
+				break;
+				
+			case SWITCH6: 
+				SwitchTrack switch6 = new SwitchTrack(TrackType.SWITCH6, placeX, placeY, false, "None");
+				newTrack = switch6;
+				break;
+				
+			case SWITCH7: 
+				SwitchTrack switch7 = new SwitchTrack(TrackType.SWITCH7, placeX, placeY, false, "None");
+				newTrack = switch7;
+				break;
+				
+			case SWITCH8: 
+				SwitchTrack switch8 = new SwitchTrack(TrackType.SWITCH8, placeX, placeY, false, "None");
+				newTrack = switch8;
 				break;
 				
 			case BRIDGE1: 
