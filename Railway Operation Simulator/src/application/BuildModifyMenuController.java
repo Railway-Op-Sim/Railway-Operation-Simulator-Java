@@ -426,8 +426,8 @@ public class BuildModifyMenuController {
     @FXML // fx:id="switchTight1Toggle"
     private ToggleButton switchTight1Toggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="switchTight1"
-    private ImageView switchTight1; // Value injected by FXMLLoader
+    @FXML // fx:id="switchTight1Image"
+    private ImageView switchTight1Image; // Value injected by FXMLLoader
 
     @FXML // fx:id="switchTight2Toggle"
     private ToggleButton switchTight2Toggle; // Value injected by FXMLLoader
@@ -447,8 +447,29 @@ public class BuildModifyMenuController {
     @FXML // fx:id="switchTight4Image"
     private ImageView switchTight4Image; // Value injected by FXMLLoader
     
-    @FXML
-    private ToggleButton cssTest;
+    @FXML // fx:id="switchTight5Toggle"
+    private ToggleButton switchTight5Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight5Image"
+    private ImageView switchTight5Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight6Toggle"
+    private ToggleButton switchTight6Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight6Image"
+    private ImageView switchTight6Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight7Toggle"
+    private ToggleButton switchTight7Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight7Image"
+    private ImageView switchTight7Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight8Toggle"
+    private ToggleButton switchTight8Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switchTight8Image"
+    private ImageView switchTight8Image; // Value injected by FXMLLoader
    
 
     
@@ -1227,6 +1248,49 @@ public class BuildModifyMenuController {
     		GUIController.setItemSelected(TrackType.SWITCHTIGHT4);
 		} else {
 			switchTight4Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    @FXML
+    void selectSwitchTight5(ActionEvent event) {
+    	if (switchTight5Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCHTIGHT5);
+		} else {
+			switchTight5Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitchTight6(ActionEvent event) {
+    	if (switchTight6Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCHTIGHT6);
+		} else {
+			switchTight6Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitchTight7(ActionEvent event) {
+    	if (switchTight7Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCHTIGHT7);
+		} else {
+			switchTight7Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitchTight8(ActionEvent event) {
+    	if (switchTight8Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCHTIGHT8);
+		} else {
+			switchTight8Toggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 

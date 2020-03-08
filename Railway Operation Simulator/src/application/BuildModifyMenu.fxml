@@ -638,6 +638,10 @@
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -647,7 +651,7 @@
                <children>
                   <ToggleButton fx:id="switchTight1Toggle" mnemonicParsing="false" onAction="#selectSwitchTight1" toggleGroup="$elementGroup">
                      <graphic>
-                        <ImageView fx:id="switchTight1" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="switchTight1Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/switchTight1.png" />
                            </image>
@@ -700,5 +704,53 @@
             <Insets />
          </VBox.margin>
       </HBox>
+      <ToggleButton fx:id="switchTight5Toggle" mnemonicParsing="false" onAction="#selectSwitchTight5" toggleGroup="$elementGroup">
+         <graphic>
+            <ImageView fx:id="switchTight5Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/switchTight5.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ToggleButton>
+      <ToggleButton fx:id="switchTight6Toggle" mnemonicParsing="false" onAction="#selectSwitchTight6" toggleGroup="$elementGroup">
+         <graphic>
+            <ImageView fx:id="switchTight6Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/switchTight6.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ToggleButton>
+      <ToggleButton fx:id="switchTight7Toggle" mnemonicParsing="false" onAction="#selectSwitchTight7" toggleGroup="$elementGroup">
+         <graphic>
+            <ImageView fx:id="switchTight7Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/switchTight7.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ToggleButton>
+      <ToggleButton fx:id="switchTight8Toggle" mnemonicParsing="false" onAction="#selectSwitchTight8" toggleGroup="$elementGroup">
+         <graphic>
+            <ImageView fx:id="switchTight8Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../graphics/switchTight8.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ToggleButton>
    </children>
 </VBox>
