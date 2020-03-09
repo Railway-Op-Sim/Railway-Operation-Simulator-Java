@@ -101,7 +101,7 @@ public class GUIController extends Application {
 	private Canvas canvas; // Value injected by FXMLLoader
 	
 	Color backgroundColour;
-	
+
 	BackgroundFill colourBack;
 	
 	Background background;
@@ -155,373 +155,373 @@ public class GUIController extends Application {
 				break;
 
 			case STRAIGHTH:
-				MenuActions.addTrack(event, canvas, "graphics/straightH.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/straightH.png", itemSelected, null, backgroundColour);
 				break;
 
 			case STRAIGHTV:
-				MenuActions.addTrack(event, canvas, "graphics/straightV.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/straightV.png", itemSelected, null, backgroundColour);
 				break;
 
 			case STRAIGHTRIGHTUP:
-				MenuActions.addTrack(event, canvas, "graphics/straightRightUp.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/straightRightUp.png", itemSelected, null, backgroundColour);
 				break;
 
 			case STRAIGHTLEFTUP:
-				MenuActions.addTrack(event, canvas, "graphics/straightLeftUp.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/straightLeftUp.png", itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERLEFT:
-				MenuActions.addTrack(event, canvas, "graphics/bufferLeft.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/bufferLeft.png", itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERRIGHT:
-				MenuActions.addTrack(event, canvas, "graphics/bufferRight.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/bufferRight.png", itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERUP:
-				MenuActions.addTrack(event, canvas, "graphics/bufferUp.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/bufferUp.png", itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERDOWN:
-				MenuActions.addTrack(event, canvas, "graphics/bufferDown.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/bufferDown.png", itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERLEFTUP:
-				MenuActions.addTrack(event, canvas, "graphics/bufferLeftUp.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/bufferLeftUp.png", itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERRIGHTUP:
-				MenuActions.addTrack(event, canvas, "graphics/bufferRightUp.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/bufferRightUp.png", itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERLEFTDOWN:
-				MenuActions.addTrack(event, canvas, "graphics/bufferLeftDown.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/bufferLeftDown.png", itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERRIGHTDOWN:
-				MenuActions.addTrack(event, canvas, "graphics/bufferRightDown.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/bufferRightDown.png", itemSelected, null, backgroundColour);
 				break;
 
 			case LINKLEFT:
-				MenuActions.addTrack(event, canvas, "graphics/linkLeftUnset.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/linkLeftUnset.png", itemSelected, null, backgroundColour);
 				break;
 
 			case LINKRIGHT:
-				MenuActions.addTrack(event, canvas, "graphics/linkRightUnset.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/linkRightUnset.png", itemSelected, null, backgroundColour);
 				break;
 
 			case LINKUP:
-				MenuActions.addTrack(event, canvas, "graphics/linkUpUnset.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/linkUpUnset.png", itemSelected, null, backgroundColour);
 				break;
 
 			case LINKDOWN:
-				MenuActions.addTrack(event, canvas, "graphics/linkDownUnset.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/linkDownUnset.png", itemSelected, null, backgroundColour);
 				break;
 
 			case LINKLEFTUP:
-				MenuActions.addTrack(event, canvas, "graphics/linkLeftUpUnset.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/linkLeftUpUnset.png", itemSelected, null, backgroundColour);
 				break;
 
 			case LINKRIGHTUP:
-				MenuActions.addTrack(event, canvas, "graphics/linkRightUpUnset.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/linkRightUpUnset.png", itemSelected, null, backgroundColour);
 				break;
 
 			case LINKLEFTDOWN:
-				MenuActions.addTrack(event, canvas, "graphics/linkLeftDownUnset.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/linkLeftDownUnset.png", itemSelected, null, backgroundColour);
 				break;
 
 			case LINKRIGHTDOWN:
-				MenuActions.addTrack(event, canvas, "graphics/linkRightDownUnset.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/linkRightDownUnset.png", itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTLEFT:
-				MenuActions.addTrack(event, canvas, "graphics/directLeft.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/directLeft.png", itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTRIGHT:
-				MenuActions.addTrack(event, canvas, "graphics/directRight.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/directRight.png", itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTUP:
-				MenuActions.addTrack(event, canvas, "graphics/directUp.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/directUp.png", itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTDOWN:
-				MenuActions.addTrack(event, canvas, "graphics/directDown.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/directDown.png", itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTLEFTUP:
-				MenuActions.addTrack(event, canvas, "graphics/directLeftUp.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/directLeftUp.png", itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTRIGHTUP:
-				MenuActions.addTrack(event, canvas, "graphics/directRightUp.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/directRightUp.png", itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTLEFTDOWN:
-				MenuActions.addTrack(event, canvas, "graphics/directLeftDown.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/directLeftDown.png", itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTRIGHTDOWN:
-				MenuActions.addTrack(event, canvas, "graphics/directRightDown.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/directRightDown.png", itemSelected, null, backgroundColour);
 				break;
 
 			case EXITLEFT:
-				MenuActions.addTrack(event, canvas, "graphics/exitLeftTrack.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/exitLeftTrack.png", itemSelected, null, backgroundColour);
 				break;
 
 			case EXITRIGHT:
-				MenuActions.addTrack(event, canvas, "graphics/exitRightTrack.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/exitRightTrack.png", itemSelected, null, backgroundColour);
 				break;
 
 			case EXITUP:
-				MenuActions.addTrack(event, canvas, "graphics/exitUpTrack.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/exitUpTrack.png", itemSelected, null, backgroundColour);
 				break;
 
 			case EXITDOWN:
-				MenuActions.addTrack(event, canvas, "graphics/exitDownTrack.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/exitDownTrack.png", itemSelected, null, backgroundColour);
 				break;
 
 			case EXITLEFTUP:
-				MenuActions.addTrack(event, canvas, "graphics/exitLeftUpTrack.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/exitLeftUpTrack.png", itemSelected, null, backgroundColour);
 				break;
 
 			case EXITRIGHTUP:
-				MenuActions.addTrack(event, canvas, "graphics/exitRightUpTrack.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/exitRightUpTrack.png", itemSelected, null, backgroundColour);
 				break;
 
 			case EXITLEFTDOWN:
-				MenuActions.addTrack(event, canvas, "graphics/exitLeftDownTrack.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/exitLeftDownTrack.png", itemSelected, null, backgroundColour);
 				break;
 
 			case EXITRIGHTDOWN:
-				MenuActions.addTrack(event, canvas, "graphics/exitRightDownTrack.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/exitRightDownTrack.png", itemSelected, null, backgroundColour);
 				break;
 
 			case TIGHTCURVE1:
-				MenuActions.addTrack(event, canvas, "graphics/tightCurve1.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/tightCurve1.png", itemSelected, null, backgroundColour);
 				break;
 
 			case TIGHTCURVE2:
-				MenuActions.addTrack(event, canvas, "graphics/tightcurve2.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/tightcurve2.png", itemSelected, null, backgroundColour);
 				break;
 
 			case TIGHTCURVE3:
-				MenuActions.addTrack(event, canvas, "graphics/tightCurve3.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/tightCurve3.png", itemSelected, null, backgroundColour);
 				break;
 
 			case TIGHTCURVE4:
-				MenuActions.addTrack(event, canvas, "graphics/tightCurve4.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/tightCurve4.png", itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE1:
-				MenuActions.addTrack(event, canvas, "graphics/curve1.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/curve1.png", itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE2:
-				MenuActions.addTrack(event, canvas, "graphics/curve2.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/curve2.png", itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE3:
-				MenuActions.addTrack(event, canvas, "graphics/curve4.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/curve4.png", itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE4:
-				MenuActions.addTrack(event, canvas, "graphics/curve4.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/curve4.png", itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE5:
-				MenuActions.addTrack(event, canvas, "graphics/curve5.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/curve5.png", itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE6:
-				MenuActions.addTrack(event, canvas, "graphics/curve6.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/curve6.png", itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE7:
-				MenuActions.addTrack(event, canvas, "graphics/curve7.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/curve7.png", itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE8:
-				MenuActions.addTrack(event, canvas, "graphics/curve8.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/curve8.png", itemSelected, null, backgroundColour);
 				break;
 
 			case BRIDGE1:
-				MenuActions.addTrack(event, canvas, "graphics/bridgeUnset1.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/bridgeUnset1.png", itemSelected, null, backgroundColour);
 				break;
 
 			case BRIDGE2:
-				MenuActions.addTrack(event, canvas, "graphics/bridgeUnset2.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/bridgeUnset2.png", itemSelected, null, backgroundColour);
 				break;
 
 			case UNDERPASS1:
-				MenuActions.addTrack(event, canvas, "graphics/underpassUnset1.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/underpassUnset1.png", itemSelected, null, backgroundColour);
 				break;
 
 			case UNDERPASS2:
-				MenuActions.addTrack(event, canvas, "graphics/underpassUnset2.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/underpassUnset2.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT1:
-				MenuActions.addTrack(event, canvas, "graphics/switchTight1.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switchTight1.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT2:
-				MenuActions.addTrack(event, canvas, "graphics/switchTight2.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switchTight2.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT3:
-				MenuActions.addTrack(event, canvas, "graphics/switchTight3.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switchTight3.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT4:
-				MenuActions.addTrack(event, canvas, "graphics/switchTight4.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switchTight4.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT5:
-				MenuActions.addTrack(event, canvas, "graphics/switchTight5.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switchTight5.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT6:
-				MenuActions.addTrack(event, canvas, "graphics/switchTight6.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switchTight6.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT7:
-				MenuActions.addTrack(event, canvas, "graphics/switchTight7.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switchTight7.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT8:
-				MenuActions.addTrack(event, canvas, "graphics/switchTight8.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switchTight8.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH1:
-				MenuActions.addTrack(event, canvas, "graphics/switch1.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch1.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH2:
-				MenuActions.addTrack(event, canvas, "graphics/switch2.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch2.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH3:
-				MenuActions.addTrack(event, canvas, "graphics/switch3.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch3.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH4:
-				MenuActions.addTrack(event, canvas, "graphics/switch4.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch4.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH5:
-				MenuActions.addTrack(event, canvas, "graphics/switch5.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch5.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH6:
-				MenuActions.addTrack(event, canvas, "graphics/switch6.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch6.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH7:
-				MenuActions.addTrack(event, canvas, "graphics/switch7.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch7.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH8:
-				MenuActions.addTrack(event, canvas, "graphics/switch8.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch8.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH9:
-				MenuActions.addTrack(event, canvas, "graphics/switch9.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch9.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH10:
-				MenuActions.addTrack(event, canvas, "graphics/switch10.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch10.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH11:
-				MenuActions.addTrack(event, canvas, "graphics/switch11.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch11.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH12:
-				MenuActions.addTrack(event, canvas, "graphics/switch12.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch12.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH13:
-				MenuActions.addTrack(event, canvas, "graphics/switch13.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch13.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH14:
-				MenuActions.addTrack(event, canvas, "graphics/switch14.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch14.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH15:
-				MenuActions.addTrack(event, canvas, "graphics/switch15.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch15.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH16:
-				MenuActions.addTrack(event, canvas, "graphics/switch16.png", itemSelected, null);
+				MenuActions.addTrack(event, canvas, "graphics/switch16.png", itemSelected, null, backgroundColour);
 				break;
 
 			case SIGNALLEFT:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, "graphics/shuntLeftRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/shuntLeftRed.png", itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, "graphics/signalLeft.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/signalLeft.png", itemSelected, aspect, backgroundColour);
 				}
 
 				break;
 
 			case SIGNALRIGHT:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, "graphics/shuntRightRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/shuntRightRed.png", itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, "graphics/signalRight.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/signalRight.png", itemSelected, aspect, backgroundColour);
 				}
 				break;
 
 			case SIGNALUP:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, "graphics/shuntUpRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/shuntUpRed.png", itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, "graphics/signalUp.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/signalUp.png", itemSelected, aspect, backgroundColour);
 				}
 				break;
 
 			case SIGNALDOWN:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, "graphics/shuntDownRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/shuntDownRed.png", itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, "graphics/signalDown.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/signalDown.png", itemSelected, aspect, backgroundColour);
 				}
 				break;
 
 			case SIGNALLEFTUP:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, "graphics/shuntLeftUpRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/shuntLeftUpRed.png", itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, "graphics/signalLeftUp.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/signalLeftUp.png", itemSelected, aspect, backgroundColour);
 				}
 
 				break;
 
 			case SIGNALRIGHTUP:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, "graphics/shuntRightUpRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/shuntRightUpRed.png", itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, "graphics/signalRightUp.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/signalRightUp.png", itemSelected, aspect, backgroundColour);
 				}
 				break;
 
 			case SIGNALLEFTDOWN:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, "graphics/shuntLeftDownRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/shuntLeftDownRed.png", itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, "graphics/signalLeftDown.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/signalLeftDown.png", itemSelected, aspect, backgroundColour);
 				}
 
 				break;
 
 			case SIGNALRIGHTDOWN:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, "graphics/shuntRightDownRed.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/shuntRightDownRed.png", itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, "graphics/signalRightDown.png", itemSelected, aspect);
+					MenuActions.addTrack(event, canvas, "graphics/signalRightDown.png", itemSelected, aspect, backgroundColour);
 				}
 				break;
 
@@ -560,7 +560,7 @@ public class GUIController extends Application {
 	 */
 	@FXML
 	void showGrid(ActionEvent event) {
-		MenuActions.toggleGrid(canvas, showHideGridButton);
+		MenuActions.toggleGrid(canvas, showHideGridButton, backgroundColour);
 	}
 
 	/**
@@ -577,7 +577,7 @@ public class GUIController extends Application {
 
 	@FXML
 	void selectBlackBackground(ActionEvent event) {
-		backgroundColour = Color.BLACK;
+		setBackgroundColour(Color.BLACK);
 		colourBack = new BackgroundFill(backgroundColour, CornerRadii.EMPTY, Insets.EMPTY);
 		background = new Background(colourBack);
 		pane.setBackground(background);
@@ -586,7 +586,7 @@ public class GUIController extends Application {
 
 	@FXML
 	void selectBlueBackground(ActionEvent event) {
-		backgroundColour = Color.DARKBLUE;
+		setBackgroundColour(Color.DARKBLUE);
 		colourBack = new BackgroundFill(backgroundColour, CornerRadii.EMPTY, Insets.EMPTY);
 		background = new Background(colourBack);
 		pane.setBackground(background);
@@ -595,12 +595,34 @@ public class GUIController extends Application {
 
 	@FXML
 	void selectWhiteBackground(ActionEvent event) {
-		backgroundColour = Color.WHITE;
+		setBackgroundColour(Color.WHITE);
 		colourBack = new BackgroundFill(backgroundColour, CornerRadii.EMPTY, Insets.EMPTY);
 		background = new Background(colourBack);
 		pane.setBackground(background);
 
 	}
+	
+	public Color getBackgroundColour() {
+		return backgroundColour;
+	}
+
+	public void setBackgroundColour(Color backgroundColour) {
+		if (backgroundColour.equals(Color.BLACK)) {
+			blackBackgroundMenuItem.setDisable(true);
+			whiteBackgroundMenuItem.setDisable(false);
+			blueBackgroundMenuItem.setDisable(false);
+		} else if (backgroundColour.equals(Color.WHITE)) {
+			blackBackgroundMenuItem.setDisable(false);
+			whiteBackgroundMenuItem.setDisable(true);
+			blueBackgroundMenuItem.setDisable(false);
+		} else {
+			blackBackgroundMenuItem.setDisable(false);
+			whiteBackgroundMenuItem.setDisable(false);
+			blueBackgroundMenuItem.setDisable(true);
+		}
+		this.backgroundColour = backgroundColour;
+	}
+		
 
 	/**
 	 * Auto-generated method t help initalize the FXML?
@@ -609,6 +631,10 @@ public class GUIController extends Application {
 	void initialize() {
 		canvas.widthProperty().bind(pane.widthProperty());
 		canvas.heightProperty().bind(pane.heightProperty());
+		setBackgroundColour(Color.BLACK);
+		colourBack = new BackgroundFill(backgroundColour, CornerRadii.EMPTY, Insets.EMPTY);
+		background = new Background(colourBack);
+		pane.setBackground(background);
 		assert topVBox != null : "fx:id=\"topVBox\" was not injected: check your FXML file 'GUI.fxml'.";
 		assert exitMenuItem != null : "fx:id=\"exitMenuItem\" was not injected: check your FXML file 'GUI.fxml'.";
 		assert buildModifyRailway != null : "fx:id=\"buildModifyRailway\" was not injected: check your FXML file 'GUI.fxml'.";

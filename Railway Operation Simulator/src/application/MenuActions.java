@@ -29,6 +29,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.image.PixelWriter;
+import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
@@ -57,7 +59,7 @@ public class MenuActions {
 	  * @param railMap
 	  * @param event
 	  */
-	 public static void drawElement(GraphicsContext railMap, MouseEvent event, String file) {
+	 public static void drawElement(GraphicsContext railMap, MouseEvent event, String file, Color canvasColour) {
 		 //Get Location of mouse click and round to 0
 		 int xLocation = (int) event.getX();
 		 int yLocation = (int) event.getY(); 
@@ -70,18 +72,66 @@ public class MenuActions {
 		 int placeY = yLocation - slightLyOffY;
 		 
 		 File trackImage = new File(file); //Open image file.
-		 Image image = null;
-		 image = new Image(MenuActions.class.getClassLoader().getResource(file).toString()); //Set file as image.
-		
-		
-		railMap.drawImage( image, placeX, placeY); //Draw the image at that place.
+		 Image oldImage = null;
+		 oldImage = new Image(MenuActions.class.getClassLoader().getResource(file).toString()); //Set file as image.
+		 int width = (int) oldImage.getWidth();
+		 int height = (int) oldImage.getHeight();
+		 
+		 
+		 
+		 WritableImage newImage = editImage(oldImage, width, height, canvasColour);
+		 
+		 railMap.drawImage( newImage, placeX, placeY); //Draw the image at that place.
+	 }
+	 
+	 public static WritableImage editImage(Image oldImage, int width, int height, Color canvasColour) {
+		 WritableImage newImage = removeWhiteBackground(oldImage, width, height);
+		 if (canvasColour.equals(Color.BLACK)) {
+			 newImage = invertColour(newImage, width, height);
+		 }
+		 return newImage;
+		 
+	 }
+	 public static WritableImage removeWhiteBackground(Image oldImage, int width, int height) {
+		 WritableImage newImage = new WritableImage( width, height);
+		 PixelWriter pixelWriter = newImage.getPixelWriter();
+		 for (int y =0; y<height;y++) {
+			 for (int x=0;x<width;x++) {
+				 Color currentColor = oldImage.getPixelReader().getColor(x, y);
+				 if (currentColor.equals(Color.WHITE)) {
+					 pixelWriter.setColor(x, y, Color.color(0, 0, 0, 0.0));
+				 } else {
+					 pixelWriter.setColor(x, y, currentColor);
+				 }
+				 
+			 }
+		 }
+		return newImage;
+	 }
+	 
+	 public static WritableImage invertColour(WritableImage image, int width, int height) {
+		 WritableImage currentImage = image;
+		 PixelWriter pixelWriter = currentImage.getPixelWriter();
+		 for (int y =0; y<height;y++) {
+			 for (int x=0;x<width;x++) {
+				 Color currentColor = image.getPixelReader().getColor(x, y);
+				 if (currentColor.equals(Color.BLACK)) {
+					 pixelWriter.setColor(x, y, Color.color(1, 1, 1, 1.0));
+				 } else {
+					 pixelWriter.setColor(x, y, currentColor);
+				 }
+				 
+			 }
+		 }
+		return currentImage; 
 	 }
 	 
 	 /**
 	  * A method to draw the grid on the canvas.
 	  * @param display
+	 * @param canvasColour 
 	  */
-	 public static void createGrid(Canvas display) {
+	 public static void createGrid(Canvas display, Color canvasColour) {
 		 	GraphicsContext railMap = display.getGraphicsContext2D();
 		 	
 		 	//Get the canvas size
@@ -108,13 +158,13 @@ public class MenuActions {
 	  * @param display
 	  * @param showHideGridButton
 	  */
-	 public static void toggleGrid(Canvas display, Button showHideGridButton ) {
+	 public static void toggleGrid(Canvas display, Button showHideGridButton, Color canvasColour ) {
 		 String showHideGridText = showHideGridButton.getText();
 		 if (showHideGridText.equals("Show Grid")) {
-			 createGrid(display);
+			 createGrid(display, canvasColour);
 			 showHideGridButton.setText("Hide Grid");
 		 } else {
-			 removeGrid(display);
+			 removeGrid(display,canvasColour);
 			 showHideGridButton.setText("Show Grid");
 		 }
 	 }
@@ -122,7 +172,7 @@ public class MenuActions {
 	  * A method to remove the grid drawn on the canvas.
 	  * @param display
 	  */
-	private static void removeGrid(Canvas display) {
+	private static void removeGrid(Canvas display, Color canvasColour) {
 		
 		int railMapSizeX = (int) display.getWidth();
         int railMapSizeY = (int) display.getHeight();
@@ -615,7 +665,7 @@ public class MenuActions {
 	}
 	
 	
-	public static void addTrack(MouseEvent event,Canvas railMap, String file, TrackType itemSelected, SignalAspect aspect ) {
+	public static void addTrack(MouseEvent event,Canvas railMap, String file, TrackType itemSelected, SignalAspect aspect, Color canvasColour ) {
 		boolean trackExist = false;
     	int xLocation = (int) event.getX();
 		int yLocation = (int) event.getY();
@@ -1070,7 +1120,7 @@ public class MenuActions {
 			
 			
 			GraphicsContext graphic = railMap.getGraphicsContext2D();
-			drawElement(graphic, event, file);
+			drawElement(graphic, event, file, canvasColour);
 		}
 		System.out.println(trackStore.size());
 	}
