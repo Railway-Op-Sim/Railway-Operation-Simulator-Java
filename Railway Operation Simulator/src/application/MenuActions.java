@@ -405,6 +405,38 @@ public class MenuActions {
 				trackImage = new String("graphics/switch8.png"); //Open image file.
 				break;
 				
+			case SWITCH9 :
+				trackImage = new String("graphics/switch9.png"); //Open image file.
+				break;
+				
+			case SWITCH10 :
+				trackImage = new String("graphics/switch10.png"); //Open image file.
+				break;
+				
+			case SWITCH11 :
+				trackImage = new String("graphics/switch11.png"); //Open image file.
+				break;
+				
+			case SWITCH12 :
+				trackImage = new String("graphics/switch12.png"); //Open image file.
+				break;
+				
+			case SWITCH13 :
+				trackImage = new String("graphics/switch13.png"); //Open image file.
+				break;
+				
+			case SWITCH14 :
+				trackImage = new String("graphics/switch14.png"); //Open image file.
+				break;
+				
+			case SWITCH15 :
+				trackImage = new String("graphics/switch15.png"); //Open image file.
+				break;
+				
+			case SWITCH16 :
+				trackImage = new String("graphics/switch16.png"); //Open image file.
+				break;
+				
 				
 			case BRIDGE1 :
 				bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
@@ -934,6 +966,46 @@ public class MenuActions {
 			case SWITCH8: 
 				SwitchTrack switch8 = new SwitchTrack(TrackType.SWITCH8, placeX, placeY, false, "None");
 				newTrack = switch8;
+				break;
+				
+			case SWITCH9: 
+				SwitchTrack switch9 = new SwitchTrack(TrackType.SWITCH9, placeX, placeY, false, "None");
+				newTrack = switch9;
+				break;
+				
+			case SWITCH10: 
+				SwitchTrack switch10 = new SwitchTrack(TrackType.SWITCH10, placeX, placeY, false, "None");
+				newTrack = switch10;
+				break;
+				
+			case SWITCH11: 
+				SwitchTrack switch11 = new SwitchTrack(TrackType.SWITCH11, placeX, placeY, false, "None");
+				newTrack = switch11;
+				break;
+				
+			case SWITCH12: 
+				SwitchTrack switch12 = new SwitchTrack(TrackType.SWITCH12, placeX, placeY, false, "None");
+				newTrack = switch12;
+				break;
+				
+			case SWITCH13: 
+				SwitchTrack switch13 = new SwitchTrack(TrackType.SWITCH13, placeX, placeY, false, "None");
+				newTrack = switch13;
+				break;
+				
+			case SWITCH14: 
+				SwitchTrack switch14 = new SwitchTrack(TrackType.SWITCH14, placeX, placeY, false, "None");
+				newTrack = switch14;
+				break;
+				
+			case SWITCH15: 
+				SwitchTrack switch15 = new SwitchTrack(TrackType.SWITCH15, placeX, placeY, false, "None");
+				newTrack = switch15;
+				break;
+				
+			case SWITCH16: 
+				SwitchTrack switch16 = new SwitchTrack(TrackType.SWITCH16, placeX, placeY, false, "None");
+				newTrack = switch16;
 				break;
 				
 			case BRIDGE1: 

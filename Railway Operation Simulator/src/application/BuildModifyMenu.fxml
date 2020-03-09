@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="196.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BuildModifyMenuController">
+<VBox prefHeight="100.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BuildModifyMenuController">
    <children>
       <HBox prefHeight="48.0" prefWidth="512.0">
          <children>
@@ -45,35 +45,35 @@
             </Button>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" spacing="6.0">
+      <HBox prefHeight="72.0" prefWidth="200.0" spacing="6.0">
          <children>
-            <GridPane fx:id="trackMenu">
+            <GridPane fx:id="trackMenu" prefHeight="64.0" prefWidth="360.0">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="16.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="16.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="16.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="18.0" minHeight="16.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="18.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="18.0" minHeight="16.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <ToggleButton fx:id="straightHorizontalToggle" mnemonicParsing="false" onAction="#selectStraightHorizontal">
@@ -90,24 +90,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
-                  </ToggleButton>
-                  <ToggleButton fx:id="linkLeftToggle" mnemonicParsing="false" onAction="#selectLinkLeft" toggleGroup="$elementGroup" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="linkLeftImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/linkLeftSet.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="bufferLeftToggle" mnemonicParsing="false" onAction="#selectBufferLeft" toggleGroup="$elementGroup" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="bufferLeftImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/bufferLeft.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="straightVerticalToggle" mnemonicParsing="false" onAction="#selectStraightVertical" toggleGroup="$elementGroup" GridPane.columnIndex="1">
                      <graphic>
@@ -117,24 +102,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="linkRightToggle" mnemonicParsing="false" onAction="#selectLinkRight" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="linkRightImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/linkRightSet.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="bufferRightToggle" mnemonicParsing="false" onAction="#selectBufferRight" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="bufferRightImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/bufferRight.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="directLeftTrackToggle" mnemonicParsing="false" onAction="#selectDirectLeftTrack" toggleGroup="$elementGroup" GridPane.columnIndex="2">
                      <graphic>
@@ -144,24 +114,10 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
-                  <ToggleButton fx:id="linkDownToggle" mnemonicParsing="false" onAction="#selectLinkDown" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="linkDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/linkDownSet.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton id="downBufferToggle" fx:id="bufferDownToggle" mnemonicParsing="false" onAction="#selectBufferDown" stylesheets="@application.css" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="bufferDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/bufferDown.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></ToggleButton>
                   <ToggleButton fx:id="directRightTrackToggle" mnemonicParsing="false" onAction="#selectDirectRightTrack" toggleGroup="$elementGroup" GridPane.columnIndex="3">
                      <graphic>
                         <ImageView fx:id="directRightTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
@@ -170,24 +126,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="linkUpToggle" mnemonicParsing="false" onAction="#selectLinkUp" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="linkUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/linkUpSet.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="bufferUpToggle" mnemonicParsing="false" onAction="#selectBufferUp" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="bufferUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/bufferUp.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="directUpTrackToggle" mnemonicParsing="false" onAction="#selectDirectUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="4">
                      <graphic>
@@ -197,24 +138,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="linkLeftUpToggle" mnemonicParsing="false" onAction="#selectLinkLeftUp" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="linkLeftUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/linkLeftUpSet.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="bufferLeftUpToggle" mnemonicParsing="false" onAction="#selectBufferLeftUp" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="bufferLeftUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/bufferLeftUp.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="directDownTrackToggle" mnemonicParsing="false" onAction="#selectDirectDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="5">
                      <graphic>
@@ -224,24 +150,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="linkRightUpToggle" mnemonicParsing="false" onAction="#selectLinkRightUp" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="linkRightUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/linkRightUpSet.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="bufferRightUpToggle" mnemonicParsing="false" onAction="#selectBufferRightUp" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="bufferRightUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/bufferRightUp.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="straightRightUpToggle" mnemonicParsing="false" onAction="#selectStraightRightUp" toggleGroup="$elementGroup" GridPane.columnIndex="6">
                      <graphic>
@@ -251,24 +162,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="linkLeftDownToggle" mnemonicParsing="false" onAction="#selectLinkLeftDown" toggleGroup="$elementGroup" GridPane.columnIndex="6" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="linkLeftDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/linkLeftDownSet.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="bufferLeftDownToggle" mnemonicParsing="false" onAction="#selectBufferLeftDown" toggleGroup="$elementGroup" GridPane.columnIndex="6" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="bufferLeftDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/bufferLeftDown.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="straightLeftUpToggle" mnemonicParsing="false" onAction="#selectStraightLeftUp" toggleGroup="$elementGroup" GridPane.columnIndex="7">
                      <graphic>
@@ -278,24 +174,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="linkRightDownToggle" mnemonicParsing="false" onAction="#selectLinkRightDown" toggleGroup="$elementGroup" GridPane.columnIndex="7" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="linkRightDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/linkRightDownSet.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="bufferRightDownToggle" mnemonicParsing="false" onAction="#selectBufferRightDown" toggleGroup="$elementGroup" GridPane.columnIndex="7" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="bufferRightDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/bufferRightDown.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="directRightUpToggle" mnemonicParsing="false" onAction="#selectDirectRightUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="8">
                      <graphic>
@@ -305,24 +186,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="exitLeftTrackToggle" mnemonicParsing="false" onAction="#selectExitLeftTrack" toggleGroup="$elementGroup" GridPane.columnIndex="8" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="exitLeftTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/exitLeftTrack.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="signalLeftTrackToggle" mnemonicParsing="false" onAction="#selectSignalLeftTrack" toggleGroup="$elementGroup" GridPane.columnIndex="8" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="signalLeftTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/signalLeft.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="directLeftUpToggle" mnemonicParsing="false" onAction="#selectDirectLeftUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="9">
                      <graphic>
@@ -332,24 +198,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="exitRightTrackToggle" mnemonicParsing="false" onAction="#selectExitRightTrack" toggleGroup="$elementGroup" GridPane.columnIndex="9" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="exitRightTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/exitRightTrack.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="signalRightTrackToggle" mnemonicParsing="false" onAction="#selectSignalRightTrack" toggleGroup="$elementGroup" GridPane.columnIndex="9" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="signalRightTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/signalRight.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="directLeftDownToggle" mnemonicParsing="false" onAction="#selectDirectLeftDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="10">
                      <graphic>
@@ -359,24 +210,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="exitDownTrackToggle" mnemonicParsing="false" onAction="#selectExitDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="10" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="exitDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/exitDownTrack.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="signalUpTrackToggle" mnemonicParsing="false" onAction="#selectSignalUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="10" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="signalUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/signalUp.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="directRightDownToggle" mnemonicParsing="false" onAction="#selectDirectRightDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="11">
                      <graphic>
@@ -386,24 +222,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="exitUpTrackToggle" mnemonicParsing="false" onAction="#selectExitUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="11" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="exitUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/exitUpTrack.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="signalDownTrackToggle" mnemonicParsing="false" onAction="#selectSignalDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="11" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="signalDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/signalDown.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="tightCurve1Toggle" mnemonicParsing="false" onAction="#selectTightCurve1" toggleGroup="$elementGroup" GridPane.columnIndex="12">
                      <graphic>
@@ -413,24 +234,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="exitLeftUpTrackToggle" mnemonicParsing="false" onAction="#selectExitLeftUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="12" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="exitLeftUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/exitLeftUpTrack.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="signalLeftUpTrackToggle" mnemonicParsing="false" onAction="#selectSignalLeftUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="12" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="signalLeftUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/signalLeftUp.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="tightCurve2Toggle" mnemonicParsing="false" onAction="#selectTightCurve2" toggleGroup="$elementGroup" GridPane.columnIndex="13">
                      <graphic>
@@ -440,24 +246,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="exitRightUpTrackToggle" mnemonicParsing="false" onAction="#selectExitRightUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="13" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="exitRightUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/exitRightUpTrack.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="signalRightUpTrackToggle" mnemonicParsing="false" onAction="#selectSignalRightUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="13" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="signalRightUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/signalRightUp.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="tightCurve3Toggle" mnemonicParsing="false" onAction="#selectTightCurve3" toggleGroup="$elementGroup" GridPane.columnIndex="14">
                      <graphic>
@@ -467,24 +258,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="exitLeftDownTrackToggle" mnemonicParsing="false" onAction="#selectExitLeftDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="14" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="exitLeftDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/exitLeftDownTrack.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="signalLeftDownTrackToggle" mnemonicParsing="false" onAction="#selectSignalLeftDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="14" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="signalLeftDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/signalLeftDown.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="tightCurve4Toggle" mnemonicParsing="false" onAction="#selectTightCurve4" toggleGroup="$elementGroup" GridPane.columnIndex="15">
                      <graphic>
@@ -494,24 +270,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="exitRightDownTrackToggle" mnemonicParsing="false" onAction="#selectExitRightDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="15" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="exitRightDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/exitRightDownTrack.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="signalRightDownTrackToggle" mnemonicParsing="false" onAction="#selectSignalRightDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="15" GridPane.rowIndex="2">
-                     <graphic>
-                        <ImageView fx:id="signalRightDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/signalRightDown.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="curve1Toggle" mnemonicParsing="false" onAction="#selectCurve1" toggleGroup="$elementGroup" GridPane.columnIndex="16">
                      <graphic>
@@ -521,15 +282,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="curve5Toggle" mnemonicParsing="false" onAction="#selectCurve5" toggleGroup="$elementGroup" GridPane.columnIndex="16" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="curve5Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/curve5.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="curve2Toggle" mnemonicParsing="false" onAction="#selectCurve2" toggleGroup="$elementGroup" GridPane.columnIndex="17">
                      <graphic>
@@ -539,15 +294,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="curve6Toggle" mnemonicParsing="false" onAction="#selectCurve6" toggleGroup="$elementGroup" GridPane.columnIndex="17" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="curve6Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/curve6.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="curve3Toggle" mnemonicParsing="false" onAction="#selectCurve3" toggleGroup="$elementGroup" GridPane.columnIndex="18">
                      <graphic>
@@ -557,15 +306,9 @@
                            </image>
                         </ImageView>
                      </graphic>
-                  </ToggleButton>
-                  <ToggleButton fx:id="curve7Toggle" mnemonicParsing="false" onAction="#selectCurve7" toggleGroup="$elementGroup" GridPane.columnIndex="18" GridPane.rowIndex="1">
-                     <graphic>
-                        <ImageView fx:id="curve7Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../graphics/curve7.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="curve4Toggle" cacheHint="SPEED" mnemonicParsing="false" onAction="#selectCurve4" toggleGroup="$elementGroup" GridPane.columnIndex="19">
                      <graphic>
@@ -578,6 +321,237 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="linkLeftToggle" mnemonicParsing="false" onAction="#selectLinkLeft" toggleGroup="$elementGroup" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="linkLeftImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/linkLeftSet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="linkRightToggle" mnemonicParsing="false" onAction="#selectLinkRight" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="linkRightImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/linkRightSet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="linkDownToggle" mnemonicParsing="false" onAction="#selectLinkDown" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="linkDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/linkDownSet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="linkUpToggle" mnemonicParsing="false" onAction="#selectLinkUp" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="linkUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/linkUpSet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="linkLeftUpToggle" mnemonicParsing="false" onAction="#selectLinkLeftUp" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="linkLeftUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/linkLeftUpSet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="linkRightUpToggle" mnemonicParsing="false" onAction="#selectLinkRightUp" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="linkRightUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/linkRightUpSet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="linkLeftDownToggle" mnemonicParsing="false" onAction="#selectLinkLeftDown" toggleGroup="$elementGroup" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="linkLeftDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/linkLeftDownSet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="linkRightDownToggle" mnemonicParsing="false" onAction="#selectLinkRightDown" toggleGroup="$elementGroup" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="linkRightDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/linkRightDownSet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="exitLeftTrackToggle" mnemonicParsing="false" onAction="#selectExitLeftTrack" toggleGroup="$elementGroup" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="exitLeftTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/exitLeftTrack.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="exitRightTrackToggle" mnemonicParsing="false" onAction="#selectExitRightTrack" toggleGroup="$elementGroup" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="exitRightTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/exitRightTrack.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="exitDownTrackToggle" mnemonicParsing="false" onAction="#selectExitDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="10" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="exitDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/exitDownTrack.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="exitUpTrackToggle" mnemonicParsing="false" onAction="#selectExitUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="11" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="exitUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/exitUpTrack.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="exitLeftUpTrackToggle" mnemonicParsing="false" onAction="#selectExitLeftUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="12" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="exitLeftUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/exitLeftUpTrack.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="exitRightUpTrackToggle" mnemonicParsing="false" onAction="#selectExitRightUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="13" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="exitRightUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/exitRightUpTrack.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="exitLeftDownTrackToggle" mnemonicParsing="false" onAction="#selectExitLeftDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="14" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="exitLeftDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/exitLeftDownTrack.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="exitRightDownTrackToggle" mnemonicParsing="false" onAction="#selectExitRightDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="15" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="exitRightDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/exitRightDownTrack.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="curve5Toggle" mnemonicParsing="false" onAction="#selectCurve5" toggleGroup="$elementGroup" GridPane.columnIndex="16" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="curve5Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/curve5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="curve6Toggle" mnemonicParsing="false" onAction="#selectCurve6" toggleGroup="$elementGroup" GridPane.columnIndex="17" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="curve6Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/curve6.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="curve7Toggle" mnemonicParsing="false" onAction="#selectCurve7" toggleGroup="$elementGroup" GridPane.columnIndex="18" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="curve7Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/curve7.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="curve8Toggle" mnemonicParsing="false" onAction="#selectCurve8" toggleGroup="$elementGroup" GridPane.columnIndex="19" GridPane.rowIndex="1">
                      <graphic>
@@ -587,6 +561,200 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="bufferLeftToggle" mnemonicParsing="false" onAction="#selectBufferLeft" toggleGroup="$elementGroup" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="bufferLeftImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/bufferLeft.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="bufferRightToggle" mnemonicParsing="false" onAction="#selectBufferRight" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="bufferRightImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/bufferRight.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton id="downBufferToggle" fx:id="bufferDownToggle" mnemonicParsing="false" onAction="#selectBufferDown" stylesheets="@application.css" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="bufferDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/bufferDown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding></ToggleButton>
+                  <ToggleButton fx:id="bufferUpToggle" mnemonicParsing="false" onAction="#selectBufferUp" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="bufferUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/bufferUp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="bufferLeftUpToggle" mnemonicParsing="false" onAction="#selectBufferLeftUp" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="bufferLeftUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/bufferLeftUp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="bufferRightUpToggle" mnemonicParsing="false" onAction="#selectBufferRightUp" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="bufferRightUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/bufferRightUp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="bufferLeftDownToggle" mnemonicParsing="false" onAction="#selectBufferLeftDown" toggleGroup="$elementGroup" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="bufferLeftDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/bufferLeftDown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="bufferRightDownToggle" mnemonicParsing="false" onAction="#selectBufferRightDown" toggleGroup="$elementGroup" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="bufferRightDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/bufferRightDown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="signalLeftTrackToggle" mnemonicParsing="false" onAction="#selectSignalLeftTrack" toggleGroup="$elementGroup" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="signalLeftTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/signalLeft.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="signalRightTrackToggle" mnemonicParsing="false" onAction="#selectSignalRightTrack" toggleGroup="$elementGroup" GridPane.columnIndex="9" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="signalRightTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/signalRight.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="signalUpTrackToggle" mnemonicParsing="false" onAction="#selectSignalUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="10" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="signalUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/signalUp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="signalDownTrackToggle" mnemonicParsing="false" onAction="#selectSignalDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="11" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="signalDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/signalDown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="signalLeftUpTrackToggle" mnemonicParsing="false" onAction="#selectSignalLeftUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="12" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="signalLeftUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/signalLeftUp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="signalRightUpTrackToggle" mnemonicParsing="false" onAction="#selectSignalRightUpTrack" toggleGroup="$elementGroup" GridPane.columnIndex="13" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="signalRightUpTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/signalRightUp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="signalLeftDownTrackToggle" mnemonicParsing="false" onAction="#selectSignalLeftDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="14" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="signalLeftDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/signalLeftDown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="signalRightDownTrackToggle" mnemonicParsing="false" onAction="#selectSignalRightDownTrack" toggleGroup="$elementGroup" GridPane.columnIndex="15" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="signalRightDownTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/signalRightDown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="bridge1Toggle" mnemonicParsing="false" onAction="#selectBridge1" toggleGroup="$elementGroup" GridPane.columnIndex="16" GridPane.rowIndex="2">
                      <graphic>
@@ -596,6 +764,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="bridge2Toggle" mnemonicParsing="false" onAction="#selectBridge2" toggleGroup="$elementGroup" GridPane.columnIndex="17" GridPane.rowIndex="2">
                      <graphic>
@@ -605,6 +776,12 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="underpass1Toggle" mnemonicParsing="false" onAction="#selectUnderpass1" toggleGroup="$elementGroup" GridPane.columnIndex="18" GridPane.rowIndex="2">
                      <graphic>
@@ -614,6 +791,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="underpass2Toggle" mnemonicParsing="false" onAction="#selectUnderpass2" toggleGroup="$elementGroup" GridPane.columnIndex="19" GridPane.rowIndex="2">
                      <graphic>
@@ -629,24 +809,30 @@
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                </children>
             </GridPane>
             <GridPane>
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="16.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="18.0" minHeight="16.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="18.0" minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="18.0" minHeight="16.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <ToggleButton fx:id="switchTight1Toggle" mnemonicParsing="false" onAction="#selectSwitchTight1" toggleGroup="$elementGroup">
@@ -660,6 +846,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switchTight2Toggle" mnemonicParsing="false" onAction="#selectSwitchTight2" toggleGroup="$elementGroup" GridPane.columnIndex="1">
                      <graphic>
@@ -672,6 +861,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switchTight3Toggle" mnemonicParsing="false" onAction="#selectSwitchTight3" toggleGroup="$elementGroup" GridPane.columnIndex="2">
                      <graphic>
@@ -684,6 +876,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switchTight4Toggle" mnemonicParsing="false" onAction="#selectSwitchTight4" toggleGroup="$elementGroup" GridPane.columnIndex="3">
                      <graphic>
@@ -696,6 +891,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switchTight5Toggle" mnemonicParsing="false" onAction="#selectSwitchTight5" toggleGroup="$elementGroup" GridPane.columnIndex="4">
                      <graphic>
@@ -708,6 +906,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switchTight6Toggle" mnemonicParsing="false" onAction="#selectSwitchTight6" toggleGroup="$elementGroup" GridPane.columnIndex="5">
                      <graphic>
@@ -720,6 +921,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switchTight7Toggle" mnemonicParsing="false" onAction="#selectSwitchTight7" toggleGroup="$elementGroup" GridPane.columnIndex="6">
                      <graphic>
@@ -732,6 +936,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switchTight8Toggle" mnemonicParsing="false" onAction="#selectSwitchTight8" toggleGroup="$elementGroup" GridPane.columnIndex="7">
                      <graphic>
@@ -744,6 +951,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switch1Toggle" mnemonicParsing="false" onAction="#selectSwitch1" toggleGroup="$elementGroup" GridPane.rowIndex="1">
                      <graphic>
@@ -756,6 +966,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switch2Toggle" mnemonicParsing="false" onAction="#selectSwitch2" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <graphic>
@@ -768,6 +981,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switch3Toggle" mnemonicParsing="false" onAction="#selectSwitch3" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <graphic>
@@ -780,6 +996,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switch4Toggle" mnemonicParsing="false" onAction="#selectSwitch4" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <graphic>
@@ -792,6 +1011,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switch5Toggle" mnemonicParsing="false" onAction="#selectSwitch5" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="1">
                      <graphic>
@@ -804,6 +1026,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switch6Toggle" mnemonicParsing="false" onAction="#selectSwitch6" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="1">
                      <graphic>
@@ -816,6 +1041,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switch7Toggle" mnemonicParsing="false" onAction="#selectSwitch7" toggleGroup="$elementGroup" GridPane.columnIndex="6" GridPane.rowIndex="1">
                      <graphic>
@@ -828,6 +1056,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                   <ToggleButton fx:id="switch8Toggle" mnemonicParsing="false" onAction="#selectSwitch8" toggleGroup="$elementGroup" GridPane.columnIndex="7" GridPane.rowIndex="1">
                      <graphic>
@@ -840,6 +1071,129 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch9Toggle" mnemonicParsing="false" onAction="#selectSwitch9" toggleGroup="$elementGroup" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="switch9Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch9.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch10Toggle" mnemonicParsing="false" onAction="#selectSwitch10" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="switch10Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch10.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch11Toggle" mnemonicParsing="false" onAction="#selectSwitch11" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="switch11Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch11.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch12Toggle" mnemonicParsing="false" onAction="#selectSwitch12" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="switch12Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch12.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch13Toggle" mnemonicParsing="false" onAction="#selectSwitch13" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="switch13Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch13.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch14Toggle" mnemonicParsing="false" onAction="#selectSwitch14" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="switch14Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch14.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch15Toggle" mnemonicParsing="false" onAction="#selectSwitch15" toggleGroup="$elementGroup" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="switch15Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch15.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch16Toggle" mnemonicParsing="false" onAction="#selectSwitch16" toggleGroup="$elementGroup" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="switch16Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch14.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
                   </ToggleButton>
                </children>
             </GridPane>

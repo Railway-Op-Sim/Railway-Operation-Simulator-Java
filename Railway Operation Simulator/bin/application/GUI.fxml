@@ -20,8 +20,14 @@
 					<menus>
 						<Menu mnemonicParsing="false" text="File">
 							<items>
-								<MenuItem mnemonicParsing="false" text="Load Railway" />
-								<MenuItem mnemonicParsing="false" text="Save Railway" />
+								<MenuItem mnemonicParsing="false" text="Load Railway">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="L" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                           </accelerator></MenuItem>
+								<MenuItem mnemonicParsing="false" text="Save Railway">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                           </accelerator></MenuItem>
 								<MenuItem mnemonicParsing="false" text="Save Railway As" />
 								<MenuItem mnemonicParsing="false" text="Load Timetable" />
 								<SeparatorMenuItem mnemonicParsing="false" />
@@ -34,8 +40,18 @@
 						</Menu>
 						<Menu mnemonicParsing="false" text="Mode">
 							<items>
-								<MenuItem fx:id="buildModifyRailway" mnemonicParsing="false" onAction="#showBuildMenu" text="Build/Modify Railway" />
-								<MenuItem mnemonicParsing="false" text="Unspecified Action" />
+								<MenuItem fx:id="buildModifyRailway" mnemonicParsing="false" onAction="#showBuildMenu" text="Build/Modify Railway">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="B" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                           </accelerator></MenuItem>
+								<MenuItem mnemonicParsing="false" text="Set Preferred Directions" />
+                        <MenuItem mnemonicParsing="false" text="Operate Railway" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="whiteBackgroundMenuItem" mnemonicParsing="false" onAction="#selectWhiteBackground" text="White Background" />
+                        <MenuItem fx:id="blackBackgroundMenuItem" mnemonicParsing="false" onAction="#selectBlackBackground" text="Black Background" />
+                        <MenuItem fx:id="blueBackgroundMenuItem" mnemonicParsing="false" onAction="#selectBlueBackground" text="Blue Background" />
 							</items>
 						</Menu>
 						<Menu mnemonicParsing="false" text="Edit">
@@ -71,7 +87,7 @@
    <center>
       <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-      		<Canvas fx:id="railMap" height="448.0" onMouseClicked="#onMouseClicked" width="768.0" />
+      		<Canvas fx:id="canvas" height="448.0" onMouseClicked="#onMouseClicked" width="768.0" />
          </children>
       </Pane>
    </center>

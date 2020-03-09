@@ -520,6 +520,54 @@ public class BuildModifyMenuController {
 
     @FXML // fx:id="switch8Image"
     private ImageView switch8Image; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="switch9Toggle"
+    private ToggleButton switch9Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch9Image"
+    private ImageView switch9Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch10Toggle"
+    private ToggleButton switch10Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch10Image"
+    private ImageView switch10Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch11Toggle"
+    private ToggleButton switch11Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch11Image"
+    private ImageView switch11Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch12Toggle"
+    private ToggleButton switch12Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch12Image"
+    private ImageView switch12Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch13Toggle"
+    private ToggleButton switch13Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch13Image"
+    private ImageView switch13Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch14Toggle"
+    private ToggleButton switch14Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch14Image"
+    private ImageView switch14Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch15Toggle"
+    private ToggleButton switch15Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch15Image"
+    private ImageView switch15Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch16Toggle"
+    private ToggleButton switch16Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="switch16Image"
+    private ImageView switch16Image; // Value injected by FXMLLoader
    
 
     
@@ -1346,8 +1394,93 @@ public class BuildModifyMenuController {
 
     }
     
-// Select switch actions
     
+    @FXML
+    void selectSwitch9(ActionEvent event) {
+    	if (switch9Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCH9);
+		} else {
+			switch9Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitch10(ActionEvent event) {
+    	if (switch10Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCH10);
+		} else {
+			switch10Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitch11(ActionEvent event) {
+    	if (switch11Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCH11);
+		} else {
+			switch11Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitch12(ActionEvent event) {
+    	if (switch12Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCH12);
+		} else {
+			switch12Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    @FXML
+    void selectSwitch13(ActionEvent event) {
+    	if (switch13Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCH13);
+		} else {
+			switch13Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitch14(ActionEvent event) {
+    	if (switch14Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCH14);
+		} else {
+			switch14Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitch15(ActionEvent event) {
+    	if (switch15Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCH15);
+		} else {
+			switch15Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectSwitch16(ActionEvent event) {
+    	if (switch16Toggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.SWITCH16);
+		} else {
+			switch16Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
     @FXML
     void selectSwitch1(ActionEvent event) {
     	if (switch1Toggle.isSelected()) {
