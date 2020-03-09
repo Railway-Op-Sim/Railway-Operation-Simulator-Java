@@ -47,7 +47,7 @@
       </HBox>
       <HBox prefHeight="72.0" prefWidth="200.0" spacing="6.0">
          <children>
-            <GridPane fx:id="trackMenu" prefHeight="64.0" prefWidth="360.0">
+            <GridPane fx:id="trackMenu1" prefHeight="64.0" prefWidth="360.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
@@ -240,7 +240,7 @@
                   </ToggleButton>
                   <ToggleButton fx:id="tightCurve2Toggle" mnemonicParsing="false" onAction="#selectTightCurve2" toggleGroup="$elementGroup" GridPane.columnIndex="13">
                      <graphic>
-                        <ImageView fx:id="tightCurve1Image2" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="tightCurve2Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/tightCurve2.png" />
                            </image>
@@ -815,7 +815,7 @@
                   </ToggleButton>
                </children>
             </GridPane>
-            <GridPane>
+            <GridPane fx:id="trackMenu2">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />

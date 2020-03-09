@@ -19,6 +19,8 @@ public class Main extends Application {
 	/**
 	 * The starting method to launch the GUI.
 	 */
+	
+	private static Mode mode = Mode.NONE;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -33,6 +35,14 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public Mode getMode() {
+		return mode;
+	}
+
+	public static void setMode(Mode newMode) {
+		mode = newMode;
 	}
 
 	/**
