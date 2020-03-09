@@ -182,36 +182,36 @@ public class GUIController extends Application {
 				MenuActions.addTrack(event, railMap, "graphics/bufferRightDown.png", itemSelected, null);
 				break;
 
-			case LEFTGAP:
-				MenuActions.addTrack(event, railMap, "graphics/unsetLeftGap.png", itemSelected, null);
+			case LINKLEFT:
+				MenuActions.addTrack(event, railMap, "graphics/linkLeftUnset.png", itemSelected, null);
 				break;
 
-			case RIGHTGAP:
-				MenuActions.addTrack(event, railMap, "graphics/unsetRightGap.png", itemSelected, null);
+			case LINKRIGHT:
+				MenuActions.addTrack(event, railMap, "graphics/linkRightUnset.png", itemSelected, null);
 				break;
 
-			case UPGAP:
-				MenuActions.addTrack(event, railMap, "graphics/unsetUpGap.png", itemSelected, null);
+			case LINKUP:
+				MenuActions.addTrack(event, railMap, "graphics/linkUpUnset.png", itemSelected, null);
 				break;
 
-			case DOWNGAP:
-				MenuActions.addTrack(event, railMap, "graphics/unsetDownGap.png", itemSelected, null);
+			case LINKDOWN:
+				MenuActions.addTrack(event, railMap, "graphics/linkDownUnset.png", itemSelected, null);
 				break;
 
-			case LEFTUPGAP:
-				MenuActions.addTrack(event, railMap, "graphics/unsetLeftUpGap.png", itemSelected, null);
+			case LINKLEFTUP:
+				MenuActions.addTrack(event, railMap, "graphics/linkLeftUpUnset.png", itemSelected, null);
 				break;
 
-			case RIGHTUPGAP:
-				MenuActions.addTrack(event, railMap, "graphics/unsetRightUpGap.png", itemSelected, null);
+			case LINKRIGHTUP:
+				MenuActions.addTrack(event, railMap, "graphics/linkRightUpUnset.png", itemSelected, null);
 				break;
 
-			case LEFTDOWNGAP:
-				MenuActions.addTrack(event, railMap, "graphics/unsetLeftDownGap.png", itemSelected, null);
+			case LINKLEFTDOWN:
+				MenuActions.addTrack(event, railMap, "graphics/linkLeftDownUnset.png", itemSelected, null);
 				break;
 
-			case RIGHTDOWNGAP:
-				MenuActions.addTrack(event, railMap, "graphics/unsetRightDownGap.png", itemSelected, null);
+			case LINKRIGHTDOWN:
+				MenuActions.addTrack(event, railMap, "graphics/linkRightDownUnset.png", itemSelected, null);
 				break;
 
 			case DIRECTLEFT:

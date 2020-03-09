@@ -91,11 +91,11 @@
                         <Insets />
                      </opaqueInsets>
                   </ToggleButton>
-                  <ToggleButton fx:id="leftGapTrackToggle" mnemonicParsing="false" onAction="#selectLeftGapTrack" toggleGroup="$elementGroup" GridPane.rowIndex="1">
+                  <ToggleButton fx:id="linkLeftToggle" mnemonicParsing="false" onAction="#selectLinkLeft" toggleGroup="$elementGroup" GridPane.rowIndex="1">
                      <graphic>
-                        <ImageView fx:id="leftGapTrackImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="linkLeftImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/setLeftGap.png" />
+                              <Image url="@../graphics/linkLeftSet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -118,11 +118,11 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="rightGapTrackToggle" mnemonicParsing="false" onAction="#selectRightGapTrack" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <ToggleButton fx:id="linkRightToggle" mnemonicParsing="false" onAction="#selectLinkRight" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <graphic>
-                        <ImageView fx:id="rightGapImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="linkRightImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/setRightGap.png" />
+                              <Image url="@../graphics/linkRightSet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -145,11 +145,11 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="downGapTrackToggle" mnemonicParsing="false" onAction="#selectDownGapTrack" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <ToggleButton fx:id="linkDownToggle" mnemonicParsing="false" onAction="#selectLinkDown" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <graphic>
-                        <ImageView fx:id="downGapImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="linkDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/setDownGap.png" />
+                              <Image url="@../graphics/linkDownSet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -171,11 +171,11 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="upGapTrackToggle" mnemonicParsing="false" onAction="#selectUpGapTrack" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  <ToggleButton fx:id="linkUpToggle" mnemonicParsing="false" onAction="#selectLinkUp" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <graphic>
-                        <ImageView fx:id="upGapImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="linkUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/setUpGap.png" />
+                              <Image url="@../graphics/linkUpSet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -198,11 +198,11 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="leftUpGapTrackToggle" mnemonicParsing="false" onAction="#selectLeftUpGapTrack" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                  <ToggleButton fx:id="linkLeftUpToggle" mnemonicParsing="false" onAction="#selectLinkLeftUp" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="1">
                      <graphic>
-                        <ImageView fx:id="leftUpGapImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="linkLeftUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/setLeftUpGap.png" />
+                              <Image url="@../graphics/linkLeftUpSet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -225,11 +225,11 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="rightUpGapTrackToggle" mnemonicParsing="false" onAction="#selectRightUpGapTrack" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                  <ToggleButton fx:id="linkRightUpToggle" mnemonicParsing="false" onAction="#selectLinkRightUp" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="1">
                      <graphic>
-                        <ImageView fx:id="rightUpGapImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="linkRightUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/setRighUpGap.png" />
+                              <Image url="@../graphics/linkRightUpSet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -252,11 +252,11 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="leftDownGapTrackToggle" mnemonicParsing="false" onAction="#selectLeftDownGapTrack" toggleGroup="$elementGroup" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                  <ToggleButton fx:id="linkLeftDownToggle" mnemonicParsing="false" onAction="#selectLinkLeftDown" toggleGroup="$elementGroup" GridPane.columnIndex="6" GridPane.rowIndex="1">
                      <graphic>
-                        <ImageView fx:id="leftDownGapImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="linkLeftDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/setLeftDownGap.png" />
+                              <Image url="@../graphics/linkLeftDownSet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -279,11 +279,11 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="rightDownGapTrackToggle" mnemonicParsing="false" onAction="#selectRightDownGapTrack" toggleGroup="$elementGroup" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                  <ToggleButton fx:id="linkRightDownToggle" mnemonicParsing="false" onAction="#selectLinkRightDown" toggleGroup="$elementGroup" GridPane.columnIndex="7" GridPane.rowIndex="1">
                      <graphic>
-                        <ImageView fx:id="rightDownGapImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="linkRightDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/setRightDownGap.png" />
+                              <Image url="@../graphics/linkRightDownSet.png" />
                            </image>
                         </ImageView>
                      </graphic>

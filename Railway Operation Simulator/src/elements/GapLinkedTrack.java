@@ -19,7 +19,7 @@ public class GapLinkedTrack extends Track {
 		
 		switch (this.trackType) {
 		
-		case LEFTGAP:
+		case LINKLEFT:
 			this.trackLinks[5] = true;
 
 			break;
@@ -29,7 +29,7 @@ public class GapLinkedTrack extends Track {
 
             break; 
             */
-        case UPGAP: 
+        case LINKUP: 
         	this.trackLinks[7] = true;
         	
             break; 
@@ -38,7 +38,7 @@ public class GapLinkedTrack extends Track {
 
             break;
             */
-        case RIGHTGAP: 
+        case LINKRIGHT: 
         	this.trackLinks[3] = true;
 
             break;
@@ -46,7 +46,7 @@ public class GapLinkedTrack extends Track {
         	this.trackLinks[0] = true;
 
             break; */
-        case DOWNGAP: 
+        case LINKDOWN: 
         	this.trackLinks[1] = true;
 
             break;

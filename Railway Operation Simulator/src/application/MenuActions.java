@@ -197,36 +197,36 @@ public class MenuActions {
 				trackImage = new String("graphics/bufferRightDown.png"); //Open image file.
 				break;
 				
-			case LEFTGAP :
-				trackImage = new String("graphics/unsetLeftGap.png"); //Open image file.
+			case LINKLEFT :
+				trackImage = new String("graphics/linkLeftUnset.png"); //Open image file.
 				break;
 			
-			case RIGHTGAP :
-				trackImage = new String("graphics/unsetRightGap.png"); //Open image file.
+			case LINKRIGHT :
+				trackImage = new String("graphics/linkRightUnset.png"); //Open image file.
 				break;
 			
-			case UPGAP :
-				trackImage = new String("graphics/unsetUpGap.png"); //Open image file.
+			case LINKUP :
+				trackImage = new String("graphics/linkUpUnset.png"); //Open image file.
 				break;
 				
-			case DOWNGAP :
-				trackImage = new String("graphics/unsetDownGap.png"); //Open image file.
+			case LINKDOWN :
+				trackImage = new String("graphics/linkDownUnset.png"); //Open image file.
 				break;
 				
-			case LEFTUPGAP :
-				trackImage = new String("graphics/unsetLeftUpGap.png"); //Open image file.
+			case LINKLEFTUP :
+				trackImage = new String("graphics/linkLeftUpUnset.png"); //Open image file.
 				break;
 				
-			case RIGHTUPGAP :
-				trackImage = new String("graphics/unsetRightUpGap.png"); //Open image file.
+			case LINKRIGHTUP :
+				trackImage = new String("graphics/linkRightUpUnset.png"); //Open image file.
 				break;
 				
-			case LEFTDOWNGAP :
-				trackImage = new String("graphics/unsetLeftDownGap.png"); //Open image file.
+			case LINKLEFTDOWN :
+				trackImage = new String("graphics/linkLeftDownUnset.png"); //Open image file.
 				break;
 				
-			case RIGHTDOWNGAP :
-				trackImage = new String("graphics/unsetRightDownGap.png"); //Open image file.
+			case LINKRIGHTDOWN :
+				trackImage = new String("graphics/linkRightDownUnset.png"); //Open image file.
 				break;
 				
 			case DIRECTLEFT :
@@ -676,44 +676,44 @@ public class MenuActions {
 				newTrack = rightDownBuffer;
 				break;
 				
-			case LEFTGAP: 
-				GapLinkedTrack leftGapTrack = new GapLinkedTrack(TrackType.LEFTGAP, placeX, placeY, false, "None");
-				newTrack = leftGapTrack;
+			case LINKLEFT: 
+				GapLinkedTrack linkLeft = new GapLinkedTrack(TrackType.LINKLEFT, placeX, placeY, false, "None");
+				newTrack = linkLeft;
 				break;
 				
-			case RIGHTGAP: 
-				GapLinkedTrack rightGapTrack = new GapLinkedTrack(TrackType.RIGHTGAP, placeX, placeY, false, "None");
-				newTrack = rightGapTrack;
+			case LINKRIGHT: 
+				GapLinkedTrack linkRight = new GapLinkedTrack(TrackType.LINKRIGHT, placeX, placeY, false, "None");
+				newTrack = linkRight;
 				break;
 				
-			case UPGAP: 
-				GapLinkedTrack upGapTrack = new GapLinkedTrack(TrackType.UPGAP, placeX, placeY, false, "None");
-				newTrack = upGapTrack;
+			case LINKUP: 
+				GapLinkedTrack linkUp = new GapLinkedTrack(TrackType.LINKUP, placeX, placeY, false, "None");
+				newTrack = linkUp;
 				break;
 				
-			case DOWNGAP: 
-				GapLinkedTrack downGapTrack = new GapLinkedTrack(TrackType.DOWNGAP, placeX, placeY, false, "None");
-				newTrack = downGapTrack;
+			case LINKDOWN: 
+				GapLinkedTrack linkDown = new GapLinkedTrack(TrackType.LINKDOWN, placeX, placeY, false, "None");
+				newTrack = linkDown;
 				break;
 			
-			case LEFTUPGAP: 
-				GapLinkedTrack leftUpGapTrack = new GapLinkedTrack(TrackType.LEFTUPGAP, placeX, placeY, false, "None");
-				newTrack = leftUpGapTrack;
+			case LINKLEFTUP: 
+				GapLinkedTrack linkLeftUp = new GapLinkedTrack(TrackType.LINKLEFTUP, placeX, placeY, false, "None");
+				newTrack = linkLeftUp;
 				break;
 				
-			case RIGHTUPGAP: 
-				GapLinkedTrack rightUpGapTrack = new GapLinkedTrack(TrackType.RIGHTUPGAP, placeX, placeY, false, "None");
-				newTrack = rightUpGapTrack;
+			case LINKRIGHTUP: 
+				GapLinkedTrack linkRightUp = new GapLinkedTrack(TrackType.LINKRIGHTUP, placeX, placeY, false, "None");
+				newTrack = linkRightUp;
 				break;
 				
-			case LEFTDOWNGAP: 
-				GapLinkedTrack leftDownGapTrack = new GapLinkedTrack(TrackType.LEFTDOWNGAP, placeX, placeY, false, "None");
-				newTrack = leftDownGapTrack;
+			case LINKLEFTDOWN: 
+				GapLinkedTrack linkLeftDown = new GapLinkedTrack(TrackType.LINKLEFTDOWN, placeX, placeY, false, "None");
+				newTrack = linkLeftDown;
 				break;
 				
-			case RIGHTDOWNGAP: 
-				GapLinkedTrack rightDownGapTrack = new GapLinkedTrack(TrackType.RIGHTDOWNGAP, placeX, placeY, false, "None");
-				newTrack = rightDownGapTrack;
+			case LINKRIGHTDOWN: 
+				GapLinkedTrack linkRightDown = new GapLinkedTrack(TrackType.LINKRIGHTDOWN, placeX, placeY, false, "None");
+				newTrack = linkRightDown;
 				break;
 				
 			case DIRECTLEFT: 

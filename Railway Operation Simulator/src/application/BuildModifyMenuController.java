@@ -118,55 +118,55 @@ public class BuildModifyMenuController {
     @FXML // fx:id="straightLeftUpImage"
     private ImageView straightLeftUpImage; // Value injected by FXMLLoader
     
-    // ** Gap link track toggle and images **
+    // ** Link track toggle and images **
     
-    @FXML // fx:id="leftGapTrackToggle"
-    private ToggleButton leftGapTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="linkLeftToggle"
+    private ToggleButton linkLeftToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="leftGapTrackImage"
-    private ImageView leftGapTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="linkLeftImage"
+    private ImageView linkLeftImage; // Value injected by FXMLLoader
     
-    @FXML // fx:id="upGapTrackToggle"
-    private ToggleButton upGapTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="linkUpToggle"
+    private ToggleButton linkUpToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="upGapTrackImage"
-    private ImageView upGapTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="linkUpImage"
+    private ImageView linkUpImage; // Value injected by FXMLLoader
     
-    @FXML // fx:id="rightGapTrackToggle"
-    private ToggleButton rightGapTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="linkRightToggle"
+    private ToggleButton linkRightToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="linkRightImage"
+    private ImageView linkRightImage; // Value injected by FXMLLoader
+
+    @FXML // fx:id="linkDownToggle"
+    private ToggleButton linkDownToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="linkDownImage"
+    private ImageView linkDownImage; // Value injected by FXMLLoader
     
-    @FXML // fx:id="rightGapTrackImage"
-    private ImageView rightGapTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="linkLeftUpToggle"
+    private ToggleButton linkLeftUpToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="downGapTrackToggle"
-    private ToggleButton downGapTrackToggle; // Value injected by FXMLLoader
-
-    @FXML // fx:id="downGapTrackImage"
-    private ImageView downGapTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="linkLeftUpImage"
+    private ImageView linkLeftUpImage; // Value injected by FXMLLoader
     
-    @FXML // fx:id="leftUpGapTrackToggle"
-    private ToggleButton leftUpGapTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="linkRightUpToggle"
+    private ToggleButton linkRightUpToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="leftUpGapTrackImage"
-    private ImageView leftUpGapTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="linkRightUpImage"
+    private ImageView linkRightUpImage; // Value injected by FXMLLoader
     
-    @FXML // fx:id="rightUpGapTrackToggle"
-    private ToggleButton rightUpGapTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="linkLeftDownToggle"
+    private ToggleButton linkLeftDownToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="rightUpGapTrackImage"
-    private ImageView rightUpGapTrackImage; // Value injected by FXMLLoader
-    
-    @FXML // fx:id="leftDownGapTrackToggle"
-    private ToggleButton leftDownGapTrackToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="linkLeftDownImage"
+    private ImageView linkLeftDownImage; // Value injected by FXMLLoader
 
-    @FXML // fx:id="leftDownGapTrackImage"
-    private ImageView leftDownGapTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="linkRightDownToggle"
+    private ToggleButton linkRightDownToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="rightDownGapTrackToggle"
-    private ToggleButton rightDownGapTrackToggle; // Value injected by FXMLLoader
-
-    @FXML // fx:id="rightDownGapTrackImage"
-    private ImageView rightDownGapTrackImage; // Value injected by FXMLLoader
+    @FXML // fx:id="linkRightDownImage"
+    private ImageView linkRightDownImage; // Value injected by FXMLLoader
     
     //** Directional Track toggles and images. **
     
@@ -721,88 +721,88 @@ public class BuildModifyMenuController {
     //Select Gap Link Track actions
     
     @FXML
-    void selectLeftGapTrack(ActionEvent event) {
-    	if (leftGapTrackToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.LEFTGAP);
+    void selectLinkLeft(ActionEvent event) {
+    	if (linkLeftToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.LINKLEFT);
 		} else {
-			leftGapTrackToggle.setSelected(false);
+			linkLeftToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
     
     @FXML
-    void selectRightGapTrack(ActionEvent event) {
-    	if (rightGapTrackToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.RIGHTGAP);
+    void selectLinkRight(ActionEvent event) {
+    	if (linkRightToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.LINKRIGHT);
 		} else {
-			rightGapTrackToggle.setSelected(false);
+			linkRightToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
     
     @FXML
-    void selectDownGapTrack(ActionEvent event) {
-    	if (downGapTrackToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.DOWNGAP);
+    void selectLinkDown(ActionEvent event) {
+    	if (linkDownToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.LINKDOWN);
 		} else {
-			downGapTrackToggle.setSelected(false);
+			linkDownToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
     
     @FXML
-    void selectUpGapTrack(ActionEvent event) {
-    	if (upGapTrackToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.UPGAP);
+    void selectLinkUp(ActionEvent event) {
+    	if (linkUpToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.LINKUP);
 		} else {
-			upGapTrackToggle.setSelected(false);
+			linkUpToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
     
     @FXML
-    void selectLeftUpGapTrack(ActionEvent event) {
-    	if (leftUpGapTrackToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.LEFTUPGAP);
+    void selectLinkLeftUp(ActionEvent event) {
+    	if (linkLeftUpToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.LINKLEFTUP);
 		} else {
-			leftUpGapTrackToggle.setSelected(false);
+			linkLeftUpToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
     
     @FXML
-    void selectRightUpGapTrack(ActionEvent event) {
-    	if (rightUpGapTrackToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.RIGHTUPGAP);
+    void selectLinkRightUp(ActionEvent event) {
+    	if (linkRightUpToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.LINKRIGHTUP);
 		} else {
-			rightUpGapTrackToggle.setSelected(false);
+			linkRightUpToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
     
     @FXML
-    void selectLeftDownGapTrack(ActionEvent event) {
-    	if (leftDownGapTrackToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.LEFTDOWNGAP);
+    void selectLinkLeftDown(ActionEvent event) {
+    	if (linkLeftDownToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.LINKLEFTDOWN);
 		} else {
-			leftDownGapTrackToggle.setSelected(false);
+			linkLeftDownToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
     
     @FXML
-    void selectRightDownGapTrack(ActionEvent event) {
-    	if (rightDownGapTrackToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.RIGHTDOWNGAP);
+    void selectLinkRightDown(ActionEvent event) {
+    	if (linkRightDownToggle.isSelected()) {
+    		GUIController.setItemSelected(TrackType.LINKRIGHTDOWN);
 		} else {
-			rightDownGapTrackToggle.setSelected(false);
+			linkRightDownToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
