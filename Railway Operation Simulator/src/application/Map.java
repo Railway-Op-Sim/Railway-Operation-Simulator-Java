@@ -3,6 +3,7 @@ package application;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import elements.Location;
 import elements.Space;
 import elements.StraightTrack;
 import elements.Track;
@@ -19,6 +20,7 @@ public class Map {
 	
 	private Track baseTrack;
 	private HashSet<Track>  trackStore = new HashSet<Track>();
+	private HashSet<Location>  locationStore = new HashSet<Location>();
 	private ArrayList<Train> trainList = new ArrayList<Train>();
 	private ArrayList<Object> otherList = new ArrayList<Object>();
 	//private HashSet<Connection> connectionStore = new HashSet<Connection>();
