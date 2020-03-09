@@ -44,53 +44,53 @@ public class BuildModifyMenuController {
 
     // ** Buffer toggles and images. **
     
-    @FXML // fx:id="leftBufferToggle"
-    private ToggleButton leftBufferToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferLeftToggle"
+    private ToggleButton bufferLeftToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="leftBufferImage"
-    private ImageView leftBufferImage; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferLeftImage"
+    private ImageView bufferLeftImage; // Value injected by FXMLLoader
 
-    @FXML // fx:id="rightBufferToggle"
-    private ToggleButton rightBufferToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferRightToggle"
+    private ToggleButton bufferRightToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="rightBufferImage"
-    private ImageView rightBufferImage; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferRightImage"
+    private ImageView bufferRightImage; // Value injected by FXMLLoader
 
-    @FXML // fx:id="upBufferToggle"
-    private ToggleButton upBufferToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferUpToggle"
+    private ToggleButton bufferUpToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="upBufferImage"
-    private ImageView upBufferImage; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferUpImage"
+    private ImageView bufferUpImage; // Value injected by FXMLLoader
 
-    @FXML // fx:id="downBufferToggle"
-    private ToggleButton downBufferToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferDownToggle"
+    private ToggleButton bufferDownToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="downBufferImage"
-    private ImageView downBufferImage; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferDownImage"
+    private ImageView bufferDownImage; // Value injected by FXMLLoader
     
-    @FXML // fx:id="leftUpBufferToggle"
-    private ToggleButton leftUpBufferToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferLeftUpToggle"
+    private ToggleButton bufferLeftUpToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="leftUpBufferImage"
-    private ImageView leftUpBufferImage; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferLeftUpImage"
+    private ImageView bufferLeftUpImage; // Value injected by FXMLLoader
 
-    @FXML // fx:id="rightUpBufferToggle"
-    private ToggleButton rightUpBufferToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferRightUpToggle"
+    private ToggleButton bufferRightUpToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="rightUpBufferImage"
-    private ImageView rightUpBufferImage; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferRightUpImage"
+    private ImageView bufferRightUpImage; // Value injected by FXMLLoader
     
-    @FXML // fx:id="rightDownBufferToggle"
-    private ToggleButton rightDownBufferToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferLeftDownToggle"
+    private ToggleButton bufferLeftDownToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="rightDownBufferImage"
-    private ImageView rightDownBufferImage; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferLeftDownImage"
+    private ImageView bufferLeftDownImage; // Value injected by FXMLLoader
 
-    @FXML // fx:id="leftDownBufferToggle"
-    private ToggleButton leftDownBufferToggle; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferRightDownToggle"
+    private ToggleButton bufferRightDownToggle; // Value injected by FXMLLoader
 
-    @FXML // fx:id="leftDownBufferImage"
-    private ImageView leftDownBufferImage; // Value injected by FXMLLoader
+    @FXML // fx:id="bufferRightDownImage"
+    private ImageView bufferRightDownImage; // Value injected by FXMLLoader
     
     //  ** Straight Track toggles and images. **
 
@@ -532,10 +532,10 @@ public class BuildModifyMenuController {
     void openbuildModifyMenu(ActionEvent event) {
     	trackMenu.setDisable(false);
     	trackMenu.setVisible(true);
-    	leftBufferToggle.setDisable(false);
-    	leftBufferToggle.setVisible(true);
-    	leftBufferImage.setDisable(false);
-    	leftBufferImage.setVisible(true);
+    	//leftBufferToggle.setDisable(false);
+    	//leftBufferToggle.setVisible(true);
+    	//leftBufferImage.setDisable(false);
+    	//leftBufferImage.setVisible(true);
     }
     
     @FXML
@@ -631,23 +631,23 @@ public class BuildModifyMenuController {
     //Select Buffer Actions.
 
     @FXML
-    void selectLeftBuffer(ActionEvent event) {
+    void selectBufferLeft(ActionEvent event) {
     		
-    		if (leftBufferToggle.isSelected()) {
+    		if (bufferLeftToggle.isSelected()) {
     			GUIController.setItemSelected(TrackType.BUFFERLEFT);
     		} else {
-    			leftBufferToggle.setSelected(false);
+    			bufferLeftToggle.setSelected(false);
     			GUIController.setItemSelected(TrackType.NONE);
     		}
     		
 
     }
     @FXML
-    void selectDownBuffer(ActionEvent event) {
-    	if (downBufferToggle.isSelected()) {
+    void selectBufferDown(ActionEvent event) {
+    	if (bufferDownToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.BUFFERDOWN);
 		} else {
-			downBufferToggle.setSelected(false);
+			bufferDownToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
@@ -656,63 +656,63 @@ public class BuildModifyMenuController {
     
 
     @FXML
-    void selectRightBuffer(ActionEvent event) {
-    	if (rightBufferToggle.isSelected()) {
+    void selectBufferRight(ActionEvent event) {
+    	if (bufferRightToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.BUFFERRIGHT);
 		} else {
-			rightBufferToggle.setSelected(false);
+			bufferRightToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
 
     @FXML
-    void selectUpBuffer(ActionEvent event) {
-    	if (upBufferToggle.isSelected()) {
+    void selectBufferUp(ActionEvent event) {
+    	if (bufferUpToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.BUFFERUP);
 		} else {
-			upBufferToggle.setSelected(false);
+			bufferUpToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
     }
     
     @FXML
-    void selectLeftUpBuffer(ActionEvent event) {
-    	if (leftUpBufferToggle.isSelected()) {
+    void selectBufferLeftUp(ActionEvent event) {
+    	if (bufferLeftUpToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.BUFFERLEFTUP);
 		} else {
-			leftUpBufferToggle.setSelected(false);
+			bufferLeftUpToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
     }
 
     @FXML
-    void selectRightUpBuffer(ActionEvent event) {
-    	if (rightUpBufferToggle.isSelected()) {
+    void selectBufferRightUp(ActionEvent event) {
+    	if (bufferRightUpToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.BUFFERRIGHTUP);
 		} else {
-			rightUpBufferToggle.setSelected(false);
+			bufferRightUpToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
     }
     
     @FXML
-    void selectLeftDownBuffer(ActionEvent event) {
-    	if (leftDownBufferToggle.isSelected()) {
+    void selectBufferLeftDown(ActionEvent event) {
+    	if (bufferLeftDownToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.BUFFERLEFTDOWN);
 		} else {
-			leftDownBufferToggle.setSelected(false);
+			bufferLeftDownToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 
     }
     
     @FXML
-    void selectRightDownBuffer(ActionEvent event) {
-    	if (rightDownBufferToggle.isSelected()) {
+    void selectBufferRightDown(ActionEvent event) {
+    	if (bufferRightDownToggle.isSelected()) {
     		GUIController.setItemSelected(TrackType.BUFFERRIGHTDOWN);
 		} else {
-			rightDownBufferToggle.setSelected(false);
+			bufferRightDownToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
 

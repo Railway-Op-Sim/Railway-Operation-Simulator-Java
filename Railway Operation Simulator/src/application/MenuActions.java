@@ -644,7 +644,7 @@ public class MenuActions {
 				break;
 				
 			case BUFFERUP: 
-				BufferedTrack topBuffer = new BufferedTrack(TrackType.BUFFERRIGHT, placeX, placeY, false, "None");
+				BufferedTrack topBuffer = new BufferedTrack(TrackType.BUFFERUP, placeX, placeY, false, "None");
 				topBuffer.setLinks();
 				newTrack = topBuffer;
 				break;

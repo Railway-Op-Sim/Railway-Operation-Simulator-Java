@@ -100,9 +100,9 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="leftBufferToggle" mnemonicParsing="false" onAction="#selectLeftBuffer" toggleGroup="$elementGroup" GridPane.rowIndex="2">
+                  <ToggleButton fx:id="bufferLeftToggle" mnemonicParsing="false" onAction="#selectBufferLeft" toggleGroup="$elementGroup" GridPane.rowIndex="2">
                      <graphic>
-                        <ImageView fx:id="leftBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="bufferLeftImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/bufferLeft.png" />
                            </image>
@@ -127,9 +127,9 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="rightBufferToggle" mnemonicParsing="false" onAction="#selectRightBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <ToggleButton fx:id="bufferRightToggle" mnemonicParsing="false" onAction="#selectBufferRight" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <graphic>
-                        <ImageView fx:id="rightBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="bufferRightImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/bufferRight.png" />
                            </image>
@@ -154,9 +154,9 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton id="downBufferToggle" fx:id="downBufferToggle" mnemonicParsing="false" onAction="#selectDownBuffer" stylesheets="@application.css" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <ToggleButton id="downBufferToggle" fx:id="bufferDownToggle" mnemonicParsing="false" onAction="#selectBufferDown" stylesheets="@application.css" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <graphic>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="bufferDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/bufferDown.png" />
                            </image>
@@ -180,9 +180,9 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="upBufferToggle" mnemonicParsing="false" onAction="#selectUpBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                  <ToggleButton fx:id="bufferUpToggle" mnemonicParsing="false" onAction="#selectBufferUp" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <graphic>
-                        <ImageView fx:id="upBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="bufferUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/bufferUp.png" />
                            </image>
@@ -207,9 +207,9 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="leftUpBufferToggle" mnemonicParsing="false" onAction="#selectLeftUpBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                  <ToggleButton fx:id="bufferLeftUpToggle" mnemonicParsing="false" onAction="#selectBufferLeftUp" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="2">
                      <graphic>
-                        <ImageView fx:id="leftUpBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="bufferLeftUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/bufferLeftUp.png" />
                            </image>
@@ -234,9 +234,9 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="rightUpBufferToggle" mnemonicParsing="false" onAction="#selectRightUpBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                  <ToggleButton fx:id="bufferRightUpToggle" mnemonicParsing="false" onAction="#selectBufferRightUp" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="2">
                      <graphic>
-                        <ImageView fx:id="rightUpBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="bufferRightUpImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/bufferRightUp.png" />
                            </image>
@@ -261,9 +261,9 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="leftDownBufferToggle" mnemonicParsing="false" onAction="#selectLeftDownBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                  <ToggleButton fx:id="bufferLeftDownToggle" mnemonicParsing="false" onAction="#selectBufferLeftDown" toggleGroup="$elementGroup" GridPane.columnIndex="6" GridPane.rowIndex="2">
                      <graphic>
-                        <ImageView fx:id="leftDownBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="bufferLeftDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/bufferLeftDown.png" />
                            </image>
@@ -288,9 +288,9 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="rightDownBufferToggle" mnemonicParsing="false" onAction="#selectRightDownBuffer" toggleGroup="$elementGroup" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                  <ToggleButton fx:id="bufferRightDownToggle" mnemonicParsing="false" onAction="#selectBufferRightDown" toggleGroup="$elementGroup" GridPane.columnIndex="7" GridPane.rowIndex="2">
                      <graphic>
-                        <ImageView fx:id="rightDownBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="bufferRightDownImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/bufferRightDown.png" />
                            </image>
