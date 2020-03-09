@@ -18,36 +18,36 @@ public class BufferedTrack extends Track {
 
 		switch (this.trackType) {
 
-		case LEFTBUFFER:
+		case BUFFERLEFT:
 			this.trackLinks[5] = true;
 			break;
 			
-		case RIGHTBUFFER:
+		case BUFFERRIGHT:
 			this.trackLinks[3] = true;
 			break;
 			
-		case UPBUFFER:
+		case BUFFERUP:
 			this.trackLinks[7] = true;
 			break;
 			
-		case DOWNBUFFER:
+		case BUFFERDOWN:
 			this.trackLinks[1] = true;
 			break;
 			
-		case LEFTUPBUFFER:
-			this.trackLinks[0] = true;
+		case BUFFERLEFTUP:
+			this.trackLinks[8] = true;
 			break;
 			
-		case RIGHTUPBUFFER:
-			this.trackLinks[2] = true;
-			break;
-			
-		case LEFTDOWNBUFFER:
+		case BUFFERRIGHTUP:
 			this.trackLinks[6] = true;
 			break;
 			
-		case RIGHTDOWNBUFFER:
-			this.trackLinks[8] = true;
+		case BUFFERLEFTDOWN:
+			this.trackLinks[2] = true;
+			break;
+			
+		case BUFFERRIGHTDOWN:
+			this.trackLinks[0] = true;
 			break;
 			
 		}

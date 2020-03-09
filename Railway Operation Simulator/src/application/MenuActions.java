@@ -165,36 +165,36 @@ public class MenuActions {
 				trackImage = new String("graphics/straightLeftUp.png"); //Open image file.
 				break;
 				
-			case LEFTBUFFER :
-				trackImage = new String("graphics/leftBuffer.png"); //Open image file.
+			case BUFFERLEFT :
+				trackImage = new String("graphics/bufferLeft.png"); //Open image file.
 				break;
 			
-			case RIGHTBUFFER :
-				trackImage = new String("graphics/rightBuffer.png"); //Open image file.
+			case BUFFERRIGHT :
+				trackImage = new String("graphics/bufferRight.png"); //Open image file.
 				break;
 			
-			case UPBUFFER :
-				trackImage = new String("graphics/upBuffer.png"); //Open image file.
+			case BUFFERUP :
+				trackImage = new String("graphics/bufferUp.png"); //Open image file.
 				break;
 				
-			case DOWNBUFFER :
-				trackImage = new String("graphics/downBuffer.png"); //Open image file.
+			case BUFFERDOWN :
+				trackImage = new String("graphics/bufferDown.png"); //Open image file.
 				break;
 				
-			case LEFTUPBUFFER :
-				trackImage = new String("graphics/leftUpBuffer.png"); //Open image file.
+			case BUFFERLEFTUP :
+				trackImage = new String("graphics/bufferLeftUp.png"); //Open image file.
 				break;
 			
-			case RIGHTUPBUFFER :
-				trackImage = new String("graphics/rightUpBuffer.png"); //Open image file.
+			case BUFFERRIGHTUP :
+				trackImage = new String("graphics/bufferRightUp.png"); //Open image file.
 				break;
 				
-			case LEFTDOWNBUFFER :
-				trackImage = new String("graphics/leftDownBuffer.png"); //Open image file.
+			case BUFFERLEFTDOWN :
+				trackImage = new String("graphics/bufferLeftDown.png"); //Open image file.
 				break;
 			
-			case RIGHTDOWNBUFFER :
-				trackImage = new String("graphics/rightDownBuffer.png"); //Open image file.
+			case BUFFERRIGHTDOWN :
+				trackImage = new String("graphics/bufferRightDown.png"); //Open image file.
 				break;
 				
 			case LEFTGAP :
@@ -631,48 +631,48 @@ public class MenuActions {
 				
 				break;
 			
-			case LEFTBUFFER: 
-				BufferedTrack leftBuffer = new BufferedTrack(TrackType.LEFTBUFFER, placeX, placeY, false, "None");
+			case BUFFERLEFT: 
+				BufferedTrack leftBuffer = new BufferedTrack(TrackType.BUFFERLEFT, placeX, placeY, false, "None");
 				leftBuffer.setLinks();
 				newTrack = leftBuffer;
 				break;
 			
-			case RIGHTBUFFER: 
-				BufferedTrack rightBuffer = new BufferedTrack(TrackType.RIGHTBUFFER, placeX, placeY, false, "None");
+			case BUFFERRIGHT: 
+				BufferedTrack rightBuffer = new BufferedTrack(TrackType.BUFFERRIGHT, placeX, placeY, false, "None");
 				rightBuffer.setLinks();
 				newTrack = rightBuffer;
 				break;
 				
-			case UPBUFFER: 
-				BufferedTrack topBuffer = new BufferedTrack(TrackType.UPBUFFER, placeX, placeY, false, "None");
+			case BUFFERUP: 
+				BufferedTrack topBuffer = new BufferedTrack(TrackType.BUFFERRIGHT, placeX, placeY, false, "None");
 				topBuffer.setLinks();
 				newTrack = topBuffer;
 				break;
 				
-			case DOWNBUFFER: 
-				BufferedTrack bottomBuffer = new BufferedTrack(TrackType.DOWNBUFFER, placeX, placeY, false, "None");
+			case BUFFERDOWN: 
+				BufferedTrack bottomBuffer = new BufferedTrack(TrackType.BUFFERDOWN, placeX, placeY, false, "None");
 				bottomBuffer.setLinks();
 				newTrack = bottomBuffer;
 				break;
 				
-			case LEFTUPBUFFER: 
-				BufferedTrack leftUpBuffer = new BufferedTrack(TrackType.LEFTUPBUFFER, placeX, placeY, false, "None");
+			case BUFFERLEFTUP: 
+				BufferedTrack leftUpBuffer = new BufferedTrack(TrackType.BUFFERLEFTUP, placeX, placeY, false, "None");
 				leftUpBuffer.setLinks();
 				newTrack = leftUpBuffer;
 				break;
 			
-			case RIGHTUPBUFFER: 
-				BufferedTrack rightUpBuffer = new BufferedTrack(TrackType.RIGHTUPBUFFER, placeX, placeY, false, "None");
+			case BUFFERRIGHTUP: 
+				BufferedTrack rightUpBuffer = new BufferedTrack(TrackType.BUFFERRIGHTUP, placeX, placeY, false, "None");
 				newTrack = rightUpBuffer;
 				break;
 				
-			case LEFTDOWNBUFFER: 
-				BufferedTrack leftDownBuffer = new BufferedTrack(TrackType.LEFTDOWNBUFFER, placeX, placeY, false, "None");
+			case BUFFERLEFTDOWN: 
+				BufferedTrack leftDownBuffer = new BufferedTrack(TrackType.BUFFERLEFTDOWN, placeX, placeY, false, "None");
 				newTrack = leftDownBuffer;
 				break;
 			
-			case RIGHTDOWNBUFFER: 
-				BufferedTrack rightDownBuffer = new BufferedTrack(TrackType.RIGHTDOWNBUFFER, placeX, placeY, false, "None");
+			case BUFFERRIGHTDOWN: 
+				BufferedTrack rightDownBuffer = new BufferedTrack(TrackType.BUFFERRIGHTDOWN, placeX, placeY, false, "None");
 				newTrack = rightDownBuffer;
 				break;
 				

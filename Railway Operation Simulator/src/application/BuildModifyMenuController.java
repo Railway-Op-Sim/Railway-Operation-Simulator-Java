@@ -634,7 +634,7 @@ public class BuildModifyMenuController {
     void selectLeftBuffer(ActionEvent event) {
     		
     		if (leftBufferToggle.isSelected()) {
-    			GUIController.setItemSelected(TrackType.LEFTBUFFER);
+    			GUIController.setItemSelected(TrackType.BUFFERLEFT);
     		} else {
     			leftBufferToggle.setSelected(false);
     			GUIController.setItemSelected(TrackType.NONE);
@@ -645,7 +645,7 @@ public class BuildModifyMenuController {
     @FXML
     void selectDownBuffer(ActionEvent event) {
     	if (downBufferToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.DOWNBUFFER);
+    		GUIController.setItemSelected(TrackType.BUFFERDOWN);
 		} else {
 			downBufferToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
@@ -658,7 +658,7 @@ public class BuildModifyMenuController {
     @FXML
     void selectRightBuffer(ActionEvent event) {
     	if (rightBufferToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.RIGHTBUFFER);
+    		GUIController.setItemSelected(TrackType.BUFFERRIGHT);
 		} else {
 			rightBufferToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
@@ -669,7 +669,7 @@ public class BuildModifyMenuController {
     @FXML
     void selectUpBuffer(ActionEvent event) {
     	if (upBufferToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.UPBUFFER);
+    		GUIController.setItemSelected(TrackType.BUFFERUP);
 		} else {
 			upBufferToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
@@ -679,7 +679,7 @@ public class BuildModifyMenuController {
     @FXML
     void selectLeftUpBuffer(ActionEvent event) {
     	if (leftUpBufferToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.LEFTUPBUFFER);
+    		GUIController.setItemSelected(TrackType.BUFFERLEFTUP);
 		} else {
 			leftUpBufferToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
@@ -689,7 +689,7 @@ public class BuildModifyMenuController {
     @FXML
     void selectRightUpBuffer(ActionEvent event) {
     	if (rightUpBufferToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.RIGHTUPBUFFER);
+    		GUIController.setItemSelected(TrackType.BUFFERRIGHTUP);
 		} else {
 			rightUpBufferToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
@@ -699,7 +699,7 @@ public class BuildModifyMenuController {
     @FXML
     void selectLeftDownBuffer(ActionEvent event) {
     	if (leftDownBufferToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.LEFTDOWNBUFFER);
+    		GUIController.setItemSelected(TrackType.BUFFERLEFTDOWN);
 		} else {
 			leftDownBufferToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
@@ -710,7 +710,7 @@ public class BuildModifyMenuController {
     @FXML
     void selectRightDownBuffer(ActionEvent event) {
     	if (rightDownBufferToggle.isSelected()) {
-    		GUIController.setItemSelected(TrackType.RIGHTDOWNBUFFER);
+    		GUIController.setItemSelected(TrackType.BUFFERRIGHTDOWN);
 		} else {
 			rightDownBufferToggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);

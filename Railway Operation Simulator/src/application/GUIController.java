@@ -150,36 +150,36 @@ public class GUIController extends Application {
 				MenuActions.addTrack(event, railMap, "graphics/straightLeftUp.png", itemSelected, null);
 				break;
 
-			case LEFTBUFFER:
-				MenuActions.addTrack(event, railMap, "graphics/leftBuffer.png", itemSelected, null);
+			case BUFFERLEFT:
+				MenuActions.addTrack(event, railMap, "graphics/bufferLeft.png", itemSelected, null);
 				break;
 
-			case RIGHTBUFFER:
-				MenuActions.addTrack(event, railMap, "graphics/rightBuffer.png", itemSelected, null);
+			case BUFFERRIGHT:
+				MenuActions.addTrack(event, railMap, "graphics/bufferRight.png", itemSelected, null);
 				break;
 
-			case UPBUFFER:
-				MenuActions.addTrack(event, railMap, "graphics/upBuffer.png", itemSelected, null);
+			case BUFFERUP:
+				MenuActions.addTrack(event, railMap, "graphics/bufferUp.png", itemSelected, null);
 				break;
 
-			case DOWNBUFFER:
-				MenuActions.addTrack(event, railMap, "graphics/downBuffer.png", itemSelected, null);
+			case BUFFERDOWN:
+				MenuActions.addTrack(event, railMap, "graphics/bufferDown.png", itemSelected, null);
 				break;
 
-			case LEFTUPBUFFER:
-				MenuActions.addTrack(event, railMap, "graphics/leftUpBuffer.png", itemSelected, null);
+			case BUFFERLEFTUP:
+				MenuActions.addTrack(event, railMap, "graphics/bufferLeftUp.png", itemSelected, null);
 				break;
 
-			case RIGHTUPBUFFER:
-				MenuActions.addTrack(event, railMap, "graphics/rightUpBuffer.png", itemSelected, null);
+			case BUFFERRIGHTUP:
+				MenuActions.addTrack(event, railMap, "graphics/bufferRightUp.png", itemSelected, null);
 				break;
 
-			case LEFTDOWNBUFFER:
-				MenuActions.addTrack(event, railMap, "graphics/leftDownBuffer.png", itemSelected, null);
+			case BUFFERLEFTDOWN:
+				MenuActions.addTrack(event, railMap, "graphics/bufferLeftDown.png", itemSelected, null);
 				break;
 
-			case RIGHTDOWNBUFFER:
-				MenuActions.addTrack(event, railMap, "graphics/rightDownBuffer.png", itemSelected, null);
+			case BUFFERRIGHTDOWN:
+				MenuActions.addTrack(event, railMap, "graphics/bufferRightDown.png", itemSelected, null);
 				break;
 
 			case LEFTGAP:

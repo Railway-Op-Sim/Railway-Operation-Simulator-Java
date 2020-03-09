@@ -104,7 +104,7 @@
                      <graphic>
                         <ImageView fx:id="leftBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/leftBuffer.png" />
+                              <Image url="@../graphics/bufferLeft.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -131,7 +131,7 @@
                      <graphic>
                         <ImageView fx:id="rightBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/rightBuffer.png" />
+                              <Image url="@../graphics/bufferRight.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -158,7 +158,7 @@
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/downBuffer.png" />
+                              <Image url="@../graphics/bufferDown.png" />
                            </image>
                         </ImageView>
                      </graphic></ToggleButton>
@@ -184,7 +184,7 @@
                      <graphic>
                         <ImageView fx:id="upBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/upBuffer.png" />
+                              <Image url="@../graphics/bufferUp.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -211,7 +211,7 @@
                      <graphic>
                         <ImageView fx:id="leftUpBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/leftUpBuffer.png" />
+                              <Image url="@../graphics/bufferLeftUp.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -238,7 +238,7 @@
                      <graphic>
                         <ImageView fx:id="rightUpBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/rightUpBuffer.png" />
+                              <Image url="@../graphics/bufferRightUp.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -265,7 +265,7 @@
                      <graphic>
                         <ImageView fx:id="leftDownBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/leftDownBuffer.png" />
+                              <Image url="@../graphics/bufferLeftDown.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -292,7 +292,7 @@
                      <graphic>
                         <ImageView fx:id="rightDownBufferImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/rightDownBuffer.png" />
+                              <Image url="@../graphics/bufferRightDown.png" />
                            </image>
                         </ImageView>
                      </graphic>
