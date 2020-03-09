@@ -9,6 +9,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -17,9 +18,13 @@ import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import application.MenuActions;
 import elements.SignalAspect;
@@ -94,6 +99,12 @@ public class GUIController extends Application {
 
 	@FXML // fx:id="canvas"
 	private Canvas canvas; // Value injected by FXMLLoader
+	
+	Color backgroundColour;
+	
+	BackgroundFill colourBack;
+	
+	Background background;
 
 	/**
 	 * A method to exit and close the program.
@@ -566,16 +577,28 @@ public class GUIController extends Application {
 
 	@FXML
 	void selectBlackBackground(ActionEvent event) {
+		backgroundColour = Color.BLACK;
+		colourBack = new BackgroundFill(backgroundColour, CornerRadii.EMPTY, Insets.EMPTY);
+		background = new Background(colourBack);
+		pane.setBackground(background);
 
 	}
 
 	@FXML
 	void selectBlueBackground(ActionEvent event) {
+		backgroundColour = Color.DARKBLUE;
+		colourBack = new BackgroundFill(backgroundColour, CornerRadii.EMPTY, Insets.EMPTY);
+		background = new Background(colourBack);
+		pane.setBackground(background);
 
 	}
 
 	@FXML
 	void selectWhiteBackground(ActionEvent event) {
+		backgroundColour = Color.WHITE;
+		colourBack = new BackgroundFill(backgroundColour, CornerRadii.EMPTY, Insets.EMPTY);
+		background = new Background(colourBack);
+		pane.setBackground(background);
 
 	}
 
