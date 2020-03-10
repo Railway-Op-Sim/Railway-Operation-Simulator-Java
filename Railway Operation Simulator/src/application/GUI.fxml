@@ -6,7 +6,6 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
@@ -29,7 +28,6 @@
                               <KeyCodeCombination alt="UP" code="S" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
                            </accelerator></MenuItem>
 								<MenuItem mnemonicParsing="false" text="Save Railway As" />
-								<MenuItem mnemonicParsing="false" text="Load Timetable" />
 								<SeparatorMenuItem mnemonicParsing="false" />
 								<MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#exitApp" text="Exit">
 									<accelerator>
@@ -45,9 +43,6 @@
                               <KeyCodeCombination alt="UP" code="B" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
                            </accelerator></MenuItem>
 								<MenuItem mnemonicParsing="false" text="Set Preferred Directions" />
-                        <MenuItem mnemonicParsing="false" text="Operate Railway" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem fx:id="whiteBackgroundMenuItem" mnemonicParsing="false" onAction="#selectWhiteBackground" text="White Background" />
                         <MenuItem fx:id="blackBackgroundMenuItem" mnemonicParsing="false" onAction="#selectBlackBackground" text="Black Background" />
@@ -80,7 +75,6 @@
 		<VBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="48.0" BorderPane.alignment="CENTER">
 			<children>
 				<Button fx:id="showHideGridButton" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#showGrid" prefHeight="48.0" prefWidth="48.0" text="Show Grid" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" />
-            <Slider fx:id="canvasSlider" blockIncrement="1.0" majorTickUnit="1.0" max="2.0" min="1.0" onMouseReleased="#onSliderChanged" orientation="VERTICAL" prefHeight="236.0" prefWidth="48.0" showTickLabels="true" showTickMarks="true" value="1.0" />
 			</children>
 		</VBox>
 	</right>

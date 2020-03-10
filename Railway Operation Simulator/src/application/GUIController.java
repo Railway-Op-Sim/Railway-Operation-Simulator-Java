@@ -91,9 +91,6 @@ public class GUIController extends Application {
 	@FXML // fx:id="aboutMenuItem"
 	private MenuItem aboutMenuItem; // Value injected by FXMLLoader
 
-	@FXML // fx:id="canvasSlider"
-	private Slider canvasSlider; // Value injected by FXMLLoader
-
 	@FXML // fx:id="showHideGridButton"
 	private Button showHideGridButton; // Value injected by FXMLLoader
 
@@ -561,18 +558,6 @@ public class GUIController extends Application {
 	@FXML
 	void showGrid(ActionEvent event) {
 		MenuActions.toggleGrid(canvas, showHideGridButton, backgroundColour);
-	}
-
-	/**
-	 * A method that zooms in and out of canvas.
-	 * 
-	 * @param event
-	 */
-	@FXML
-	void onSliderChanged(MouseEvent event) {
-		int sliderValue = (int) canvasSlider.getValue();
-		canvas.setScaleX(sliderValue);
-		canvas.setScaleY(sliderValue);
 	}
 
 	@FXML
