@@ -12,9 +12,20 @@ public class BuildModifyMenuActions {
 	public BuildModifyMenuActions() {
 		// TODO Auto-generated constructor stub
 	}
-
+	/**
+	 * A method to change the Signal Graphics in the BuildModifyMenu to shunt signals.
+	 * @param leftSignal
+	 * @param rightSignal
+	 * @param upSignal
+	 * @param downSignal
+	 * @param leftUpSignal
+	 * @param rightUpSignal
+	 * @param leftDownSignal
+	 * @param rightDownSignal
+	 */
 	public static void changeToShuntSignalGraphic(ImageView leftSignal, ImageView rightSignal, ImageView upSignal, ImageView downSignal,
 			ImageView leftUpSignal, ImageView rightUpSignal, ImageView leftDownSignal, ImageView rightDownSignal) {
+		//New image links
 		String leftShuntFile = new String("graphics/shuntLeftRed.png");
 		String rightShuntFile = new String("graphics/shuntRightRed.png");
 		String upShuntFile = new String("graphics/shuntRightRed.png");
@@ -24,6 +35,7 @@ public class BuildModifyMenuActions {
 		String leftDownShuntFile = new String("graphics/shuntLeftDownRed.png");
 		String rightDownShuntFile = new String("graphics/shuntRightDownRed.png");
 		
+		//Set image to links
 		Image leftShuntImage = new Image(MenuActions.class.getClassLoader().getResource(leftShuntFile).toString());
 		Image rightShuntImage = new Image(MenuActions.class.getClassLoader().getResource(rightShuntFile).toString());
 		Image upShuntImage = new Image(MenuActions.class.getClassLoader().getResource(upShuntFile).toString());
@@ -33,6 +45,7 @@ public class BuildModifyMenuActions {
 		Image leftDownShuntImage = new Image(MenuActions.class.getClassLoader().getResource(leftDownShuntFile).toString());
 		Image rightDownShuntImage = new Image(MenuActions.class.getClassLoader().getResource(rightDownShuntFile).toString());
 		
+		//At the imageViews set new images
 		leftSignal.setImage(leftShuntImage);
 		rightSignal.setImage(rightShuntImage);
 		upSignal.setImage(upShuntImage);
@@ -44,7 +57,17 @@ public class BuildModifyMenuActions {
 		
 		
 	}
-	
+	/**
+	 * A method to change the Signal Graphics in the BuildModifyMenu to normal signals.
+	 * @param leftSignal
+	 * @param rightSignal
+	 * @param upSignal
+	 * @param downSignal
+	 * @param leftUpSignal
+	 * @param rightUpSignal
+	 * @param leftDownSignal
+	 * @param rightDownSignal
+	 */
 	public static void changeToNormalSignalGraphic(ImageView leftSignal, ImageView rightSignal, ImageView upSignal, ImageView downSignal, 
 			ImageView leftUpSignal, ImageView rightUpSignal, ImageView leftDownSignal, ImageView rightDownSignal) {
 		String leftSignalFile = new String("graphics/signalLeft.png");

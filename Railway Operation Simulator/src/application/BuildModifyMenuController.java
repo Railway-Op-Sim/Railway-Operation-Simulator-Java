@@ -571,11 +571,14 @@ public class BuildModifyMenuController {
 
 	@FXML // fx:id="switch16Image"
 	private ImageView switch16Image; // Value injected by FXMLLoader
-
+	/**
+	 * A method to return current signal aspect. 
+	 * @return
+	 */
 	public static SignalAspect getAspect() {
 		return aspect;
 	}
-
+	
 	@FXML
 	void openbuildModifyMenu(ActionEvent event) {
 		trackMenu1.setVisible(true);
