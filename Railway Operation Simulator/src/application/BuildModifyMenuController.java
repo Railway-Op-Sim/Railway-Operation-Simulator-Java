@@ -583,7 +583,6 @@ public class BuildModifyMenuController {
 	void openbuildModifyMenu(ActionEvent event) {
 		trackMenu1.setVisible(true);
 		trackMenu2.setVisible(true);
-		Main.setMode(Mode.BUILDMODIFY);
 		for (Node button : trackMenu1.getChildrenUnmodifiable()) {
 			button.setVisible(true);
 
