@@ -102,6 +102,8 @@ public class GUIController extends Application {
 	BackgroundFill colourBack;
 	
 	Background background;
+	
+	Boolean buildModifyMenuOn = false;
 
 	/**
 	 * A method to exit and close the program.
@@ -540,13 +542,17 @@ public class GUIController extends Application {
 	 */
 	@FXML
 	void showBuildMenu(ActionEvent event) {
-		try {
-			VBox buildMenu = FXMLLoader.load(getClass().getResource("BuildModifyMenu.fxml"));
-			topVBox.getChildren().add(buildMenu);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (buildModifyMenuOn==false) {
+			try {
+				VBox buildMenu = FXMLLoader.load(getClass().getResource("BuildModifyMenu.fxml"));
+				topVBox.getChildren().add(buildMenu);
+				buildModifyMenuOn = true;
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
+		
 
 	}
 
