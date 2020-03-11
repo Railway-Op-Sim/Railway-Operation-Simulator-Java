@@ -84,7 +84,7 @@ public class MenuActions {
 
 	private static WritableImage editImage(Image oldImage, int width, int height, Color canvasColour) {
 		WritableImage newImage = removeWhiteBackground(oldImage, width, height);
-		if (canvasColour.equals(Color.BLACK)) {
+		if (canvasColour.equals(Color.BLACK)|| canvasColour.equals(Color.DARKBLUE)) {
 			newImage = invertColour(newImage, width, height);
 		}
 		return newImage;
@@ -209,9 +209,12 @@ public class MenuActions {
 			String trackImage = switchTrack(track);
 
 			Image image = new Image(MenuActions.class.getClassLoader().getResource(trackImage).toString());
-			; // Set file as image.
+			int size = (int) image.getWidth();
 
-			railMap.drawImage(image, placeX, placeY);
+			WritableImage newImage = editImage(image, size, size, canvasColour);
+			 // Set file as image.
+
+			railMap.drawImage(newImage, placeX, placeY);
 		}
 	}
 
