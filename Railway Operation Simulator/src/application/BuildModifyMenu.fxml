@@ -955,6 +955,51 @@
                         <Insets top="-1.0" />
                      </padding>
                   </ToggleButton>
+                  <ToggleButton fx:id="switch17Toggle" mnemonicParsing="false" onAction="#selectSwitch17" toggleGroup="$elementGroup" GridPane.columnIndex="8">
+                     <graphic>
+                        <ImageView fx:id="switch17Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch17.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch18Toggle" mnemonicParsing="false" onAction="#selectSwitch18" toggleGroup="$elementGroup" GridPane.columnIndex="9">
+                     <graphic>
+                        <ImageView fx:id="switch18Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch18.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch19Toggle" mnemonicParsing="false" onAction="#selectSwitch19" toggleGroup="$elementGroup" GridPane.columnIndex="10">
+                     <graphic>
+                        <ImageView fx:id="switch19Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch19.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
                   <ToggleButton fx:id="switch1Toggle" mnemonicParsing="false" onAction="#selectSwitch1" toggleGroup="$elementGroup" GridPane.rowIndex="1">
                      <graphic>
                         <ImageView fx:id="switch1Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
@@ -1075,6 +1120,51 @@
                         <Insets top="-1.0" />
                      </padding>
                   </ToggleButton>
+                  <ToggleButton fx:id="switch20Toggle" mnemonicParsing="false" onAction="#selectSwitch20" toggleGroup="$elementGroup" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="switch20Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch20.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch21Toggle" mnemonicParsing="false" onAction="#selectSwitch21" toggleGroup="$elementGroup" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="switch21Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch21.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch22Toggle" mnemonicParsing="false" onAction="#selectSwitch22" toggleGroup="$elementGroup" GridPane.columnIndex="10" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="switch22Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch22.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
                   <ToggleButton fx:id="switch9Toggle" mnemonicParsing="false" onAction="#selectSwitch9" toggleGroup="$elementGroup" GridPane.rowIndex="2">
                      <graphic>
                         <ImageView fx:id="switch9Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
@@ -1185,6 +1275,36 @@
                         <ImageView fx:id="switch16Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../graphics/switch14.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch23Toggle" mnemonicParsing="false" onAction="#selectSwitch23" toggleGroup="$elementGroup" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="switch23Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch23.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="switch24Toggle" mnemonicParsing="false" onAction="#selectSwitch24" toggleGroup="$elementGroup" GridPane.columnIndex="9" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="switch24Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/switch24.png" />
                            </image>
                         </ImageView>
                      </graphic>

@@ -38,7 +38,8 @@ import javafx.stage.Stage;
 
 public class MenuActions {
 
-	private static int gridSize = 16;
+	private static final int GRID_SIZE = 16;
+	private static final double INVERT_NUM = 0.85;
 
 	/**
 	 * Constructor that makes a MenuActions object. Probably won't be used.
@@ -115,7 +116,7 @@ public class MenuActions {
 			for (int x = 0; x < width; x++) {
 				Color currentColor = image.getPixelReader().getColor(x, y);
 				if (currentColor.equals(Color.BLACK)) {
-					pixelWriter.setColor(x, y, Color.color(1, 1, 1, 1.0));
+					pixelWriter.setColor(x, y, Color.color(INVERT_NUM, INVERT_NUM, INVERT_NUM, 1.0));
 				} else {
 					pixelWriter.setColor(x, y, currentColor);
 				}
@@ -160,7 +161,7 @@ public class MenuActions {
 		if (canvasColour.equals(Color.WHITE)) {
 			railMap.setStroke(Color.BLACK);
 		} else {
-			railMap.setStroke(Color.WHITE);
+			railMap.setStroke(Color.GREY);
 		}
 		
 
@@ -233,14 +234,14 @@ public class MenuActions {
 			int existingTrackY = track.getyLocation();
 			if (existingTrackX == placeX && existingTrackY == placeY) {
 				item = track;
-				railMap.clearRect(placeX, placeY, gridSize, gridSize);
+				railMap.clearRect(placeX, placeY, GRID_SIZE, GRID_SIZE);
 			}
 		}
 		if (item != null) {
 			trackStore.remove(item);
 			String showHidGridButtonText = showHideGridButton.getText();
 			if (showHidGridButtonText.equals("Hide Grid")) {
-				railMap.strokeRect(placeX, placeY, gridSize, gridSize);
+				railMap.strokeRect(placeX, placeY, GRID_SIZE, GRID_SIZE);
 			}
 
 		} else {
@@ -542,6 +543,38 @@ public class MenuActions {
 
 		case SWITCH16:
 			trackImage = new String("graphics/switch16.png"); // Open image file.
+			break;
+			
+		case SWITCH17:
+			trackImage = new String("graphics/switch17.png"); // Open image file.
+			break;
+
+		case SWITCH18:
+			trackImage = new String("graphics/switch18.png"); // Open image file.
+			break;
+
+		case SWITCH19:
+			trackImage = new String("graphics/switch19.png"); // Open image file.
+			break;
+
+		case SWITCH20:
+			trackImage = new String("graphics/switch20.png"); // Open image file.
+			break;
+
+		case SWITCH21:
+			trackImage = new String("graphics/switch21.png"); // Open image file.
+			break;
+
+		case SWITCH22:
+			trackImage = new String("graphics/switch22.png"); // Open image file.
+			break;
+
+		case SWITCH23:
+			trackImage = new String("graphics/switch23.png"); // Open image file.
+			break;
+
+		case SWITCH24:
+			trackImage = new String("graphics/switch24.png"); // Open image file.
 			break;
 
 		case BRIDGE1:
@@ -1063,6 +1096,46 @@ public class MenuActions {
 			case SWITCH16:
 				SwitchTrack switch16 = new SwitchTrack(TrackType.SWITCH16, placeX, placeY, false, "None");
 				newTrack = switch16;
+				break;
+				
+			case SWITCH17:
+				SwitchTrack switch17 = new SwitchTrack(TrackType.SWITCH17, placeX, placeY, false, "None");
+				newTrack = switch17;
+				break;
+
+			case SWITCH18:
+				SwitchTrack switch18 = new SwitchTrack(TrackType.SWITCH18, placeX, placeY, false, "None");
+				newTrack = switch18;
+				break;
+
+			case SWITCH19:
+				SwitchTrack switch19 = new SwitchTrack(TrackType.SWITCH19, placeX, placeY, false, "None");
+				newTrack = switch19;
+				break;
+
+			case SWITCH20:
+				SwitchTrack switch20 = new SwitchTrack(TrackType.SWITCH20, placeX, placeY, false, "None");
+				newTrack = switch20;
+				break;
+
+			case SWITCH21:
+				SwitchTrack switch21 = new SwitchTrack(TrackType.SWITCH21, placeX, placeY, false, "None");
+				newTrack = switch21;
+				break;
+
+			case SWITCH22:
+				SwitchTrack switch22 = new SwitchTrack(TrackType.SWITCH22, placeX, placeY, false, "None");
+				newTrack = switch22;
+				break;
+
+			case SWITCH23:
+				SwitchTrack switch23 = new SwitchTrack(TrackType.SWITCH23, placeX, placeY, false, "None");
+				newTrack = switch23;
+				break;
+
+			case SWITCH24:
+				SwitchTrack switch24 = new SwitchTrack(TrackType.SWITCH24, placeX, placeY, false, "None");
+				newTrack = switch24;
 				break;
 
 			case BRIDGE1:

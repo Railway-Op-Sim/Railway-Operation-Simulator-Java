@@ -456,6 +456,38 @@ public class GUIController extends Application {
 			case SWITCH16:
 				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
 				break;
+				
+			case SWITCH17:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case SWITCH18:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case SWITCH19:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+				
+			case SWITCH20:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+				
+			case SWITCH21:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case SWITCH22:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case SWITCH23:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case SWITCH24:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
 
 			case SIGNALLEFT:
 				if (aspect == SignalAspect.SHUNT) {

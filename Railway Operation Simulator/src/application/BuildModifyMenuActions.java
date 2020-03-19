@@ -28,7 +28,7 @@ public class BuildModifyMenuActions {
 		//New image links
 		String leftShuntFile = new String("graphics/shuntLeftRed.png");
 		String rightShuntFile = new String("graphics/shuntRightRed.png");
-		String upShuntFile = new String("graphics/shuntRightRed.png");
+		String upShuntFile = new String("graphics/shuntUpRed.png");
 		String downShuntFile = new String("graphics/shuntDownRed.png");
 		String leftUpShuntFile = new String("graphics/shuntLeftUpRed.png");
 		String rightUpShuntFile = new String("graphics/shuntRightUpRed.png");
