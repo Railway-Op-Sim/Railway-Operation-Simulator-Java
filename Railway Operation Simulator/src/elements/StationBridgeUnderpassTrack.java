@@ -9,8 +9,8 @@ public class StationBridgeUnderpassTrack extends Track {
 		this.yLocation = yLocation;
 		this.electrified = electrified;
 		this.methodOfElectrification = methodOfElectrification;
-		this.station = false;
-		this.stationName = null;
+		this.location = false;
+		this.locationName = null;
 
 	}
 

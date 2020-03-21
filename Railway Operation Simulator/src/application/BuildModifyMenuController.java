@@ -37,6 +37,9 @@ public class BuildModifyMenuController {
 
 	@FXML // fx:id="trackMenu2"
 	private GridPane trackMenu2; // Value injected by FXMLLoader
+	
+	@FXML // fx:id="trackMenu3"
+	private GridPane trackMenu3; // Value injected by FXMLLoader
 
 	@FXML // fx:id="aspectChangerButton"
 	private Button aspectChangerButton; // Value injected by FXMLLoader
@@ -619,7 +622,118 @@ public class BuildModifyMenuController {
 
 	@FXML // fx:id="switch24Image"
 	private ImageView switch24Image; // Value injected by FXMLLoader
+	
+	//** Crossover toggles and images **
+	
+    @FXML // fx:id="crossover1Toggle"
+    private ToggleButton crossover1Toggle; // Value injected by FXMLLoader
 
+    @FXML // fx:id="crossover1Image"
+    private ImageView crossover1Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="crossover2Toggle"
+    private ToggleButton crossover2Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="crossover2Image"
+    private ImageView crossover2Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="crossover3Toggle"
+    private ToggleButton crossover3Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="crossover3Image"
+    private ImageView crossover3Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="crossover4Toggle"
+    private ToggleButton crossover4Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="crossover4Image"
+    private ImageView crossover4Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="crossover5Toggle"
+    private ToggleButton crossover5Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="crossover5Image"
+    private ImageView crossover5Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="crossover6Toggle"
+    private ToggleButton crossover6Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="crossover6Image"
+    private ImageView crossover6Image; // Value injected by FXMLLoader
+    
+    //** Flyover toggles and images **
+    
+    @FXML // fx:id="flyover1Toggle"
+    private ToggleButton flyover1Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover1Image"
+    private ImageView flyover1Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover2Toggle"
+    private ToggleButton flyover2Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover2Image"
+    private ImageView flyover2Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover3Toggle"
+    private ToggleButton flyover3Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover3Image"
+    private ImageView flyover3Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover4Toggle"
+    private ToggleButton flyover4Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover4Image"
+    private ImageView flyover4Image; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="flyover5Toggle"
+    private ToggleButton flyover5Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover5Image"
+    private ImageView flyover5Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover6Toggle"
+    private ToggleButton flyover6Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover6Image"
+    private ImageView flyover6Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover7Toggle"
+    private ToggleButton flyover7Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover7Image"
+    private ImageView flyover7Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover8Toggle"
+    private ToggleButton flyover8Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover8Image"
+    private ImageView flyover8Image; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="flyover9Toggle"
+    private ToggleButton flyover9Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover9Image"
+    private ImageView flyover9Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover10Toggle"
+    private ToggleButton flyover10Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover10Image"
+    private ImageView flyover10Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover11Toggle"
+    private ToggleButton flyover11Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover11Image"
+    private ImageView flyover11Image; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover12Toggle"
+    private ToggleButton flyover12Toggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="flyover12Image"
+    private ImageView flyover12Image; // Value injected by 
 	/**
 	 * A method to return current signal aspect.
 	 * 
@@ -640,6 +754,10 @@ public class BuildModifyMenuController {
 
 		for (Node button2 : trackMenu2.getChildrenUnmodifiable()) {
 			button2.setVisible(true);
+		}
+		
+		for (Node button3 : trackMenu3.getChildrenUnmodifiable()) {
+			button3.setVisible(true);
 		}
 	}
 
@@ -1717,6 +1835,196 @@ public class BuildModifyMenuController {
 		}
 
     }
+    
+    @FXML
+    void selectCrossover1(ActionEvent event) {
+    	if (crossover1Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.CROSSOVER1);
+		} else {
+			crossover1Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectCrossover2(ActionEvent event) {
+    	if (crossover2Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.CROSSOVER2);
+		} else {
+			crossover2Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    	
+    }
+
+    @FXML
+    void selectCrossover3(ActionEvent event) {
+    	if (crossover3Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.CROSSOVER3);
+		} else {
+			crossover3Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectCrossover4(ActionEvent event) {
+    	if (crossover4Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.CROSSOVER4);
+		} else {
+			crossover4Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectCrossover5(ActionEvent event) {
+    	if (crossover5Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.CROSSOVER5);
+		} else {
+			crossover5Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectCrossover6(ActionEvent event) {
+    	if (crossover6Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.CROSSOVER6);
+		} else {
+			crossover6Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+    
+    @FXML
+    void selectFlyover1(ActionEvent event) {
+    	if (flyover1Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.FLYOVER1);
+		} else {
+			flyover1Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectFlyover2(ActionEvent event) {
+    	if (flyover2Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.FLYOVER2);
+		} else {
+			flyover2Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    }
+
+    @FXML
+    void selectFlyover3(ActionEvent event) {
+    	if (flyover3Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.FLYOVER3);
+		} else {
+			flyover3Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectFlyover4(ActionEvent event) {
+    	if (flyover4Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.FLYOVER4);
+		} else {
+			flyover4Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    }
+    @FXML
+    void selectFlyover5(ActionEvent event) {
+    	if (flyover5Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.FLYOVER5);
+		} else {
+			flyover5Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectFlyover6(ActionEvent event) {
+    	if (flyover6Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.FLYOVER6);
+		} else {
+			flyover6Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    }
+
+    @FXML
+    void selectFlyover7(ActionEvent event) {
+    	if (flyover7Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.FLYOVER7);
+		} else {
+			flyover7Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectFlyover8(ActionEvent event) {
+    	if (flyover8Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.FLYOVER8);
+		} else {
+			flyover8Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    }
+    @FXML
+    void selectFlyover9(ActionEvent event) {
+    	if (flyover9Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.FLYOVER9);
+		} else {
+			flyover9Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectFlyover10(ActionEvent event) {
+    	if (flyover10Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.FLYOVER10);
+		} else {
+			flyover10Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    }
+
+    @FXML
+    void selectFlyover11(ActionEvent event) {
+    	if (flyover11Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.FLYOVER11);
+		} else {
+			flyover11Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
+    }
+
+    @FXML
+    void selectFlyover12(ActionEvent event) {
+    	if (flyover12Toggle.isSelected()) {
+			GUIController.setItemSelected(TrackType.FLYOVER12);
+		} else {
+			flyover12Toggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    }
 
 	@FXML // This method is called by the FXMLLoader when initialization is complete
 	void initialize() {
@@ -1727,6 +2035,10 @@ public class BuildModifyMenuController {
 
 		for (Node button2 : trackMenu2.getChildrenUnmodifiable()) {
 			button2.setVisible(false);
+		}
+		
+		for (Node button3 : trackMenu3.getChildrenUnmodifiable()) {
+			button3.setVisible(false);
 		}
 	}
 

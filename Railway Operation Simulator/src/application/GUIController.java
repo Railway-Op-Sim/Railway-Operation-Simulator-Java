@@ -488,6 +488,78 @@ public class GUIController extends Application {
 			case SWITCH24:
 				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
 				break;
+				
+			case CROSSOVER1:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case CROSSOVER2:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case CROSSOVER3:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case CROSSOVER4:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case CROSSOVER5:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case CROSSOVER6:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+				
+			case FLYOVER1:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case FLYOVER2:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case FLYOVER3:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case FLYOVER4:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+				
+			case FLYOVER5:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case FLYOVER6:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case FLYOVER7:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case FLYOVER8:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+				
+			case FLYOVER9:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case FLYOVER10:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case FLYOVER11:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
+
+			case FLYOVER12:
+				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				break;
 
 			case SIGNALLEFT:
 				if (aspect == SignalAspect.SHUNT) {

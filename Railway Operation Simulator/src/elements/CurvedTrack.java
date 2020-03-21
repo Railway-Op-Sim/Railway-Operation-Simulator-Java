@@ -8,8 +8,8 @@ public class CurvedTrack extends Track {
 		this.yLocation = yLocation;
 		this.electrified = electrified;
 		this.methodOfElectrification = methodOfElectrification;
-		this.station = false;
-		this.stationName = null;
+		this.location = false;
+		this.locationName = null;
 		// TODO Auto-generated constructor stub
 	}
 

@@ -9,10 +9,12 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 import elements.BufferedTrack;
+import elements.Crossover;
 import elements.CurvedTrack;
 import elements.Direction;
 import elements.DirectionalTrack;
 import elements.ExitTrack;
+import elements.Flyover;
 import elements.GapLinkedTrack;
 import elements.SignalAspect;
 import elements.SignalTrack;
@@ -448,6 +450,43 @@ public class MenuActions {
 		case CURVE8:
 			trackImage = new String("graphics/curve8.png"); // Open image file.
 			break;
+			
+		case BRIDGE1:
+			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
+			if (bridgeUnderPassTrack.isStation()) {
+				trackImage = new String("graphics/bridgeSet1.png"); // Open image file.
+			} else {
+				trackImage = new String("graphics/bridgeUnset1.png"); // Open image file.
+			}
+
+			break;
+
+		case BRIDGE2:
+			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
+			if (bridgeUnderPassTrack.isStation()) {
+				trackImage = new String("graphics/bridgeSet2.png"); // Open image file.
+			} else {
+				trackImage = new String("graphics/bridgeUnset2.png"); // Open image file.
+			}
+			break;
+
+		case UNDERPASS1:
+			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
+			if (bridgeUnderPassTrack.isStation()) {
+				trackImage = new String("graphics/underpassSet1.png"); // Open image file.
+			} else {
+				trackImage = new String("graphics/underpassUnset1.png"); // Open image file.
+			}
+			break;
+
+		case UNDERPASS2:
+			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
+			if (bridgeUnderPassTrack.isStation()) {
+				trackImage = new String("graphics/underpassSet1.png"); // Open image file.
+			} else {
+				trackImage = new String("graphics/underpassUnset1.png"); // Open image file.
+			}
+			break;
 
 		case SWITCHTIGHT1:
 			trackImage = new String("graphics/switchTight1.png"); // Open image file.
@@ -576,43 +615,80 @@ public class MenuActions {
 		case SWITCH24:
 			trackImage = new String("graphics/switch24.png"); // Open image file.
 			break;
-
-		case BRIDGE1:
-			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
-			if (bridgeUnderPassTrack.isStation()) {
-				trackImage = new String("graphics/bridgeSet1.png"); // Open image file.
-			} else {
-				trackImage = new String("graphics/bridgeUnset1.png"); // Open image file.
-			}
-
+			
+		case CROSSOVER1:
+			trackImage = new String("graphics/crossover1.png"); // Open image file.
 			break;
 
-		case BRIDGE2:
-			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
-			if (bridgeUnderPassTrack.isStation()) {
-				trackImage = new String("graphics/bridgeSet2.png"); // Open image file.
-			} else {
-				trackImage = new String("graphics/bridgeUnset2.png"); // Open image file.
-			}
+		case CROSSOVER2:
+			trackImage = new String("graphics/crossover2.png"); // Open image file.
 			break;
 
-		case UNDERPASS1:
-			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
-			if (bridgeUnderPassTrack.isStation()) {
-				trackImage = new String("graphics/underpassSet1.png"); // Open image file.
-			} else {
-				trackImage = new String("graphics/underpassUnset1.png"); // Open image file.
-			}
+		case CROSSOVER3:
+			trackImage = new String("graphics/crossover3.png"); // Open image file.
 			break;
 
-		case UNDERPASS2:
-			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
-			if (bridgeUnderPassTrack.isStation()) {
-				trackImage = new String("graphics/underpassSet1.png"); // Open image file.
-			} else {
-				trackImage = new String("graphics/underpassUnset1.png"); // Open image file.
-			}
+		case CROSSOVER4:
+			trackImage = new String("graphics/crossover4.png"); // Open image file.
 			break;
+
+		case CROSSOVER5:
+			trackImage = new String("graphics/crossover5.png"); // Open image file.
+			break;
+
+		case CROSSOVER6:
+			trackImage = new String("graphics/crossover6.png"); // Open image file.
+			break;
+			
+		case FLYOVER1:
+			trackImage = new String("graphics/flyover1.png"); // Open image file.
+			break;
+
+		case FLYOVER2:
+			trackImage = new String("graphics/flyover2.png"); // Open image file.
+			break;
+
+		case FLYOVER3:
+			trackImage = new String("graphics/flyover3.png"); // Open image file.
+			break;
+
+		case FLYOVER4:
+			trackImage = new String("graphics/flyover4.png"); // Open image file.
+			break;
+		
+		case FLYOVER5:
+			trackImage = new String("graphics/flyover5.png"); // Open image file.
+			break;
+
+		case FLYOVER6:
+			trackImage = new String("graphics/flyover6.png"); // Open image file.
+			break;
+
+		case FLYOVER7:
+			trackImage = new String("graphics/flyover7.png"); // Open image file.
+			break;
+
+		case FLYOVER8:
+			trackImage = new String("graphics/flyover8.png"); // Open image file.
+			break;
+			
+		case FLYOVER9:
+			trackImage = new String("graphics/flyover9.png"); // Open image file.
+			break;
+
+		case FLYOVER10:
+			trackImage = new String("graphics/flyover10.png"); // Open image file.
+			break;
+
+		case FLYOVER11:
+			trackImage = new String("graphics/flyover11.png"); // Open image file.
+			break;
+
+		case FLYOVER12:
+			trackImage = new String("graphics/flyover12.png"); // Open image file.
+			break;
+
+		
 
 		case SIGNALLEFT:
 			newSig = (SignalTrack) track;
@@ -977,6 +1053,30 @@ public class MenuActions {
 				CurvedTrack curve8 = new CurvedTrack(TrackType.CURVE8, placeX, placeY, false, "None");
 				newTrack = curve8;
 				break;
+				
+			case BRIDGE1:
+				StationBridgeUnderpassTrack bridge1 = new StationBridgeUnderpassTrack(TrackType.BRIDGE1, placeX, placeY,
+						false, "None");
+				newTrack = bridge1;
+				break;
+
+			case BRIDGE2:
+				StationBridgeUnderpassTrack bridge2 = new StationBridgeUnderpassTrack(TrackType.BRIDGE2, placeX, placeY,
+						false, "None");
+				newTrack = bridge2;
+				break;
+
+			case UNDERPASS1:
+				StationBridgeUnderpassTrack underpass1 = new StationBridgeUnderpassTrack(TrackType.UNDERPASS1, placeX,
+						placeY, false, "None");
+				newTrack = underpass1;
+				break;
+
+			case UNDERPASS2:
+				StationBridgeUnderpassTrack underpass2 = new StationBridgeUnderpassTrack(TrackType.UNDERPASS2, placeX,
+						placeY, false, "None");
+				newTrack = underpass2;
+				break;
 
 			case SWITCHTIGHT1:
 				SwitchTrack switchTight1 = new SwitchTrack(TrackType.SWITCHTIGHT1, placeX, placeY, false, "None");
@@ -1137,30 +1237,98 @@ public class MenuActions {
 				SwitchTrack switch24 = new SwitchTrack(TrackType.SWITCH24, placeX, placeY, false, "None");
 				newTrack = switch24;
 				break;
-
-			case BRIDGE1:
-				StationBridgeUnderpassTrack bridge1 = new StationBridgeUnderpassTrack(TrackType.BRIDGE1, placeX, placeY,
-						false, "None");
-				newTrack = bridge1;
+				
+			case CROSSOVER1:
+				Crossover crossover1 = new Crossover(TrackType.CROSSOVER1, placeX, placeY, false, "None");
+				newTrack = crossover1;
 				break;
 
-			case BRIDGE2:
-				StationBridgeUnderpassTrack bridge2 = new StationBridgeUnderpassTrack(TrackType.BRIDGE2, placeX, placeY,
-						false, "None");
-				newTrack = bridge2;
+			case CROSSOVER2:
+				Crossover crossover2 = new Crossover(TrackType.CROSSOVER2, placeX, placeY, false, "None");
+				newTrack = crossover2;
 				break;
 
-			case UNDERPASS1:
-				StationBridgeUnderpassTrack underpass1 = new StationBridgeUnderpassTrack(TrackType.UNDERPASS1, placeX,
-						placeY, false, "None");
-				newTrack = underpass1;
+			case CROSSOVER3:
+				Crossover crossover3 = new Crossover(TrackType.CROSSOVER3, placeX, placeY, false, "None");
+				newTrack = crossover3;
 				break;
 
-			case UNDERPASS2:
-				StationBridgeUnderpassTrack underpass2 = new StationBridgeUnderpassTrack(TrackType.UNDERPASS2, placeX,
-						placeY, false, "None");
-				newTrack = underpass2;
+			case CROSSOVER4:
+				Crossover crossover4 = new Crossover(TrackType.CROSSOVER4, placeX, placeY, false, "None");
+				newTrack = crossover4;
 				break;
+
+			case CROSSOVER5:
+				Crossover crossover5 = new Crossover(TrackType.CROSSOVER5, placeX, placeY, false, "None");
+				newTrack = crossover5;
+				break;
+
+			case CROSSOVER6:
+				Crossover crossover6 = new Crossover(TrackType.CROSSOVER6, placeX, placeY, false, "None");
+				newTrack = crossover6;
+				break;
+				
+			case FLYOVER1:
+				Flyover flyover1 = new Flyover(TrackType.FLYOVER1, placeX, placeY, false, "None");
+				newTrack = flyover1;
+				break;
+
+			case FLYOVER2:
+				Flyover flyover2 = new Flyover(TrackType.FLYOVER2, placeX, placeY, false, "None");
+				newTrack = flyover2;
+				break;
+
+			case FLYOVER3:
+				Flyover flyover3 = new Flyover(TrackType.FLYOVER3, placeX, placeY, false, "None");
+				newTrack = flyover3;
+				break;
+
+			case FLYOVER4:
+				Flyover flyover4 = new Flyover(TrackType.FLYOVER4, placeX, placeY, false, "None");
+				newTrack = flyover4;
+				break;	
+			
+			case FLYOVER5:
+				Flyover flyover5 = new Flyover(TrackType.FLYOVER5, placeX, placeY, false, "None");
+				newTrack = flyover5;
+				break;
+
+			case FLYOVER6:
+				Flyover flyover6 = new Flyover(TrackType.FLYOVER6, placeX, placeY, false, "None");
+				newTrack = flyover6;
+				break;
+
+			case FLYOVER7:
+				Flyover flyover7 = new Flyover(TrackType.FLYOVER7, placeX, placeY, false, "None");
+				newTrack = flyover7;
+				break;
+
+			case FLYOVER8:
+				Flyover flyover8 = new Flyover(TrackType.FLYOVER8, placeX, placeY, false, "None");
+				newTrack = flyover8;
+				break;	
+			
+			case FLYOVER9:
+				Flyover flyover9 = new Flyover(TrackType.FLYOVER9, placeX, placeY, false, "None");
+				newTrack = flyover9;
+				break;
+
+			case FLYOVER10:
+				Flyover flyover10 = new Flyover(TrackType.FLYOVER10, placeX, placeY, false, "None");
+				newTrack = flyover10;
+				break;
+
+			case FLYOVER11:
+				Flyover flyover11 = new Flyover(TrackType.FLYOVER11, placeX, placeY, false, "None");
+				newTrack = flyover11;
+				break;
+
+			case FLYOVER12:
+				Flyover flyover12 = new Flyover(TrackType.FLYOVER12, placeX, placeY, false, "None");
+				newTrack = flyover12;
+				break;	
+			
+			
 
 			case SIGNALLEFT:
 				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);

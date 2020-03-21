@@ -7,8 +7,8 @@ public abstract class Track extends Space {
 	protected int trackSpeed = 200;
 	protected int trackLength = 100;
 	protected boolean[] trackLinks = new boolean[9];
-	protected boolean station;
-	protected String stationName;
+	protected boolean location;
+	protected Location locationName;
 	
 	/*
 	 * trackLink works like thus 
@@ -91,19 +91,19 @@ public abstract class Track extends Space {
 	}
 
 	public boolean isStation() {
-		return station;
+		return location;
 	}
 
-	public void setStation(boolean station) {
-		this.station = station;
+	public void setStation(boolean location) {
+		this.location = location;
 	}
 
-	public String getStationName() {
-		return stationName;
+	public Location getStationName() {
+		return locationName;
 	}
 
-	public void setStationName(String stationName) {
-		this.stationName = stationName;
+	public void setStationName(Location locationName) {
+		this.locationName = locationName;
 	}
 	
 	

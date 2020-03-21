@@ -1317,6 +1317,293 @@
                   </ToggleButton>
                </children>
             </GridPane>
+            <GridPane fx:id="trackMenu3">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="18.0" minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="18.0" minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="18.0" minHeight="10.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ToggleButton fx:id="crossover1Toggle" mnemonicParsing="false" onAction="#selectCrossover1" toggleGroup="$elementGroup">
+                     <graphic>
+                        <ImageView fx:id="crossover1Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/crossover1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="crossover2Toggle" mnemonicParsing="false" onAction="#selectCrossover2" toggleGroup="$elementGroup" GridPane.columnIndex="1">
+                     <graphic>
+                        <ImageView fx:id="crossover2Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/crossover2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="flyover1Toggle" mnemonicParsing="false" onAction="#selectFlyover1" toggleGroup="$elementGroup" GridPane.columnIndex="2">
+                     <graphic>
+                        <ImageView fx:id="flyover1Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/flyover1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="flyover2Toggle" mnemonicParsing="false" onAction="#selectFlyover2" toggleGroup="$elementGroup" GridPane.columnIndex="3">
+                     <graphic>
+                        <ImageView fx:id="flyover2Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/flyover2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="flyover3Toggle" mnemonicParsing="false" onAction="#selectFlyover3" toggleGroup="$elementGroup" GridPane.columnIndex="4">
+                     <graphic>
+                        <ImageView fx:id="flyover3Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/flyover3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="flyover4Toggle" mnemonicParsing="false" onAction="#selectFlyover4" toggleGroup="$elementGroup" GridPane.columnIndex="5">
+                     <graphic>
+                        <ImageView fx:id="flyover4Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/flyover4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="crossover3Toggle" mnemonicParsing="false" onAction="#selectCrossover3" toggleGroup="$elementGroup" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="crossover3Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/crossover3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="crossover4Toggle" mnemonicParsing="false" onAction="#selectCrossover4" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="crossover4Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/crossover4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="flyover5Toggle" mnemonicParsing="false" onAction="#selectFlyover5" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fx:id="flyover5Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/flyover5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="flyover6Toggle" mnemonicParsing="false" onAction="#selectFlyover6" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fx:id="flyover6Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/flyover6.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="flyover7Toggle" mnemonicParsing="false" onAction="#selectFlyover7" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fx:id="flyover7Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/flyover7.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="flyover8Toggle" mnemonicParsing="false" onAction="#selectFlyover8" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fx:id="flyover8Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/flyover8.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="crossover5Toggle" mnemonicParsing="false" onAction="#selectCrossover5" toggleGroup="$elementGroup" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="crossover5Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/crossover5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="crossover6Toggle" mnemonicParsing="false" onAction="#selectCrossover6" toggleGroup="$elementGroup" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="crossover6Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/crossover6.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="flyover9Toggle" mnemonicParsing="false" onAction="#selectFlyover9" toggleGroup="$elementGroup" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fx:id="flyover9Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/flyover9.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="flyover10Toggle" mnemonicParsing="false" onAction="#selectFlyover10" toggleGroup="$elementGroup" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fx:id="flyover10Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/flyover10.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="flyover11Toggle" mnemonicParsing="false" onAction="#selectFlyover11" toggleGroup="$elementGroup" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fx:id="flyover11Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/flyover11.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="flyover12Toggle" mnemonicParsing="false" onAction="#selectFlyover12" toggleGroup="$elementGroup" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fx:id="flyover12Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/flyover12.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+               </children>
+            </GridPane>
          </children>
          <VBox.margin>
             <Insets />
