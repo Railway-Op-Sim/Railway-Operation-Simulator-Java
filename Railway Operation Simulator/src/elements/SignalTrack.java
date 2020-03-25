@@ -7,8 +7,8 @@ public class SignalTrack extends Track {
 	Track nextThreeSignalBlock;
 	boolean state;
 
-	public SignalTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification, SignalAspect aspect) {
-		this.trackType = trackType;
+	public SignalTrack(ElementType elementType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification, SignalAspect aspect) {
+		this.elementType = elementType;
 		this.xLocation = xLocation;
 		this.yLocation = yLocation;
 		this.electrified = electrified;

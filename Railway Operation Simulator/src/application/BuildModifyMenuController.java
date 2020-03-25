@@ -6,9 +6,8 @@ import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import elements.LocationType;
 import elements.SignalAspect;
-import elements.TrackType;
+import elements.ElementType;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -827,20 +826,20 @@ public class BuildModifyMenuController {
 	void selectStraightHorizontal(ActionEvent event) {
 
 		if (straightHorizontalToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.STRAIGHTH);
+			GUIController.setItemSelected(ElementType.STRAIGHTH);
 		} else {
 			straightHorizontalToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 	}
 
 	@FXML
 	void selectStraightVertical(ActionEvent event) {
 		if (straightVerticalToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.STRAIGHTV);
+			GUIController.setItemSelected(ElementType.STRAIGHTV);
 		} else {
 			straightVerticalToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -848,10 +847,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectStraightLeftUp(ActionEvent event) {
 		if (straightLeftUpToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.STRAIGHTLEFTUP);
+			GUIController.setItemSelected(ElementType.STRAIGHTLEFTUP);
 		} else {
 			straightLeftUpToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -859,10 +858,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectStraightRightUp(ActionEvent event) {
 		if (straightRightUpToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.STRAIGHTRIGHTUP);
+			GUIController.setItemSelected(ElementType.STRAIGHTRIGHTUP);
 		} else {
 			straightRightUpToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -873,10 +872,10 @@ public class BuildModifyMenuController {
 	void selectBufferLeft(ActionEvent event) {
 
 		if (bufferLeftToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.BUFFERLEFT);
+			GUIController.setItemSelected(ElementType.BUFFERLEFT);
 		} else {
 			bufferLeftToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -884,10 +883,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectBufferDown(ActionEvent event) {
 		if (bufferDownToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.BUFFERDOWN);
+			GUIController.setItemSelected(ElementType.BUFFERDOWN);
 		} else {
 			bufferDownToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -895,10 +894,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectBufferRight(ActionEvent event) {
 		if (bufferRightToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.BUFFERRIGHT);
+			GUIController.setItemSelected(ElementType.BUFFERRIGHT);
 		} else {
 			bufferRightToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -906,40 +905,40 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectBufferUp(ActionEvent event) {
 		if (bufferUpToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.BUFFERUP);
+			GUIController.setItemSelected(ElementType.BUFFERUP);
 		} else {
 			bufferUpToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 	}
 
 	@FXML
 	void selectBufferLeftUp(ActionEvent event) {
 		if (bufferLeftUpToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.BUFFERLEFTUP);
+			GUIController.setItemSelected(ElementType.BUFFERLEFTUP);
 		} else {
 			bufferLeftUpToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 	}
 
 	@FXML
 	void selectBufferRightUp(ActionEvent event) {
 		if (bufferRightUpToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.BUFFERRIGHTUP);
+			GUIController.setItemSelected(ElementType.BUFFERRIGHTUP);
 		} else {
 			bufferRightUpToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 	}
 
 	@FXML
 	void selectBufferLeftDown(ActionEvent event) {
 		if (bufferLeftDownToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.BUFFERLEFTDOWN);
+			GUIController.setItemSelected(ElementType.BUFFERLEFTDOWN);
 		} else {
 			bufferLeftDownToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -947,10 +946,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectBufferRightDown(ActionEvent event) {
 		if (bufferRightDownToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.BUFFERRIGHTDOWN);
+			GUIController.setItemSelected(ElementType.BUFFERRIGHTDOWN);
 		} else {
 			bufferRightDownToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -960,10 +959,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectLinkLeft(ActionEvent event) {
 		if (linkLeftToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.LINKLEFT);
+			GUIController.setItemSelected(ElementType.LINKLEFT);
 		} else {
 			linkLeftToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -971,10 +970,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectLinkRight(ActionEvent event) {
 		if (linkRightToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.LINKRIGHT);
+			GUIController.setItemSelected(ElementType.LINKRIGHT);
 		} else {
 			linkRightToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -982,10 +981,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectLinkDown(ActionEvent event) {
 		if (linkDownToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.LINKDOWN);
+			GUIController.setItemSelected(ElementType.LINKDOWN);
 		} else {
 			linkDownToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -993,10 +992,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectLinkUp(ActionEvent event) {
 		if (linkUpToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.LINKUP);
+			GUIController.setItemSelected(ElementType.LINKUP);
 		} else {
 			linkUpToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1004,10 +1003,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectLinkLeftUp(ActionEvent event) {
 		if (linkLeftUpToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.LINKLEFTUP);
+			GUIController.setItemSelected(ElementType.LINKLEFTUP);
 		} else {
 			linkLeftUpToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1015,10 +1014,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectLinkRightUp(ActionEvent event) {
 		if (linkRightUpToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.LINKRIGHTUP);
+			GUIController.setItemSelected(ElementType.LINKRIGHTUP);
 		} else {
 			linkRightUpToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1026,10 +1025,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectLinkLeftDown(ActionEvent event) {
 		if (linkLeftDownToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.LINKLEFTDOWN);
+			GUIController.setItemSelected(ElementType.LINKLEFTDOWN);
 		} else {
 			linkLeftDownToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1037,10 +1036,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectLinkRightDown(ActionEvent event) {
 		if (linkRightDownToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.LINKRIGHTDOWN);
+			GUIController.setItemSelected(ElementType.LINKRIGHTDOWN);
 		} else {
 			linkRightDownToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1050,10 +1049,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectDirectLeftTrack(ActionEvent event) {
 		if (directLeftTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.DIRECTLEFT);
+			GUIController.setItemSelected(ElementType.DIRECTLEFT);
 		} else {
 			directLeftTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1061,10 +1060,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectDirectRightTrack(ActionEvent event) {
 		if (directRightTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.DIRECTRIGHT);
+			GUIController.setItemSelected(ElementType.DIRECTRIGHT);
 		} else {
 			directRightTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1072,10 +1071,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectDirectUpTrack(ActionEvent event) {
 		if (directUpTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.DIRECTUP);
+			GUIController.setItemSelected(ElementType.DIRECTUP);
 		} else {
 			directUpTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1083,10 +1082,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectDirectDownTrack(ActionEvent event) {
 		if (directDownTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.DIRECTDOWN);
+			GUIController.setItemSelected(ElementType.DIRECTDOWN);
 		} else {
 			directDownTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1094,10 +1093,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectDirectRightUpTrack(ActionEvent event) {
 		if (directRightUpToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.DIRECTRIGHTUP);
+			GUIController.setItemSelected(ElementType.DIRECTRIGHTUP);
 		} else {
 			directRightUpToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1105,10 +1104,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectDirectLeftUpTrack(ActionEvent event) {
 		if (directLeftUpToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.DIRECTLEFTUP);
+			GUIController.setItemSelected(ElementType.DIRECTLEFTUP);
 		} else {
 			directLeftUpToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1116,10 +1115,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectDirectRightDownTrack(ActionEvent event) {
 		if (directRightDownToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.DIRECTRIGHTDOWN);
+			GUIController.setItemSelected(ElementType.DIRECTRIGHTDOWN);
 		} else {
 			directRightDownToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1127,10 +1126,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectDirectLeftDownTrack(ActionEvent event) {
 		if (directLeftDownToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.DIRECTLEFTDOWN);
+			GUIController.setItemSelected(ElementType.DIRECTLEFTDOWN);
 		} else {
 			directLeftDownToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1140,10 +1139,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectExitLeftTrack(ActionEvent event) {
 		if (exitLeftTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.EXITLEFT);
+			GUIController.setItemSelected(ElementType.EXITLEFT);
 		} else {
 			exitLeftTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1151,10 +1150,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectExitRightTrack(ActionEvent event) {
 		if (exitRightTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.EXITRIGHT);
+			GUIController.setItemSelected(ElementType.EXITRIGHT);
 		} else {
 			exitRightTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1162,10 +1161,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectExitDownTrack(ActionEvent event) {
 		if (exitDownTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.EXITDOWN);
+			GUIController.setItemSelected(ElementType.EXITDOWN);
 		} else {
 			exitDownTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1173,10 +1172,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectExitUpTrack(ActionEvent event) {
 		if (exitUpTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.EXITUP);
+			GUIController.setItemSelected(ElementType.EXITUP);
 		} else {
 			exitUpTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1184,10 +1183,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectExitLeftUpTrack(ActionEvent event) {
 		if (exitLeftUpTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.EXITLEFTUP);
+			GUIController.setItemSelected(ElementType.EXITLEFTUP);
 		} else {
 			exitLeftTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1195,10 +1194,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectExitRightUpTrack(ActionEvent event) {
 		if (exitRightUpTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.EXITRIGHTUP);
+			GUIController.setItemSelected(ElementType.EXITRIGHTUP);
 		} else {
 			exitRightUpTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1206,10 +1205,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectExitLeftDownTrack(ActionEvent event) {
 		if (exitLeftDownTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.EXITLEFTDOWN);
+			GUIController.setItemSelected(ElementType.EXITLEFTDOWN);
 		} else {
 			exitLeftDownTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1217,10 +1216,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectExitRightDownTrack(ActionEvent event) {
 		if (exitRightDownTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.EXITRIGHTDOWN);
+			GUIController.setItemSelected(ElementType.EXITRIGHTDOWN);
 		} else {
 			exitRightDownTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1230,10 +1229,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSignalLeftTrack(ActionEvent event) {
 		if (signalLeftTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SIGNALLEFT);
+			GUIController.setItemSelected(ElementType.SIGNALLEFT);
 		} else {
 			signalLeftTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1241,10 +1240,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSignalRightTrack(ActionEvent event) {
 		if (signalRightTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SIGNALRIGHT);
+			GUIController.setItemSelected(ElementType.SIGNALRIGHT);
 		} else {
 			signalRightTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1252,10 +1251,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSignalUpTrack(ActionEvent event) {
 		if (signalUpTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SIGNALUP);
+			GUIController.setItemSelected(ElementType.SIGNALUP);
 		} else {
 			signalUpTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1263,10 +1262,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSignalDownTrack(ActionEvent event) {
 		if (signalDownTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SIGNALDOWN);
+			GUIController.setItemSelected(ElementType.SIGNALDOWN);
 		} else {
 			signalDownTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1274,10 +1273,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSignalLeftUpTrack(ActionEvent event) {
 		if (signalLeftUpTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SIGNALLEFTUP);
+			GUIController.setItemSelected(ElementType.SIGNALLEFTUP);
 		} else {
 			signalLeftUpTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1285,10 +1284,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSignalRightUpTrack(ActionEvent event) {
 		if (signalRightUpTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SIGNALRIGHTUP);
+			GUIController.setItemSelected(ElementType.SIGNALRIGHTUP);
 		} else {
 			signalRightUpTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1296,10 +1295,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSignalLeftDownTrack(ActionEvent event) {
 		if (signalLeftDownTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SIGNALLEFTDOWN);
+			GUIController.setItemSelected(ElementType.SIGNALLEFTDOWN);
 		} else {
 			signalLeftDownTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1307,10 +1306,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSignalRightDownTrack(ActionEvent event) {
 		if (signalRightDownTrackToggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SIGNALRIGHTDOWN);
+			GUIController.setItemSelected(ElementType.SIGNALRIGHTDOWN);
 		} else {
 			signalRightDownTrackToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1320,20 +1319,20 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectTightCurve1(ActionEvent event) {
 		if (tightCurve1Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.TIGHTCURVE1);
+			GUIController.setItemSelected(ElementType.TIGHTCURVE1);
 		} else {
 			tightCurve1Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 	}
 
 	@FXML
 	void selectTightCurve2(ActionEvent event) {
 		if (tightCurve2Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.TIGHTCURVE2);
+			GUIController.setItemSelected(ElementType.TIGHTCURVE2);
 		} else {
 			tightCurve2Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1341,10 +1340,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectTightCurve3(ActionEvent event) {
 		if (tightCurve3Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.TIGHTCURVE3);
+			GUIController.setItemSelected(ElementType.TIGHTCURVE3);
 		} else {
 			tightCurve3Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1352,10 +1351,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectTightCurve4(ActionEvent event) {
 		if (tightCurve4Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.TIGHTCURVE4);
+			GUIController.setItemSelected(ElementType.TIGHTCURVE4);
 		} else {
 			tightCurve4Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 	}
 
@@ -1364,10 +1363,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectCurve1(ActionEvent event) {
 		if (curve1Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CURVE1);
+			GUIController.setItemSelected(ElementType.CURVE1);
 		} else {
 			curve1Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1375,10 +1374,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectCurve2(ActionEvent event) {
 		if (curve2Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CURVE2);
+			GUIController.setItemSelected(ElementType.CURVE2);
 		} else {
 			curve2Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1386,10 +1385,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectCurve3(ActionEvent event) {
 		if (curve3Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CURVE3);
+			GUIController.setItemSelected(ElementType.CURVE3);
 		} else {
 			curve3Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1397,10 +1396,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectCurve4(ActionEvent event) {
 		if (curve4Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CURVE4);
+			GUIController.setItemSelected(ElementType.CURVE4);
 		} else {
 			curve4Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1408,10 +1407,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectCurve5(ActionEvent event) {
 		if (curve5Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CURVE5);
+			GUIController.setItemSelected(ElementType.CURVE5);
 		} else {
 			curve5Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1419,10 +1418,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectCurve6(ActionEvent event) {
 		if (curve6Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CURVE6);
+			GUIController.setItemSelected(ElementType.CURVE6);
 		} else {
 			curve6Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1430,10 +1429,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectCurve7(ActionEvent event) {
 		if (curve7Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CURVE7);
+			GUIController.setItemSelected(ElementType.CURVE7);
 		} else {
 			curve7Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1441,10 +1440,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectCurve8(ActionEvent event) {
 		if (curve8Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CURVE8);
+			GUIController.setItemSelected(ElementType.CURVE8);
 		} else {
 			curve8Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1454,20 +1453,20 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectBridge1(ActionEvent event) {
 		if (bridge1Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.BRIDGE1);
+			GUIController.setItemSelected(ElementType.BRIDGE1);
 		} else {
 			bridge1Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 	}
 
 	@FXML
 	void selectBridge2(ActionEvent event) {
 		if (bridge2Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.BRIDGE2);
+			GUIController.setItemSelected(ElementType.BRIDGE2);
 		} else {
 			bridge2Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1475,10 +1474,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectUnderpass1(ActionEvent event) {
 		if (underpass1Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.UNDERPASS1);
+			GUIController.setItemSelected(ElementType.UNDERPASS1);
 		} else {
 			underpass1Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1486,10 +1485,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectUnderpass2(ActionEvent event) {
 		if (underpass2Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.UNDERPASS2);
+			GUIController.setItemSelected(ElementType.UNDERPASS2);
 		} else {
 			underpass2Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1499,10 +1498,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitchTight1(ActionEvent event) {
 		if (switchTight1Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCHTIGHT1);
+			GUIController.setItemSelected(ElementType.SWITCHTIGHT1);
 		} else {
 			switchTight1Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1510,10 +1509,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitchTight2(ActionEvent event) {
 		if (switchTight2Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCHTIGHT2);
+			GUIController.setItemSelected(ElementType.SWITCHTIGHT2);
 		} else {
 			switchTight2Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1521,10 +1520,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitchTight3(ActionEvent event) {
 		if (switchTight3Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCHTIGHT3);
+			GUIController.setItemSelected(ElementType.SWITCHTIGHT3);
 		} else {
 			switchTight3Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1532,10 +1531,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitchTight4(ActionEvent event) {
 		if (switchTight4Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCHTIGHT4);
+			GUIController.setItemSelected(ElementType.SWITCHTIGHT4);
 		} else {
 			switchTight4Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1543,10 +1542,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitchTight5(ActionEvent event) {
 		if (switchTight5Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCHTIGHT5);
+			GUIController.setItemSelected(ElementType.SWITCHTIGHT5);
 		} else {
 			switchTight5Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1554,10 +1553,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitchTight6(ActionEvent event) {
 		if (switchTight6Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCHTIGHT6);
+			GUIController.setItemSelected(ElementType.SWITCHTIGHT6);
 		} else {
 			switchTight6Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1565,10 +1564,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitchTight7(ActionEvent event) {
 		if (switchTight7Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCHTIGHT7);
+			GUIController.setItemSelected(ElementType.SWITCHTIGHT7);
 		} else {
 			switchTight7Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1576,10 +1575,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitchTight8(ActionEvent event) {
 		if (switchTight8Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCHTIGHT8);
+			GUIController.setItemSelected(ElementType.SWITCHTIGHT8);
 		} else {
 			switchTight8Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1589,10 +1588,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch1(ActionEvent event) {
 		if (switch1Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH1);
+			GUIController.setItemSelected(ElementType.SWITCH1);
 		} else {
 			switch1Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1600,10 +1599,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch2(ActionEvent event) {
 		if (switch2Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH2);
+			GUIController.setItemSelected(ElementType.SWITCH2);
 		} else {
 			switch2Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1611,10 +1610,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch3(ActionEvent event) {
 		if (switch3Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH3);
+			GUIController.setItemSelected(ElementType.SWITCH3);
 		} else {
 			switch3Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1622,10 +1621,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch4(ActionEvent event) {
 		if (switch4Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH4);
+			GUIController.setItemSelected(ElementType.SWITCH4);
 		} else {
 			switch4Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1633,10 +1632,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch5(ActionEvent event) {
 		if (switch5Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH5);
+			GUIController.setItemSelected(ElementType.SWITCH5);
 		} else {
 			switch5Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1644,10 +1643,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch6(ActionEvent event) {
 		if (switch6Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH6);
+			GUIController.setItemSelected(ElementType.SWITCH6);
 		} else {
 			switch6Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1655,10 +1654,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch7(ActionEvent event) {
 		if (switch7Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH7);
+			GUIController.setItemSelected(ElementType.SWITCH7);
 		} else {
 			switch7Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1666,10 +1665,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch8(ActionEvent event) {
 		if (switch8Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH8);
+			GUIController.setItemSelected(ElementType.SWITCH8);
 		} else {
 			switch8Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1677,10 +1676,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch9(ActionEvent event) {
 		if (switch9Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH9);
+			GUIController.setItemSelected(ElementType.SWITCH9);
 		} else {
 			switch9Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1688,10 +1687,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch10(ActionEvent event) {
 		if (switch10Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH10);
+			GUIController.setItemSelected(ElementType.SWITCH10);
 		} else {
 			switch10Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1699,10 +1698,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch11(ActionEvent event) {
 		if (switch11Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH11);
+			GUIController.setItemSelected(ElementType.SWITCH11);
 		} else {
 			switch11Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1710,10 +1709,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch12(ActionEvent event) {
 		if (switch12Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH12);
+			GUIController.setItemSelected(ElementType.SWITCH12);
 		} else {
 			switch12Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1721,10 +1720,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch13(ActionEvent event) {
 		if (switch13Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH13);
+			GUIController.setItemSelected(ElementType.SWITCH13);
 		} else {
 			switch13Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1732,10 +1731,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch14(ActionEvent event) {
 		if (switch14Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH14);
+			GUIController.setItemSelected(ElementType.SWITCH14);
 		} else {
 			switch14Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1743,10 +1742,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch15(ActionEvent event) {
 		if (switch15Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH15);
+			GUIController.setItemSelected(ElementType.SWITCH15);
 		} else {
 			switch15Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1754,10 +1753,10 @@ public class BuildModifyMenuController {
 	@FXML
 	void selectSwitch16(ActionEvent event) {
 		if (switch16Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH16);
+			GUIController.setItemSelected(ElementType.SWITCH16);
 		} else {
 			switch16Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
 	}
@@ -1766,10 +1765,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectSwitch17(ActionEvent event) {
     	if (switch17Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH17);
+			GUIController.setItemSelected(ElementType.SWITCH17);
 		} else {
 			switch17Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1777,10 +1776,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectSwitch18(ActionEvent event) {
     	if (switch18Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH18);
+			GUIController.setItemSelected(ElementType.SWITCH18);
 		} else {
 			switch18Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1788,10 +1787,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectSwitch19(ActionEvent event) {
     	if (switch19Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH19);
+			GUIController.setItemSelected(ElementType.SWITCH19);
 		} else {
 			switch19Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1799,10 +1798,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectSwitch20(ActionEvent event) {
     	if (switch20Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH20);
+			GUIController.setItemSelected(ElementType.SWITCH20);
 		} else {
 			switch20Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1810,10 +1809,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectSwitch21(ActionEvent event) {
     	if (switch21Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH21);
+			GUIController.setItemSelected(ElementType.SWITCH21);
 		} else {
 			switch21Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
     	
     }
@@ -1821,10 +1820,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectSwitch22(ActionEvent event) {
     	if (switch22Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH22);
+			GUIController.setItemSelected(ElementType.SWITCH22);
 		} else {
 			switch22Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1832,10 +1831,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectSwitch23(ActionEvent event) {
     	if (switch23Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH23);
+			GUIController.setItemSelected(ElementType.SWITCH23);
 		} else {
 			switch23Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1843,10 +1842,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectSwitch24(ActionEvent event) {
     	if (switch24Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.SWITCH24);
+			GUIController.setItemSelected(ElementType.SWITCH24);
 		} else {
 			switch24Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1854,10 +1853,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectCrossover1(ActionEvent event) {
     	if (crossover1Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CROSSOVER1);
+			GUIController.setItemSelected(ElementType.CROSSOVER1);
 		} else {
 			crossover1Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1865,10 +1864,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectCrossover2(ActionEvent event) {
     	if (crossover2Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CROSSOVER2);
+			GUIController.setItemSelected(ElementType.CROSSOVER2);
 		} else {
 			crossover2Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
     	
     }
@@ -1876,10 +1875,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectCrossover3(ActionEvent event) {
     	if (crossover3Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CROSSOVER3);
+			GUIController.setItemSelected(ElementType.CROSSOVER3);
 		} else {
 			crossover3Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1887,10 +1886,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectCrossover4(ActionEvent event) {
     	if (crossover4Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CROSSOVER4);
+			GUIController.setItemSelected(ElementType.CROSSOVER4);
 		} else {
 			crossover4Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1898,10 +1897,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectCrossover5(ActionEvent event) {
     	if (crossover5Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CROSSOVER5);
+			GUIController.setItemSelected(ElementType.CROSSOVER5);
 		} else {
 			crossover5Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1909,10 +1908,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectCrossover6(ActionEvent event) {
     	if (crossover6Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.CROSSOVER6);
+			GUIController.setItemSelected(ElementType.CROSSOVER6);
 		} else {
 			crossover6Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1920,10 +1919,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectFlyover1(ActionEvent event) {
     	if (flyover1Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.FLYOVER1);
+			GUIController.setItemSelected(ElementType.FLYOVER1);
 		} else {
 			flyover1Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1931,20 +1930,20 @@ public class BuildModifyMenuController {
     @FXML
     void selectFlyover2(ActionEvent event) {
     	if (flyover2Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.FLYOVER2);
+			GUIController.setItemSelected(ElementType.FLYOVER2);
 		} else {
 			flyover2Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
     }
 
     @FXML
     void selectFlyover3(ActionEvent event) {
     	if (flyover3Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.FLYOVER3);
+			GUIController.setItemSelected(ElementType.FLYOVER3);
 		} else {
 			flyover3Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1952,19 +1951,19 @@ public class BuildModifyMenuController {
     @FXML
     void selectFlyover4(ActionEvent event) {
     	if (flyover4Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.FLYOVER4);
+			GUIController.setItemSelected(ElementType.FLYOVER4);
 		} else {
 			flyover4Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
     }
     @FXML
     void selectFlyover5(ActionEvent event) {
     	if (flyover5Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.FLYOVER5);
+			GUIController.setItemSelected(ElementType.FLYOVER5);
 		} else {
 			flyover5Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1972,20 +1971,20 @@ public class BuildModifyMenuController {
     @FXML
     void selectFlyover6(ActionEvent event) {
     	if (flyover6Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.FLYOVER6);
+			GUIController.setItemSelected(ElementType.FLYOVER6);
 		} else {
 			flyover6Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
     }
 
     @FXML
     void selectFlyover7(ActionEvent event) {
     	if (flyover7Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.FLYOVER7);
+			GUIController.setItemSelected(ElementType.FLYOVER7);
 		} else {
 			flyover7Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -1993,19 +1992,19 @@ public class BuildModifyMenuController {
     @FXML
     void selectFlyover8(ActionEvent event) {
     	if (flyover8Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.FLYOVER8);
+			GUIController.setItemSelected(ElementType.FLYOVER8);
 		} else {
 			flyover8Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
     }
     @FXML
     void selectFlyover9(ActionEvent event) {
     	if (flyover9Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.FLYOVER9);
+			GUIController.setItemSelected(ElementType.FLYOVER9);
 		} else {
 			flyover9Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -2013,20 +2012,20 @@ public class BuildModifyMenuController {
     @FXML
     void selectFlyover10(ActionEvent event) {
     	if (flyover10Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.FLYOVER10);
+			GUIController.setItemSelected(ElementType.FLYOVER10);
 		} else {
 			flyover10Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
     }
 
     @FXML
     void selectFlyover11(ActionEvent event) {
     	if (flyover11Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.FLYOVER11);
+			GUIController.setItemSelected(ElementType.FLYOVER11);
 		} else {
 			flyover11Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }
@@ -2034,20 +2033,20 @@ public class BuildModifyMenuController {
     @FXML
     void selectFlyover12(ActionEvent event) {
     	if (flyover12Toggle.isSelected()) {
-			GUIController.setItemSelected(TrackType.FLYOVER12);
+			GUIController.setItemSelected(ElementType.FLYOVER12);
 		} else {
 			flyover12Toggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
     }
     
     @FXML
     void selectNamedArea(ActionEvent event) {
     	if (namedAreaToggle.isSelected()) {
-			GUIController.setLocationType(LocationType.NAMEDAREA);
+			GUIController.setItemSelected(ElementType.NAMEDAREA);
 		} else {
 			namedAreaToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
     	
 
@@ -2056,10 +2055,10 @@ public class BuildModifyMenuController {
     @FXML
     void selectConcourse(ActionEvent event) {
     	if (concourseToggle.isSelected()) {
-			GUIController.setLocationType(LocationType.CONCOURSE);
+			GUIController.setItemSelected(ElementType.CONCOURSE);
 		} else {
 			concourseToggle.setSelected(false);
-			GUIController.setItemSelected(TrackType.NONE);
+			GUIController.setItemSelected(ElementType.NONE);
 		}
 
     }

@@ -9,20 +9,23 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 import elements.BufferedTrack;
+import elements.Concourse;
 import elements.Crossover;
 import elements.CurvedTrack;
 import elements.Direction;
 import elements.DirectionalTrack;
+import elements.Element;
 import elements.ExitTrack;
 import elements.Flyover;
 import elements.GapLinkedTrack;
+import elements.NamedArea;
 import elements.SignalAspect;
 import elements.SignalTrack;
 import elements.StationBridgeUnderpassTrack;
 import elements.StraightTrack;
 import elements.SwitchTrack;
 import elements.Track;
-import elements.TrackType;
+import elements.ElementType;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.canvas.Canvas;
@@ -63,7 +66,7 @@ public class MenuActions {
 	 * @param railMap
 	 * @param event
 	 */
-	public static void drawElement(GraphicsContext railMap, MouseEvent event, Color canvasColour, Track track) {
+	public static void drawElement(GraphicsContext railMap, MouseEvent event, Color canvasColour, Element element) {
 		// Get Location of mouse click and round to 0
 		int xLocation = (int) event.getX();
 		int yLocation = (int) event.getY();
@@ -76,9 +79,9 @@ public class MenuActions {
 		int placeX = xLocation - slightlyOffX;
 		int placeY = yLocation - slightLyOffY;
 
-		String trackFile = switchTrack(track);
+		String elementFile = switchTrack(element);
 		Image image = null;
-		image = new Image(MenuActions.class.getClassLoader().getResource(trackFile).toString()); // Set file as image.
+		image = new Image(MenuActions.class.getClassLoader().getResource(elementFile).toString()); // Set file as image.
 		int size = (int) image.getWidth();
 
 		WritableImage newImage = editImage(image, size, size, canvasColour);
@@ -197,19 +200,19 @@ public class MenuActions {
 
 	public static void redrawEverything(Canvas display, Color canvasColour) {
 		Map map = MapManager.sharedMapManager().getMap();
-		HashSet<Track> trackStore = map.getTrackStore();
+		HashSet<Element> elementStore = map.getElementStore();
 		GraphicsContext railMap = display.getGraphicsContext2D();
 		// For every track in the list , redraw it.
-		for (Track track : trackStore) {
-			int xLocation = track.getxLocation();
-			int yLocation = track.getyLocation();
+		for (Element element : elementStore) {
+			int xLocation = element.getxLocation();
+			int yLocation = element.getyLocation();
 
 			int slightlyOffX = xLocation % 16;
 			int slightLyOffY = yLocation % 16;
 
 			int placeX = xLocation - slightlyOffX;
 			int placeY = yLocation - slightLyOffY;
-			String trackImage = switchTrack(track);
+			String trackImage = switchTrack(element);
 
 			Image image = new Image(MenuActions.class.getClassLoader().getResource(trackImage).toString());
 			int size = (int) image.getWidth();
@@ -229,18 +232,18 @@ public class MenuActions {
 		int placeX = xLocation - slightlyOffX;
 		int placeY = yLocation - slightLyOffY;
 		GraphicsContext railMap = display.getGraphicsContext2D();
-		HashSet<Track> trackStore = MapManager.sharedMapManager().getMap().getTrackStore();
-		Track item = null;
-		for (Track track : trackStore) {
-			int existingTrackX = track.getxLocation();
-			int existingTrackY = track.getyLocation();
-			if (existingTrackX == placeX && existingTrackY == placeY) {
-				item = track;
+		HashSet<Element> elementStore = MapManager.sharedMapManager().getMap().getElementStore();
+		Element item = null;
+		for (Element element : elementStore) {
+			int existingElementX = element.getxLocation();
+			int existingElementY = element.getyLocation();
+			if (existingElementX == placeX && existingElementY == placeY) {
+				item = element;
 				railMap.clearRect(placeX, placeY, GRID_SIZE, GRID_SIZE);
 			}
 		}
 		if (item != null) {
-			trackStore.remove(item);
+			elementStore.remove(item);
 			String showHidGridButtonText = showHideGridButton.getText();
 			if (showHidGridButtonText.equals("Hide Grid")) {
 				railMap.strokeRect(placeX, placeY, GRID_SIZE, GRID_SIZE);
@@ -252,13 +255,13 @@ public class MenuActions {
 
 	}
 
-	public static String switchTrack(Track track) {
+	public static String switchTrack(Element element) {
 		String trackImage = null;
 		Image image = null;
 		SignalTrack newSig = null;
 		StationBridgeUnderpassTrack bridgeUnderPassTrack = null;
-		TrackType currentTrackType = track.getTrackType();
-		switch (currentTrackType) {
+		ElementType currentElementType = element.getElementType();
+		switch (currentElementType) {
 		case STRAIGHTH:
 			trackImage = new String("graphics/straightH.png"); // Open image file.
 			break;
@@ -452,7 +455,7 @@ public class MenuActions {
 			break;
 			
 		case BRIDGE1:
-			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
+			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) element;
 			if (bridgeUnderPassTrack.isStation()) {
 				trackImage = new String("graphics/bridgeSet1.png"); // Open image file.
 			} else {
@@ -462,7 +465,7 @@ public class MenuActions {
 			break;
 
 		case BRIDGE2:
-			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
+			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) element;
 			if (bridgeUnderPassTrack.isStation()) {
 				trackImage = new String("graphics/bridgeSet2.png"); // Open image file.
 			} else {
@@ -471,7 +474,7 @@ public class MenuActions {
 			break;
 
 		case UNDERPASS1:
-			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
+			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) element;
 			if (bridgeUnderPassTrack.isStation()) {
 				trackImage = new String("graphics/underpassSet1.png"); // Open image file.
 			} else {
@@ -480,7 +483,7 @@ public class MenuActions {
 			break;
 
 		case UNDERPASS2:
-			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) track;
+			bridgeUnderPassTrack = (StationBridgeUnderpassTrack) element;
 			if (bridgeUnderPassTrack.isStation()) {
 				trackImage = new String("graphics/underpassSet1.png"); // Open image file.
 			} else {
@@ -687,11 +690,18 @@ public class MenuActions {
 		case FLYOVER12:
 			trackImage = new String("graphics/flyover12.png"); // Open image file.
 			break;
+			
+		case NAMEDAREA:
+			trackImage = new String("graphics/locationUnset.png"); // Open image file.
+			break;
 
+		case CONCOURSE:
+			trackImage = new String("graphics/concourseUnset.png"); // Open image file.
+			break;
 		
 
 		case SIGNALLEFT:
-			newSig = (SignalTrack) track;
+			newSig = (SignalTrack) element;
 			if (newSig.getAspect() == SignalAspect.SHUNT) {
 				trackImage = new String("graphics/shuntLeftRed.png");
 			} else {
@@ -700,7 +710,7 @@ public class MenuActions {
 			break;
 
 		case SIGNALRIGHT:
-			newSig = (SignalTrack) track;
+			newSig = (SignalTrack) element;
 			if (newSig.getAspect() == SignalAspect.SHUNT) {
 				trackImage = new String("graphics/shuntRightRed.png");
 			} else {
@@ -709,7 +719,7 @@ public class MenuActions {
 			break;
 
 		case SIGNALUP:
-			newSig = (SignalTrack) track;
+			newSig = (SignalTrack) element;
 			if (newSig.getAspect() == SignalAspect.SHUNT) {
 				trackImage = new String("graphics/shuntUpRed.png");
 			} else {
@@ -718,7 +728,7 @@ public class MenuActions {
 			break;
 
 		case SIGNALDOWN:
-			newSig = (SignalTrack) track;
+			newSig = (SignalTrack) element;
 			if (newSig.getAspect() == SignalAspect.SHUNT) {
 				trackImage = new String("graphics/shuntDownRed.png");
 			} else {
@@ -727,7 +737,7 @@ public class MenuActions {
 			break;
 
 		case SIGNALLEFTUP:
-			newSig = (SignalTrack) track;
+			newSig = (SignalTrack) element;
 			if (newSig.getAspect() == SignalAspect.SHUNT) {
 				trackImage = new String("graphics/shuntLeftUpRed.png");
 			} else {
@@ -736,7 +746,7 @@ public class MenuActions {
 			break;
 
 		case SIGNALRIGHTUP:
-			newSig = (SignalTrack) track;
+			newSig = (SignalTrack) element;
 			if (newSig.getAspect() == SignalAspect.SHUNT) {
 				trackImage = new String("graphics/shuntRightUpRed.png");
 			} else {
@@ -745,7 +755,7 @@ public class MenuActions {
 			break;
 
 		case SIGNALLEFTDOWN:
-			newSig = (SignalTrack) track;
+			newSig = (SignalTrack) element;
 			if (newSig.getAspect() == SignalAspect.SHUNT) {
 				trackImage = new String("graphics/shuntLeftDownRed.png");
 			} else {
@@ -754,7 +764,7 @@ public class MenuActions {
 			break;
 
 		case SIGNALRIGHTDOWN:
-			newSig = (SignalTrack) track;
+			newSig = (SignalTrack) element;
 			if (newSig.getAspect() == SignalAspect.SHUNT) {
 				trackImage = new String("graphics/shuntRightDownRed.png");
 			} else {
@@ -770,639 +780,647 @@ public class MenuActions {
 
 	}
 
-	public static void addTrack(MouseEvent event, Canvas railMap, TrackType itemSelected, SignalAspect aspect,
+	public static void addElement(MouseEvent event, Canvas railMap, ElementType itemSelected, SignalAspect aspect,
 			Color canvasColour) {
-		boolean trackExist = false;
+		boolean elementExist = false;
 		int xLocation = (int) event.getX();
 		int yLocation = (int) event.getY();
 		int slightlyOffX = xLocation % 16;
 		int slightLyOffY = yLocation % 16;
 		int placeX = xLocation - slightlyOffX;
 		int placeY = yLocation - slightLyOffY;
-		HashSet<Track> trackStore = MapManager.sharedMapManager().getMap().getTrackStore();
-		for (Track track : trackStore) {
-			int existingTrackX = track.getxLocation();
-			int existingTrackY = track.getyLocation();
-			if (existingTrackX == placeX && existingTrackY == placeY) {
-				trackExist = true;
+		HashSet<Element> elementStore = MapManager.sharedMapManager().getMap().getElementStore();
+		for (Element element : elementStore) {
+			int existingElementX = element.getxLocation();
+			int existingElementY = element.getyLocation();
+			if (existingElementX == placeX && existingElementY == placeY) {
+				elementExist = true;
 				ErrorBox.makeExistingTrackErrorBox();
 			}
 		}
 
-		if (!trackExist) {
-			Track newTrack = null;
+		if (!elementExist) {
+			Element newElement = null;
 			switch (itemSelected) {
 			case STRAIGHTH:
-				StraightTrack straight1 = new StraightTrack(TrackType.STRAIGHTH, placeX, placeY, false, "None");
+				StraightTrack straight1 = new StraightTrack(ElementType.STRAIGHTH, placeX, placeY, false, "None");
 				straight1.setLinks();
-				newTrack = straight1;
+				newElement = straight1;
 				break;
 
 			case STRAIGHTV:
-				StraightTrack straight2 = new StraightTrack(TrackType.STRAIGHTV, placeX, placeY, false, "None");
+				StraightTrack straight2 = new StraightTrack(ElementType.STRAIGHTV, placeX, placeY, false, "None");
 				straight2.setLinks();
-				newTrack = straight2;
+				newElement = straight2;
 
 				break;
 
 			case STRAIGHTLEFTUP:
-				StraightTrack straight3 = new StraightTrack(TrackType.STRAIGHTLEFTUP, placeX, placeY, false, "None");
+				StraightTrack straight3 = new StraightTrack(ElementType.STRAIGHTLEFTUP, placeX, placeY, false, "None");
 				straight3.setLinks();
-				newTrack = straight3;
+				newElement = straight3;
 				break;
 
 			case STRAIGHTRIGHTUP:
-				StraightTrack straight4 = new StraightTrack(TrackType.STRAIGHTRIGHTUP, placeX, placeY, false, "None");
+				StraightTrack straight4 = new StraightTrack(ElementType.STRAIGHTRIGHTUP, placeX, placeY, false, "None");
 				straight4.setLinks();
-				newTrack = straight4;
+				newElement = straight4;
 
 				break;
 
 			case BUFFERLEFT:
-				BufferedTrack leftBuffer = new BufferedTrack(TrackType.BUFFERLEFT, placeX, placeY, false, "None");
+				BufferedTrack leftBuffer = new BufferedTrack(ElementType.BUFFERLEFT, placeX, placeY, false, "None");
 				leftBuffer.setLinks();
-				newTrack = leftBuffer;
+				newElement = leftBuffer;
 				break;
 
 			case BUFFERRIGHT:
-				BufferedTrack rightBuffer = new BufferedTrack(TrackType.BUFFERRIGHT, placeX, placeY, false, "None");
+				BufferedTrack rightBuffer = new BufferedTrack(ElementType.BUFFERRIGHT, placeX, placeY, false, "None");
 				rightBuffer.setLinks();
-				newTrack = rightBuffer;
+				newElement = rightBuffer;
 				break;
 
 			case BUFFERUP:
-				BufferedTrack topBuffer = new BufferedTrack(TrackType.BUFFERUP, placeX, placeY, false, "None");
+				BufferedTrack topBuffer = new BufferedTrack(ElementType.BUFFERUP, placeX, placeY, false, "None");
 				topBuffer.setLinks();
-				newTrack = topBuffer;
+				newElement = topBuffer;
 				break;
 
 			case BUFFERDOWN:
-				BufferedTrack bottomBuffer = new BufferedTrack(TrackType.BUFFERDOWN, placeX, placeY, false, "None");
+				BufferedTrack bottomBuffer = new BufferedTrack(ElementType.BUFFERDOWN, placeX, placeY, false, "None");
 				bottomBuffer.setLinks();
-				newTrack = bottomBuffer;
+				newElement = bottomBuffer;
 				break;
 
 			case BUFFERLEFTUP:
-				BufferedTrack leftUpBuffer = new BufferedTrack(TrackType.BUFFERLEFTUP, placeX, placeY, false, "None");
+				BufferedTrack leftUpBuffer = new BufferedTrack(ElementType.BUFFERLEFTUP, placeX, placeY, false, "None");
 				leftUpBuffer.setLinks();
-				newTrack = leftUpBuffer;
+				newElement = leftUpBuffer;
 				break;
 
 			case BUFFERRIGHTUP:
-				BufferedTrack rightUpBuffer = new BufferedTrack(TrackType.BUFFERRIGHTUP, placeX, placeY, false, "None");
-				newTrack = rightUpBuffer;
+				BufferedTrack rightUpBuffer = new BufferedTrack(ElementType.BUFFERRIGHTUP, placeX, placeY, false, "None");
+				newElement = rightUpBuffer;
 				break;
 
 			case BUFFERLEFTDOWN:
-				BufferedTrack leftDownBuffer = new BufferedTrack(TrackType.BUFFERLEFTDOWN, placeX, placeY, false,
+				BufferedTrack leftDownBuffer = new BufferedTrack(ElementType.BUFFERLEFTDOWN, placeX, placeY, false,
 						"None");
-				newTrack = leftDownBuffer;
+				newElement = leftDownBuffer;
 				break;
 
 			case BUFFERRIGHTDOWN:
-				BufferedTrack rightDownBuffer = new BufferedTrack(TrackType.BUFFERRIGHTDOWN, placeX, placeY, false,
+				BufferedTrack rightDownBuffer = new BufferedTrack(ElementType.BUFFERRIGHTDOWN, placeX, placeY, false,
 						"None");
-				newTrack = rightDownBuffer;
+				newElement = rightDownBuffer;
 				break;
 
 			case LINKLEFT:
-				GapLinkedTrack linkLeft = new GapLinkedTrack(TrackType.LINKLEFT, placeX, placeY, false, "None");
-				newTrack = linkLeft;
+				GapLinkedTrack linkLeft = new GapLinkedTrack(ElementType.LINKLEFT, placeX, placeY, false, "None");
+				newElement = linkLeft;
 				break;
 
 			case LINKRIGHT:
-				GapLinkedTrack linkRight = new GapLinkedTrack(TrackType.LINKRIGHT, placeX, placeY, false, "None");
-				newTrack = linkRight;
+				GapLinkedTrack linkRight = new GapLinkedTrack(ElementType.LINKRIGHT, placeX, placeY, false, "None");
+				newElement = linkRight;
 				break;
 
 			case LINKUP:
-				GapLinkedTrack linkUp = new GapLinkedTrack(TrackType.LINKUP, placeX, placeY, false, "None");
-				newTrack = linkUp;
+				GapLinkedTrack linkUp = new GapLinkedTrack(ElementType.LINKUP, placeX, placeY, false, "None");
+				newElement = linkUp;
 				break;
 
 			case LINKDOWN:
-				GapLinkedTrack linkDown = new GapLinkedTrack(TrackType.LINKDOWN, placeX, placeY, false, "None");
-				newTrack = linkDown;
+				GapLinkedTrack linkDown = new GapLinkedTrack(ElementType.LINKDOWN, placeX, placeY, false, "None");
+				newElement = linkDown;
 				break;
 
 			case LINKLEFTUP:
-				GapLinkedTrack linkLeftUp = new GapLinkedTrack(TrackType.LINKLEFTUP, placeX, placeY, false, "None");
-				newTrack = linkLeftUp;
+				GapLinkedTrack linkLeftUp = new GapLinkedTrack(ElementType.LINKLEFTUP, placeX, placeY, false, "None");
+				newElement = linkLeftUp;
 				break;
 
 			case LINKRIGHTUP:
-				GapLinkedTrack linkRightUp = new GapLinkedTrack(TrackType.LINKRIGHTUP, placeX, placeY, false, "None");
-				newTrack = linkRightUp;
+				GapLinkedTrack linkRightUp = new GapLinkedTrack(ElementType.LINKRIGHTUP, placeX, placeY, false, "None");
+				newElement = linkRightUp;
 				break;
 
 			case LINKLEFTDOWN:
-				GapLinkedTrack linkLeftDown = new GapLinkedTrack(TrackType.LINKLEFTDOWN, placeX, placeY, false, "None");
-				newTrack = linkLeftDown;
+				GapLinkedTrack linkLeftDown = new GapLinkedTrack(ElementType.LINKLEFTDOWN, placeX, placeY, false, "None");
+				newElement = linkLeftDown;
 				break;
 
 			case LINKRIGHTDOWN:
-				GapLinkedTrack linkRightDown = new GapLinkedTrack(TrackType.LINKRIGHTDOWN, placeX, placeY, false,
+				GapLinkedTrack linkRightDown = new GapLinkedTrack(ElementType.LINKRIGHTDOWN, placeX, placeY, false,
 						"None");
-				newTrack = linkRightDown;
+				newElement = linkRightDown;
 				break;
 
 			case DIRECTLEFT:
-				DirectionalTrack directLeftTrack = new DirectionalTrack(TrackType.DIRECTLEFT, placeX, placeY, false,
+				DirectionalTrack directLeftTrack = new DirectionalTrack(ElementType.DIRECTLEFT, placeX, placeY, false,
 						"None", Direction.LEFT);
-				newTrack = directLeftTrack;
+				newElement = directLeftTrack;
 				break;
 
 			case DIRECTRIGHT:
-				DirectionalTrack directRightTrack = new DirectionalTrack(TrackType.DIRECTRIGHT, placeX, placeY, false,
+				DirectionalTrack directRightTrack = new DirectionalTrack(ElementType.DIRECTRIGHT, placeX, placeY, false,
 						"None", Direction.RIGHT);
-				newTrack = directRightTrack;
+				newElement = directRightTrack;
 				break;
 
 			case DIRECTUP:
-				DirectionalTrack directUpTrack = new DirectionalTrack(TrackType.DIRECTUP, placeX, placeY, false, "None",
+				DirectionalTrack directUpTrack = new DirectionalTrack(ElementType.DIRECTUP, placeX, placeY, false, "None",
 						Direction.UP);
-				newTrack = directUpTrack;
+				newElement = directUpTrack;
 				break;
 
 			case DIRECTDOWN:
-				DirectionalTrack directDownTrack = new DirectionalTrack(TrackType.DIRECTDOWN, placeX, placeY, false,
+				DirectionalTrack directDownTrack = new DirectionalTrack(ElementType.DIRECTDOWN, placeX, placeY, false,
 						"None", Direction.DOWN);
-				newTrack = directDownTrack;
+				newElement = directDownTrack;
 				break;
 
 			case DIRECTLEFTUP:
-				DirectionalTrack directLeftUpTrack = new DirectionalTrack(TrackType.DIRECTLEFTUP, placeX, placeY, false,
+				DirectionalTrack directLeftUpTrack = new DirectionalTrack(ElementType.DIRECTLEFTUP, placeX, placeY, false,
 						"None", Direction.LEFTUP);
-				newTrack = directLeftUpTrack;
+				newElement = directLeftUpTrack;
 				break;
 
 			case DIRECTRIGHTUP:
-				DirectionalTrack directRightUpTrack = new DirectionalTrack(TrackType.DIRECTRIGHTUP, placeX, placeY,
+				DirectionalTrack directRightUpTrack = new DirectionalTrack(ElementType.DIRECTRIGHTUP, placeX, placeY,
 						false, "None", Direction.RIGHTUP);
-				newTrack = directRightUpTrack;
+				newElement = directRightUpTrack;
 				break;
 
 			case DIRECTLEFTDOWN:
-				DirectionalTrack directLeftDownTrack = new DirectionalTrack(TrackType.DIRECTLEFTDOWN, placeX, placeY,
+				DirectionalTrack directLeftDownTrack = new DirectionalTrack(ElementType.DIRECTLEFTDOWN, placeX, placeY,
 						false, "None", Direction.LEFTDOWN);
-				newTrack = directLeftDownTrack;
+				newElement = directLeftDownTrack;
 				break;
 
 			case DIRECTRIGHTDOWN:
-				DirectionalTrack directRightDownTrack = new DirectionalTrack(TrackType.DIRECTRIGHT, placeX, placeY,
+				DirectionalTrack directRightDownTrack = new DirectionalTrack(ElementType.DIRECTRIGHT, placeX, placeY,
 						false, "None", Direction.RIGHTDOWN);
-				newTrack = directRightDownTrack;
+				newElement = directRightDownTrack;
 				break;
 
 			case EXITLEFT:
-				ExitTrack exitLeftTrack = new ExitTrack(TrackType.EXITLEFT, placeX, placeY, false, "None");
-				newTrack = exitLeftTrack;
+				ExitTrack exitLeftTrack = new ExitTrack(ElementType.EXITLEFT, placeX, placeY, false, "None");
+				newElement = exitLeftTrack;
 				break;
 
 			case EXITRIGHT:
-				ExitTrack exitRightTrack = new ExitTrack(TrackType.EXITRIGHT, placeX, placeY, false, "None");
-				newTrack = exitRightTrack;
+				ExitTrack exitRightTrack = new ExitTrack(ElementType.EXITRIGHT, placeX, placeY, false, "None");
+				newElement = exitRightTrack;
 				break;
 
 			case EXITUP:
-				ExitTrack exitUpTrack = new ExitTrack(TrackType.EXITUP, placeX, placeY, false, "None");
-				newTrack = exitUpTrack;
+				ExitTrack exitUpTrack = new ExitTrack(ElementType.EXITUP, placeX, placeY, false, "None");
+				newElement = exitUpTrack;
 				break;
 
 			case EXITDOWN:
-				ExitTrack exitDownTrack = new ExitTrack(TrackType.EXITDOWN, placeX, placeY, false, "None");
-				newTrack = exitDownTrack;
+				ExitTrack exitDownTrack = new ExitTrack(ElementType.EXITDOWN, placeX, placeY, false, "None");
+				newElement = exitDownTrack;
 				break;
 
 			case EXITLEFTUP:
-				ExitTrack exitLeftUpTrack = new ExitTrack(TrackType.EXITLEFTUP, placeX, placeY, false, "None");
-				newTrack = exitLeftUpTrack;
+				ExitTrack exitLeftUpTrack = new ExitTrack(ElementType.EXITLEFTUP, placeX, placeY, false, "None");
+				newElement = exitLeftUpTrack;
 				break;
 
 			case EXITRIGHTUP:
-				ExitTrack exitRightUpTrack = new ExitTrack(TrackType.EXITRIGHTUP, placeX, placeY, false, "None");
-				newTrack = exitRightUpTrack;
+				ExitTrack exitRightUpTrack = new ExitTrack(ElementType.EXITRIGHTUP, placeX, placeY, false, "None");
+				newElement = exitRightUpTrack;
 				break;
 
 			case EXITLEFTDOWN:
-				ExitTrack exitLeftDownTrack = new ExitTrack(TrackType.EXITLEFTDOWN, placeX, placeY, false, "None");
-				newTrack = exitLeftDownTrack;
+				ExitTrack exitLeftDownTrack = new ExitTrack(ElementType.EXITLEFTDOWN, placeX, placeY, false, "None");
+				newElement = exitLeftDownTrack;
 				break;
 
 			case EXITRIGHTDOWN:
-				ExitTrack exitRightDownTrack = new ExitTrack(TrackType.EXITRIGHTDOWN, placeX, placeY, false, "None");
-				newTrack = exitRightDownTrack;
+				ExitTrack exitRightDownTrack = new ExitTrack(ElementType.EXITRIGHTDOWN, placeX, placeY, false, "None");
+				newElement = exitRightDownTrack;
 				break;
 
 			case TIGHTCURVE1:
-				CurvedTrack tightCurve1 = new CurvedTrack(TrackType.TIGHTCURVE1, placeX, placeY, false, "None");
-				newTrack = tightCurve1;
+				CurvedTrack tightCurve1 = new CurvedTrack(ElementType.TIGHTCURVE1, placeX, placeY, false, "None");
+				newElement = tightCurve1;
 				break;
 
 			case TIGHTCURVE2:
-				CurvedTrack tightCurve2 = new CurvedTrack(TrackType.TIGHTCURVE2, placeX, placeY, false, "None");
-				newTrack = tightCurve2;
+				CurvedTrack tightCurve2 = new CurvedTrack(ElementType.TIGHTCURVE2, placeX, placeY, false, "None");
+				newElement = tightCurve2;
 				break;
 
 			case TIGHTCURVE3:
-				CurvedTrack tightCurve3 = new CurvedTrack(TrackType.TIGHTCURVE3, placeX, placeY, false, "None");
-				newTrack = tightCurve3;
+				CurvedTrack tightCurve3 = new CurvedTrack(ElementType.TIGHTCURVE3, placeX, placeY, false, "None");
+				newElement = tightCurve3;
 				break;
 
 			case TIGHTCURVE4:
-				CurvedTrack tightCurve4 = new CurvedTrack(TrackType.TIGHTCURVE4, placeX, placeY, false, "None");
-				newTrack = tightCurve4;
+				CurvedTrack tightCurve4 = new CurvedTrack(ElementType.TIGHTCURVE4, placeX, placeY, false, "None");
+				newElement = tightCurve4;
 				break;
 
 			case CURVE1:
-				CurvedTrack curve1 = new CurvedTrack(TrackType.CURVE1, placeX, placeY, false, "None");
-				newTrack = curve1;
+				CurvedTrack curve1 = new CurvedTrack(ElementType.CURVE1, placeX, placeY, false, "None");
+				newElement = curve1;
 				break;
 
 			case CURVE2:
-				CurvedTrack curve2 = new CurvedTrack(TrackType.CURVE2, placeX, placeY, false, "None");
-				newTrack = curve2;
+				CurvedTrack curve2 = new CurvedTrack(ElementType.CURVE2, placeX, placeY, false, "None");
+				newElement = curve2;
 				break;
 
 			case CURVE3:
-				CurvedTrack curve3 = new CurvedTrack(TrackType.CURVE3, placeX, placeY, false, "None");
-				newTrack = curve3;
+				CurvedTrack curve3 = new CurvedTrack(ElementType.CURVE3, placeX, placeY, false, "None");
+				newElement = curve3;
 				break;
 
 			case CURVE4:
-				CurvedTrack curve4 = new CurvedTrack(TrackType.CURVE4, placeX, placeY, false, "None");
-				newTrack = curve4;
+				CurvedTrack curve4 = new CurvedTrack(ElementType.CURVE4, placeX, placeY, false, "None");
+				newElement = curve4;
 				break;
 
 			case CURVE5:
-				CurvedTrack curve5 = new CurvedTrack(TrackType.CURVE5, placeX, placeY, false, "None");
-				newTrack = curve5;
+				CurvedTrack curve5 = new CurvedTrack(ElementType.CURVE5, placeX, placeY, false, "None");
+				newElement = curve5;
 				break;
 
 			case CURVE6:
-				CurvedTrack curve6 = new CurvedTrack(TrackType.CURVE6, placeX, placeY, false, "None");
-				newTrack = curve6;
+				CurvedTrack curve6 = new CurvedTrack(ElementType.CURVE6, placeX, placeY, false, "None");
+				newElement = curve6;
 				break;
 
 			case CURVE7:
-				CurvedTrack curve7 = new CurvedTrack(TrackType.CURVE7, placeX, placeY, false, "None");
-				newTrack = curve7;
+				CurvedTrack curve7 = new CurvedTrack(ElementType.CURVE7, placeX, placeY, false, "None");
+				newElement = curve7;
 				break;
 
 			case CURVE8:
-				CurvedTrack curve8 = new CurvedTrack(TrackType.CURVE8, placeX, placeY, false, "None");
-				newTrack = curve8;
+				CurvedTrack curve8 = new CurvedTrack(ElementType.CURVE8, placeX, placeY, false, "None");
+				newElement = curve8;
 				break;
 				
 			case BRIDGE1:
-				StationBridgeUnderpassTrack bridge1 = new StationBridgeUnderpassTrack(TrackType.BRIDGE1, placeX, placeY,
+				StationBridgeUnderpassTrack bridge1 = new StationBridgeUnderpassTrack(ElementType.BRIDGE1, placeX, placeY,
 						false, "None");
-				newTrack = bridge1;
+				newElement = bridge1;
 				break;
 
 			case BRIDGE2:
-				StationBridgeUnderpassTrack bridge2 = new StationBridgeUnderpassTrack(TrackType.BRIDGE2, placeX, placeY,
+				StationBridgeUnderpassTrack bridge2 = new StationBridgeUnderpassTrack(ElementType.BRIDGE2, placeX, placeY,
 						false, "None");
-				newTrack = bridge2;
+				newElement = bridge2;
 				break;
 
 			case UNDERPASS1:
-				StationBridgeUnderpassTrack underpass1 = new StationBridgeUnderpassTrack(TrackType.UNDERPASS1, placeX,
+				StationBridgeUnderpassTrack underpass1 = new StationBridgeUnderpassTrack(ElementType.UNDERPASS1, placeX,
 						placeY, false, "None");
-				newTrack = underpass1;
+				newElement = underpass1;
 				break;
 
 			case UNDERPASS2:
-				StationBridgeUnderpassTrack underpass2 = new StationBridgeUnderpassTrack(TrackType.UNDERPASS2, placeX,
+				StationBridgeUnderpassTrack underpass2 = new StationBridgeUnderpassTrack(ElementType.UNDERPASS2, placeX,
 						placeY, false, "None");
-				newTrack = underpass2;
+				newElement = underpass2;
 				break;
 
 			case SWITCHTIGHT1:
-				SwitchTrack switchTight1 = new SwitchTrack(TrackType.SWITCHTIGHT1, placeX, placeY, false, "None");
-				newTrack = switchTight1;
+				SwitchTrack switchTight1 = new SwitchTrack(ElementType.SWITCHTIGHT1, placeX, placeY, false, "None");
+				newElement = switchTight1;
 				break;
 
 			case SWITCHTIGHT2:
-				SwitchTrack switchTight2 = new SwitchTrack(TrackType.SWITCHTIGHT2, placeX, placeY, false, "None");
-				newTrack = switchTight2;
+				SwitchTrack switchTight2 = new SwitchTrack(ElementType.SWITCHTIGHT2, placeX, placeY, false, "None");
+				newElement = switchTight2;
 				break;
 
 			case SWITCHTIGHT3:
-				SwitchTrack switchTight3 = new SwitchTrack(TrackType.SWITCHTIGHT3, placeX, placeY, false, "None");
-				newTrack = switchTight3;
+				SwitchTrack switchTight3 = new SwitchTrack(ElementType.SWITCHTIGHT3, placeX, placeY, false, "None");
+				newElement = switchTight3;
 				break;
 
 			case SWITCHTIGHT4:
-				SwitchTrack switchTight4 = new SwitchTrack(TrackType.SWITCHTIGHT4, placeX, placeY, false, "None");
-				newTrack = switchTight4;
+				SwitchTrack switchTight4 = new SwitchTrack(ElementType.SWITCHTIGHT4, placeX, placeY, false, "None");
+				newElement = switchTight4;
 				break;
 
 			case SWITCHTIGHT5:
-				SwitchTrack switchTight5 = new SwitchTrack(TrackType.SWITCHTIGHT5, placeX, placeY, false, "None");
-				newTrack = switchTight5;
+				SwitchTrack switchTight5 = new SwitchTrack(ElementType.SWITCHTIGHT5, placeX, placeY, false, "None");
+				newElement = switchTight5;
 				break;
 
 			case SWITCHTIGHT6:
-				SwitchTrack switchTight6 = new SwitchTrack(TrackType.SWITCHTIGHT6, placeX, placeY, false, "None");
-				newTrack = switchTight6;
+				SwitchTrack switchTight6 = new SwitchTrack(ElementType.SWITCHTIGHT6, placeX, placeY, false, "None");
+				newElement = switchTight6;
 				break;
 
 			case SWITCHTIGHT7:
-				SwitchTrack switchTight7 = new SwitchTrack(TrackType.SWITCHTIGHT7, placeX, placeY, false, "None");
-				newTrack = switchTight7;
+				SwitchTrack switchTight7 = new SwitchTrack(ElementType.SWITCHTIGHT7, placeX, placeY, false, "None");
+				newElement = switchTight7;
 				break;
 
 			case SWITCHTIGHT8:
-				SwitchTrack switchTight8 = new SwitchTrack(TrackType.SWITCHTIGHT8, placeX, placeY, false, "None");
-				newTrack = switchTight8;
+				SwitchTrack switchTight8 = new SwitchTrack(ElementType.SWITCHTIGHT8, placeX, placeY, false, "None");
+				newElement = switchTight8;
 				break;
 
 			case SWITCH1:
-				SwitchTrack switch1 = new SwitchTrack(TrackType.SWITCH1, placeX, placeY, false, "None");
-				newTrack = switch1;
+				SwitchTrack switch1 = new SwitchTrack(ElementType.SWITCH1, placeX, placeY, false, "None");
+				newElement = switch1;
 				break;
 
 			case SWITCH2:
-				SwitchTrack switch2 = new SwitchTrack(TrackType.SWITCH2, placeX, placeY, false, "None");
-				newTrack = switch2;
+				SwitchTrack switch2 = new SwitchTrack(ElementType.SWITCH2, placeX, placeY, false, "None");
+				newElement = switch2;
 				break;
 
 			case SWITCH3:
-				SwitchTrack switch3 = new SwitchTrack(TrackType.SWITCH3, placeX, placeY, false, "None");
-				newTrack = switch3;
+				SwitchTrack switch3 = new SwitchTrack(ElementType.SWITCH3, placeX, placeY, false, "None");
+				newElement = switch3;
 				break;
 
 			case SWITCH4:
-				SwitchTrack switch4 = new SwitchTrack(TrackType.SWITCH4, placeX, placeY, false, "None");
-				newTrack = switch4;
+				SwitchTrack switch4 = new SwitchTrack(ElementType.SWITCH4, placeX, placeY, false, "None");
+				newElement = switch4;
 				break;
 
 			case SWITCH5:
-				SwitchTrack switch5 = new SwitchTrack(TrackType.SWITCH5, placeX, placeY, false, "None");
-				newTrack = switch5;
+				SwitchTrack switch5 = new SwitchTrack(ElementType.SWITCH5, placeX, placeY, false, "None");
+				newElement = switch5;
 				break;
 
 			case SWITCH6:
-				SwitchTrack switch6 = new SwitchTrack(TrackType.SWITCH6, placeX, placeY, false, "None");
-				newTrack = switch6;
+				SwitchTrack switch6 = new SwitchTrack(ElementType.SWITCH6, placeX, placeY, false, "None");
+				newElement = switch6;
 				break;
 
 			case SWITCH7:
-				SwitchTrack switch7 = new SwitchTrack(TrackType.SWITCH7, placeX, placeY, false, "None");
-				newTrack = switch7;
+				SwitchTrack switch7 = new SwitchTrack(ElementType.SWITCH7, placeX, placeY, false, "None");
+				newElement = switch7;
 				break;
 
 			case SWITCH8:
-				SwitchTrack switch8 = new SwitchTrack(TrackType.SWITCH8, placeX, placeY, false, "None");
-				newTrack = switch8;
+				SwitchTrack switch8 = new SwitchTrack(ElementType.SWITCH8, placeX, placeY, false, "None");
+				newElement = switch8;
 				break;
 
 			case SWITCH9:
-				SwitchTrack switch9 = new SwitchTrack(TrackType.SWITCH9, placeX, placeY, false, "None");
-				newTrack = switch9;
+				SwitchTrack switch9 = new SwitchTrack(ElementType.SWITCH9, placeX, placeY, false, "None");
+				newElement = switch9;
 				break;
 
 			case SWITCH10:
-				SwitchTrack switch10 = new SwitchTrack(TrackType.SWITCH10, placeX, placeY, false, "None");
-				newTrack = switch10;
+				SwitchTrack switch10 = new SwitchTrack(ElementType.SWITCH10, placeX, placeY, false, "None");
+				newElement = switch10;
 				break;
 
 			case SWITCH11:
-				SwitchTrack switch11 = new SwitchTrack(TrackType.SWITCH11, placeX, placeY, false, "None");
-				newTrack = switch11;
+				SwitchTrack switch11 = new SwitchTrack(ElementType.SWITCH11, placeX, placeY, false, "None");
+				newElement = switch11;
 				break;
 
 			case SWITCH12:
-				SwitchTrack switch12 = new SwitchTrack(TrackType.SWITCH12, placeX, placeY, false, "None");
-				newTrack = switch12;
+				SwitchTrack switch12 = new SwitchTrack(ElementType.SWITCH12, placeX, placeY, false, "None");
+				newElement = switch12;
 				break;
 
 			case SWITCH13:
-				SwitchTrack switch13 = new SwitchTrack(TrackType.SWITCH13, placeX, placeY, false, "None");
-				newTrack = switch13;
+				SwitchTrack switch13 = new SwitchTrack(ElementType.SWITCH13, placeX, placeY, false, "None");
+				newElement = switch13;
 				break;
 
 			case SWITCH14:
-				SwitchTrack switch14 = new SwitchTrack(TrackType.SWITCH14, placeX, placeY, false, "None");
-				newTrack = switch14;
+				SwitchTrack switch14 = new SwitchTrack(ElementType.SWITCH14, placeX, placeY, false, "None");
+				newElement = switch14;
 				break;
 
 			case SWITCH15:
-				SwitchTrack switch15 = new SwitchTrack(TrackType.SWITCH15, placeX, placeY, false, "None");
-				newTrack = switch15;
+				SwitchTrack switch15 = new SwitchTrack(ElementType.SWITCH15, placeX, placeY, false, "None");
+				newElement = switch15;
 				break;
 
 			case SWITCH16:
-				SwitchTrack switch16 = new SwitchTrack(TrackType.SWITCH16, placeX, placeY, false, "None");
-				newTrack = switch16;
+				SwitchTrack switch16 = new SwitchTrack(ElementType.SWITCH16, placeX, placeY, false, "None");
+				newElement = switch16;
 				break;
 				
 			case SWITCH17:
-				SwitchTrack switch17 = new SwitchTrack(TrackType.SWITCH17, placeX, placeY, false, "None");
-				newTrack = switch17;
+				SwitchTrack switch17 = new SwitchTrack(ElementType.SWITCH17, placeX, placeY, false, "None");
+				newElement = switch17;
 				break;
 
 			case SWITCH18:
-				SwitchTrack switch18 = new SwitchTrack(TrackType.SWITCH18, placeX, placeY, false, "None");
-				newTrack = switch18;
+				SwitchTrack switch18 = new SwitchTrack(ElementType.SWITCH18, placeX, placeY, false, "None");
+				newElement = switch18;
 				break;
 
 			case SWITCH19:
-				SwitchTrack switch19 = new SwitchTrack(TrackType.SWITCH19, placeX, placeY, false, "None");
-				newTrack = switch19;
+				SwitchTrack switch19 = new SwitchTrack(ElementType.SWITCH19, placeX, placeY, false, "None");
+				newElement = switch19;
 				break;
 
 			case SWITCH20:
-				SwitchTrack switch20 = new SwitchTrack(TrackType.SWITCH20, placeX, placeY, false, "None");
-				newTrack = switch20;
+				SwitchTrack switch20 = new SwitchTrack(ElementType.SWITCH20, placeX, placeY, false, "None");
+				newElement = switch20;
 				break;
 
 			case SWITCH21:
-				SwitchTrack switch21 = new SwitchTrack(TrackType.SWITCH21, placeX, placeY, false, "None");
-				newTrack = switch21;
+				SwitchTrack switch21 = new SwitchTrack(ElementType.SWITCH21, placeX, placeY, false, "None");
+				newElement = switch21;
 				break;
 
 			case SWITCH22:
-				SwitchTrack switch22 = new SwitchTrack(TrackType.SWITCH22, placeX, placeY, false, "None");
-				newTrack = switch22;
+				SwitchTrack switch22 = new SwitchTrack(ElementType.SWITCH22, placeX, placeY, false, "None");
+				newElement = switch22;
 				break;
 
 			case SWITCH23:
-				SwitchTrack switch23 = new SwitchTrack(TrackType.SWITCH23, placeX, placeY, false, "None");
-				newTrack = switch23;
+				SwitchTrack switch23 = new SwitchTrack(ElementType.SWITCH23, placeX, placeY, false, "None");
+				newElement = switch23;
 				break;
 
 			case SWITCH24:
-				SwitchTrack switch24 = new SwitchTrack(TrackType.SWITCH24, placeX, placeY, false, "None");
-				newTrack = switch24;
+				SwitchTrack switch24 = new SwitchTrack(ElementType.SWITCH24, placeX, placeY, false, "None");
+				newElement = switch24;
 				break;
 				
 			case CROSSOVER1:
-				Crossover crossover1 = new Crossover(TrackType.CROSSOVER1, placeX, placeY, false, "None");
-				newTrack = crossover1;
+				Crossover crossover1 = new Crossover(ElementType.CROSSOVER1, placeX, placeY, false, "None");
+				newElement = crossover1;
 				break;
 
 			case CROSSOVER2:
-				Crossover crossover2 = new Crossover(TrackType.CROSSOVER2, placeX, placeY, false, "None");
-				newTrack = crossover2;
+				Crossover crossover2 = new Crossover(ElementType.CROSSOVER2, placeX, placeY, false, "None");
+				newElement = crossover2;
 				break;
 
 			case CROSSOVER3:
-				Crossover crossover3 = new Crossover(TrackType.CROSSOVER3, placeX, placeY, false, "None");
-				newTrack = crossover3;
+				Crossover crossover3 = new Crossover(ElementType.CROSSOVER3, placeX, placeY, false, "None");
+				newElement = crossover3;
 				break;
 
 			case CROSSOVER4:
-				Crossover crossover4 = new Crossover(TrackType.CROSSOVER4, placeX, placeY, false, "None");
-				newTrack = crossover4;
+				Crossover crossover4 = new Crossover(ElementType.CROSSOVER4, placeX, placeY, false, "None");
+				newElement = crossover4;
 				break;
 
 			case CROSSOVER5:
-				Crossover crossover5 = new Crossover(TrackType.CROSSOVER5, placeX, placeY, false, "None");
-				newTrack = crossover5;
+				Crossover crossover5 = new Crossover(ElementType.CROSSOVER5, placeX, placeY, false, "None");
+				newElement = crossover5;
 				break;
 
 			case CROSSOVER6:
-				Crossover crossover6 = new Crossover(TrackType.CROSSOVER6, placeX, placeY, false, "None");
-				newTrack = crossover6;
+				Crossover crossover6 = new Crossover(ElementType.CROSSOVER6, placeX, placeY, false, "None");
+				newElement = crossover6;
 				break;
 				
 			case FLYOVER1:
-				Flyover flyover1 = new Flyover(TrackType.FLYOVER1, placeX, placeY, false, "None");
-				newTrack = flyover1;
+				Flyover flyover1 = new Flyover(ElementType.FLYOVER1, placeX, placeY, false, "None");
+				newElement = flyover1;
 				break;
 
 			case FLYOVER2:
-				Flyover flyover2 = new Flyover(TrackType.FLYOVER2, placeX, placeY, false, "None");
-				newTrack = flyover2;
+				Flyover flyover2 = new Flyover(ElementType.FLYOVER2, placeX, placeY, false, "None");
+				newElement = flyover2;
 				break;
 
 			case FLYOVER3:
-				Flyover flyover3 = new Flyover(TrackType.FLYOVER3, placeX, placeY, false, "None");
-				newTrack = flyover3;
+				Flyover flyover3 = new Flyover(ElementType.FLYOVER3, placeX, placeY, false, "None");
+				newElement = flyover3;
 				break;
 
 			case FLYOVER4:
-				Flyover flyover4 = new Flyover(TrackType.FLYOVER4, placeX, placeY, false, "None");
-				newTrack = flyover4;
+				Flyover flyover4 = new Flyover(ElementType.FLYOVER4, placeX, placeY, false, "None");
+				newElement = flyover4;
 				break;	
 			
 			case FLYOVER5:
-				Flyover flyover5 = new Flyover(TrackType.FLYOVER5, placeX, placeY, false, "None");
-				newTrack = flyover5;
+				Flyover flyover5 = new Flyover(ElementType.FLYOVER5, placeX, placeY, false, "None");
+				newElement = flyover5;
 				break;
 
 			case FLYOVER6:
-				Flyover flyover6 = new Flyover(TrackType.FLYOVER6, placeX, placeY, false, "None");
-				newTrack = flyover6;
+				Flyover flyover6 = new Flyover(ElementType.FLYOVER6, placeX, placeY, false, "None");
+				newElement = flyover6;
 				break;
 
 			case FLYOVER7:
-				Flyover flyover7 = new Flyover(TrackType.FLYOVER7, placeX, placeY, false, "None");
-				newTrack = flyover7;
+				Flyover flyover7 = new Flyover(ElementType.FLYOVER7, placeX, placeY, false, "None");
+				newElement = flyover7;
 				break;
 
 			case FLYOVER8:
-				Flyover flyover8 = new Flyover(TrackType.FLYOVER8, placeX, placeY, false, "None");
-				newTrack = flyover8;
+				Flyover flyover8 = new Flyover(ElementType.FLYOVER8, placeX, placeY, false, "None");
+				newElement = flyover8;
 				break;	
 			
 			case FLYOVER9:
-				Flyover flyover9 = new Flyover(TrackType.FLYOVER9, placeX, placeY, false, "None");
-				newTrack = flyover9;
+				Flyover flyover9 = new Flyover(ElementType.FLYOVER9, placeX, placeY, false, "None");
+				newElement = flyover9;
 				break;
 
 			case FLYOVER10:
-				Flyover flyover10 = new Flyover(TrackType.FLYOVER10, placeX, placeY, false, "None");
-				newTrack = flyover10;
+				Flyover flyover10 = new Flyover(ElementType.FLYOVER10, placeX, placeY, false, "None");
+				newElement = flyover10;
 				break;
 
 			case FLYOVER11:
-				Flyover flyover11 = new Flyover(TrackType.FLYOVER11, placeX, placeY, false, "None");
-				newTrack = flyover11;
+				Flyover flyover11 = new Flyover(ElementType.FLYOVER11, placeX, placeY, false, "None");
+				newElement = flyover11;
 				break;
 
 			case FLYOVER12:
-				Flyover flyover12 = new Flyover(TrackType.FLYOVER12, placeX, placeY, false, "None");
-				newTrack = flyover12;
+				Flyover flyover12 = new Flyover(ElementType.FLYOVER12, placeX, placeY, false, "None");
+				newElement = flyover12;
 				break;	
-			
-			
+				
+			case NAMEDAREA:
+				NamedArea namedArea = new NamedArea(ElementType.NAMEDAREA, placeX, placeY);
+				newElement = namedArea;
+				break;
+
+			case CONCOURSE:
+				Concourse concourse = new Concourse(ElementType.CONCOURSE, placeX, placeY);
+				newElement = concourse;
+				break;
 
 			case SIGNALLEFT:
-				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				newElement = addsSignalTrack(placeX, placeY, itemSelected, aspect);
 
 				break;
 
 			case SIGNALRIGHT:
-				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				newElement = addsSignalTrack(placeX, placeY, itemSelected, aspect);
 				break;
 
 			case SIGNALUP:
-				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				newElement = addsSignalTrack(placeX, placeY, itemSelected, aspect);
 				break;
 
 			case SIGNALDOWN:
-				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				newElement = addsSignalTrack(placeX, placeY, itemSelected, aspect);
 				break;
 
 			case SIGNALLEFTUP:
-				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				newElement = addsSignalTrack(placeX, placeY, itemSelected, aspect);
 
 				break;
 
 			case SIGNALRIGHTUP:
-				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				newElement = addsSignalTrack(placeX, placeY, itemSelected, aspect);
 				break;
 
 			case SIGNALLEFTDOWN:
-				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				newElement = addsSignalTrack(placeX, placeY, itemSelected, aspect);
 
 				break;
 
 			case SIGNALRIGHTDOWN:
-				newTrack = addsSignalTrack(placeX, placeY, itemSelected, aspect);
+				newElement = addsSignalTrack(placeX, placeY, itemSelected, aspect);
 				break;
 			default:
 				break;
 			}
 
-			trackStore.add(newTrack);
+			elementStore.add(newElement);
 
 			GraphicsContext graphic = railMap.getGraphicsContext2D();
-			drawElement(graphic, event, canvasColour, newTrack);
+			drawElement(graphic, event, canvasColour, newElement);
 		}
-		System.out.println(trackStore.size());
+		System.out.println(elementStore.size());
 	}
 
-	public static Track addsSignalTrack(int placeX, int placeY, TrackType itemSelected, SignalAspect aspect) {
-		Track newTrack = null;
+	public static Track addsSignalTrack(int placeX, int placeY, ElementType itemSelected, SignalAspect aspect) {
+		Track newElement = null;
 		;
 		switch (aspect) {
 
 		case SHUNT:
 			SignalTrack exitLeftTrack = new SignalTrack(itemSelected, placeX, placeY, false, "None", aspect);
-			newTrack = exitLeftTrack;
+			newElement = exitLeftTrack;
 			break;
 
 		case TWO:
 			SignalTrack exitRightTrack = new SignalTrack(itemSelected, placeX, placeY, false, "None", aspect);
-			newTrack = exitRightTrack;
+			newElement = exitRightTrack;
 			break;
 
 		case THREE:
 			SignalTrack exitUpTrack = new SignalTrack(itemSelected, placeX, placeY, false, "None", aspect);
-			newTrack = exitUpTrack;
+			newElement = exitUpTrack;
 			break;
 
 		case FOUR:
 			SignalTrack exitDownTrack = new SignalTrack(itemSelected, placeX, placeY, false, "None", aspect);
-			newTrack = exitDownTrack;
+			newElement = exitDownTrack;
 			break;
 
 		}
-		return newTrack;
+		return newElement;
 	}
 
 }

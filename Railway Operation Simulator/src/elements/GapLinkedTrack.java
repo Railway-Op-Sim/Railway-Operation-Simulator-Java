@@ -4,8 +4,8 @@ public class GapLinkedTrack extends Track {
 	boolean[] gapLink = new boolean[9];
 	GapLinkedTrack specialLink;
 
-	public GapLinkedTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
-		this.trackType = trackType;
+	public GapLinkedTrack(ElementType elementType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
+		this.elementType = elementType;
 		this.xLocation = xLocation;
 		this.yLocation = yLocation;
 		this.electrified = electrified;
@@ -17,7 +17,7 @@ public class GapLinkedTrack extends Track {
 	
 	public void setLinks() {
 		
-		switch (this.trackType) {
+		switch (this.elementType) {
 		
 		case LINKLEFT:
 			this.trackLinks[5] = true;

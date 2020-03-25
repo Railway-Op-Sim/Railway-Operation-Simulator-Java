@@ -2,8 +2,8 @@ package elements;
 
 public class CurvedTrack extends Track {
 
-	public CurvedTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
-		this.trackType = trackType;
+	public CurvedTrack(ElementType elementType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
+		this.elementType = elementType;
 		this.xLocation = xLocation;
 		this.yLocation = yLocation;
 		this.electrified = electrified;

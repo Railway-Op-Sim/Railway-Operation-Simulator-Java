@@ -13,8 +13,8 @@ public class StraightTrack extends Track {
 	
 	// Straight Horizontal, Straight Vertical, Diagonal Top Right, Diagonal Top Left
 
-	public StraightTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
-		this.trackType = trackType;
+	public StraightTrack(ElementType elementType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
+		this.elementType = elementType;
 		this.xLocation = xLocation;
 		this.yLocation = yLocation;
 		this.electrified = electrified;
@@ -24,7 +24,7 @@ public class StraightTrack extends Track {
 	
 	public void setLinks() {
 		
-		switch (this.trackType) {
+		switch (this.elementType) {
 		
 		case STRAIGHTH:
 			

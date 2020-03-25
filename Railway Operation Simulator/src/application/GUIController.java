@@ -30,7 +30,7 @@ import application.MenuActions;
 import elements.SignalAspect;
 import elements.StraightTrack;
 import elements.Track;
-import elements.TrackType;
+import elements.ElementType;
 
 /**
  * GUIController.java The class that interacts with the GUI.fxml to output to
@@ -42,13 +42,13 @@ import elements.TrackType;
 
 public class GUIController extends Application {
 
-	private static TrackType itemSelected = TrackType.NONE;
+	private static ElementType itemSelected = ElementType.NONE;
 
-	public static TrackType getItemSelected() {
+	public static ElementType getItemSelected() {
 		return itemSelected;
 	}
 
-	public static void setItemSelected(TrackType itemSelected) {
+	public static void setItemSelected(ElementType itemSelected) {
 		GUIController.itemSelected = itemSelected;
 	}
 
@@ -154,477 +154,485 @@ public class GUIController extends Application {
 				break;
 
 			case STRAIGHTH:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case STRAIGHTV:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case STRAIGHTRIGHTUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case STRAIGHTLEFTUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERLEFT:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERRIGHT:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERDOWN:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERLEFTUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERRIGHTUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERLEFTDOWN:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case BUFFERRIGHTDOWN:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case LINKLEFT:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case LINKRIGHT:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case LINKUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case LINKDOWN:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case LINKLEFTUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case LINKRIGHTUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case LINKLEFTDOWN:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case LINKRIGHTDOWN:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTLEFT:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTRIGHT:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTDOWN:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTLEFTUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTRIGHTUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTLEFTDOWN:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case DIRECTRIGHTDOWN:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case EXITLEFT:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case EXITRIGHT:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case EXITUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case EXITDOWN:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case EXITLEFTUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case EXITRIGHTUP:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case EXITLEFTDOWN:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case EXITRIGHTDOWN:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case TIGHTCURVE1:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case TIGHTCURVE2:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case TIGHTCURVE3:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case TIGHTCURVE4:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE1:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE2:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE3:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE4:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE5:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE6:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE7:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CURVE8:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case BRIDGE1:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case BRIDGE2:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case UNDERPASS1:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case UNDERPASS2:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT1:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT2:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT3:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT4:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT5:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT6:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT7:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCHTIGHT8:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH1:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH2:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH3:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH4:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH5:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH6:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH7:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH8:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH9:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH10:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH11:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH12:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH13:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH14:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH15:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH16:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 				
 			case SWITCH17:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH18:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH19:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 				
 			case SWITCH20:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 				
 			case SWITCH21:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH22:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH23:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case SWITCH24:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 				
 			case CROSSOVER1:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CROSSOVER2:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CROSSOVER3:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CROSSOVER4:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CROSSOVER5:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case CROSSOVER6:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 				
 			case FLYOVER1:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case FLYOVER2:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case FLYOVER3:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case FLYOVER4:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 				
 			case FLYOVER5:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case FLYOVER6:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case FLYOVER7:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case FLYOVER8:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 				
 			case FLYOVER9:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case FLYOVER10:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case FLYOVER11:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
 			case FLYOVER12:
-				MenuActions.addTrack(event, canvas, itemSelected, null, backgroundColour);
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
+				break;
+				
+			case NAMEDAREA:
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
 				break;
 
+			case CONCOURSE:
+				MenuActions.addElement(event, canvas, itemSelected, null, backgroundColour);
+				break;
+				
 			case SIGNALLEFT:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				}
 
 				break;
 
 			case SIGNALRIGHT:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				}
 				break;
 
 			case SIGNALUP:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				}
 				break;
 
 			case SIGNALDOWN:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				}
 				break;
 
 			case SIGNALLEFTUP:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				}
 
 				break;
 
 			case SIGNALRIGHTUP:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				}
 				break;
 
 			case SIGNALLEFTDOWN:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				}
 
 				break;
 
 			case SIGNALRIGHTDOWN:
 				if (aspect == SignalAspect.SHUNT) {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				} else {
-					MenuActions.addTrack(event, canvas, itemSelected, aspect, backgroundColour);
+					MenuActions.addElement(event, canvas, itemSelected, aspect, backgroundColour);
 				}
 				break;
 

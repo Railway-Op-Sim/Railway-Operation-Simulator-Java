@@ -2,9 +2,9 @@ package elements;
 
 public class BufferedTrack extends Track {
 
-	public BufferedTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified,
+	public BufferedTrack(ElementType elementType, int xLocation, int yLocation, boolean electrified,
 			String methodOfElectrification) {
-		this.trackType = trackType;
+		this.elementType = elementType;
 		this.xLocation = xLocation;
 		this.yLocation = yLocation;
 		this.electrified = electrified;
@@ -16,7 +16,7 @@ public class BufferedTrack extends Track {
 
 	public void setLinks() {
 
-		switch (this.trackType) {
+		switch (this.elementType) {
 
 		case BUFFERLEFT:
 			this.trackLinks[5] = true;

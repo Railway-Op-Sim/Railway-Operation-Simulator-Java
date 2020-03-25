@@ -19,7 +19,7 @@ import train.Train;
 public class Map {
 	
 	private Track baseTrack;
-	private HashSet<Track>  trackStore = new HashSet<Track>();
+	private HashSet<Element>  elementStore = new HashSet<Element>();
 	
 	private HashSet<Location>  locationStore = new HashSet<Location>();
 	private ArrayList<Train> trainList = new ArrayList<Train>();
@@ -37,8 +37,8 @@ public class Map {
 	* Currently not in use as Tracks stored in ArrayList.
 	*
 	*/
-	public HashSet<Track> getTrackStore() {
-		return trackStore;
+	public HashSet<Element> getElementStore() {
+		return elementStore;
 	}
 	
 	/**
@@ -46,8 +46,8 @@ public class Map {
 	 * Currently not in use as Tracks stored in ArrayList.
 	 * @param trackStore
 	 */
-	public void setTrackStore(HashSet<Track> trackStore) {
-		this.trackStore = trackStore;
+	public void setTrackStore(HashSet<Element> elementStore) {
+		this.elementStore = elementStore;
 	}
 	
 	/**
@@ -88,16 +88,16 @@ public class Map {
 	 * Could be modified to add tracks/trains to hashset.
 	 * @param element
 	 */
-	public void addTrack(StraightTrack element) {
-		trackStore.add(element);
+	public void addElement(Element element) {
+		elementStore.add(element);
 	}
 
 	/**
 	 * A method to get Links between tracks.
 	 */
 	public void makeStraightTRackLinks() {
-		for(Track track1 : trackStore){
-			for(Track track2 : trackStore){
+		for(Element track1 : elementStore){
+			for(Element track2 : elementStore){
 				if (!track1.equals(track2)) {
 					
 			}

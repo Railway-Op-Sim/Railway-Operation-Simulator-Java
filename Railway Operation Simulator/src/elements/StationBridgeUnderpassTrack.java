@@ -3,8 +3,8 @@ package elements;
 public class StationBridgeUnderpassTrack extends Track {
 
 	
-	public StationBridgeUnderpassTrack(TrackType trackType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
-		this.trackType = trackType;
+	public StationBridgeUnderpassTrack(ElementType elementType, int xLocation, int yLocation, boolean electrified, String methodOfElectrification) {
+		this.elementType = elementType;
 		this.xLocation = xLocation;
 		this.yLocation = yLocation;
 		this.electrified = electrified;

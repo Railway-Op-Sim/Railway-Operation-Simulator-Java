@@ -1,7 +1,6 @@
 package elements;
 
 public abstract class Track extends Element {
-	protected TrackType trackType;
 	protected boolean electrified;
 	protected String methodOfElectrification;
 	protected int trackSpeed = 200;
@@ -22,15 +21,6 @@ public abstract class Track extends Element {
 
 	public Track() {
 		// TODO Auto-generated constructor stub
-	}
-	
-	public TrackType getTrackType() {
-		return this.trackType;
-	}
-
-
-	public void setTrackType(TrackType trackType) {
-		this.trackType = trackType;
 	}
 
 
