@@ -1,6 +1,6 @@
 package elements;
 
-public abstract class Track extends Space {
+public abstract class Track extends Element {
 	protected TrackType trackType;
 	protected boolean electrified;
 	protected String methodOfElectrification;

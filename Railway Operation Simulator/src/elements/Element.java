@@ -1,10 +1,10 @@
 package elements;
 
-public abstract class Space {
+public abstract class Element {
 	int xLocation;
 	int yLocation;
 	
-	public Space() {
+	public Element() {
 		
 	}
 
