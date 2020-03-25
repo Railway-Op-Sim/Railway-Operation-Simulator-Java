@@ -1274,7 +1274,7 @@
                      <graphic>
                         <ImageView fx:id="switch16Image" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../graphics/switch14.png" />
+                              <Image url="@../graphics/switch16.png" />
                            </image>
                         </ImageView>
                      </graphic>
