@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import elements.LocationType;
 import elements.SignalAspect;
 import elements.TrackType;
 import javafx.event.ActionEvent;
@@ -733,7 +734,21 @@ public class BuildModifyMenuController {
     private ToggleButton flyover12Toggle; // Value injected by FXMLLoader
 
     @FXML // fx:id="flyover12Image"
-    private ImageView flyover12Image; // Value injected by 
+    private ImageView flyover12Image; // Value injected by FXMLLoader
+    
+    //** Named Area, concourses and platforms toggles and images.
+    
+    @FXML // fx:id="namedAreaToggle"
+    private ToggleButton namedAreaToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="namedAreaImage"
+    private ImageView namedAreaImage; // Value injected by FXMLLoader
+
+    @FXML // fx:id="concourseToggle"
+    private ToggleButton concourseToggle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="concourseImage"
+    private ImageView concourseImage; // Value injected by FXMLLoader
 	/**
 	 * A method to return current signal aspect.
 	 * 
@@ -2024,6 +2039,29 @@ public class BuildModifyMenuController {
 			flyover12Toggle.setSelected(false);
 			GUIController.setItemSelected(TrackType.NONE);
 		}
+    }
+    
+    @FXML
+    void selectNamedArea(ActionEvent event) {
+    	if (namedAreaToggle.isSelected()) {
+			GUIController.setLocationType(LocationType.NAMEDAREA);
+		} else {
+			namedAreaToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+    	
+
+    }
+    
+    @FXML
+    void selectConcourse(ActionEvent event) {
+    	if (concourseToggle.isSelected()) {
+			GUIController.setLocationType(LocationType.CONCOURSE);
+		} else {
+			concourseToggle.setSelected(false);
+			GUIController.setItemSelected(TrackType.NONE);
+		}
+
     }
 
 	@FXML // This method is called by the FXMLLoader when initialization is complete

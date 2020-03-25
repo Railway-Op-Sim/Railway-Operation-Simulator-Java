@@ -1604,6 +1604,49 @@
                   </ToggleButton>
                </children>
             </GridPane>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="18.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ToggleButton fx:id="namedAreaToggle" mnemonicParsing="false" onAction="#selectNamedArea" toggleGroup="$elementGroup">
+                     <graphic>
+                        <ImageView fx:id="namedAreaImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/locationSet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+                  <ToggleButton fx:id="concourseToggle" mnemonicParsing="false" onAction="#selectConcourse" toggleGroup="$elementGroup" GridPane.columnIndex="1">
+                     <graphic>
+                        <ImageView fx:id="concourseImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/concourseSet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="-1.0" />
+                     </padding>
+                  </ToggleButton>
+               </children>
+            </GridPane>
          </children>
          <VBox.margin>
             <Insets />
